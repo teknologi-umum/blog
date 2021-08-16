@@ -1,5 +1,7 @@
 import { defineConfig } from 'windicss/helpers';
 import typography from 'windicss/plugin/typography';
+import clamp from 'windicss/plugin/line-clamp';
+import aspectRatio from 'windicss/plugin/aspect-ratio';
 
 export default defineConfig({
   darkMode: 'media',
@@ -15,5 +17,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [typography],
+  plugins: [typography, clamp, aspectRatio],
 });

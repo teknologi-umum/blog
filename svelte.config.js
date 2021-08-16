@@ -1,8 +1,8 @@
-import { mdsvex } from 'mdsvex';
+// import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 import preprocess from 'svelte-preprocess';
 import WindiCSS from 'vite-plugin-windicss';
-import adapter from '@sveltejs/adapter-netlify';
+import adapterNetlify from '@sveltejs/adapter-netlify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,10 +10,13 @@ const config = {
 
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
-  preprocess: [preprocess(), mdsvex(mdsvexConfig)],
+  preprocess: [
+    preprocess(),
+    // mdsvex(mdsvexConfig),
+  ],
 
   kit: {
-    adapter: adapter(),
+    adapter: adapterNetlify(),
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     trailingSlash: 'never',
