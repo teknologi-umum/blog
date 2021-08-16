@@ -16,7 +16,7 @@
 <script lang="ts">
   // Using this solution for now, until it's fixed
   // https://github.com/pngwn/MDsveX/issues/255#issuecomment-880873964
-  import * as mdsvex from 'mdsvex/dist/browser-umd';
+  import * as mdsvex from 'mdsvex/dist/browser-umd.js';
   export let title: string;
   export let author: string;
   export let date: string | Date;

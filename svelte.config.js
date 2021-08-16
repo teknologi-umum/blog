@@ -22,6 +22,11 @@ const config = {
     trailingSlash: 'never',
     vite: {
       plugins: [WindiCSS.default()],
+      build: {
+        rollupOptions: {
+          external: ['mdsvex']
+        }
+      }
     },
     files: {
       assets: './static',

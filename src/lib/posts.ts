@@ -14,6 +14,7 @@ export interface Post {
   content?: string;
 }
 
+// FIXME: import.meta.url gamau kebaca
 const contentPath = resolve(dirname(fileURLToPath(import.meta.url)), '../../content/');
 
 export function fetchPosts(): Post[] {

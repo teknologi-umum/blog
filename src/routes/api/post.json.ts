@@ -2,6 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import type { Post } from '$lib/posts';
 import { fetchOnePost, fetchPosts } from '$lib/posts';
 
+// FIXME: this should be string, body: JSON.stringify(result) tapi entah kenapa malah error
 export const get: RequestHandler = async ({ query }) => {
   let result: Post | Post[];
 
