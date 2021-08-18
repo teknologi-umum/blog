@@ -8,11 +8,14 @@ export default function PostCard({ slug, title, desc, categories, key }) {
         src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
         width="400"
         height="200"
+        alt={slug}
       />
       <div className="p-4">
         <div className="flex gap-1 mb-2">
-          {categories.map((category: string) => (
-            <div className="text-sm px-4 rounded-full bg-blue-500 text-white">{category}</div>
+          {categories.map((category: string, idx: number) => (
+            <div className="text-sm px-4 rounded-full bg-blue-500 text-white" key={`${idx}-${category}`}>
+              {category}
+            </div>
           ))}
         </div>
         <Link href={`/posts/${slug}`}>

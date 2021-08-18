@@ -8,8 +8,8 @@ export default function Navbar() {
           <a className="flex-1 font-sans font-bold text-lg">Teknologi Umum</a>
         </Link>
         <div className="flex gap-4">
-          {['home', 'blog', 'about'].map((route) => (
-            <Link href={`/${route === 'home' ? '' : route}`}>
+          {['home', 'blog', 'about'].map((route, idx) => (
+            <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
               <a className="flex-1 font-sans text-lg capitalize text-gray-700 hover:text-blue-500 hover:underline">
                 {route}
               </a>
