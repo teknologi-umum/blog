@@ -2,10 +2,22 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import AuthorCard from '../../components/AuthorCard';
 import { markdownToHtml } from 'utils/markdownToHtml';
 import { getPostBySlug, getPostSlugs } from 'utils/posts';
+import siteData from '../../data/site';
+import { NextSeo } from 'next-seo';
 
 export default function Post({ title, desc, html, author, github, twitter, date }) {
   return (
     <>
+      <NextSeo
+        title={title}
+        description={desc}
+        openGraph={{
+          title,
+          description: desc,
+          url: process.env.NEXT_PUBLIC_SERVER_URL,
+          site_name: siteData.siteName,
+        }}
+      />
       <header className="w-full px-4 pt-32 pb-20 bg-gray-100 mb-8 -mt-16 text-center md:text-left">
         <div className="mx-auto max-w-screen-lg">
           <h1 className="font-heading text-gray-800 text-4xl font-bold capitalize mb-2">{title}</h1>
