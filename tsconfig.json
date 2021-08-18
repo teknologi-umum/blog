@@ -2,12 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": [
-      "es6",
-      "es7",
-      "esnext",
-      "dom"
-    ],
+    "lib": ["es6", "es7", "esnext", "dom"],
     "allowJs": true,
     "jsx": "preserve",
     "removeComments": true,
@@ -34,11 +29,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [
-    "pages",
-    "utils"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["pages", "utils"],
+  "exclude": ["node_modules"]
 }

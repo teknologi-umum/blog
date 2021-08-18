@@ -1,3 +1,3 @@
 export default {
-  siteName: "Blog Teknologi Umum"
-}
+  siteName: 'Blog Teknologi Umum',
+};

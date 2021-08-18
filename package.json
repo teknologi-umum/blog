@@ -1,13 +1,23 @@
 {
   "name": "tu-blog",
   "version": "0.1.0",
-  "private": true,
+  "license": "GPL-3.0 AND CC-BY-SA-4.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write --ignore-path .gitignore .",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teknologi-umum/blog.git"
+  },
+  "engines": {
+    "node": ">=16.4.x",
+    "npm": ">=7.x"
   },
   "dependencies": {
     "@stefanprobst/remark-shiki": "^1.1.1",
@@ -31,7 +41,10 @@
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
     "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
     "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5"
   }
