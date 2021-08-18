@@ -2,7 +2,7 @@
 title: some random markdown post
 date: 2021-08-18
 author: manusia_bernapas
-desc: some random post for testing purpose only, 何もないだよ
+desc: このポストの目的はマークダウンフィーチャーをショーケースする. Masih baca sampe sini? Kurang kerjaan banget deh om.
 categories:
   - foo
   - bar

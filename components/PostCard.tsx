@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function PostCard({ slug, title, desc, categories, key }) {
   return (
     <div className="flex flex-col shadow-lg rounded-md" key={key}>
-      <Image
+      <img
         src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
         width="400"
         height="200"
