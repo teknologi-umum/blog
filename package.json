@@ -37,6 +37,7 @@
     "unified": "^10.1.0"
   },
   "devDependencies": {
+    "@types/next-seo": "^2.1.2",
     "@types/react": "^17.0.18",
     "autoprefixer": "^10.3.1",
     "eslint": "7.32.0",
