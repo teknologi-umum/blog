@@ -1,26 +1,12 @@
-import { getAllPosts } from '../utils/posts';
-import PostCard from '../components/PostCard';
-import type { PostFields } from '../utils/posts';
-
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <div className="mx-auto max-w-screen-lg">
       <h1 className="text-center text-4xl font-bold my-8">Teknologi Umum</h1>
-      <div className="grid grid-cols-3 gap-4">
-        {posts.map((post: PostFields, idx: number) => (
-          <PostCard {...post} key={idx} />
-        ))}
-      </div>
+      <p className="text-lg text-gray-700 leading-loose">
+        Consectetur veniam repellat placeat iure eveniet nobis Soluta neque ipsam aliquam veritatis reprehenderit! Fuga
+        porro ipsam itaque illo libero quas ut fugit Delectus ducimus odio optio aliquid hic. Placeat odit eveniet
+        veritatis tempore recusandae In perferendis corrupti inventore eos eum.
+      </p>
     </div>
   );
 }
-
-export const getStaticProps = async () => {
-  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories']);
-
-  return {
-    props: {
-      posts,
-    },
-  };
-};

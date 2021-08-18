@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Layout from '../components/Layout';
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 
@@ -12,7 +13,9 @@ function MyApp({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

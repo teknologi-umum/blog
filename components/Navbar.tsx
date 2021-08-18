@@ -1,0 +1,22 @@
+import Link from 'next/link';
+
+export default function Navbar() {
+  return (
+    <nav className="fixed h-16 top-0 left-0 right-0 backdrop-blur-sm z-20">
+      <div className="flex items-center mx-auto max-w-screen-lg h-full">
+        <Link href="/">
+          <a className="flex-1 font-sans font-bold text-lg">Teknologi Umum</a>
+        </Link>
+        <div className="flex gap-4">
+          {['home', 'blog', 'about'].map((route) => (
+            <Link href={`/${route === 'home' ? '' : route}`}>
+              <a className="flex-1 font-sans text-lg capitalize text-gray-700 hover:text-blue-500 hover:underline">
+                {route}
+              </a>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+}
