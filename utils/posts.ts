@@ -1,5 +1,6 @@
 import { readdir, readFile } from 'fs/promises';
 import matter from 'gray-matter';
+import pLimit from 'p-limit';
 import { join, resolve } from 'path';
 import type { PostFields } from '#types/post';
 import { filterPostsByKeywords } from './_modules';
@@ -29,8 +30,9 @@ export const getPostBySlug = async (path: string, fields: Fields): Promise<Parti
 };
 
 export const getAllPosts = async (fields: Fields = []) => {
+  const limit = pLimit(10);
   const slugs = await getPostSlugs();
-  const posts = await Promise.all(slugs.map((path) => getPostBySlug(path, fields)));
+  const posts = await Promise.all(slugs.map((path) => limit(getPostBySlug, path, fields)));
   // sort posts by date in descending order
   return posts.sort((post1, post2) => (post1.date! > post2.date! ? -1 : 1));
 };
