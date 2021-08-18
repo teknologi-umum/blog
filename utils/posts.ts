@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'fs';
+import { readdir, readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import { join, resolve } from 'path';
 
@@ -8,20 +8,24 @@ export interface PostFields {
   slug: string;
   content: string;
   title: string;
-  author: string;
   desc: string;
-  categories: string[];
+  author: string;
+  github: string;
+  twitter: string;
+  telegram: string;
   date: string;
+  categories: string[];
 }
 type Fields = Array<keyof PostFields>;
 
-export const getPostSlugs = (): string[] => {
-  return readdirSync(POST_DIR).map((path) => path.replace(/\.md$/, ''));
+export const getPostSlugs = async (): Promise<string[]> => {
+  const paths = await readdir(POST_DIR);
+  return paths.map((path: string) => path.replace(/\.md$/, ''));
 };
 
-export const getPostBySlug = (path: string, fields: Fields): Partial<PostFields> => {
+export const getPostBySlug = async (path: string, fields: Fields): Promise<Partial<PostFields>> => {
   const fullPath = join(POST_DIR, `${path}.md`);
-  const fileContent = readFileSync(fullPath, 'utf-8');
+  const fileContent = await readFile(fullPath, 'utf-8');
   const { data, content } = matter(fileContent);
 
   // only expose necessary field
@@ -35,10 +39,8 @@ export const getPostBySlug = (path: string, fields: Fields): Partial<PostFields>
 };
 
 export const getAllPosts = async (fields: Fields = []) => {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((path) => getPostBySlug(path, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date! > post2.date! ? -1 : 1));
-  return posts;
+  const slugs = await getPostSlugs();
+  const posts = await Promise.all(slugs.map((path) => getPostBySlug(path, fields)));
+  // sort posts by date in descending order
+  return posts.sort((post1, post2) => (post1.date! > post2.date! ? -1 : 1));
 };

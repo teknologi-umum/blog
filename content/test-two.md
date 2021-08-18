@@ -1,11 +1,14 @@
 ---
-title: some random markdown post
-date: 2021-08-18
-author: manusia_bernapas
-desc: some random post for testing purpose only, 何もないだよ
+title: Your Title Goes Here
+desc: The post description. Might be somethinig that would interest the reader in less than 100 words.
+author: Reinaldy Rafli
+github: aldy505
+twitter: aldy505
+telegram: your_telegram_username (not required)
+date: 2021-08-31
 categories:
-  - foo
-  - bar
+  - javascript
+  - tutorial
 ---
 
 # Heading 1
@@ -54,5 +57,36 @@ repellendus Molestias aliquid totam consequuntur expedita officiis magni
 3. Three
 
 ```javascript
-some random content lmao
+import withShiki from '@stefanprobst/remark-shiki';
+import fromMarkdown from 'remark-parse';
+import toHAST from 'remark-rehype';
+import toHTML from 'rehype-stringify';
+import withHtmlInMarkdown from 'rehype-raw';
+import shiki from 'shiki';
+import { unified } from 'unified';
+
+const createProcessor = async () => {
+  const highlighter = await shiki.getHighlighter({ theme: 'github-dark ' });
+
+  return (
+    unified()
+      .use(fromMarkdown)
+      // @ts-ignore
+      .use(withShiki, { highlighter })
+      .use(toHAST, { allowDangerousHtml: true })
+      .use(withHtmlInMarkdown)
+      .use(toHTML)
+  );
+};
+
+/**
+ * Convert given markdown string to HTMl using remark
+ * @param markdown - The markdown you want to convert
+ * @return String containing HTML
+ */
+export const markdownToHtml = async (markdown: string): Promise<string> => {
+  const processor = await createProcessor();
+  const vfile = await processor.process(markdown);
+  return vfile.toString();
+};
 ```

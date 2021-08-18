@@ -1,11 +1,14 @@
 ---
-title: some random markdown post
-date: 2021-08-18
-author: manusia_bernapas
-desc: some random post for testing purpose only, 何もないだよ
+title: Your Title Goes Here
+desc: The post description. Might be somethinig that would interest the reader in less than 100 words.
+author: Laode Muhammad Al Fatih
+github: lamualfa
+twitter: lamualfa
+telegram: your_telegram_username (not required)
+date: 2021-08-31
 categories:
-  - foo
-  - bar
+  - javascript
+  - tutorial
 ---
 
 # Heading 1
