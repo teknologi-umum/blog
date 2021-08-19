@@ -8,11 +8,21 @@ export default function Navbar() {
           <a className="flex-1 text-lg font-bold">Teknologi Umum</a>
         </Link>
         <div className="flex gap-4">
-          {['home', 'blogs', 'news', 'about'].map((route, idx) => (
-            <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
-              <a className="flex-1 text-lg text-gray-700 capitalize hover:text-blue-600 hover:underline">{route}</a>
-            </Link>
-          ))}
+          <Link href="/" key="home">
+            <a className="flex-1 text-lg text-gray-700 capitalize hover:text-blue-600 hover:underline">Home</a>
+          </Link>
+
+          <Link href="/explores/blogs" key="blogs">
+            <a className="flex-1 text-lg text-gray-700 capitalize hover:text-blue-600 hover:underline">Blogs</a>
+          </Link>
+
+          <Link href="/explores/news" key="news">
+            <a className="flex-1 text-lg text-gray-700 capitalize hover:text-blue-600 hover:underline">News</a>
+          </Link>
+
+          <Link href="/about" key="about">
+            <a className="flex-1 text-lg text-gray-700 capitalize hover:text-blue-600 hover:underline">About</a>
+          </Link>
         </div>
       </div>
     </nav>
