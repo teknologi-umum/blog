@@ -1,19 +1,21 @@
-import withShiki from '@stefanprobst/remark-shiki';
+// import withShiki from '@stefanprobst/remark-shiki';
 import fromMarkdown from 'remark-parse';
 import toHAST from 'remark-rehype';
 import toHTML from 'rehype-stringify';
 import withHtmlInMarkdown from 'rehype-raw';
 import { unified } from 'unified';
-import * as shiki from 'shiki';
+// import * as shiki from 'shiki';
+import withPrism from '@mapbox/rehype-prism';
 
 const createProcessor = async () => {
-  const highlighter = await shiki.getHighlighter({ theme: 'github-dark' });
+  // const highlighter = await shiki.getHighlighter({ theme: 'github-dark' });
 
   return (
     unified()
       .use(fromMarkdown)
       // @ts-ignore
-      .use(withShiki, { highlighter })
+      // .use(withShiki, { highlighter })
+      .use(withPrism)
       .use(toHAST, { allowDangerousHtml: true })
       .use(withHtmlInMarkdown)
       .use(toHTML)

@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/markdownToHtml.ts": {
-      "includeFiles": "node_modules/shiki/**/*.json"
-    }
-  }
-}
