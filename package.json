@@ -40,6 +40,7 @@
   "devDependencies": {
     "@types/next-seo": "^2.1.2",
     "@types/react": "^17.0.18",
+    "@vercel/node": "^1.12.1",
     "autoprefixer": "^10.3.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
