@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function ContentPreview({ slug, title, description, categories, author, github }) {
+export default function ContentPreview(contentType: string, { slug, title, description, categories, author, github }) {
   return (
     <div className="flex flex-col overflow-hidden rounded-md shadow-lg">
       <img
@@ -22,7 +22,7 @@ export default function ContentPreview({ slug, title, description, categories, a
               </span>
             ))}
         </div>
-        <Link href={`/posts/${slug}`}>
+        <Link href={`/${contentType}/${slug}`}>
           <a className="text-lg font-bold text-gray-800 capitalize font-display hover:text-blue-600 hover:underline">
             {title}
           </a>
