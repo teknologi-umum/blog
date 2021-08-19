@@ -33,6 +33,6 @@
       "#utils/*": ["utils/*"]
     }
   },
-  "include": ["pages", "utils", "pages/api"],
+  "include": ["pages", "utils", "api"],
   "exclude": ["node_modules"]
 }
