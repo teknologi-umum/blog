@@ -1,5 +1,4 @@
 import grayMatter from 'gray-matter';
-import { markdownToHtml } from './markdownToHtml';
 import { Octokit } from '@octokit/rest';
 import { request } from 'undici';
 
@@ -20,7 +19,16 @@ async function fetchContent(type: ContentType, slug: string) {
 export async function getContent(type: ContentType, slug: string) {
   const raw = await fetchContent(type, slug);
   const { content, data: meta } = grayMatter(raw);
-  const html = await markdownToHtml(content);
+  const res = await request(
+    `${
+      process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://teknum.vercel.app'
+    }/api/markdownToHtml`,
+    // @ts-ignore
+    {
+      body: content,
+    },
+  );
+  const html = await res.body.text();
 
   meta.slug = slug;
 

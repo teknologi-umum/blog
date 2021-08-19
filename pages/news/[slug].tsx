@@ -1,7 +1,12 @@
+import NextPageError from 'next/error';
 import { getContent } from '#utils/content';
 import PageContent from '../../components/PageContent';
 
 export default function Content({ meta, html }) {
+  if (!html) {
+    return <NextPageError statusCode={404} />;
+  }
+
   return <PageContent meta={meta} html={html} />;
 }
 
