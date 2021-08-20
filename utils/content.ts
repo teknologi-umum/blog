@@ -1,7 +1,6 @@
 import grayMatter from 'gray-matter';
 import { markdownToHtml } from './markdownToHtml';
 import { Octokit } from '@octokit/rest';
-import { request } from 'undici';
 
 const octokit = new Octokit();
 
@@ -12,9 +11,9 @@ async function fetchContent(type: ContentType, slug: string) {
     slug = `${slug}.md`;
   }
 
-  const res = await request(`https://raw.githubusercontent.com/teknologi-umum/contents/master/${type}/${slug}`);
+  const res = await fetch(`https://raw.githubusercontent.com/teknologi-umum/contents/master/${type}/${slug}`);
 
-  return await res.body.text();
+  return res.text();
 }
 
 export async function getContent(type: ContentType, slug: string) {
