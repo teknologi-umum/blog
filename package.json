@@ -19,7 +19,6 @@
     "npm": ">=7.x"
   },
   "dependencies": {
-    "@mapbox/rehype-prism": "^0.7.0",
     "@octokit/rest": "^18.9.1",
     "@stefanprobst/remark-shiki": "^1.1.1",
     "@tailwindcss/typography": "^0.4.1",
