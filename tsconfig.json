@@ -33,10 +33,6 @@
       "#utils/*": ["utils/*"]
     }
   },
-<<<<<<< HEAD
   "include": ["pages", "utils"],
-=======
-  "include": ["pages", "utils", "pages/api"],
->>>>>>> parent of c2df032 (move next api to vercel api)
   "exclude": ["node_modules"]
 }
