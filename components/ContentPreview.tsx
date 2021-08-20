@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function ContentPreview({ contentType, slug, title, description, categories, author, github }) {
+export default function ContentPreview(contentType: string, { slug, title, description, categories, author, github }) {
   return (
     <div className="flex flex-col overflow-hidden rounded-md shadow-lg">
       <img

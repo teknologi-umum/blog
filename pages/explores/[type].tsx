@@ -20,7 +20,7 @@ export default function Blog({ type, contents }) {
         <h1 className="my-8 text-4xl font-bold text-center">Semua {type === 'blogs' ? 'Blogs' : 'News'}</h1>
         <div className="grid grid-cols-3 gap-4 px-4 posts">
           {contents.map(({ meta }, idx: number) => (
-            <ContentPreview contentType={type} {...meta} key={idx} />
+            <ContentPreview {...meta} key={idx} />
           ))}
         </div>
       </div>
