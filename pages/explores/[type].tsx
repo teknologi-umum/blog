@@ -43,7 +43,7 @@ export const getStaticProps = async ({ params }) => {
 
 export async function getStaticPaths() {
   return {
-    paths: [],
+    paths: ['/explores/blogs', '/explores/news'],
     fallback: true,
   };
 }
