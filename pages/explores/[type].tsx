@@ -1,17 +1,12 @@
 import { useRouter } from 'next/router';
 import ContentPreview from '#components/ContentPreview';
 import { getListContent } from '#utils/content';
-import NextPageError from 'next/error';
 
 export default function Blog({ type, contents }) {
   const { isFallback } = useRouter();
 
   if (isFallback) {
     return <h2>Loading list content...</h2>;
-  }
-
-  if (!contents) {
-    return <NextPageError statusCode={404} />;
   }
 
   return (
@@ -48,7 +43,7 @@ export const getStaticProps = async ({ params }) => {
 
 export async function getStaticPaths() {
   return {
-    fallback: true,
     paths: [],
+    fallback: true,
   };
 }
