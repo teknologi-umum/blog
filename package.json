@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write --ignore-path .gitignore .",
@@ -19,7 +20,6 @@
     "npm": ">=7.x"
   },
   "dependencies": {
-    "@octokit/rest": "^18.9.1",
     "@stefanprobst/remark-shiki": "^1.1.1",
     "@tailwindcss/typography": "^0.4.1",
     "gray-matter": "^4.0.3",
@@ -37,7 +37,6 @@
     "unified": "^10.1.0"
   },
   "devDependencies": {
-    "@types/next-seo": "^2.1.2",
     "@types/react": "^17.0.18",
     "autoprefixer": "^10.3.1",
     "eslint": "7.32.0",
