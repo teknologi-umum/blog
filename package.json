@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write --ignore-path .gitignore .",
@@ -15,12 +16,10 @@
     "url": "https://github.com/teknologi-umum/blog.git"
   },
   "engines": {
-    "node": ">=14.x",
+    "node": ">=16.4.x",
     "npm": ">=7.x"
   },
   "dependencies": {
-    "@mapbox/rehype-prism": "^0.7.0",
-    "@octokit/rest": "^18.9.1",
     "@stefanprobst/remark-shiki": "^1.1.1",
     "@tailwindcss/typography": "^0.4.1",
     "gray-matter": "^4.0.3",
@@ -35,13 +34,10 @@
     "remark-rehype": "^9.0.0",
     "sharp": "^0.29.0",
     "shiki": "^0.9.6",
-    "undici": "^4.4.4",
     "unified": "^10.1.0"
   },
   "devDependencies": {
-    "@types/next-seo": "^2.1.2",
     "@types/react": "^17.0.18",
-    "@vercel/node": "^1.12.1",
     "autoprefixer": "^10.3.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
