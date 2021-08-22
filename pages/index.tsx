@@ -17,9 +17,9 @@ export default function Home() {
       />
       <h1 className="text-2xl uppercase font-bold py-8">Teknologi Umum</h1>
       <p className="font-serif text-lg text-gray-700">
-        Consectetur veniam repellat placeat iure eveniet nobis Soluta neque ipsam aliquam veritatis reprehenderit!
-        Fuga porro ipsam itaque illo libero quas ut fugit Delectus ducimus odio optio aliquid hic. Placeat odit
-        eveniet veritatis tempore recusandae In perferendis corrupti inventore eos eum.
+        Consectetur veniam repellat placeat iure eveniet nobis Soluta neque ipsam aliquam veritatis reprehenderit! Fuga
+        porro ipsam itaque illo libero quas ut fugit Delectus ducimus odio optio aliquid hic. Placeat odit eveniet
+        veritatis tempore recusandae In perferendis corrupti inventore eos eum.
       </p>
     </>
   );

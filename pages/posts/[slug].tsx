@@ -28,7 +28,9 @@ export default function Post({ title, desc, html, author, github, twitter, teleg
         <div className="mx-auto w-full max-w-screen-lg">
           <h1 className="font-heading text-gray-800 text-4xl font-bold capitalize mb-2">{title}</h1>
           <p className="text-gray-600 text-xl font-serif mb-4 pt-2">{desc}</p>
-          <p className="mb-10 text-gray-600 text-sm uppercase">Posted in {new Date(date).toLocaleDateString('en-GB')}</p>
+          <p className="mb-10 text-gray-600 text-sm uppercase">
+            Posted in {new Date(date).toLocaleDateString('en-GB')}
+          </p>
           <AuthorCard author={author} github={github} twitter={twitter} telegram={telegram} />
         </div>
       </header>
