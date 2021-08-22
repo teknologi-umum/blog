@@ -24,17 +24,28 @@ export default function Post({ title, desc, html, author, github, twitter, teleg
           site_name: siteData.siteName,
         }}
       />
-      <header className="w-full px-4 pt-32 pb-20 bg-gray-100 mb-8 -mt-16 text-center md:text-left">
-        <div className="mx-auto w-full max-w-screen-lg">
-          <h1 className="font-heading text-gray-800 text-4xl font-bold capitalize mb-2">{title}</h1>
-          <p className="text-gray-600 text-xl font-serif mb-4 pt-2">{desc}</p>
-          <p className="mb-10 text-gray-600 text-sm uppercase">
-            Posted in {new Date(date).toLocaleDateString('en-GB')}
-          </p>
-          <AuthorCard author={author} github={github} twitter={twitter} telegram={telegram} />
+      <style jsx>{`
+        .bg-image {
+          background-image: linear-gradient(120deg, rgba(243, 244, 246, 100) 35%, rgba(243, 244, 246, 0) 100%),
+            url('https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80');
+        }
+        .shift-left {
+          left: calc(-50vw + 50%);
+        }
+      `}</style>
+      <header className="flex flex-row items-center w-screen relative shift-left bg-gray-100 bg-no-repeat bg-cover bg-center bg-image my-4">
+        <div className="flex-1 w-full px-4 md:px-8 pt-32 pb-20 rounded-lg -mt-16 text-center md:text-left">
+          <div className="mx-auto w-full max-w-screen-lg">
+            <h1 className="font-heading text-gray-800 text-4xl font-bold capitalize mb-2">{title}</h1>
+            <p className="text-gray-600 text-xl font-serif mb-4 pt-2">{desc}</p>
+            <p className="mb-10 text-gray-600 text-sm uppercase">
+              Posted on {new Date(date).toLocaleDateString('en-GB')}
+            </p>
+            <AuthorCard author={author} github={github} twitter={twitter} telegram={telegram} />
+          </div>
         </div>
       </header>
-      <div className="mx-auto px-4 max-w-screen-md prose xl:prose-lg">
+      <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg">
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </div>
     </>

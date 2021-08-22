@@ -15,6 +15,7 @@
     "type": "git",
     "url": "https://github.com/teknologi-umum/blog.git"
   },
+  "engineStrict": true,
   "engines": {
     "node": ">=16.4.x",
     "npm": ">=7.x"

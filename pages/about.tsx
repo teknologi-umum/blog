@@ -22,7 +22,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function About({ contributors = [] }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
-      <div className="w-4/5 text-lg font-serif">
+      <div className="w-full md:w-4/5 text-lg font-serif">
         <h1 className="text-left text-2xl font-bold py-8 uppercase font-sans">Tentang Teknologi Umum</h1>
         <p className="pb-3">
           <strong className="font-bold">Teknologi Umum</strong> merupakan suatu paguyuban yang berdiri sejak tahun 2021
@@ -46,12 +46,12 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
       </div>
       <div className="py-4">
         <h2 className="text-left text-2xl font-bold py-8 uppercase">Contributors</h2>
-        <div className="grid grid-flow-row grid-cols-12 grid-rows-3 gap-2 py-4 pb-2">
+        <div className="grid grid-flow-row grid-cols-4 md:grid-cols-8 lg:grid-cols-12 grid-rows-3 gap-2 py-4 pb-2">
           {contributors.map((contributor: Contributor) => (
             <a href={contributor.html_url} key={contributor.id}>
               <img
                 src={contributor.avatar_url}
-                className="w-8 h-8 rounded-full mx-auto"
+                className="w-10 h-auto rounded-full mx-auto"
                 loading="lazy"
                 referrerPolicy="no-referrer"
                 crossOrigin="anonymous"
