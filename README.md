@@ -1,5 +1,7 @@
 # Blog for Teknologi Umum
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f7daee1a-fd92-4eb9-9ced-58424ebe6d95/deploy-status)](https://app.netlify.com/sites/teknum/deploys)
+
 A _bleeding edge_ blog full of anything tech and... uh, any topics, maybe? I don't know, only time will tell.
 
 ## How do I contribute?
