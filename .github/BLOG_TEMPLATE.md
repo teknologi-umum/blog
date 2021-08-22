@@ -1,10 +1,10 @@
 ---
 title: Your Title Goes Here
-desc: The post description. Might be somethinig that would interest the reader in less than 100 words.
+desc: The post description. Might be something that would interest the reader in less than 100 wooooords.
 author: Your Name (No, not the Makoto Shinkai's film. YOUR given name. But your online alias is also fine.)
 github: your_github_username
-twitter: your_twitter_username (not required)
-telegram: your_telegram_username (not required)
+twitter: your_twitter_username (not required, leave it empty by deleting this line)
+telegram: your_telegram_username (not required, leave it empty by deleting this line)
 date: 2021-08-31
 categories:
   - javascript

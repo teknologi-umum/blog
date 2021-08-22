@@ -5,10 +5,12 @@ export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col min-h-screen pt-16">
-        <div className="flex-1">{children}</div>
-        <Footer />
-      </main>
+      <div className="container mx-auto w-full font-sans">
+        <main className="flex flex-col pt-16 px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56">
+          <div className="flex-1 h-full min-h-screen">{children}</div>
+          <Footer />
+        </main>
+      </div>
     </>
   );
 }

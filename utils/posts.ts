@@ -1,21 +1,10 @@
 import { readdir, readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import { join, resolve } from 'path';
+import type { PostFields } from '#types/post';
 
 const POST_DIR = resolve('content');
 
-export interface PostFields {
-  slug: string;
-  content: string;
-  title: string;
-  desc: string;
-  author: string;
-  github: string;
-  twitter: string;
-  telegram: string;
-  date: string;
-  categories: string[];
-}
 type Fields = Array<keyof PostFields>;
 
 export const getPostSlugs = async (): Promise<string[]> => {
