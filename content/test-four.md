@@ -1,10 +1,10 @@
 ---
-title: Your Title Goes Here
-desc: The post description. Might be something that would interest the reader in less than 100 wooooords.
-author: Reinaldy Rafli
-github: aldy505
-twitter: aldy505
-telegram:
+title: Elon Musk ganteng
+description: Starlink keren.
+author: Laode Muhammad Al Fatih
+github: lamualfa
+twitter: lamualfa
+telegram: lamualfa
 date: 2021-08-31
 categories:
   - javascript

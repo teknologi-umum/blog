@@ -1,11 +1,13 @@
-export default function TwitterIcon() {
+import type { IconProperty } from '#types/icon';
+
+export default function TwitterIcon({ width, height }: IconProperty) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       role="img"
-      width="1em"
-      height="1em"
+      width={width || '1rem'}
+      height={height || '1rem'}
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 24 24"
     >

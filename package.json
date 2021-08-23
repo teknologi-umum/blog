@@ -15,11 +15,15 @@
     "type": "git",
     "url": "https://github.com/teknologi-umum/blog.git"
   },
+  "engineStrict": true,
   "engines": {
     "node": ">=16.4.x",
     "npm": ">=7.x"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^4.5.0",
+    "@fontsource/lusitana": "^4.5.0",
+    "@fontsource/sarabun": "^4.5.0",
     "@stefanprobst/remark-shiki": "^1.1.1",
     "@tailwindcss/typography": "^0.4.1",
     "gray-matter": "^4.0.3",

@@ -30,7 +30,8 @@
     "baseUrl": ".",
     "paths": {
       "#components/*": ["components/*"],
-      "#utils/*": ["utils/*"]
+      "#utils/*": ["utils/*"],
+      "#types/*": ["types/*"]
     }
   },
   "include": ["pages", "utils"],

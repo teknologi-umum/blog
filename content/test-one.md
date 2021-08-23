@@ -1,10 +1,10 @@
 ---
 title: Your Title Goes Here
-desc: The post description. Might be somethinig that would interest the reader in less than 100 words.
+desc: The post description. Might be something that would interest the reader in less than 100 words.
 author: Laode Muhammad Al Fatih
 github: lamualfa
 twitter: lamualfa
-telegram: your_telegram_username (not required)
+telegram: lamualfa
 date: 2021-08-31
 categories:
   - javascript
