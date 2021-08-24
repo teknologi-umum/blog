@@ -90,3 +90,39 @@ export const markdownToHtml = async (markdown: string): Promise<string> => {
   return vfile.toString();
 };
 ```
+
+Here's some Go code
+
+```go
+package main
+
+import (
+	"bytes"
+	"errors"
+	"strings"
+
+	"github.com/lann/builder"
+)
+
+type UpsertBuilder builder.Builder
+
+type upsertData struct {
+	Dialect     int
+	Into        string
+	Columns     []string
+	Values      [][]interface{}
+	Key         []interface{}
+	Replace     [][]interface{}
+	Placeholder string
+}
+
+func init() {
+	builder.Register(UpsertBuilder{}, upsertData{})
+}
+
+// dialect specifies database dialect used.
+func (u UpsertBuilder) dialect(db int) UpsertBuilder {
+	return builder.Set(u, "Dialect", db).(UpsertBuilder)
+}
+
+```
