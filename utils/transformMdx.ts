@@ -3,6 +3,8 @@ import { Data, Node } from 'unist';
 import { serialize } from 'next-mdx-remote/serialize';
 import * as shiki from 'shiki';
 import visit from 'unist-util-visit';
+import remarkKatex from 'remark-html-katex';
+import remarkGFM from 'remark-gfm';
 
 // TODO(elianiva): this seems hacky, but Node<Data> doesn't have value, lang, or meta.
 interface CodeNode extends Node {
@@ -27,7 +29,9 @@ const attachHighlighter = (options: { highlighter: shiki.Highlighter }) => async
 export const transformMdx = async (raw: string): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> => {
   const highlighter = await shiki.getHighlighter({ theme: 'github-dark' });
   const markdown = await serialize(raw, {
-    mdxOptions: { remarkPlugins: [[attachHighlighter, { highlighter }]] },
+    mdxOptions: {
+      remarkPlugins: [[attachHighlighter, { highlighter }], remarkGFM, remarkKatex],
+    },
   });
 
   return markdown;
