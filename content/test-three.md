@@ -23,14 +23,14 @@ www.example.com, https://example.com, and contact@example.com.
 
 ## Table
 
-| a        | b      | c         | d          |
-| -        | :-     | -:        | :-:        |
+| a        | b      |         c |     d      |
+| -------- | :----- | --------: | :--------: |
 | asdasdas | asdasd | foooooooo | baarrrrrrr |
 
 ## Tasklist
 
-* [ ] to do
-* [x] done
+- [ ] to do
+- [x] done
 
 ## Katex
 

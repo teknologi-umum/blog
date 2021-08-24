@@ -36,7 +36,6 @@
     "remark-html-katex": "^4.0.1",
     "sharp": "^0.29.0",
     "shiki": "^0.9.6",
-    "undici": "^4.4.4",
     "unified": "^10.1.0",
     "unist-util-visit": "^2.0.3"
   },
