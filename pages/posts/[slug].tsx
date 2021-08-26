@@ -1,13 +1,15 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import AuthorCard from '../../components/AuthorCard';
-import { markdownToHtml } from 'utils/markdownToHtml';
+import AuthorCard from '#components/AuthorCard';
+import { transformMdx } from 'utils/transformMdx';
 import { getPostBySlug, getPostSlugs } from 'utils/posts';
 import siteData from '../../data/site';
 import { NextSeo } from 'next-seo';
 import type { PostFields } from '#types/post';
+import { MDXRemote } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 interface PostType extends PostFields {
-  html: string;
+  html: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
 export default function Post({ title, desc, html, author, github, twitter, telegram, date }: PostType) {
@@ -46,7 +48,7 @@ export default function Post({ title, desc, html, author, github, twitter, teleg
         </div>
       </header>
       <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg">
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+        <MDXRemote {...html} />
       </div>
     </>
   );
@@ -63,7 +65,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'twitter',
     'telegram',
   ]);
-  const html = await markdownToHtml(content!);
+  const html = await transformMdx(content!);
 
   return {
     props: {
