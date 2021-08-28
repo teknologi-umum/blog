@@ -1,0 +1,4 @@
+{
+  "origins": ["https://teknum.netlify.app"],
+  "originsRegex": ["https://(.*)-teknum.netlify.app", "http://localhost:[0-9]+"]
+}
