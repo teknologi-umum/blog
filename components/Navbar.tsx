@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import GithubIcon from '#components/Icons/GithubIcon';
 import TelegramIcon from '#components/Icons/TelegramIcon';
-import React from 'react';
 import { useRouter } from 'next/router';
 
 export default function Navbar() {
