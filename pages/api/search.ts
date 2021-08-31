@@ -1,9 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { getPostsBySearchKeywords } from '#utils/posts';
 
-function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { keywords } = req.query;
+async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const keywords = req.query.keywords as string;
 
-  res.status(200).json({ msg: keywords });
+  const posts = await getPostsBySearchKeywords(keywords);
+
+  res.status(200).json({ data: posts });
 }
 
 export default handler;
