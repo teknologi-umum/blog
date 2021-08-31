@@ -7,7 +7,13 @@ export default function Blog({ posts }) {
     <>
       <style jsx>{`
         .posts {
-          grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        }
+
+        @media screen and (min-width: 432px) {
+          .posts {
+            grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+          }
         }
       `}</style>
       <h1 className="text-left uppercase text-2xl font-bold my-8">Blog Posts</h1>
