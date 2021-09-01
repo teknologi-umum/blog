@@ -1,4 +1,7 @@
 [build]
   base = "/"
   publish = "out/"
-  command = "npm run build && npm run export"
+  command = "NODE_ENV=production npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

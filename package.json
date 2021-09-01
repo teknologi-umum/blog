@@ -25,6 +25,7 @@
     "@fontsource/lusitana": "4.5.0",
     "@fontsource/sarabun": "4.5.0",
     "@giscus/react": "^1.0.0",
+    "@netlify/plugin-nextjs": "3.9.0",
     "@stefanprobst/remark-shiki": "1.1.1",
     "@tailwindcss/typography": "0.4.1",
     "gray-matter": "4.0.3",

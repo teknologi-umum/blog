@@ -22,7 +22,6 @@ jobs:
           node-version: 16.x
 
       - name: Installling dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm install
 
       - name: ESLint check
@@ -33,6 +32,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NODE_ENV: development
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
