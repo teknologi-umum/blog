@@ -4,3 +4,11 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+#__next {
+  position: relative;
+}
+
+.active {
+  @apply text-primary-600 font-bold;
+}

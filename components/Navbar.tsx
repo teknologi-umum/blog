@@ -1,15 +1,28 @@
 import Link from 'next/link';
 import GithubIcon from '#components/Icons/GithubIcon';
 import TelegramIcon from '#components/Icons/TelegramIcon';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
+  const router = useRouter();
+
+  const active = (route: string, isBasePath: boolean): string => {
+    if (router.route === '/' && isBasePath) return 'active';
+
+    return router.route === `/${route}` ? 'active' : '';
+  };
   return (
     <nav className="fixed min-h-16 top-0 left-0 right-0 bg-white backdrop-blur-full backdrop-brightness-90 z-20 font-sans">
       <div className="flex flex-col md:flex-row justify-between items-center py-5 container mx-auto px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56 2xl:px-72 h-full">
         <div className="flex-1">
           {['home', 'blog', 'about'].map((route, idx) => (
             <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
-              <a className="flex-inline pr-8 uppercase text-center md:text-left text-base text-gray-700 hover:text-primary-600 hover:font-bold">
+              <a
+                className={`flex-inline pr-8 uppercase text-center md:text-left text-base text-gray-700 hover:text-primary-600 hover:font-bold ${active(
+                  route,
+                  route === 'home',
+                )}`}
+              >
                 {route}
               </a>
             </Link>

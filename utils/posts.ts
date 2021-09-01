@@ -33,3 +33,28 @@ export const getAllPosts = async (fields: Fields = []) => {
   // sort posts by date in descending order
   return posts.sort((post1, post2) => (post1.date! > post2.date! ? -1 : 1));
 };
+
+export const getPostsBySearchKeywords = async (keywords: string) => {
+  const lowerCasedKeywords = keywords.toLowerCase();
+  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github']);
+
+  // filtering based from meta data
+  // might using for loop later
+  const filteredPosts = posts.filter((post) =>
+    Object.values(post).some((value) => {
+      if (Array.isArray(value)) {
+        let matchCount = 0;
+
+        value.forEach((v) => {
+          if (v.toLowerCase().includes(lowerCasedKeywords)) matchCount += 1;
+        });
+
+        return !!matchCount;
+      }
+
+      return value.toLowerCase().includes(lowerCasedKeywords);
+    }),
+  );
+
+  return filteredPosts;
+};
