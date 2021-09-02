@@ -2,6 +2,7 @@ import Link from 'next/link';
 import GithubIcon from '#components/Icons/GithubIcon';
 import TelegramIcon from '#components/Icons/TelegramIcon';
 import { useRouter } from 'next/router';
+import SearchIcon from '@material-ui/icons/Search';
 
 export default function Navbar() {
   const router = useRouter();
@@ -28,13 +29,21 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex-2 lg:flex-1 text-center text-3xl">
+        <div className="flex-2 lg:flex-1 text-center text-3xl mb-2 lg:mb-0">
           <Link href="/">
             <a className="font-black">Teknologi Umum</a>
           </Link>
         </div>
         <div className="flex-1 text-right text-lg">
           <div className="flex flex-row items-center justify-end">
+            <div className="flex-initial pr-4 hover:text-primary-600 opacity-60 hover:opacity-100">
+              <Link href="/search">
+                <a>
+                  <SearchIcon fontSize="medium" />
+                </a>
+              </Link>
+            </div>
+
             <div className="flex-initial pr-4 hover:text-primary-600 opacity-60 hover:opacity-100">
               <a href="https://github.com/teknologi-umum">
                 <GithubIcon width="1.5rem" height="1.5rem" />

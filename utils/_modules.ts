@@ -34,12 +34,12 @@ export const filterPostsByKeywords = (
   tags: string[] = [],
 ) => {
   const lookup = ['author', 'title', 'categories', 'desc'];
-  const lookupCacheId: number[] = [];
+  const lookupCacheIndex: number[] = [];
   const postsMatchedKeys = filterPostsByAvailableFields(posts, lookup);
 
   // filtering based from meta data
-  let filteredPosts = postsMatchedKeys.filter((post) => {
-    return Object.entries(post).some(([key, val], idx) => {
+  let filteredPosts = postsMatchedKeys.filter((post, idx) => {
+    return Object.entries(post).some(([key, val]) => {
       if (tags.length) {
         // create object of matches tags
         let isMatched = tags.reduce((acc, val) => {
@@ -54,14 +54,14 @@ export const filterPostsByKeywords = (
 
         const result = Object.values(isMatched).some((val) => val);
 
-        if (result) lookupCacheId.push(idx);
+        if (result) lookupCacheIndex.push(idx);
 
         return result;
       }
 
       const result = filterValues(val, keywords);
 
-      if (result) lookupCacheId.push(idx);
+      if (result) lookupCacheIndex.push(idx);
 
       return result;
     });
@@ -69,7 +69,7 @@ export const filterPostsByKeywords = (
 
   // reassign filtered posts with old values after lookup process
   for (let i = 0; i < filteredPosts.length; i += 1) {
-    filteredPosts[i] = { ...posts[lookupCacheId[i]], ...filteredPosts[i] };
+    filteredPosts[i] = { ...posts[lookupCacheIndex[i]], ...filteredPosts[i] };
   }
 
   return filteredPosts;
