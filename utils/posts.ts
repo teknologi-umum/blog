@@ -48,14 +48,14 @@ export const getPostsBySearchKeywords = async (keywords: string) => {
 // I'm using constant string[] from a couple of available meta from each post
 // so this function quite unused
 export const getPostCategories = async (posts?: Partial<PostFields>[]) => {
-  let _posts = posts ?? (await getAllPosts(['categories']));
+  posts ??= await getAllPosts(['categories']);
   const categories = new Set();
 
-  for (let i = 0; i < _posts.length; i += 1) {
-    let post = _posts[i];
+  for (let i = 0; i < posts.length; i += 1) {
+    const post = posts[i];
     if (post.categories && post.categories?.length) {
       for (let j = 0; j < post.categories.length; j += 1) {
-        let category = post.categories[j];
+        const category = post.categories[j];
         categories.add(category);
       }
     }

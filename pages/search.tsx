@@ -1,5 +1,5 @@
 import { useDebounce } from '#hooks/index';
-import React, { ChangeEvent, useEffect, useMemo, useState } from 'react';
+import { ChangeEvent, useEffect, useMemo, useState } from 'react';
 import type { PostFields } from '#types/post';
 import PostCard from '#components/PostCard';
 import { getAllPosts } from '#utils/posts';
