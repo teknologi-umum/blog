@@ -2,6 +2,7 @@ import { readdir, readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import { join, resolve } from 'path';
 import type { PostFields } from '#types/post';
+import { filterPostsByKeywords } from './_modules';
 
 const POST_DIR = resolve('content');
 
@@ -35,26 +36,30 @@ export const getAllPosts = async (fields: Fields = []) => {
 };
 
 export const getPostsBySearchKeywords = async (keywords: string) => {
-  const lowerCasedKeywords = keywords.toLowerCase();
   const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github']);
 
-  // filtering based from meta data
-  // might using for loop later
-  const filteredPosts = posts.filter((post) =>
-    Object.values(post).some((value) => {
-      if (Array.isArray(value)) {
-        let matchCount = 0;
+  return filterPostsByKeywords(posts, keywords);
+};
 
-        value.forEach((v) => {
-          if (v.toLowerCase().includes(lowerCasedKeywords)) matchCount += 1;
-        });
+// this function will return all categories available such ['javascript', 'tutorial'] from all posts dynamically
+// but based from my reference which is medium, they're using
+// something like 'people', 'story', 'tags', etc.
+// so rather than returning all categories available
+// I'm using constant string[] from a couple of available meta from each post
+// so this function quite unused
+export const getPostCategories = async (posts?: Partial<PostFields>[]) => {
+  posts ??= await getAllPosts(['categories']);
+  const categories = new Set();
 
-        return !!matchCount;
+  for (let i = 0; i < posts.length; i += 1) {
+    const post = posts[i];
+    if (post.categories && post.categories?.length) {
+      for (let j = 0; j < post.categories.length; j += 1) {
+        const category = post.categories[j];
+        categories.add(category);
       }
+    }
+  }
 
-      return value.toLowerCase().includes(lowerCasedKeywords);
-    }),
-  );
-
-  return filteredPosts;
+  return [...categories];
 };
