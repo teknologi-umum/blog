@@ -1,9 +1,6 @@
 import type { PostFields } from '#types/post';
 
-export const filterPostsByAvailableFields = (
-  posts: Partial<PostFields>[],
-  lookup: string[] = ['author', 'title', 'categories', 'desc'],
-): Partial<PostFields>[] => {
+export const filterPostsByAvailableFields = (posts: Partial<PostFields>[], lookup: string[]): Partial<PostFields>[] => {
   return posts.map((curr) => {
     return Object.entries(curr).reduce((acc, [key, val]) => {
       if (lookup.includes(key)) {
@@ -36,7 +33,8 @@ export const filterPostsByKeywords = (
   keywords: string = '',
   tags: string[] = [],
 ) => {
-  const postsMatchedKeys = filterPostsByAvailableFields(posts);
+  const lookup = ['author', 'title', 'categories', 'desc', 'github'];
+  const postsMatchedKeys = filterPostsByAvailableFields(posts, lookup);
 
   // filtering based from meta data
   const filteredPosts = postsMatchedKeys.filter((post) => {
