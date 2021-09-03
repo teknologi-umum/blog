@@ -12,8 +12,8 @@ export default function AuthorCard({ author, github, twitter, telegram }: Partia
       </div>
       <span className="md:text-left text-gray-700">{author}</span>
       <div className="flex flex-row items-center">
-        <div className="flex-initial pr-3">
-          {twitter && (
+        {twitter && (
+          <div className="flex-initial pr-3">
             <a
               href={`https://twitter.com/${twitter}`}
               className="flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-primary-600"
@@ -23,10 +23,10 @@ export default function AuthorCard({ author, github, twitter, telegram }: Partia
               </span>
               @{twitter}{' '}
             </a>
-          )}
-        </div>
-        <div className="flex-initial">
-          {telegram && (
+          </div>
+        )}
+        {telegram && (
+          <div className="flex-initial">
             <a
               href={`https://t.me/${telegram}`}
               className="flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-primary-600"
@@ -36,8 +36,8 @@ export default function AuthorCard({ author, github, twitter, telegram }: Partia
               </span>
               @{telegram}{' '}
             </a>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

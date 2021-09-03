@@ -1,6 +1,6 @@
 ---
 title: Belajar Docker dalam 15 Menit
-desc:
+desc: Sebuah crash course tentang Docker yang akan menjadikan dirimu ahli DevOps hanya dalam 15 menit
 author: Reinaldy Rafli
 github: aldy505
 twitter:
@@ -40,7 +40,7 @@ Khusus Linux, kamu harus install `docker-compose` terpisah, nggak include dalam 
 
 ## Dockerfile
 
-```dockerfile
+```docker
 FROM node:16.6.2-buster
 
 WORKDIR /app
@@ -72,7 +72,7 @@ Setelah itu kamu bisa buka web browser favoritmu, buka `http://localhost:8080` d
 
 Keyword di Dockerfile yang umum dipakai biasanya ini:
 
-```dockerfile
+```docker
 # Komentar di Dockerfile gini caranya
 # FROM biasanya di 1 image cuma satu
 # Kecuali kamu mau bikin multi-stage build
