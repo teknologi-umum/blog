@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 export default function BackToTop() {
   const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ export default function BackToTop() {
   };
 
   useEffect(() => {
-    const showButton = () => {
+    const toggleButton = () => {
       if (window.scrollY > 100) {
         setShow(true);
       } else {
@@ -19,21 +20,23 @@ export default function BackToTop() {
       }
     };
 
-    window.addEventListener('scroll', showButton);
+    window.addEventListener('load', toggleButton);
+    window.addEventListener('scroll', toggleButton);
 
     return () => {
-      window.removeEventListener('scroll', showButton);
+      window.removeEventListener('load', toggleButton);
+      window.removeEventListener('scroll', toggleButton);
     };
   }, []);
 
   return (
     <div
-      className={`fixed bottom-10 right-9 w-9 h-9 flex items-center justify-center bg-black rounded cursor-pointer ${
+      className={`fixed bottom-10 right-9 w-8 h-8 flex items-center justify-center bg-black rounded cursor-pointer ${
         !show && 'hidden'
       }`}
       onClick={scrollToTop}
     >
-      <span className="text-white text-sm uppercase">Top</span>
+      <KeyboardArrowUpIcon className="text-white" fontSize="medium" />
     </div>
   );
 }

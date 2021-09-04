@@ -25,6 +25,7 @@
     "@fontsource/lusitana": "4.5.0",
     "@fontsource/sarabun": "4.5.0",
     "@giscus/react": "^1.0.0",
+    "@material-ui/icons": "^4.11.2",
     "@stefanprobst/remark-shiki": "1.1.1",
     "@tailwindcss/typography": "0.4.1",
     "gray-matter": "4.0.3",
