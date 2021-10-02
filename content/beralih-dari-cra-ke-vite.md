@@ -1,11 +1,11 @@
 ---
 title: Beralih dari C-R-A ke Vite
-desc: Vite adalah sebuah Frontend Tooling yange cepat, mari menggunakan Vite untuk aplikasi React daripada create-react-app.
+desc: Vite adalah sebuah Frontend Tooling yang cepat, mari menggunakan Vite untuk aplikasi React daripada create-react-app.
 author: Rizki Maulana Citra
 github: rizkimcitra
 twitter: rizkimcitra
 telegram:
-date: 2021-08-31
+date: 2021-10-03
 categories:
   - react
   - vite
