@@ -35,6 +35,6 @@
       "#types/*": ["types/*"]
     }
   },
-  "include": ["pages", "utils"],
+  "include": ["pages", "utils", "components/FeaturedPost.tsx"],
   "exclude": ["node_modules"]
 }
