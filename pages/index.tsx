@@ -20,7 +20,7 @@ export default function Home({ categories, posts, contributors = [] }) {
           site_name: siteData.siteName,
         }}
       />
-      <FeaturedPost />
+      <FeaturedPost posts={posts} />
       <BrowseTopic categories={categories} />
       <ReadAnyway posts={posts} />
       <Contributing contributors={contributors} />
