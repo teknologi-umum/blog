@@ -1,7 +1,12 @@
 import siteData from 'data/site';
 import { NextSeo } from 'next-seo';
+import { getAllPosts, getPostCategories } from '../utils/posts';
+import FeaturedPost from '#components/FeaturedPost';
+import BrowseTopic from '#components/BrowseTopic';
+import ReadAnyway from '#components/ReadAnyway';
+import Contributing from '#components/Contributing';
 
-export default function Home() {
+export default function Home({ categories, posts, contributors = [] }) {
   return (
     <>
       <NextSeo
@@ -15,12 +20,25 @@ export default function Home() {
           site_name: siteData.siteName,
         }}
       />
-      <h1 className="text-2xl uppercase font-bold py-8">Teknologi Umum</h1>
-      <p className="font-serif text-lg text-gray-700">
-        Consectetur veniam repellat placeat iure eveniet nobis Soluta neque ipsam aliquam veritatis reprehenderit! Fuga
-        porro ipsam itaque illo libero quas ut fugit Delectus ducimus odio optio aliquid hic. Placeat odit eveniet
-        veritatis tempore recusandae In perferendis corrupti inventore eos eum.
-      </p>
+      <FeaturedPost />
+      <BrowseTopic categories={categories} />
+      <ReadAnyway posts={posts} />
+      <Contributing contributors={contributors} />
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  let categories = await getPostCategories();
+  let posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github']);
+  const res = await fetch('https://api.github.com/repos/teknologi-umum/blog/contributors');
+  const contributors = await res.json();
+
+  return {
+    props: {
+      categories,
+      posts: posts.slice(0, 6),
+      contributors,
+    },
+  };
+};
