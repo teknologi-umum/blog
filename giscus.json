@@ -1,4 +1,4 @@
 {
-  "origins": ["https://teknum.netlify.app"],
+  "origins": ["https://teknum.netlify.app","https://teknologiumum.com","https://www.teknologiumum.com"],
   "originsRegex": ["https://(.*)-teknum.netlify.app", "http://localhost:[0-9]+"]
 }
