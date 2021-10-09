@@ -14,7 +14,7 @@ interface PostType extends PostFields {
   html: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
-export default function Post({ title, desc, html, author, github, twitter, telegram, date }: PostType) {
+export default function Post({ title, desc, html, author, github, twitter, telegram, date, cover }: PostType) {
   return (
     <>
       <NextSeo
@@ -31,7 +31,7 @@ export default function Post({ title, desc, html, author, github, twitter, teleg
       <style jsx>{`
         .bg-image {
           background-image: linear-gradient(120deg, rgba(243, 244, 246, 100) 35%, rgba(243, 244, 246, 0) 100%),
-            url('https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80');
+            url(${cover});
         }
         .shift-left {
           left: calc(-50vw + 50%);
@@ -80,6 +80,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'github',
     'twitter',
     'telegram',
+    'cover',
   ]);
   const html = await transformMdx(content!);
 
