@@ -8,7 +8,7 @@ import type { PostFields } from '#types/post';
 import { MDXRemote } from 'next-mdx-remote';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { Giscus } from '@giscus/react';
-import { isCookieEnabled } from 'utils/cookies';
+import { isCookieEnabled } from '#utils/cookies';
 
 interface PostType extends PostFields {
   html: MDXRemoteSerializeResult<Record<string, unknown>>;
