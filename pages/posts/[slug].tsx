@@ -14,7 +14,17 @@ interface PostType extends PostFields {
   html: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
-export default function Post({ title, desc, html, author, github, twitter, telegram, date, cover }: PostType) {
+export default function Post({
+  title,
+  desc,
+  html,
+  author,
+  github,
+  twitter,
+  telegram,
+  date,
+  cover = '/image/sample.jpg',
+}: PostType) {
   return (
     <>
       <NextSeo

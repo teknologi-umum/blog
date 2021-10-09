@@ -25,7 +25,11 @@ const FeaturedPost = ({ post }) => {
       </div>
       <div className="w-5/6 lg:w-full mx-auto lg:mx-0">
         <div className="aspect-w-16 aspect-h-13 w-full">
-          <img className="w-full object-cover object-center" src={post.cover} alt={post.title} />
+          <img
+            className="w-full object-cover object-center"
+            src={post.cover === undefined ? '/image/sample.jpg' : post.cover}
+            alt={post.title}
+          />
         </div>
       </div>
     </div>
