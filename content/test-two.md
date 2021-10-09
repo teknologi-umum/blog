@@ -5,6 +5,7 @@ author: Reinaldy Rafli
 github: aldy505
 twitter: aldy505
 telegram:
+cover: https://picsum.photos/500
 date: 2021-08-31
 categories:
   - javascript

@@ -4,6 +4,7 @@ desc: 'Lazy load adalah salah satu cara mengoptimasi performa website dengan mem
 author: 'Bakunya | medeveloper.me'
 github: 'bakunya'
 telegram: 'shuvi_chan'
+cover: https://picsum.photos/500
 date: 2021-10-03
 categories:
   - javascript

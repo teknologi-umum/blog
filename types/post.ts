@@ -4,6 +4,7 @@ export interface PostFields extends Author {
   title: string;
   desc: string;
   date: string;
+  cover: string;
   categories: string[];
 }
 

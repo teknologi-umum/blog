@@ -30,7 +30,7 @@ export default function Home({ categories, posts, contributors = [] }) {
 
 export const getStaticProps = async () => {
   let categories = await getPostCategories();
-  let posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github']);
+  let posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github', 'cover']);
   const res = await fetch('https://api.github.com/repos/teknologi-umum/blog/contributors');
   const contributors = await res.json();
 
