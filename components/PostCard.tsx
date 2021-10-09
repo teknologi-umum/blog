@@ -1,16 +1,18 @@
 import Link from 'next/link';
 import type { PostFields } from '#types/post';
 
-export default function PostCard({ slug, title, desc, categories, author, github }: Partial<PostFields>) {
+export default function PostCard({
+  slug,
+  title,
+  desc,
+  categories,
+  author,
+  github,
+  cover = '/image/sample.jpg',
+}: Partial<PostFields>) {
   return (
     <div className="flex flex-col shadow-lg rounded-md overflow-hidden font-sans">
-      <img
-        className="h-[10rem] object-cover"
-        src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-        width="400"
-        height="200"
-        alt={slug}
-      />
+      <img className="h-[10rem] object-cover" src={cover} width="400" height="200" alt={slug} />
       <div className="p-4">
         <div className="flex gap-1 mb-2">
           {categories &&

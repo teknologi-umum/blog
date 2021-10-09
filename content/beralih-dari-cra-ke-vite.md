@@ -5,6 +5,7 @@ author: Rizki Maulana Citra
 github: rizkimcitra
 twitter: rizkimcitra
 telegram:
+cover: https://picsum.photos/500
 date: 2021-10-03
 categories:
   - react

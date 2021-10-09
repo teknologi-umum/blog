@@ -33,7 +33,7 @@ export const filterPostsByKeywords = (
   keywords: string = '',
   tags: string[] = [],
 ) => {
-  const lookup = ['author', 'title', 'categories', 'desc'];
+  const lookup = ['author', 'title', 'categories', 'desc', 'cover'];
   const lookupCacheIndex: number[] = [];
   const postsMatchedKeys = filterPostsByAvailableFields(posts, lookup);
 
