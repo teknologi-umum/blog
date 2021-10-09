@@ -8,6 +8,7 @@ import type { PostFields } from '#types/post';
 import { MDXRemote } from 'next-mdx-remote';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { Giscus } from '@giscus/react';
+import { isCookieEnabled } from '#utils/cookies';
 
 interface PostType extends PostFields {
   html: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -51,18 +52,20 @@ export default function Post({ title, desc, html, author, github, twitter, teleg
       <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg">
         <MDXRemote {...html} />
       </div>
-      <Giscus
-        repo="teknologi-umum/blog"
-        repoId="MDEwOlJlcG9zaXRvcnkzOTU1NzU1NTk="
-        category="General"
-        categoryId="DIC_kwDOF5QBB84B-uOk"
-        mapping="pathname"
-        term="..."
-        reactionsEnabled="1"
-        emitMetadata="1"
-        // TODO: Change the theme to "preferred_color_scheme" when we implement dark mode support
-        theme="light"
-      />
+      {isCookieEnabled() && (
+        <Giscus
+          repo="teknologi-umum/blog"
+          repoId="MDEwOlJlcG9zaXRvcnkzOTU1NzU1NTk="
+          category="General"
+          categoryId="DIC_kwDOF5QBB84B-uOk"
+          mapping="pathname"
+          term="..."
+          reactionsEnabled="1"
+          emitMetadata="1"
+          // TODO: Change the theme to "preferred_color_scheme" when we implement dark mode support
+          theme="light"
+        />
+      )}
     </>
   );
 }
