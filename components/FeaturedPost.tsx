@@ -19,7 +19,7 @@ const FeaturedPost = ({ post }) => {
           </div>
         </a>
         <p className="mt-4 leading-relaxed font-serif text-gray-500">{post.desc}</p>
-        <Link href={'/posts/'+post.slug}>
+        <Link href={'/posts/' + post.slug}>
           <a className="bg-primary-900 text-white py-1.5 px-10 inline-block mt-4">READ MORE</a>
         </Link>
       </div>
