@@ -27,7 +27,7 @@ const FeaturedPost = ({ post }) => {
         <div className="aspect-w-16 aspect-h-13 w-full">
           <img
             className="w-full object-cover object-center"
-            src={post.cover === undefined ? '/image/sample.jpg' : post.cover}
+            src={post.cover || '/image/sample.jpg'}
             alt={post.title}
           />
         </div>
