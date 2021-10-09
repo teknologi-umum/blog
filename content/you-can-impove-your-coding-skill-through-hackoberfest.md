@@ -5,7 +5,7 @@ author: OKTAK
 github: oktak
 twitter:
 telegram:
-cover:
+cover: https://picsum.photos/500
 date: 2021-10-08
 categories:
   - hackoberfest
