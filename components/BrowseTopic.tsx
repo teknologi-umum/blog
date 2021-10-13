@@ -13,7 +13,13 @@ const BrowseTopic = ({ categories }) => {
 
         <div className="flex flex-wrap gap-6 items-center">
           {categories.map((category: string, i: number) => (
-            <Link key={i} href={`/search?q=${category}`}>
+            <Link
+              key={i}
+              href={{
+                pathname: '/search',
+                query: { q: category },
+              }}
+            >
               <a className="item text-lg pb-3 border-b border-black text-center hover:text-primary-900 hover:font-bold whitespace-nowrap">
                 {category}
               </a>
