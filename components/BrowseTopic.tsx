@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const BrowseTopic = ({ categories }) => {
   return (
@@ -13,13 +13,8 @@ const BrowseTopic = ({ categories }) => {
 
         <div className="flex flex-wrap gap-6 items-center">
           {categories.map((category: string, i: number) => (
-            <Link
-              key={i}
-              href={`/search?q=${category}`}
-            >
-              <a
-                className="item text-lg pb-3 border-b border-black text-center hover:text-primary-900 hover:font-bold whitespace-nowrap"
-              >
+            <Link key={i} href={`/search?q=${category}`}>
+              <a className="item text-lg pb-3 border-b border-black text-center hover:text-primary-900 hover:font-bold whitespace-nowrap">
                 {category}
               </a>
             </Link>

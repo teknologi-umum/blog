@@ -7,7 +7,7 @@ import { filterPostsByKeywords } from '#utils/_modules';
 import Router, { useRouter } from 'next/router';
 
 export default function Search({ posts }) {
-  const router = useRouter()
+  const router = useRouter();
   const tags = useMemo<Array<keyof PostFields>>(() => ['author', 'title', 'categories', 'desc'], []);
   const [filteredPosts, setFilteredPosts] = useState<Partial<PostFields>[] | PostFields[]>([]);
   const [keywords, setKeywords] = useState<string>('');
@@ -22,12 +22,13 @@ export default function Search({ posts }) {
 
   useEffect(() => {
     if (!router.isReady) return;
-    if ("q" in router.query && inputRef.current) {
+    if ('q' in router.query && inputRef.current) {
       const q = router.query.q as string;
-      setKeywords(q)
-      inputRef.current.value = q
-      setFilteredPosts(() => filterPostsByKeywords(posts, q))
+      setKeywords(q);
+      inputRef.current.value = q;
+      setFilteredPosts(() => filterPostsByKeywords(posts, q));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.isReady]);
 
   useEffect(() => {
@@ -37,14 +38,14 @@ export default function Search({ posts }) {
     }
 
     Router.replace({
-      ...(notEmpty(debouncedKeywords) ? { query: { q: debouncedKeywords } } : {})
-    })
+      ...(notEmpty(debouncedKeywords) ? { query: { q: debouncedKeywords } } : {}),
+    });
 
     if (notEmpty(debouncedKeywords)) {
       setFilteredPosts(() => filterPostsByKeywords(posts, debouncedKeywords, selectedTags));
       return;
     }
-    setFilteredPosts(posts)
+    setFilteredPosts(posts);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedKeywords, selectedTags]);
 
