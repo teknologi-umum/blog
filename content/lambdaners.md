@@ -1,52 +1,27 @@
 ---
-title: Kenapa kamu perlu belajar paradigma fungsional
-desc: Ceramah yang mengantarkan kamu untuk mengenal pemrograman fungsional
+title: Manfaat dari Belajar Pemrograman
+desc: Sebuah rayuan saintifik yang membelai kamu untuk belajar koding
 author: Airavata de la Weeb
 github: artileda
 twitter:
 telegram: mikrofon_pelunas_hutang
 date: 2021-09-26
 categories:
-  - functional programming
+  - Pengantar Teknologi Informasi
 ---
 
-![gambar kucing](https://storage.googleapis.com/kotakode-prod-public/images/8a3c3f16-4397-4cea-90fa-491c05378d5e-image.png)
+Halo, Jomblo. Sudah mencium kening pacar virtual kamu dan melatih model arsitektur RNN suara waifu tercintamu hari ini. 
 
-Soyuz neruzmy, kamerad pembaca.
+Berpikir tanpa bahasa bisa dibilang suatu hal yang sulit dibayangkan (Baca: 1984, Orwel. G), dari bangun tidur hingga tidur lagi bahasa menjadi kita tidak lepas dari penggunaan bahasa. Bahasa selain alat untuk komunikasi merupakan instrumen pikiran untuk menyimpan, mendefinisikan dan memahami buah dari berpikir. Manusia dan komputer memiliki kesamaan pada titik ini.
 
-Pemrograman memiliki kompas haluan yang di sebut paradigma, kompas ini mendikte bagaimana seseorang berpikir 
-dalam menuliskan ide mereka menjadi kumpulan baris kode bahasa program.
+Namun apakah yang manusia lakukan bisa komputer lakukan ?
 
-Jika pada pemrograman objek kita berfokus bagaimana suatu kelas bisa mewakili entitas dari masalah yang kita hadapi,
-pada pemrograman fungsional kita berfokus bagaimana fungsi bisa mewakili entitas suatu masalah.
+## Apa itu Pemrograman
 
-**Kasus:** Kita memiliki sebuah teka-teki untuk menyusun rangkaian atom karbon berdasarkan nomor atom dan tidak menampilkan
-atom radioaktif, buatkan sebuah program yang dapat melakukan hal tersebut.
+Pemrograman merupakan cara kita untuk melatih komputer untuk melakukan suatu pekerjaan. Komputer tidak bisa kita minta untuk mengejar kucing yang mencuri ikan peliharan kita tetapi komputer mampu membantu kita untuk melakukan perhitungan seperti satu tambah satu, rumus pitagoras dan semacamnya. Pekerjaan apa lantas yang bisa dilakukan oleh komputer kalau manusia juga bisa menghitung ?
 
-Pada kasus ini kita memiliki stockpile atom
+Manusia bisa menghitung namun lamban laun kemampuan manusia menurut seiring besarnya perhitungan yang dihadapi sedangkan komputer tidak. Maka dari itu kita bisa mengajarkan komputer untuk melakukan perhitungan yang lebih besar seperti mengolah informasi dari pakar, menjadwalkan status transaksi dan semacamnya. Sudah tidak hanya satu tambah satu biasa tetapi formula yang menjadi alat bagi kehidupan manusia.
 
-| Nama Unsur | Nomor Atom |
-|--|--|
-| Oxygen | 8 |
-| Thorium | 90 |
-| Hydragyrum | 80 |
-| Zirkon | 40 |
-| Oganesson | 118 |
-| Astatine | 84 |
-| Uranium | 92 |
+## Bahasa Pemrograman sebagai instrumen transfer pikiran
 
-
-```haskell
-data Atom = {nomorAtom :: Int, nama :: String}
-
-stockpile :: [Atom]
-stockpile = [ Atom 8 "Oxygen"
-  , Atom 90 "Thorium"
-  , Atom 80 "Hydragyrum"
-  , Atom 40 "Zirkon"
-  , Atom 118 "Oganesson"
-  , Atom 84 "Astatine"
-  , Atom 92 "Uranium" ]
-  
- 
-```
+Komputer adalah mesin "bodoh" bila tak ada program didalamnya, hanya sebuah layar hitam dengan suara dan kerlap kerlip lampu yang tak berarti. Maka komputer harus diajarkan bagaimana caranya berperilaku. Perilaku komputer ditentukan oleh perubahan status pada transistor CPU (_Central Proccesing Unit_) yang mengambarkan suatu kondisi, sayangnya komputer hanya mengerti 0 dan 1 tentu ini bukan bahasa yang cukup manusiawi untuk dimengerti oleh manusia.
