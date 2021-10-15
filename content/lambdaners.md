@@ -1,5 +1,5 @@
 ---
-title: Manfaat dari Belajar Pemrograman
+title: Pengantar Belajar Pemrograman
 desc: Sebuah rayuan saintifik yang membelai kamu untuk belajar koding
 author: Airavata de la Weeb
 github: artileda
@@ -25,3 +25,5 @@ Manusia bisa menghitung namun lamban laun kemampuan manusia menurut seiring besa
 ## Bahasa Pemrograman sebagai instrumen transfer pikiran
 
 Komputer adalah mesin "bodoh" bila tak ada program didalamnya, hanya sebuah layar hitam dengan suara dan kerlap kerlip lampu yang tak berarti. Maka komputer harus diajarkan bagaimana caranya berperilaku. Perilaku komputer ditentukan oleh perubahan status pada transistor CPU (_Central Proccesing Unit_) yang mengambarkan suatu kondisi, sayangnya komputer hanya mengerti 0 dan 1 tentu ini bukan bahasa yang cukup manusiawi untuk dimengerti oleh manusia.
+
+Bahasa pemrograman adalah solusinya, bahasa penengah untuk menghubungkan manusia dan komputer untuk bertukar pikiran. Program merupakan kumpulan perintah komputer untuk melakukan perkerjaan, program ini akan memberikan definisi sebuah prilaku untuk komputer bertindak. Demikian dengan memrogram kita bisa melatih komputer untuk bertindak dan menindak interaksi yang diberikan kepadanya. Kerlap kerlip dan layar hitam berubah menunjukan sesuatu yang berarti kelayar kita, dengan bantuan program bernama sistem operasi komputer kita bisa menggunakan komputer dengan mudah dan juga membuat program dengan mudah tidak serepot komputer generasi pertamanya yang harus colok kabel dan mengubah transistor manual..
