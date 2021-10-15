@@ -38,7 +38,7 @@ export const getAllPosts = async (fields: Fields = []) => {
 };
 
 export const getPostsBySearchKeywords = async (keywords: string) => {
-  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github']);
+  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github', 'cover']);
 
   return filterPostsByKeywords(posts, keywords);
 };

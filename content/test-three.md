@@ -5,6 +5,7 @@ author: Manusia Bernapas
 github: elianiva
 twitter: elianiva_
 telegram:
+cover: https://picsum.photos/500
 date: 2021-08-31
 categories:
   - javascript

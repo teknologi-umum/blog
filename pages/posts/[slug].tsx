@@ -8,12 +8,23 @@ import type { PostFields } from '#types/post';
 import { MDXRemote } from 'next-mdx-remote';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { Giscus } from '@giscus/react';
+import { isCookieEnabled } from '#utils/cookies';
 
 interface PostType extends PostFields {
   html: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
-export default function Post({ title, desc, html, author, github, twitter, telegram, date }: PostType) {
+export default function Post({
+  title,
+  desc,
+  html,
+  author,
+  github,
+  twitter,
+  telegram,
+  date,
+  cover = '/image/sample.jpg',
+}: PostType) {
   return (
     <>
       <NextSeo
@@ -30,7 +41,7 @@ export default function Post({ title, desc, html, author, github, twitter, teleg
       <style jsx>{`
         .bg-image {
           background-image: linear-gradient(120deg, rgba(243, 244, 246, 100) 35%, rgba(243, 244, 246, 0) 100%),
-            url('https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80');
+            url(${cover});
         }
         .shift-left {
           left: calc(-50vw + 50%);
@@ -51,18 +62,20 @@ export default function Post({ title, desc, html, author, github, twitter, teleg
       <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg">
         <MDXRemote {...html} />
       </div>
-      <Giscus
-        repo="teknologi-umum/blog"
-        repoId="MDEwOlJlcG9zaXRvcnkzOTU1NzU1NTk="
-        category="General"
-        categoryId="DIC_kwDOF5QBB84B-uOk"
-        mapping="pathname"
-        term="..."
-        reactionsEnabled="1"
-        emitMetadata="1"
-        // TODO: Change the theme to "preferred_color_scheme" when we implement dark mode support
-        theme="light"
-      />
+      {isCookieEnabled() && (
+        <Giscus
+          repo="teknologi-umum/blog"
+          repoId="MDEwOlJlcG9zaXRvcnkzOTU1NzU1NTk="
+          category="General"
+          categoryId="DIC_kwDOF5QBB84B-uOk"
+          mapping="pathname"
+          term="..."
+          reactionsEnabled="1"
+          emitMetadata="1"
+          // TODO: Change the theme to "preferred_color_scheme" when we implement dark mode support
+          theme="light"
+        />
+      )}
     </>
   );
 }
@@ -77,6 +90,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'github',
     'twitter',
     'telegram',
+    'cover',
   ]);
   const html = await transformMdx(content!);
 
