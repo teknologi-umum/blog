@@ -4,6 +4,7 @@ desc: Sebuah rayuan kurang saintifik yang membelai kamu tentang programming
 author: Airavata
 github: artileda
 twitter:
+cover: https://images.unsplash.com/photo-1590959651373-a3db0f38a961?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=739&q=80
 telegram: mikrofon_pelunas_hutang
 date: 2021-10-15
 categories:
