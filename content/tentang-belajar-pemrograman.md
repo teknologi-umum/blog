@@ -18,9 +18,9 @@ Namun apakah yang manusia lakukan bisa komputer lakukan ?
 
 ## Apa itu Pemrograman
 
-Pemrograman merupakan cara kita untuk melatih komputer untuk melakukan pekerjaan. Komputer tidak bisa kita minta untuk mengejar kucing yang mencuri ikan peliharan kita tetapi komputer mampu membantu kita untuk melakukan perhitungan seperti satu tambah satu, rumus pitagoras dan semacamnya. Pekerjaan apa lantas yang bisa dilakukan oleh komputer kalau manusia juga bisa menghitung ?
+Pemrograman merupakan cara kita untuk melatih komputer untuk melakukan pekerjaan. Komputer tidak bisa kita minta untuk mengejar kucing yang mencuri ikan peliharan kita tetapi komputer mampu membantu kita untuk melakukan perhitungan seperti satu tambah satu, rumus pitagoras dan semacamnya. Lantas, pekerjaan apa yang bisa dilakukan oleh komputer kalau manusia juga bisa menghitung ?
 
-Manusia bisa menghitung namun lamban laun kemampuan manusia menurut seiring besarnya perhitungan yang dihadapi sedangkan komputer tidak. Maka dari itu kita bisa mengajarkan komputer untuk melakukan perhitungan yang lebih besar seperti mengolah informasi dari pakar, menjadwalkan status transaksi dan semacamnya. Sudah tidak hanya satu tambah satu biasa tetapi formula yang menjadi alat bagi kehidupan manusia.
+Manusia bisa menghitung namun lamban laun kemampuan manusia menurun seiring besar dan lamanya perhitungan yang dihadapi sedangkan komputer tidak. Maka dari itu kita bisa mengajarkan komputer untuk melakukan perhitungan yang lebih besar seperti mengolah informasi dari pakar, menjadwalkan status transaksi dan semacamnya. Sudah tidak hanya operasi satu tambah satu biasa tetapi formula yang menjadi alat bagi kehidupan manusia.
 
 ## Bahasa Pemrograman sebagai instrumen transfer pikiran
 
