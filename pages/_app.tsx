@@ -1,6 +1,6 @@
-import '@fontsource/sarabun/400.css';
-import '@fontsource/sarabun/700.css';
-import '@fontsource/sarabun/800.css';
+import '@fontsource/rubik/400.css';
+import '@fontsource/rubik/700.css';
+import '@fontsource/rubik/800.css';
 import '@fontsource/lusitana/400.css';
 import '@fontsource/lusitana/700.css';
 import '@fontsource/jetbrains-mono/400.css';

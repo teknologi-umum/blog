@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+import siteData from 'data/site';
 import { useDebounce } from '#hooks/index';
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from 'react';
 import type { PostFields } from '#types/post';
@@ -72,6 +74,17 @@ export default function Search({ posts }) {
   };
   return (
     <>
+      <NextSeo
+        title={'Search - ' + siteData.siteName}
+        description={siteData.description}
+        openGraph={{
+          type: 'website',
+          title: 'Search - ' + siteData.siteName,
+          description: siteData.description,
+          url: process.env.NEXT_PUBLIC_SERVER_URL,
+          site_name: siteData.siteName,
+        }}
+      />
       <style jsx>{`
         .posts {
           grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));

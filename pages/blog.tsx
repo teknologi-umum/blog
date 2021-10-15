@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+import siteData from 'data/site';
 import { getAllPosts } from '#utils/posts';
 import PostCard from '#components/PostCard';
 import type { PostFields } from '#types/post';
@@ -5,6 +7,17 @@ import type { PostFields } from '#types/post';
 export default function Blog({ posts }) {
   return (
     <>
+      <NextSeo
+        title={'Blog - ' + siteData.siteName}
+        description={siteData.description}
+        openGraph={{
+          type: 'website',
+          title: 'Blog - ' + siteData.siteName,
+          description: siteData.description,
+          url: process.env.NEXT_PUBLIC_SERVER_URL,
+          site_name: siteData.siteName,
+        }}
+      />
       <style jsx>{`
         .posts {
           grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
@@ -27,7 +40,7 @@ export default function Blog({ posts }) {
 }
 
 export const getStaticProps = async () => {
-  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github']);
+  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'cover', 'author', 'github']);
 
   return {
     props: {
