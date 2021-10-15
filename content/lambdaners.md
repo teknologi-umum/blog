@@ -99,4 +99,17 @@ _feature_ dan _bugs_ ini sering kita temukan ketika kita mengembangkan atau meng
 
 ## Manusia sebagai komputer sejati
 
-Manusia membuat komputer untuk memenuhi kebutuhanya dalam perhitungan, tatkala manusia adalah komputer yang membuat komputer.
+Manusia membuat komputer untuk memenuhi kebutuhanya dalam perhitungan, namun manusia juga bisa melakukan perhitungan seperti komputer. Tatkala manusia juga bisa disebut komputer karena bisa melakukan perhitungan, komputer yang membuat komputer diluar dirinya.
+
+Kita mungkin sadar banyak dampak yang dihasilkan oleh komputer seperti kemudahan dalam memproses informasi dan perhitungan yang rumit, namun apakah kita sadar bahwa ketika kita memrogram komputer kita juga sebenarnya sedang diprogram oleh komputer untuk berpikir mengikuti caranya ? 
+
+Pemrograman memang memiliki dampak yaitu eksternal dan internal pada diri kita. Dampak eksternal kita bisa membuat solusi dari masalah penghitungan rumit, kedua secara tidak langsung apa yang perlu kita tulis di komputer perlu jelas digambarkan ini juga melatih kemampuan kognitif dan ingatan kita dalam pengenalan pola serta penyelesaian masalah.
+
+> A language that doesn't affect the way you think about programming, is not worth knowing -- Alan J. Perlis
+
+
+### Referensi:
+
+- Liem, I. 2008. Diktat Kuliah Dasar Pemrograman : Pemrograman Fungsional. ITB.
+- [What is Programming Language ?](https://hackr.io/blog/what-is-programming-language)
+- [What is Programming ?](https://hackr.io/blog/what-is-programming)
