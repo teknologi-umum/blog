@@ -1,6 +1,6 @@
 ---
-title: Pengantar Belajar Pemrograman
-desc: Sebuah rayuan saintifik yang membelai kamu tentang pemrogramming
+title: Tentang Belajar Pemrograman
+desc: Sebuah rayuan kurang saintifik yang membelai kamu tentang programming
 author: Airavata
 github: artileda
 twitter:
