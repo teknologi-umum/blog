@@ -10,7 +10,7 @@ categories:
   - Pengantar Teknologi Informasi
 ---
 
-Halo, Jomblo. Sudah mencium kening pacar virtual kamu dan melatih model arsitektur RNN suara waifu tercintamu hari ini. 
+Halo, Jomblo. Sudah mencium kening pacar virtual kamu dan melatih model arsitektur RNN suara waifu tercintamu hari ini.
 
 Berpikir tanpa bahasa bisa dibilang suatu hal yang sulit dibayangkan (Baca: 1984, Orwel. G), dari bangun tidur hingga tidur lagi tidak lepas dari penggunaan bahasa. Bahasa selain alat untuk komunikasi merupakan instrumen pikiran untuk menyimpan, mendefinisikan dan memahami buah pikiran manusia. Manusia dan komputer memiliki kesamaan pada titik ini.
 
@@ -26,7 +26,7 @@ Manusia bisa menghitung namun lamban laun kemampuan manusia menurun seiring besa
 
 Komputer adalah mesin "bodoh" bila tak ada program didalamnya, hanya sebuah layar hitam dengan suara dan kerlap kerlip lampu yang tak berarti. Maka komputer harus diajarkan bagaimana caranya berperilaku. Perilaku komputer ditentukan oleh perubahan status pada transistor CPU (_Central Proccesing Unit_) yang mengambarkan suatu kondisi, sayangnya komputer hanya mengerti 0 dan 1 tentu ini bukan bahasa yang cukup manusiawi untuk dimengerti oleh manusia.
 
-Bahasa pemrograman adalah solusinya, bahasa penengah untuk menghubungkan manusia dan komputer untuk bertukar pikiran. Program merupakan kumpulan perintah komputer untuk melakukan perkerjaan, program ini akan memberikan definisi sebuah prilaku untuk komputer bertindak. Demikian dengan memrogram kita bisa melatih komputer untuk bertindak dan menindak interaksi yang diberikan kepadanya. 
+Bahasa pemrograman adalah solusinya, bahasa penengah untuk menghubungkan manusia dan komputer untuk bertukar pikiran. Program merupakan kumpulan perintah komputer untuk melakukan perkerjaan, program ini akan memberikan definisi sebuah prilaku untuk komputer bertindak. Demikian dengan memrogram kita bisa melatih komputer untuk bertindak dan menindak interaksi yang diberikan kepadanya.
 
 Kerlap kerlip dan layar hitam berubah menunjukan sesuatu yang berarti kelayar kita, dengan bantuan program bernama sistem operasi komputer kita bisa menggunakan komputer dengan mudah dan juga membuat program dengan mudah tidak serepot komputer generasi pertamanya yang harus colok kabel dan mengubah transistor manual.
 
@@ -42,18 +42,17 @@ Berikut perbandingan antara bahasa manusia dengan bahasa pemrograman :
   ```shell
   Computer show my name
   ```
-  
 - Bahasa Pemrograman
   ```javascript
-  console.log(yourName)
+  console.log(yourName);
   ```
 
-Saat memrogram kita perlu memberikan arahan dan informasi yang jelas dari perintah kita, yang tidak jelas dari contoh diatas : Program tidak tau yourName itu sebuah nilai apa. 
+Saat memrogram kita perlu memberikan arahan dan informasi yang jelas dari perintah kita, yang tidak jelas dari contoh diatas : Program tidak tau yourName itu sebuah nilai apa.
 
 Maka perlu kita ubah dengan nama kita dalam bentuk yang dimengerti komputer, nilai ini`"UwU"` sebagai contoh.
 
 ```javascript
-console.log("UwU")
+console.log('UwU');
 ```
 
 ## Paradigma sebagai kunci
@@ -76,18 +75,19 @@ Paradigma pemrograman mengatur kita untuk menuliskan kode program yang menwakili
   nama = "Reine"
   tulisNama() // Reine
   ```
-  
+
 - Paradigma Fungsional
 
   ```javascript
   tulisNama(nama){
     console.log(nama)
   }
-  
+
   tulisNama("UwU") // UwU
   tulisNama("Reine") // Reine
   ```
-Contoh diatas kita melihat bahwa paradigma imperatif lebih cenderung melakukan perubahan nilai sedengkan paradigma fungsional lebih cendrung memanggil fungsi, dari kedua contoh ini menghasilkan bentuk kode yang tidak jauh berbeda namun memerlukan cara berpikir yang berbeda untuk menghasilkan kode demikian.
+
+  Contoh diatas kita melihat bahwa paradigma imperatif lebih cenderung melakukan perubahan nilai sedengkan paradigma fungsional lebih cendrung memanggil fungsi, dari kedua contoh ini menghasilkan bentuk kode yang tidak jauh berbeda namun memerlukan cara berpikir yang berbeda untuk menghasilkan kode demikian.
 
 ## Program sebagai ekosistem pikiran
 
@@ -101,12 +101,11 @@ _feature_ dan _bugs_ ini sering kita temukan ketika kita mengembangkan atau meng
 
 Manusia membuat komputer untuk memenuhi kebutuhanya dalam perhitungan, namun manusia juga bisa melakukan perhitungan seperti komputer. Tatkala manusia juga bisa disebut komputer karena bisa melakukan perhitungan, komputer yang membuat komputer diluar dirinya.
 
-Kita mungkin sadar banyak dampak yang dihasilkan oleh komputer seperti kemudahan dalam memproses informasi dan perhitungan yang rumit, namun apakah kita sadar bahwa ketika kita memrogram komputer kita juga sebenarnya sedang diprogram oleh komputer untuk berpikir mengikuti caranya ? 
+Kita mungkin sadar banyak dampak yang dihasilkan oleh komputer seperti kemudahan dalam memproses informasi dan perhitungan yang rumit, namun apakah kita sadar bahwa ketika kita memrogram komputer kita juga sebenarnya sedang diprogram oleh komputer untuk berpikir mengikuti caranya ?
 
 Pemrograman memang memiliki dampak yaitu eksternal dan internal pada diri kita. Dampak eksternal kita bisa membuat solusi dari masalah penghitungan rumit, kedua secara tidak langsung apa yang perlu kita tulis di komputer perlu jelas digambarkan ini juga melatih kemampuan kognitif dan ingatan kita dalam pengenalan pola serta penyelesaian masalah.
 
 > A language that doesn't affect the way you think about programming, is not worth knowing -- Alan J. Perlis
-
 
 ### Referensi:
 
