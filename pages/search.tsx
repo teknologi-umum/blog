@@ -1,26 +1,51 @@
 import { useDebounce } from '#hooks/index';
-import { ChangeEvent, useEffect, useMemo, useState } from 'react';
+import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from 'react';
 import type { PostFields } from '#types/post';
 import PostCard from '#components/PostCard';
 import { getAllPosts } from '#utils/posts';
 import { filterPostsByKeywords } from '#utils/_modules';
+import Router, { useRouter } from 'next/router';
 
 export default function Search({ posts }) {
+  const router = useRouter();
   const tags = useMemo<Array<keyof PostFields>>(() => ['author', 'title', 'categories', 'desc'], []);
   const [filteredPosts, setFilteredPosts] = useState<Partial<PostFields>[] | PostFields[]>([]);
   const [keywords, setKeywords] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
+  const inputRef = useRef<HTMLInputElement>(null);
+  const didMount = useRef(false);
+
   const debouncedKeywords = useDebounce<typeof keywords>(keywords);
 
+  const notEmpty = (str: string) => str.replace(/\s/g, '').length;
+
   useEffect(() => {
-    if (debouncedKeywords.replace(/\s/g, '').length) {
-      setFilteredPosts(() => filterPostsByKeywords(posts, debouncedKeywords, selectedTags));
+    if (!router.isReady) return;
+    if ('q' in router.query && inputRef.current) {
+      const q = router.query.q as string;
+      setKeywords(q);
+      inputRef.current.value = q;
+      setFilteredPosts(() => filterPostsByKeywords(posts, q));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.isReady]);
+
+  useEffect(() => {
+    if (!didMount.current) {
+      didMount.current = true;
       return;
     }
 
-    setFilteredPosts(posts);
+    Router.replace({
+      ...(notEmpty(debouncedKeywords) ? { query: { q: debouncedKeywords } } : {}),
+    });
 
+    if (notEmpty(debouncedKeywords)) {
+      setFilteredPosts(() => filterPostsByKeywords(posts, debouncedKeywords, selectedTags));
+      return;
+    }
+    setFilteredPosts(posts);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedKeywords, selectedTags]);
 
@@ -60,6 +85,7 @@ export default function Search({ posts }) {
       `}</style>
       <div className="my-8">
         <input
+          ref={inputRef}
           className="w-full h-12 leading-tight border-0 border-b border-gray-600 text-2xl focus:outline-none"
           type="text"
           placeholder="Dukun Teknologi Umum"
