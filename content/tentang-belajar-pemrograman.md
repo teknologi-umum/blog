@@ -5,7 +5,7 @@ author: Airavata
 github: artileda
 twitter:
 telegram: mikrofon_pelunas_hutang
-date: 2021-09-26
+date: 2021-10-15
 categories:
   - Pengantar Teknologi Informasi
 ---
