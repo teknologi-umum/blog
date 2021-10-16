@@ -119,21 +119,21 @@ _Data-driven Programming_.
 Misal komputer diberi data seperti ini :
 
 | Jumlah Ban | Jumlah Kaca | Nama Kendaraan |
-|--|--|--|
-| 4 | 4 | Mobil |
-| 2 | 0 | Motor |
-| 3 | 6 | Truk |
-| 32 | 8 | Bus |
+| ---------- | ----------- | -------------- |
+| 4          | 4           | Mobil          |
+| 2          | 0           | Motor          |
+| 3          | 6           | Truk           |
+| 32         | 8           | Bus            |
 
 Komputer akan bisa menjawab pertanyaan berdasarkan data yang dimilikinya, namun apakah komputer bisa
 menjawab data tidak ada dari tabel diatas ?
 
-contoh : 
+contoh :
 
 | Jumlah Ban | Jumlah Kaca | Nama Kendaraan |
-|--|--|--|
-| 16 | 72 | Pesawat |
-| 2 | 5 | Helikopter |
+| ---------- | ----------- | -------------- |
+| 16         | 72          | Pesawat        |
+| 2          | 5           | Helikopter     |
 
 Apa kira-kira jawaban yang dikeluarkan komputer ? mereka tidak akan menjawab pesawat atau helikopter
 karena tidak memiliki data itu.
