@@ -1,6 +1,14 @@
 import GithubIcon from '#components/Icons/GithubIcon';
 
-const Contributing = ({ contributors }) => {
+export interface Contributor {
+  id: number;
+  login: string;
+  contribution: number;
+  html_url: string;
+  avatar_url: string;
+}
+
+const Contributing = ({ contributors }: { contributors: Contributor[] }) => {
   return (
     <>
       <div className="md:-mx-12 mt-24 bg-primary-900 py-12 px-12 md:px-16 grid gap-12 grid-cols-1 md:grid-cols-2">
