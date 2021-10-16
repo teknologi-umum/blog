@@ -60,7 +60,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Sarabun', 'Poppins', 'Roboto', 'Arial', 'sans-serif'],
+      sans: ['Rubik', 'Poppins', 'Roboto', 'Arial', 'sans-serif'],
       serif: ['Lusitana', 'PT Serif', 'Times New Roman', 'serif'],
       mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
     },

@@ -23,17 +23,17 @@
   "dependencies": {
     "@fontsource/jetbrains-mono": "4.5.0",
     "@fontsource/lusitana": "4.5.0",
-    "@fontsource/sarabun": "4.5.0",
-    "@giscus/react": "^1.0.0",
-    "@material-ui/icons": "^4.11.2",
+    "@fontsource/rubik": "^4.5.0",
+    "@giscus/react": "1.0.0",
+    "@material-ui/icons": "4.11.2",
     "@stefanprobst/remark-shiki": "1.1.1",
-    "@tailwindcss/aspect-ratio": "^0.2.2",
+    "@tailwindcss/aspect-ratio": "0.2.2",
     "@tailwindcss/typography": "0.4.1",
     "gray-matter": "4.0.3",
-    "next": "11.1.0",
+    "next": "11.1.2",
     "next-mdx-remote": "3.0.4",
-    "next-seo": "4.26.0",
-    "p-limit": "^3.1.0",
+    "next-seo": "4.28.1",
+    "p-limit": "3.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rehype-katex": "6.0.1",
@@ -46,16 +46,16 @@
     "unist-util-visit": "2.0.3"
   },
   "devDependencies": {
-    "@types/react": "17.0.18",
+    "@types/react": "17.0.30",
     "autoprefixer": "10.3.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-prettier": "3.4.0",
-    "husky": "7.0.1",
-    "postcss": "8.3.6",
-    "prettier": "2.3.2",
-    "tailwindcss": "2.2.7",
-    "typescript": "4.3.5"
+    "eslint-plugin-prettier": "4.0.0",
+    "husky": "7.0.2",
+    "postcss": "8.3.9",
+    "prettier": "2.4.1",
+    "tailwindcss": "2.2.17",
+    "typescript": "4.4.4"
   }
 }
