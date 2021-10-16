@@ -138,7 +138,7 @@ contoh :
 Apa kira-kira jawaban yang dikeluarkan komputer ? mereka tidak akan menjawab pesawat atau helikopter
 karena tidak memiliki data itu.
 
-- [Jawabanya ada disini](https://www.kaggle.com/onigura/notebookc57c8dafe1)
+- [Jawabanya ada disini](https://www.kaggle.com/onigura/pohon-keputusan)
 
 > The only constructive theory connecting neuroscience and psychology will arise from the study of software --Alan J. Perlis
 
