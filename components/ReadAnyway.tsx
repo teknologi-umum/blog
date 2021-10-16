@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PostFields } from '#types/post';
 import PostCard from './PostCard';
 
-const ReadAnyway = ({ posts }) => {
+const ReadAnyway = ({ posts }: { posts: PostFields[] }) => {
   return (
     <>
       <style jsx>{`

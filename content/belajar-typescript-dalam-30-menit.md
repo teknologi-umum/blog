@@ -5,7 +5,7 @@ author: Reinaldy Rafli
 github: aldy505
 twitter:
 telegram: aldy505
-cover: https://picsum.photos/500
+cover: https://i.ibb.co/LhKFMDq/typescript-30-men.jpg
 date: 2021-09-02
 categories:
   - tutorial

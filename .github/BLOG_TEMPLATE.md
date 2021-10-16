@@ -6,6 +6,7 @@ github: your_github_username
 twitter: your_twitter_username (not required, leave it empty by deleting this line)
 telegram: your_telegram_username (not required, leave it empty by deleting this line)
 date: 2021-08-31
+cover: https://link/to/image (not really required, leave it empty by deleting this line)
 categories:
   - javascript
   - tutorial
