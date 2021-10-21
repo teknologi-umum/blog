@@ -13,7 +13,7 @@ export default function Navbar() {
     return router.route === `/${route}` ? 'active' : '';
   };
   return (
-    <nav className="fixed min-h-16 top-0 left-0 right-0 bg-white backdrop-blur-full backdrop-brightness-90 z-20 font-sans">
+    <nav className="fixed min-h-16 top-0 inset-x-0 bg-white/80 backdrop-filter backdrop-blur-lg z-20 font-sans">
       <div className="container flex flex-col md:flex-row justify-between items-center space-y-1 mx-auto py-5 px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56 2xl:px-72 h-full">
         <div className="flex-1 space-x-6">
           {['home', 'blog', 'about'].map((route, idx) => (
