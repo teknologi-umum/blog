@@ -20,7 +20,7 @@ const BrowseTopic = ({ categories }) => {
                 query: { q: category },
               }}
             >
-              <a className="item text-lg pb-3 border-b border-black text-center hover:text-primary-900 hover:font-bold whitespace-nowrap">
+              <a className="item text-lg pb-3 border-b border-black text-center hover:text-primary-900  whitespace-nowrap">
                 {category}
               </a>
             </Link>

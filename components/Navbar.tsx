@@ -19,7 +19,7 @@ export default function Navbar() {
           {['home', 'blog', 'about'].map((route, idx) => (
             <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
               <a
-                className={`flex-inline uppercase text-center text-gray-700 hover:text-primary-600 hover:font-bold ${active(
+                className={`flex-inline uppercase text-center text-gray-700 hover:text-primary-600 transition duration-300 ${active(
                   route,
                   route === 'home',
                 )}`}
@@ -36,7 +36,7 @@ export default function Navbar() {
         </div>
         <div className="flex-1 text-right text-lg">
           <div className="flex flex-row items-center justify-end space-x-4">
-            <div className="flex-initial opacity-60 hover:text-primary-600/100">
+            <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <Link href="/search">
                 <a>
                   <SearchIcon fontSize="medium" />
@@ -44,12 +44,12 @@ export default function Navbar() {
               </Link>
             </div>
 
-            <div className="flex-initial opacity-60 hover:text-primary-600/100">
+            <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <a href="https://github.com/teknologi-umum">
                 <GithubIcon width="1.5rem" height="1.5rem" />
               </a>
             </div>
-            <div className="flex-initial opacity-60 hover:text-primary-600/100">
+            <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <a href="https://t.me/teknologi_umum">
                 <TelegramIcon width="2rem" height="2rem" />
               </a>

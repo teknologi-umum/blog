@@ -11,7 +11,7 @@ export default function PostCard({
   cover = '/image/sample.jpg',
 }: Partial<PostFields>) {
   return (
-    <div className="flex flex-col shadow-lg rounded-md overflow-hidden font-sans">
+    <div className="flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans">
       <img className="h-[10rem] object-cover w-full" src={cover} alt={slug} />
       <div className="p-4">
         <div className="flex flex-wrap gap-1 mb-2">

@@ -24,7 +24,9 @@ const ReadAnyway = ({ posts }: { posts: PostFields[] }) => {
         </div>
 
         <Link href="/blog">
-          <a className="w-full font-bold text-black text-center block mt-10">FIND MORE POST</a>
+          <a className="w-full font-bold text-black text-center block mt-10 hover:text-primary-600 transition duration-300">
+            FIND MORE POST
+          </a>
         </Link>
       </div>
     </>
