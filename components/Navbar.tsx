@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import GithubIcon from '#components/Icons/GithubIcon';
 import TelegramIcon from '#components/Icons/TelegramIcon';
+import SearchIcon from '#components/Icons/SearchIcon';
 import { useRouter } from 'next/router';
-import SearchIcon from '@material-ui/icons/Search';
 
 export default function Navbar() {
   const router = useRouter();
@@ -39,7 +39,7 @@ export default function Navbar() {
             <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <Link href="/search">
                 <a>
-                  <SearchIcon fontSize="medium" />
+                  <SearchIcon width="1.5rem" height="1.5rem" />
                 </a>
               </Link>
             </div>
