@@ -52,7 +52,7 @@ export default function Search({ posts }) {
   }, [debouncedKeywords, selectedTags]);
 
   const activeTag = (tagName: string): string => {
-    if (selectedTags.includes(tagName)) return 'font-bold';
+    if (selectedTags.includes(tagName)) return 'text-white bg-black';
 
     return '';
   };
@@ -99,7 +99,7 @@ export default function Search({ posts }) {
       <div className="my-8">
         <input
           ref={inputRef}
-          className="w-full h-12 leading-tight border-0 border-b border-gray-600 text-2xl focus:outline-none"
+          className="w-full h-12 leading-tight border-0 border-b border-gray-400 focus:border-gray-600 text-2xl focus:outline-none"
           type="text"
           placeholder="Dukun Teknologi Umum"
           onChange={handleChange}
@@ -107,8 +107,14 @@ export default function Search({ posts }) {
 
         <div className="mt-4 flex flex-wrap gap-3">
           {tags.map((tag, idx) => (
-            <div key={idx} className={`p-1 cursor-pointer ${activeTag(tag)}`} onClick={() => handleSelectTag(tag)}>
-              <span className="text-base capitalize">{tag}</span>
+            <div
+              key={idx}
+              className={`border border-black hover:bg-black/90 hover:text-white cursor-pointer px-2 py-1 transition duration-300 ${activeTag(
+                tag,
+              )}`}
+              onClick={() => handleSelectTag(tag)}
+            >
+              <span className="text-base capitalize select-none">{tag}</span>
             </div>
           ))}
         </div>

@@ -25,7 +25,6 @@
     "@fontsource/lusitana": "4.5.0",
     "@fontsource/rubik": "^4.5.0",
     "@giscus/react": "1.0.0",
-    "@material-ui/icons": "4.11.2",
     "@stefanprobst/remark-shiki": "1.1.1",
     "@tailwindcss/aspect-ratio": "0.2.2",
     "@tailwindcss/typography": "0.4.1",

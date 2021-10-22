@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import ChevronUpIcon from '#components/Icons/ChevronUpIcon';
 
 export default function BackToTop() {
   const [show, setShow] = useState(false);
@@ -36,7 +36,7 @@ export default function BackToTop() {
       }`}
       onClick={scrollToTop}
     >
-      <KeyboardArrowUpIcon className="text-white" fontSize="medium" />
+      <ChevronUpIcon />
     </div>
   );
 }

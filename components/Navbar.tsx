@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import GithubIcon from '#components/Icons/GithubIcon';
 import TelegramIcon from '#components/Icons/TelegramIcon';
+import SearchIcon from '#components/Icons/SearchIcon';
 import { useRouter } from 'next/router';
-import SearchIcon from '@material-ui/icons/Search';
 
 export default function Navbar() {
   const router = useRouter();
@@ -13,13 +13,13 @@ export default function Navbar() {
     return router.route === `/${route}` ? 'active' : '';
   };
   return (
-    <nav className="fixed min-h-16 top-0 left-0 right-0 bg-white backdrop-blur-full backdrop-brightness-90 z-20 font-sans">
-      <div className="flex flex-col md:flex-row justify-between items-center py-5 container mx-auto px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56 2xl:px-72 h-full">
-        <div className="flex-1">
+    <nav className="fixed min-h-16 top-0 inset-x-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg z-20 font-sans">
+      <div className="container flex flex-col md:flex-row justify-between items-center space-y-1 mx-auto py-5 px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56 2xl:px-72 h-full">
+        <div className="flex-1 space-x-6">
           {['home', 'blog', 'about'].map((route, idx) => (
             <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
               <a
-                className={`flex-inline pr-8 uppercase text-center md:text-left text-base text-gray-700 hover:text-primary-600 hover:font-bold ${active(
+                className={`flex-inline uppercase text-center hover:text-primary-600 transition duration-300 ${active(
                   route,
                   route === 'home',
                 )}`}
@@ -35,21 +35,21 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex-1 text-right text-lg">
-          <div className="flex flex-row items-center justify-end">
-            <div className="flex-initial pr-4 hover:text-primary-600 opacity-60 hover:opacity-100">
+          <div className="flex flex-row items-center justify-end space-x-4">
+            <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <Link href="/search">
                 <a>
-                  <SearchIcon fontSize="medium" />
+                  <SearchIcon width="1.5rem" height="1.5rem" />
                 </a>
               </Link>
             </div>
 
-            <div className="flex-initial pr-4 hover:text-primary-600 opacity-60 hover:opacity-100">
+            <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <a href="https://github.com/teknologi-umum">
                 <GithubIcon width="1.5rem" height="1.5rem" />
               </a>
             </div>
-            <div className="flex-initial hover:text-primary-600 opacity-60 hover:opacity-100">
+            <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <a href="https://t.me/teknologi_umum">
                 <TelegramIcon width="2rem" height="2rem" />
               </a>
