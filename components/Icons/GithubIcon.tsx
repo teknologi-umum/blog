@@ -1,6 +1,6 @@
 import type { IconProperty } from '#types/icon';
 
-export default function GithubIcon({ width, height }: IconProperty) {
+export default function GithubIcon({ width, height, className }: IconProperty) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,7 @@ export default function GithubIcon({ width, height }: IconProperty) {
       height={height || '1rem'}
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 24 24"
+      className={className}
     >
       <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0" />
       <path
