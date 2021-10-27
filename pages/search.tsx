@@ -132,7 +132,7 @@ export default function Search({ posts }) {
 }
 
 export const getStaticProps = async () => {
-  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github']);
+  const posts = await getAllPosts(['title', 'slug', 'cover', 'desc', 'date', 'categories', 'author', 'github']);
   return {
     props: {
       posts,
