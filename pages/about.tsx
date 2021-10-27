@@ -37,7 +37,7 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
         }}
       />
       <div>
-        <div className="w-full md:w-4/5 text-lg font-serif">
+        <div className="w-full text-lg font-serif">
           <h1 className="text-left text-2xl font-bold py-8 uppercase font-sans">Tentang Teknologi Umum</h1>
           <p className="pb-3">
             <strong className="font-bold">Teknologi Umum</strong> merupakan suatu paguyuban yang berdiri sejak tahun
