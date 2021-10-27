@@ -33,7 +33,8 @@
       "#utils/*": ["utils/*"],
       "#hooks/*": ["hooks/*"],
       "#types/*": ["types/*"]
-    }
+    },
+    "incremental": true
   },
   "include": ["pages", "utils", "components/FeaturedPost.tsx"],
   "exclude": ["node_modules"]
