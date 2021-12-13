@@ -144,7 +144,7 @@ Go has some built-in data types, which I will only mention some of the important
 
 ## Variables
 
-There are some way to create a variable in Go:
+There are some ways to create a variable in Go:
 
 ```go
 package main
