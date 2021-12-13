@@ -464,7 +464,7 @@ func main() {
 Oh well, I'm not going to explain what a pointer is and how to use it. That will be another article.
 
 But in Go, you can use the `&` operator to get the address of a variable. This is called a `pointer`.
-And you can get the value of the pointer by using the `*` operator.
+And you can get the value of a pointer by using the `*` operator.
 
 And for C/C++ programmers, there are no pointer aritmethics in Go. If you want to play around with the
 pointer, use the [unsafe package](https://pkg.go.dev/unsafe). If you want to know more about why there are no pointer aritmethics in Go,
