@@ -676,7 +676,7 @@ Not long after, I told them, "well yeah, you could just do panic()". And they la
 like a developers who would just panic whenever they see an error?
 
 You might don't understand that story, but the point is that you should not be scared or hate the language just
-because its' error handling is verbose. After a while, I think being able to handle an error programatically
+because its error handling is verbose. After a while, I think being able to handle an error programatically
 (and with that so much verbose-power) is good, because in Go, error are just values. You can decorate the error,
 and find out what was going on and where the error is without trying to read the stack trace.
 
