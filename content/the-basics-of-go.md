@@ -40,7 +40,7 @@ on the class keyword itself. You can do OOP in Go, but do you really need OOP th
 patterns that you could implement in Go.
 
 If you've seen the formatting of Go, yes, we use the `gofmt` to lint and format the style of Go codes. And yes, all
-of us hate it, because it's opinionated. But, hey, we all also loved it because of that reason. It provides consistency
+of us hate it, because it's opinionated. But hey, we all also love it because of that reason. It provides consistency
 across projects.
 
 Some problem surrounding Go programming language when it's compared to other programming languages should be ignored
