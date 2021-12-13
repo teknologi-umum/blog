@@ -30,7 +30,7 @@ business requirement tanpa bicara dengan _domain expert_. Wah, istilah baru lagi
 dengan ranah bisnis dari suatu domain.
 
 Setelah ngobrol-ngobrol dengan domain expert, dalam menciptakan suatu model domain, biasanya diperlukan sebuah konteks.
-Konteks dapat berupa event, statement, ide, atau apapun itu yang mempunyai ikatan dengan domain. Biasanya, seorang developer
+Konteks dapat berupa _event_, _statement_, ide, atau apapun itu yang mempunyai ikatan dengan domain. Biasanya, seorang developer
 akan kepikiran untuk menciptakan model untuk domainnya. Dalam suatu domain, sangat umum juga apabila terdapat lebih dari
 satu model. Dalam setiap model pasti memiliki aturan dan batasannya sendiri, begitupula dengan implementasinya.
 
