@@ -22,7 +22,7 @@ type declaration for variables and functions.
 
 A few things that I like from Go are:
 
-1. Very easy to install, and its' toolings are available for most text editors, even IDE.
+1. Very easy to install, and its toolings are available for most text editors, even IDE.
 2. Very lightweight when compiled to binary (yes, it compiles to a binary format that you can run anywhere)
 3. Boring code, meaning the code, whoever it is that wrote it, would be easy to read and understand by anyone.
 4. The standard libraries are not as confusing as Node.js or Rust's.
