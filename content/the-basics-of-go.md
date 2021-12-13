@@ -45,7 +45,7 @@ of us hate it, because it's opinionated. But hey, we all also love it because of
 across projects.
 
 Some problem surrounding Go programming language when it's compared to other programming languages should be ignored
-because.. well.. why should we? Language is just tools for us as a software engineers to use. With that being said,
+because.. well.. why should we? Language is just a tool for us as a software engineers to use. With that being said,
 I would like to clarify that Go, might not always be the best language for you to use. It all depends on the project
 that you're handling, it depends on the problems that you're facing.
 
@@ -314,7 +314,7 @@ func calculate(a, b int) int {
 
 ## Control Flow
 
-Go is pretty much straightforward as you would see and do in C or even other C-family language.
+Go is pretty much straightforward as you would see and do in C or even other C-family languages.
 But please bear in mind, I omit the `package main` and `func main()` keyword just for the sake of
 keeping the article short. You must use those two keywords if you were to code seriously in Go.
 
