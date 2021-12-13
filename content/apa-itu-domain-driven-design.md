@@ -20,10 +20,10 @@ oleh seorang developer. Kalau kalimat itu sudah paham, mari kita lanjut.
 
 _Domain_ sendiri adalah unit yang menjadi bagian dari bisnis suatu proyek yang kamu kerjakan. Jadi, misalnya kamu memiliki
 sebuah proyek untuk mengerjakan sebuah aplikasi untuk sekolah, dimana dalam aplikasi tersebut terdapat beberapa fitur yang
-menjadi kebutuhan: absensi, data guru & murid, data pelajaran, dan rapor. Masing-masing fitur tersebut dapat menjadi
-sebuah domain yang berdiri sendiri, walaupun nanti sebuah domain dapat mempunyai ketergantungan (bahasa inggris: dependent)
+menjadi kebutuhan: absensi, data guru dan murid, data pelajaran, dan rapor. Masing-masing fitur tersebut dapat menjadi
+sebuah domain yang berdiri sendiri, walaupun nanti sebuah domain dapat mempunyai ketergantungan (bahasa inggris: dependency)
 kepada domain lain. Misalnya untuk mengeksekusi suatu fungsi dari domain absensi, harus mengambil beberapa data dari data
-guru & murid. Namun, masing-masing domain juga memiliki aturan dan batasan untuk hal-hal yang dapat dilakukan.
+guru dan murid. Namun, masing-masing domain juga memiliki aturan dan batasan untuk hal-hal yang dapat dilakukan.
 
 Dalam domain-driven design, seorang developer nggak bisa dilepas sendiri untuk develop sebuah domain tanpa mengetahui
 business requirement tanpa bicara dengan _domain expert_. Wah, istilah baru lagi. Domain expert adalah seseorang yang mengerti
@@ -35,7 +35,7 @@ akan kepikiran untuk menciptakan model untuk domainnya. Dalam suatu domain, sang
 satu model. Dalam setiap model pasti memiliki aturan dan batasannya sendiri, begitu pula dengan implementasinya.
 
 Menghadapi banyak model secara bersamaan akan menjadi suatu masalah. Oleh karena itu, harus terdapat _ubiquitous language_,
-yang bearti penamaan (bahasa inggris: _naming convention_) atas segala sesuatu yang ada di dalam konteks tersebut harus
+yang berarti penamaan (bahasa inggris: _naming convention_) atas segala sesuatu yang ada di dalam konteks tersebut harus
 manusiawi dan lebih dekat dengan bisnis. Nggak boleh disingkat-singkat atau bahkan misleading.
 
 Sampai titik ini kamu seharusnya sadar bahwa domain-driven design itu tidak berfokus kepada developers saja, namun kepada
@@ -63,12 +63,12 @@ pembahasan ini. Namun, karena saya malas, kita pindah topik saja ke suatu hal ya
 Lalu dalam real-world project, bagaimana cara menerapkan domain-driven design?
 
 Karena domain-driven design tidak mempunyai aturan terkait bagaimana struktur folder atau pattern-pattern lain
-(seperti repository pattern, dan design pattern lain) yang dapat digunakan didalamnya, maka tidak ada konvensi juga
-terkait 2 hal itu. Namun, kalau ingin mengetahui bagaimana cara paling umum dalam penerapannya, kamu bisa melihat
+(seperti repository pattern, dan design pattern lain) yang dapat digunakan di dalamnya, maka tidak ada konvensi juga
+terkait dua hal itu. Namun, kalau ingin mengetahui bagaimana cara paling umum dalam penerapannya, kamu bisa melihat
 ke konsep _Clean Architecture_, yang dari namanya mungkin akan memberikan struktur folder, namun sebenarnya tidak juga.
 
 Singkatnya, _Clean Architecture_ memisahkan antara business logic, wrapper seperti database dan hal-hal lain yang dapat
-digantikan kapanpun, serta UI (atau biasanya lebih familiar dengan sebutan presentation layer).
+digantikan kapan pun, serta UI (atau biasanya lebih familiar dengan sebutan presentation layer).
 
 Masih banyak resource yang harus dieksplor sendiri, karena tidak akan habis kalau domain-driven design dijelaskan melalui
 sebuah artikel saja.

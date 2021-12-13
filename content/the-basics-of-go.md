@@ -525,7 +525,7 @@ type Student struct {
 }
 ```
 
-Okay, that sounds complex. What if I only have a few value that I can put into the struct? Sure, you can
+Okay, that sounds complex. What if you only have a few value that can be put into the struct? Sure, you can
 put them later.
 
 ```go
@@ -603,22 +603,22 @@ func main() {
 Interface could be empty. So, you can make an interface that has no methods. This is the equivalent of `any` (that
 means literally a type of anything), and might be useful when you're dealing with things that you don't know.
 
-But is it couraged to do so? No. You should be careful with interfaces. Go is not a dynamically typed language.
+But is it encouraged to do so? No. You should be careful with interfaces. Go is not a dynamically typed language.
 So you have to validate the given type of the interface.
 
 ```go
 func main() {
-	var i interface{}
+  var i interface{}
 
-	i = 42
-	describe(i)
+  i = 42
+  describe(i)
 
-	i = "hello"
-	describe(i)
+  i = "hello"
+  describe(i)
 }
 
 func describe(i interface{}) {
-	fmt.Printf("(%v, %T)\n", i, i)
+  fmt.Printf("(%v, %T)\n", i, i)
   // Output:
   // (42, int)
   // (hello, string)
@@ -644,20 +644,20 @@ Or two, via the type switch:
 
 ```go
 func do(i interface{}) {
-	switch v := i.(type) {
-	case int:
-		fmt.Printf("Twice %v is %v\n", v, v*2)
-	case string:
-		fmt.Printf("%q is %v bytes long\n", v, len(v))
-	default:
-		fmt.Printf("I don't know about type %T!\n", v)
-	}
+  switch v := i.(type) {
+  case int:
+    fmt.Printf("Twice %v is %v\n", v, v*2)
+  case string:
+    fmt.Printf("%q is %v bytes long\n", v, len(v))
+  default:
+    fmt.Printf("I don't know about type %T!\n", v)
+  }
 }
 
 func main() {
-	do(21)
-	do("hello")
-	do(true)
+  do(21)
+  do("hello")
+  do(true)
 }
 ```
 
@@ -665,16 +665,16 @@ func main() {
 
 I want to tell a little story before we go forward. Go's error handling is a bit unique. It's not like C/C++,
 where you have to define a custom error type. But it's not like Java, where you have to define a custom exception.
-There are no try-catches. And there are no exceptions. But Go has an error type that must be defined explicitly,
+There are no try-catch blocks. And there are no exceptions. But Go has an error type that must be defined explicitly,
 which is called `error`, and means your code will be so verbose. I once had an internal talk on one of the
 company that I worked on, and when I explain about why there are `error` on the function signature and how
 verbose your code should be, some PHP and C# developers were confused and immediately don't like the language.
-Not long after, I told them, "well yeah, you could just do panic()". And they laugh, "how can a language be so much
+Not long after, I told them, "well yeah, you could just do panic()". And they laughed, "how can a language be so much
 like a developers who would just panic whenever they see an error?"
 
-You might don't understand that story, but the point is that you should not be scared or hate the language just
+You might not understand that story, but the point is that you should not be scared or hate the language just
 because its error handling is verbose. After a while, I think being able to handle an error programatically
-(and with that so much verbose-power) is good, because in Go, error are just values. You can decorate the error,
+(and with that so much verbose-power) is good, because in Go, errors are just values. You can decorate the error,
 and find out what was going on and where the error is without trying to read the stack trace.
 
 Here, we're going to use a function from the `strconv` standard library to convert a string into integer.
@@ -705,9 +705,9 @@ developer should handle on your own.
 ## Concurrency
 
 Concurrency might be something that you are familiar with if you're coming from Kotlin or other languages that
-have a coroutine. Conccurency is a way to run multiple task simultaneously, maximizing the performance
+have coroutines. Concurrency is a way to run multiple tasks simultaneously, maximizing the performance
 of the multi-core CPU of your computer. In a way, it's different than parallelism, which is a way to run
-multiple task at the same time. I found an image to describe the difference between them that I think would
+multiple tasks at the same time. I found an image to describe the difference between them that I think would
 be easy to understand.
 
 ![](https://alvinalexander.com/sites/default/files/photos/parallelism-vs-concurrency.png)
@@ -721,20 +721,20 @@ Just add a `go` keyword in front of the function, and you're good to go.
 package main
 
 import (
-	"fmt"
-	"time"
+  "fmt"
+  "time"
 )
 
 func say(s string) {
-	for i := 0; i < 5; i++ {
-		time.Sleep(100 * time.Millisecond)
-		fmt.Println(s)
-	}
+  for i := 0; i < 5; i++ {
+    time.Sleep(100 * time.Millisecond)
+    fmt.Println(s)
+  }
 }
 
 func main() {
-	go say("world")
-	say("hello")
+  go say("world")
+  say("hello")
 }
 ```
 
@@ -794,7 +794,7 @@ captcha validation for each joined user.
 
 But the question now is, how do you handle that if there are multiple users joining at the same time? On a normal
 code, the captcha bot would just wait for each user to solve the captcha, then move to the next user, right?
-But is it ideal? What if the second user that's joined just gave a spam message? It would be a total chaos.
+But is it ideal? What if the second user who joined just gave a spam message? It would be a total chaos.
 
 So, I came up with this flow:
 
