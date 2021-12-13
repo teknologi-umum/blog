@@ -803,7 +803,7 @@ So, I came up with this flow:
 
 1. A user joined the group. The captcha bot will send a captcha to the user.
 2. The captcha bot calls a function that start a 60 seconds timer for the user to complete the captcha with goroutine.
-3. If the 60 seconds has passed, and the user haven't solved the captcha, the captcha bot will kick the user.
+3. If 60 seconds has passed, and the user hasn't solved the captcha, the captcha bot will kick the user.
 4. Listen to any incoming message by anyone, and if the message was sent by one of the user that need to solve the captcha,
    we will validate their input.
 5. If the user solved the captcha, we will send a message to the user that they have solved the captcha. And remove
