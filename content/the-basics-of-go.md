@@ -198,7 +198,7 @@ What if you want it to be immutable? We'll need to use the keyword...
 
 ## Constant
 
-Unlike variables that are mutable, constants are immutable. You can't change the value of it after its' declaration.
+Unlike variables that are mutable, constants are immutable. You can't change the value of it after its declaration.
 
 ```go
 package main
