@@ -6,7 +6,7 @@ github: aldy505
 twitter:
 telegram: aldy505
 date: 2021-12-12
-cover: https://link/to/image (not really required, leave it empty by deleting this line)
+cover: https://cdn.dribbble.com/users/507883/screenshots/13801545/media/e0ad9ccf44dbd83bbe6e599569fa5f4c.jpg
 categories:
   - domain driven design
 ---

@@ -256,7 +256,7 @@ var capacity = cap(people) // 6
 Wait, why the capacity of people is 6? Well, I'm not going to explain this right now. But if you're
 curious, you can read [this article](https://go.dev/blog/slices-intro#TOC_5.) to know more.
 
-Maps is like a Dictionary, Vector, Object, or Hash in other languages.
+Maps is like a Dictionary, Associative Array, Object, or Hash in other languages.
 
 ```go
 var capitalCities = map[string]string{
@@ -278,8 +278,8 @@ fmt.Println(phoneNumbers["George"]) // 345678912
 
 ## Functions
 
-Like all programming languages that ever existed, functions acts like the same. It has a name, want zero or more
-arguments, and return a value. In Go, you can return more than one value to it.
+Like all programming languages that ever existed, function acts the same. It has a name, want zero or more
+arguments, and return a value (void or empty return is also a value). In Go, you can return more than one value to it.
 
 ```go
 package main
@@ -505,8 +505,8 @@ anonymous struct.
 ```go
 type School struct {
   Name string
-  // This is using the named or predefined
-  // struct.
+  // This is using the named or
+  // predefined struct.
   //
   // On this one, it accepts array of
   // Student struct.
@@ -608,7 +608,6 @@ So you have to validate the given type of the interface.
 ```go
 func main() {
 	var i interface{}
-	describe(i)
 
 	i = 42
 	describe(i)
@@ -638,9 +637,6 @@ fmt.Println(s, ok)
 
 f, ok := i.(float64)
 fmt.Println(f, ok)
-
-f = i.(float64) // panic
-fmt.Println(f)
 ```
 
 Or two, via the type switch:
@@ -845,6 +841,9 @@ func main() {
   //
   // Well, you can also do directly fmt.Println(<-c)
   // but that would confuse you.
+  //
+  // This blocks the main thread until there is a value
+  // received by the channel.
   result := <-c
   fmt.Println(result)
   result = <-c
