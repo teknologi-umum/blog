@@ -289,9 +289,9 @@ package main
 // it is a formatter package after all.
 import "fmt"
 
-// Calculate will take 2 integer arguments and return
-// a addition of them on the first result
-// and a subtraction of them on the second result.
+// Calculate will take 2 integer arguments and returns
+// the sum of them on the first result
+// and the difference of them on the second result.
 func calculate(a int, b int) (int, int) {
   return a + b, a - b
 }
