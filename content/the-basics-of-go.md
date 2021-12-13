@@ -46,7 +46,7 @@ across projects.
 Some problem surrounding Go programming language when it's compared to other programming languages should be ignored
 because.. well.. why should we? Language is just tools for us as a software engineers to use. With that being said,
 I would like to clarify that Go, might not always be the best language for you to use. It all depends on the project
-that you're handling, it depends on the problem's that you're facing.
+that you're handling, it depends on the problems that you're facing.
 
 With all that, let's Go.
 
