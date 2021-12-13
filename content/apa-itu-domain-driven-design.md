@@ -47,7 +47,7 @@ Dalam sebuah aplikasi yang kompleks, biasanya berbagai hal seperti UI, database,
 beberapa layer, yang biasanya membantu developer untuk me-manage kompleksitas kodenya. Secara dogmatis, domain-driven design
 menyarankan kita untuk memisahkan ekspresi antara model dengan business logic. Buat sebuah desain arsitektur yang mana
 masing-masing layer hanya mempunyai ketergantungan terhadap layer dibawahnya. Sehingga kode tersebut menjadi loosely-coupled,
-yang mana berarti terpisah antara UI, aplikasi, dan kode infrastruktur. Ada beberapa istilah dalam _layered architecture_:
+yang berarti terpisah antara UI, aplikasi, dan kode infrastruktur. Ada beberapa istilah dalam _layered architecture_:
 
 1. _Entity_, yang merujuk kepada sebuah object yang memiliki identitas, punya behavior, aturan, dan side effect. Dimana
    identitas dari suatu entity ini tidak akan pernah berubah, namun property lain di dalamnya bisa berubah
