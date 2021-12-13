@@ -28,6 +28,7 @@ A few things that I like from Go are:
 4. The standard libraries are not as confusing as Node.js or Rust's.
 5. Automatic documentation generation for packages.
 6. Can be easily decoupled, you can put a single packagee and take out another package without having headaches.
+7. Can embed files into the binary build.
 
 ## Some things to be acknowledged
 
@@ -668,8 +669,8 @@ There are no try-catches. And there are no exceptions. But Go has an error type 
 which is called `error`, and means your code will be so verbose. I once had an internal talk on one of the
 company that I worked on, and when I explain about why there are `error` on the function signature and how
 verbose your code should be, some PHP and C# developers were confused and immediately don't like the language.
-Not long after, I told them, "well yeah, you could just do panic()". And they laugh, how can a language be so much
-like a developers who would just panic whenever they see an error?
+Not long after, I told them, "well yeah, you could just do panic()". And they laugh, "how can a language be so much
+like a developers who would just panic whenever they see an error?"
 
 You might don't understand that story, but the point is that you should not be scared or hate the language just
 because its error handling is verbose. After a while, I think being able to handle an error programatically
@@ -854,6 +855,8 @@ func main() {
   // world
 }
 ```
+
+## Where to Go next?
 
 There are more things to be discover. So many things are not covered on this article such as
 dealing with the `make()` and `close()` built-in functions, buffered channels, select statement,

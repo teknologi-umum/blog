@@ -35,7 +35,7 @@ akan kepikiran untuk menciptakan model untuk domainnya. Dalam suatu domain, sang
 satu model. Dalam setiap model pasti memiliki aturan dan batasannya sendiri, begitu pula dengan implementasinya.
 
 Menghadapi banyak model secara bersamaan akan menjadi suatu masalah. Oleh karena itu, harus terdapat _ubiquitous language_,
-yang bearti penamaan (bahasa inggris: naming convention) atas segala sesuatu yang ada di dalam konteks tersebut harus
+yang bearti penamaan (bahasa inggris: _naming convention_) atas segala sesuatu yang ada di dalam konteks tersebut harus
 manusiawi dan lebih dekat dengan bisnis. Nggak boleh disingkat-singkat atau bahkan misleading.
 
 Sampai titik ini kamu seharusnya sadar bahwa domain-driven design itu tidak berfokus kepada developers saja, namun kepada
@@ -52,10 +52,10 @@ yang berarti terpisah antara UI, aplikasi, dan kode infrastruktur. Ada beberapa 
 1. _Entity_, yang merujuk kepada sebuah object yang memiliki identitas, punya behavior, aturan, dan side effect. Dimana
    identitas dari suatu entity ini tidak akan pernah berubah, namun property lain di dalamnya bisa berubah
    (atau ter-mutate).
-2. _Value object_ merupakan sebuah object yang tidak memiliki indentitas, lebih sederhana lagi dapat didefinisikan sebagai
+2. _Value object_ merupakan sebuah object yang tidak memiliki identitas, lebih sederhana lagi dapat didefinisikan sebagai
    atribut dan logika dari sebuah elemen dalam model. Value object ini dapat berubah, namun seharusnya diperlakukan sebagai
    suatu object yang immutable (atau isinya tidak bisa diubah). Apabila berubah, suatu value object baru akan diciptakan
-   dan di-assign kepada layer diatasnya yang biasanya merupakan sebuah entity.
+   dan diberikan kepada layer diatasnya yang biasanya merupakan sebuah entity.
 
 Sebetulnya ada 3 istilah lagi seperti _services_, _aggregates_ dan _factory & repository_ yang menjadi bagian dalam
 pembahasan ini. Namun, karena saya malas, kita pindah topik saja ke suatu hal yang lebih dipedulikan oleh developer:
