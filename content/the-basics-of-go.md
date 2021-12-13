@@ -817,7 +817,7 @@ by both the user and the bot. The code of the system above is available on [Gith
 Let's dive about one more thing before we end this article: Channel.
 
 Channel is a way to communicate between goroutines. To use it, simply make a channel of a type, and then
-use the channel as usual. The channel is a type that can be used to send and receive values. Let's see the example
+use the channel as usual. Channel is a type that can be used to send and receive values. Let's see the example
 code so you won't have to bother with all the technical terms.
 
 ```go
