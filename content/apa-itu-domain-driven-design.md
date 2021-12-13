@@ -32,7 +32,7 @@ dengan ranah bisnis dari suatu domain.
 Setelah ngobrol-ngobrol dengan domain expert, dalam menciptakan suatu model domain, biasanya diperlukan sebuah konteks.
 Konteks dapat berupa _event_, _statement_, ide, atau apapun itu yang mempunyai ikatan dengan domain. Biasanya, seorang developer
 akan kepikiran untuk menciptakan model untuk domainnya. Dalam suatu domain, sangat umum juga apabila terdapat lebih dari
-satu model. Dalam setiap model pasti memiliki aturan dan batasannya sendiri, begitupula dengan implementasinya.
+satu model. Dalam setiap model pasti memiliki aturan dan batasannya sendiri, begitu pula dengan implementasinya.
 
 Menghadapi banyak model secara bersamaan akan menjadi suatu masalah. Oleh karena itu, harus terdapat _ubiquitous language_,
 yang bearti penamaan (bahasa inggris: naming convention) atas segala sesuatu yang ada di dalam konteks tersebut harus
