@@ -152,7 +152,7 @@ package main
 func main() {
   // Oh by the way, this is a comment.
   var str string // Declares a variable called str, which holds an empty string
-  // Due to the is equivalent to:
+  // The declaration above is equivalent to:
   var str string = ""
   // Why is that? We'll touch that in a minute.
 
