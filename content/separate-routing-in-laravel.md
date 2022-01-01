@@ -91,12 +91,18 @@ menjadi
  |
 ```
 
-setelah itu, pada `gambar 1` line 6-8 kita pindahkan ke `admin.php`. lah kok cuma line 6-8?  
+setelah itu, pada `gambar 1` line 6-8 kita pindahkan ke `admin.php`.
+
+<p align="center" style={{fontSize: "0.875em"}}> gambar 3</p>
+
+![This is a routing-admin.php image](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/how%20to%20use%20in%20admin.php.png)
+
+lah kok cuma line 6-8?  
 ya sabarr....
 
 nahh, selanjutnya ini untuk naming dan prefixing kita atur di pengaturan routing. (`pengaturan`) 😁 nya ada di folder `app/Providers/RouteServiceProvider.php`, lihat code pada line 50-55
 
-<p align="center" style={{fontSize: "0.875em"}}> gambar 2</p>
+<p align="center" style={{fontSize: "0.875em"}}> gambar 4</p>
 
 ![This is a routing-servie image](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/admin%20routing%20done.png)
 disanalah kita meletakkan name x prefixnya.
@@ -108,12 +114,12 @@ before edit routing
 ```
 
 - adminpage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 3</p>
+<p align="center" style={{fontSize: "0.875em"}}> gambar 5</p>
 
 ![This is a adminpage image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-admin-page.png)
 
 - homepage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 4</p>
+<p align="center" style={{fontSize: "0.875em"}}> gambar 6</p>
 
 ![This is a home image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-home-page.png)
 
@@ -122,12 +128,12 @@ after edit routing
 ```
 
 - adminpage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 5</p>
+<p align="center" style={{fontSize: "0.875em"}}> gambar 7</p>
 
 ![This is a adminpage image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-admin-page.png)
 
 - homepage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 6</p>
+<p align="center" style={{fontSize: "0.875em"}}> gambar 8</p>
 
 ![This is a home image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-home-page.png)
 
