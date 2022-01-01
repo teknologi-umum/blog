@@ -20,9 +20,9 @@ hanya beberapa browser atau browser dengan versi terbaru yang mendukungnya.
 Tidak semua orang menggunakan browser versi terbaru,
 sebagian orang menggunakan browser yang tidak diupgrade,
 dikarenakan sistem komputer yang tidak mendukung.
-Sebagian orang lagi menggunakan browser dengan versi lawas. karena device orang tersebut tidak mampu mengangkat browser tersebut,
+Sebagian orang lagi menggunakan browser dengan versi lawas, karena device orang tersebut tidak mampu mengangkat browser tersebut.
 
-Jadi agar user bisa menikmati browser yang kita buat,
+Jadi agar user bisa menikmati website yang kita buat,
 kita juga harus mendukung kekurangan yang ada pada device user dengan menambahkan support untuk browser lama.
 
 ## Menambahkan legacy plugins
