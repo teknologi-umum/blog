@@ -1,5 +1,5 @@
 ---
-title: Memisahkan Routing agar lebih mudah untuk di maintenance di Laravel (Separate Routing in Laravel)
+title: Memisahkan Routing agar lebih mudah untuk di-maintain di Laravel (Separate Routing in Laravel)
 desc: Laravel is a web application framework with expressive, elegant syntax. A web framework provides a structure and starting point for creating your application, allowing you to focus on creating something amazing while we sweat the details.
 author: Wahidin Aji
 github: WahidinAji
@@ -64,8 +64,8 @@ mungkin contohnya terlihat sedikit complex. sebentar, saya buatkan contoh yang l
 <p align="center" style={{fontSize: "0.875em"}}> gambar 1</p>
 
 ![This is a routing image before edit](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before%20edit%20routing.png)
-pada gambar diatas ini 👆, telihat 2 routing di dalam 1 file `web.php`.
-nah, biasanya agar lebih ketika terjadi perubahan pada routing tertentu, saya biasanya memisahkannya kembali menjadi 1 file berbeda. dari yang sebelumnya struktur file-folder nya seperti ini :
+pada gambar diatas ini 👆, terlihat ada 2 routing di dalam 1 file `web.php`.
+nah, biasanya agar lebih mudah di mapping ketika terjadi perubahan pada routing tertentu, saya biasanya memisahkannya kembali menjadi 1 file berbeda. dari yang sebelumnya struktur file-folder nya seperti ini :
 
 ```bash
 .
@@ -105,7 +105,7 @@ nahh, selanjutnya ini untuk naming dan prefixing kita atur di pengaturan routing
 <p align="center" style={{fontSize: "0.875em"}}> gambar 4</p>
 
 ![This is a routing-servie image](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/admin%20routing%20done.png)
-disanalah kita meletakkan name x prefixnya.
+di sanalah kita meletakkan name x prefixnya.
 
 untuk uji coba silahkan lihat pada beberapa gambar ini,
 
@@ -142,5 +142,5 @@ after edit routing
 what's next? if you have some req tips. reach me on twitter [@a17wahidin](https://twitter.com/a17wahidin)
 
 ```bash
-PHP STILL ALIVE 😆
+PHP IS STILL ALIVE 😆
 ```
