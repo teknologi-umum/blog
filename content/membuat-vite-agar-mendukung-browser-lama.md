@@ -1,6 +1,6 @@
 ---
 title: Membuat Website Yang Dibangun Menggunakan Vite Agar Mendukung Browser Lama
-desc: menambahkan plugin legacy pada vite agar hasil build mendukung browser lama
+desc: Menambahkan plugin legacy pada vite agar hasil build mendukung browser lama
 author: Bulu Kucing
 github: bulukucing
 telegram: abdulqirom323
