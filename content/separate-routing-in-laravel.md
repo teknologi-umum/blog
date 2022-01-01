@@ -122,12 +122,12 @@ after edit routing
 ```
 
 - adminpage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 3</p>
+<p align="center" style={{fontSize: "0.875em"}}> gambar 5</p>
 
 ![This is a adminpage image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-admin-page.png)
 
 - homepage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 4</p>
+<p align="center" style={{fontSize: "0.875em"}}> gambar 6</p>
 
 ![This is a home image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-home-page.png)
 
