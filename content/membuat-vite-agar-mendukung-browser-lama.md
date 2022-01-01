@@ -20,7 +20,7 @@ hanya beberapa browser atau browser dengan versi terbaru yang mendukungnya.
 Tidak semua orang menggunakan browser versi terbaru,
 sebagian orang menggunakan browser yang tidak diupgrade
 dikarenakan sistem komputer yang tidak mendukung.
-Sebagian orang juga menggunakan browser versi lama karena device mereka tidak mampu menjalankan browser terbaru.
+Sebagian orang juga menggunakan browser dengan versi lama karena device mereka tidak mampu menjalankan browser terbaru.
 
 Jadi agar user bisa menikmati website yang kita buat,
 kita juga harus mendukung kekurangan yang ada pada device user dengan menambahkan support untuk browser lama.
@@ -48,7 +48,7 @@ yarn add @vitejs/plugin-legacy
 
 Setelah berhasil menginstall `@vitejs/plugin-legacy`
 kita perlu menambahkan beberapa konfigurasi pada file `vite.config.js` yang ada pada project kita,
-atau jika file tersebut tidak ada, kalian bisa membuatnya.
+atau jika file tersebut tidak ada maka kalian bisa membuatnya terlebih dahulu.
 
 ```js
 // vite.config.js
