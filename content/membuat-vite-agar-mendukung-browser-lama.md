@@ -15,7 +15,7 @@ Vite menggunakan native **ES modules** agar membuat proses development lebih cep
 akan tetapi tidak semua browser mendukung fitur tersebut,
 hanya beberapa browser atau browser dengan versi terbaru yang mendukungnya.
 
-## Mengapa kita perlu ?
+## Mengapa kita perlu mendukung browser lama?
 
 Tidak semua orang menggunakan browser versi terbaru,
 sebagian orang menggunakan browser yang tidak diupgrade,
