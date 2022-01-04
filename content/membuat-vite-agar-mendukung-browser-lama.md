@@ -152,8 +152,8 @@ akan menambahkan script dengan attribut nomodule
 Maksudnya ?
 
 Script dengan attribut module dan nomodule adalah bagian dari ES modules,
-script dengan tipe module berarti kita mendukung `import` file dalam script tersebut,
-tetapi script dengan tipe module tidak didukung oleh browser lama.
+script dengan attribut module berarti kita mendukung `import` file dalam script tersebut,
+tetapi script dengan attribut module tidak didukung oleh browser lama.
 
 Jadi dengan menggunakan `@vitejs/plugin-legacy` kita menambahkan alternatif lain,
 yaitu menggunakan script dengan attribut nomodule,
