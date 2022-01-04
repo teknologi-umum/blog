@@ -32,15 +32,14 @@ kita perlu menambahkan `@vitejs/plugin-legacy` pada project kita.
 
 ### Install @vitejs/plugin-legacy
 
-Menggunakan NPM:
+Untuk menginstall `vitejs/plugin-legacy`
+jalankan salah satu perintah berikut:
 
 ```bash
+# Menggunakan NPM:
 npm install @vitejs/plugin-legacy
-```
 
-Menggunakan Yarn:
-
-```bash
+# Menggunakan Yarn:
 yarn add @vitejs/plugin-legacy
 ```
 
@@ -69,30 +68,26 @@ Baca dokumentasi resmi berikut untuk melihat lebih spesifik konfigurasi yang bis
 
 ## Mencoba hasil build
 
-Setelah menyelesaikan konfigurasi,
-setiap kali kita membuild website, website tersebut akan mendukung browser lama.
-
 Disini saya akan melakukan uji coba
 untuk memastikan apakah website yang kita buat menggunakan vite
 akan tampil pada browser lama.
 
-Saya akan menggunakan Chrome android dengan versi 52 pada uji coba ini.
+Saya akan menggunakan Chrome android dengan versi 55 pada uji coba ini.
 
-![chrome android versi 52](https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/22-01-01-chrome-android-versi-55.jpg)
+![chrome android versi 55](https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/22-01-01-chrome-android-versi-55.jpg)
 
 <p align="center" style={{fontSize: "0.875em"}}> Chrome android versi 55</p>
 
 ### Membuild project vite
 
-Menggunakan NPM:
+Untuk membuild project vite kita,
+jalankan salah satu perintah berikut:
 
 ```bash
+# Menggunakan NPM:
 npx vite build
-```
 
-Menggunakan Yarn:
-
-```bash
+# Menggunakan Yarn:
 yarn exec vite build
 ```
 
@@ -109,17 +104,13 @@ Kalian juga bisa menggunakan npm script yang terdapat pada `package.json`
   ..
 ```
 
-Dengan menjalankan perintah:
-
-Menggunakan NPM:
+Dengan menjalankan salah satu perintah berikut:
 
 ```bash
+# Menggunakan NPM:
 npm run build
-```
 
-Menggunakan Yarn:
-
-```bash
+# Menggunakan Yarn:
 yarn build
 ```
 
@@ -166,17 +157,13 @@ Baca lebih jelasnya disini:
 
 ### Melihat preview dari project yang sudah kita build
 
-Untuk melihat preview dari hasil build project kita, jalankan perintah berikut:
-
-Menggunakan NPM
+Untuk melihat preview dari hasil build project kita, jalankan salah satu perintah berikut:
 
 ```bash
+# Menggunakan NPM:
 npx vite preview --host
-```
 
-Menggunakan Yarn:
-
-```bash
+# Menggunakan Yarn:
 yarn exec vite preview --host
 ```
 
@@ -186,12 +173,6 @@ yang terdapat pada `package.json` seperti contoh sebelumnya.
 
 Berikut adalah tampilan website yang kita buat menggunakan vite sebelum dan sesudah menambahkan `@vitejs/plugin-legacy`:
 
-<p align="center" style={{fontSize: "0.875em"}}>Sebelum:</p>
-
-![tampilan website yang dibuat menggunakan vite sebelum menambahkan plugin legacy pada chrome android versi 52](https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/22-01-01-tampilan-sebelum-menambahkan-plugin-legacy.jpg)
-
-<p align="center" style={{fontSize: "0.875em"}}>Sesudah:</p>
-
-![tampilan website yang dibuat menggunakan vite  sesudah menambahkan plugin legacy pada chrome android versi 52](https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/22-01-01-tampilan-sesudah-menambahkan-plugin-legacy.jpg)
+![tampilan website yang dibuat menggunakan vite  sesudah menambahkan plugin legacy pada chrome android versi 52](https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/22-01-01-tampilan-sblm-ssdh-menambahkan-plugin-legacy.jpg)
 
 Terimakasih sudah membaca hingga akhir, mohon maaf bila ada kesalahan. Happy Coding:)
