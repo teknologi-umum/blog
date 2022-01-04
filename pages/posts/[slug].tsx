@@ -59,7 +59,7 @@ export default function Post({
           </div>
         </div>
       </header>
-      <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg">
+      <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words">
         <MDXRemote {...html} />
       </div>
       {isCookieEnabled() && (
