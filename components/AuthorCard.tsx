@@ -11,7 +11,7 @@ export default function AuthorCard({ author, github, twitter, telegram }: Partia
         </a>
       </div>
       <span className="md:text-left text-gray-700">{author}</span>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center justify-center">
         {twitter && (
           <div className="flex-initial pr-3">
             <a
