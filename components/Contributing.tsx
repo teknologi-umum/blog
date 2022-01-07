@@ -24,7 +24,8 @@ const Contributing = ({ contributors }: { contributors: Contributor[] }) => {
             <div className="flex items-center justify-center print:pr-2">
               <GithubIcon className="w-5 h-5" />
             </div>
-            <span className="ml-2 text-sm lg:text-base print:hidden">BROWSE THE REPOSITORY</span><span className="hidden print:block">https://github.com/teknologi-umum/blog</span>
+            <span className="ml-2 text-sm lg:text-base print:hidden">BROWSE THE REPOSITORY</span>
+            <span className="hidden print:block">https://github.com/teknologi-umum/blog</span>
           </a>
         </div>
         <div className="flex flex-wrap justify-start -mb-4 -mr-4">
