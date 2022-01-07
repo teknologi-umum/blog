@@ -61,7 +61,7 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
         </div>
         <div className="py-4">
           <h2 className="text-left text-2xl font-bold py-8 uppercase">Contributors</h2>
-          <div className="grid grid-flow-row grid-cols-4 md:grid-cols-8 lg:grid-cols-12 grid-rows-3 gap-2 py-4 pb-2">
+          <div className="grid grid-flow-row grid-cols-4 md:grid-cols-8 lg:grid-cols-12 grid-rows-3 gap-2 py-4 pb-2 print:grid-cols-8">
             {contributors.map((contributor: Contributor) => (
               <a href={contributor.html_url} key={contributor.id}>
                 <img

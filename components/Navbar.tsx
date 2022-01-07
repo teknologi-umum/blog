@@ -13,9 +13,9 @@ export default function Navbar() {
     return router.route === `/${route}` ? 'active' : '';
   };
   return (
-    <nav className="fixed min-h-16 top-0 inset-x-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg z-20 font-sans">
+    <nav className="fixed min-h-16 top-0 inset-x-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg z-20 font-sans print:static">
       <div className="container flex flex-col md:flex-row justify-between items-center space-y-1 mx-auto py-5 px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56 2xl:px-72 h-full">
-        <div className="flex-1 space-x-6">
+        <div className="flex-1 space-x-6 print:hidden">
           {['home', 'blog', 'about'].map((route, idx) => (
             <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
               <a
@@ -34,7 +34,7 @@ export default function Navbar() {
             <a className="font-black">Teknologi Umum</a>
           </Link>
         </div>
-        <div className="flex-1 text-right text-lg">
+        <div className="flex-1 text-right text-lg print:hidden">
           <div className="flex flex-row items-center justify-end space-x-4">
             <div className="flex-initial opacity-60 hover:text-primary-600/100 transition duration-300">
               <Link href="/search">

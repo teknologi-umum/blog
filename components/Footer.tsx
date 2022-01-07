@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mt-12 px-4 py-10 text-center border-t-2 border-gray-200 font-serif">
+    <footer className="mt-12 px-4 py-10 text-center border-t-2 border-gray-200 font-serif print:mt-3">
       <p className="text-base pb-2">&copy; {new Date().getFullYear()} Teknologi Umum</p>
       <p className="text-xs">
         Blog posts are licensed under{' '}
