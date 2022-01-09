@@ -14,7 +14,8 @@ body {
 pre {
   counter-reset: line;
 }
-pre code > .line:before {
+
+pre > code > span.line:not(:only-child):before {
   counter-increment: line;
   content: counter(line);
   display: inline-block;
@@ -22,3 +23,4 @@ pre code > .line:before {
   min-width: 1.5em;
   text-align: right;
 }
+
