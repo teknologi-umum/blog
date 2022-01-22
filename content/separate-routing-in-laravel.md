@@ -142,5 +142,5 @@ after edit routing
 what's next? if you have some req tips. reach me on twitter [@a17wahidin](https://twitter.com/a17wahidin)
 
 ```bash
-PHP IS STILL ALIVE 😆
+PHP IS STILL ALIVE 😆.
 ```
