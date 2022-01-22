@@ -7,7 +7,7 @@ const FeaturedPost = ({ post }) => {
         <p className="text-black font-medium">FEATURED</p>
         <Link href={`/posts/${post.slug}`}>
           <a>
-            <h1 className="sm:text-5xl text-4xl mb-4 mt-2 font-bold text-black">{post.title}</h1>
+            <h1 className="sm:text-5xl text-3xl mb-4 mt-2 font-bold text-black">{post.title}</h1>
           </a>
         </Link>
         <a className="group inline-block" href={`https://github.com/${post.github}`}>
