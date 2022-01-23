@@ -1,14 +1,25 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  @apply p-0 m-0 box-border;
 }
 
 #__next {
-  position: relative;
+  @apply relative;
 }
 
 .active {
   @apply text-primary-600 font-bold;
+}
+
+pre {
+  counter-reset: line;
+}
+
+pre > code > span.line:not(:only-child):before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  margin-right: 1.5em;
+  min-width: 1.5em;
+  text-align: right;
 }
