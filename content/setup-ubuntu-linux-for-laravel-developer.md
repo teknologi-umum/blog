@@ -64,7 +64,7 @@ Download MySQL-nya dan sesuaikan dengan OS Distro Linux kalian. Kemudian ikuti l
 
 - [`Cara Install`](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-debian.html).
 
-Lohh, kok ke dokumentasi? Ya sekalian belajar baca-baca dokumentasinya juga hehehe :). Belajar dari yang mudah untuk diikuti terlebih dahulu aja okay ^~^.
+Lohhh, kok ke dokumentasi? Ya sekalian belajar baca-baca dokumentasinya juga hehehe :). Belajar dari yang mudah untuk diikuti terlebih dahulu aja okay ^~^.
 
 Untuk MySQL Client nya sendiri, saya menggunakan ekstensi Database yang ada di Visual Studio Code. Jadi, saya ga perlu install PHPMyAdmin atau MySQL Client sejenisnya.
 
