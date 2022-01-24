@@ -66,7 +66,7 @@ Download MySQL-nya dan sesuaikan dengan OS Distro Linux kalian. Kemudian ikuti l
 
 Lohhh, kok ke dokumentasi? Ya sekalian belajar baca-baca dokumentasinya juga hehehe :). Belajar dari yang mudah untuk diikuti terlebih dahulu aja okay ^~^.
 
-Untuk MySQL Client nya sendiri, saya menggunakan ekstensi Database yang ada di Visual Studio Code. Jadi, saya ga perlu install PHPMyAdmin atau MySQL Client sejenisnya.
+Untuk MySQL Client nya sendiri, saya menggunakan ekstensi Database yang ada di Visual Studio Code. Jadi, saya ga perlu install PHPMyAdmin, MySQL Client, atau sejenisnya.
 
 Oiya, disini saya tidak menggunakan Web Server ya. Karena Laravel sendiri sudah menyediakan dengan cukup jalankan command `php artisan serve`.
 
