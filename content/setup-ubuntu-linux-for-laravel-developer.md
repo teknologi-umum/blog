@@ -68,7 +68,7 @@ Lohhh, kok ke dokumentasi? Ya sekalian belajar baca-baca dokumentasinya juga heh
 
 Untuk MySQL Client nya sendiri, saya menggunakan ekstensi Database yang ada di Visual Studio Code. Jadi, saya ga perlu install PHPMyAdmin, MySQL Client, atau sejenisnya.
 
-Oiya, disini saya tidak menggunakan Web Server ya. Karena Laravel sendiri sudah menyediakan dengan cukup jalankan command `php artisan serve`.
+Oiya, disini saya tidak menggunakan Web Server ya. Karena Laravel sendiri sudah menyediakannya dengan cara menjalankan command `php artisan serve`.
 
 Sip, selanjutnya kita install Go untuk kebutuhan kalau kita pengen ngoding Go.
 
