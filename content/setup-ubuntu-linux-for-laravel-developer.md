@@ -17,7 +17,7 @@ Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya sejak sekitar dua
 
 # PHP
 
-Pertama install php beserta ekstensi-ekstensinya (disini saya menggunakan php versi 7.4)
+Pertama, install php beserta ekstensi-ekstensinya (disini saya menggunakan php versi 7.4)
 
 ```bash
 sudo apt update
