@@ -13,7 +13,7 @@ categories:
   - ubuntu
 ---
 
-Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya dari sekitar dua minggu yang lalu saya kembali memakai full linux untuk proses project development saya. Nah, maka dari itu untuk kali ini saya akan mencoba membagikan beberapa tips untuk setup Linux bagi para Laravel Developer. Oiya untuk distro Linux yang pakai adalah Ubuntu Linux versi 18.04 LTS.
+Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya sejak sekitar dua minggu yang lalu saya kembali menggunakan linux secara penuh untuk proses project development saya. Nah, maka dari itu untuk kali ini saya akan mencoba membagikan beberapa tips untuk setup Linux bagi para Laravel Developer. Oiya untuk distro Linux yang saya pakai adalah Ubuntu Linux versi 18.04 LTS.
 
 # PHP
 
