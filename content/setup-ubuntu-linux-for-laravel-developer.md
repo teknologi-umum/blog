@@ -36,7 +36,7 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
-Setelah proses diatas sudah dijalankan satu-persatu, kemudian pindahkan composer.phar ke direktori PATH.
+Setelah proses diatas sudah dijalankan satu-persatu, pindahkan composer.phar ke direktori PATH.
 
 ```bash
 sudo mv composer.phar /usr/local/bin/composer
