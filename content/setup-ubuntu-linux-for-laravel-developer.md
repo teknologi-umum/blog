@@ -27,7 +27,7 @@ sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl
 
 # Composer
 
-Kemudian pasang composer,
+Kemudian pasang composer
 
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
