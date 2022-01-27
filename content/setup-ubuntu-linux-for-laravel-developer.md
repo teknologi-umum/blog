@@ -1,6 +1,6 @@
 ---
 title: Setup Ubuntu Linux for Laravel & Go Developer
-desc: Linux is 🤝, so i made this one with 🧑🏾‍💻.
+desc: Linux is 🤝, so I made this one with 🧑🏾‍💻.
 author: Wahidin Aji
 github: WahidinAji
 twitter: a17wahidin
@@ -13,11 +13,11 @@ categories:
   - ubuntu
 ---
 
-Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya sejak sekitar dua minggu yang lalu saya kembali menggunakan linux secara penuh untuk proses project development saya. Nah, maka dari itu untuk kali ini saya akan mencoba membagikan beberapa tips untuk setup Linux bagi para Laravel Developer. Oiya untuk distro Linux yang saya pakai adalah Ubuntu Linux versi 18.04 LTS.
+Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya sejak sekitar dua minggu yang lalu saya kembali menggunakan Linux secara penuh untuk proses project development saya. Nah, maka dari itu untuk kali ini saya akan mencoba membagikan beberapa tips untuk setup Linux bagi para Laravel Developer. Oiya untuk distro Linux yang saya pakai adalah Ubuntu Linux versi 18.04 LTS.
 
 # PHP
 
-Pertama, install php beserta ekstensi-ekstensinya (disini saya menggunakan php versi 7.4)
+Pertama, install PHP beserta ekstensi-ekstensinya (disini saya menggunakan php versi 7.4)
 
 ```bash
 sudo apt update
@@ -36,15 +36,15 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
-Setelah proses diatas sudah dijalankan satu-persatu, pindahkan composer.phar ke direktori PATH.
+Setelah proses diatas sudah dijalankan satu per satu, pindahkan composer.phar ke direktori PATH.
 
 ```bash
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-# NodeJs
+# Node.js
 
-Kita perlu memasang NodeJS untuk memasang NPM (Node Package manager), caranya pun cukup mudah. Jalankan perintah dibawah ini satu per satu:
+Kita perlu memasang Node.jS untuk memasang NPM (Node Package Manager), caranya pun cukup mudah. Jalankan perintah dibawah ini satu per satu:
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_17.x -o nodesource_setup.sh
@@ -52,15 +52,15 @@ sudo bash nodesource_setup.sh
 sudo apt install nodejs
 ```
 
-Untuk version pada `https://deb.nodesource.com/setup_17.x`, ini opsional ya. kalian bisa menyesuaikan, sesuai dengan kebutuhan.
+Untuk version pada `https://deb.nodesource.com/setup_17.x`, ini opsional ya. Kalian bisa menyesuaikan sesuai dengan kebutuhan.
 
 # MySQL
 
 Nah, untuk MySQL ini kalian sebenarnya tidak perlu bingung. Cukup buka link ini
 
-- [`Mysql Download`](https://dev.mysql.com/downloads/mysql/),
+- [`MySQL Downloads`](https://dev.mysql.com/downloads/mysql/),
 
-Download MySQL-nya dan sesuaikan dengan OS Distro Linux kalian. Kemudian ikuti langkah-langkahnya seperti yang ada di dokumentasi ini
+Download MySQL-nya dan sesuaikan dengan Distro OS Linux kalian. Kemudian ikuti langkah-langkahnya seperti yang ada di dokumentasi ini
 
 - [`Cara Install`](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-debian.html).
 
@@ -78,6 +78,18 @@ Sebenarnya, langkahnya cukup mudah. Pertama [Download Go disini](https://go.dev/
 
 ```bash
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+```
+
+Untuk catatan, terkadang `PATH` ini tidak bersifat permanen ya. Apalagi kalau kalian menggunakan `ZSH` sebagai default terminal kalian di Linux. Kalian perlu menambahkan konfigurasi export-nya secara manual dengan cara,
+
+```bash
+sudo nano ~/.zshrc
+```
+
+Kemudian tambahkan kode bash seperti dibawah ini, jangan lupa disimpan ya.
+
+```bash
 export PATH=$PATH:/usr/local/go/bin
 ```
 
