@@ -23,3 +23,21 @@ pre > code > span.line:not(:only-child):before {
   min-width: 1.5em;
   text-align: right;
 }
+
+@media print {
+  @page {
+    margin: 2cm 1cm;
+  }
+
+  /* make the wrapped code looks better */
+  span.line {
+    display: inline-block;
+    margin-left: 1cm;
+    text-indent: -1cm;
+  }
+
+  p,
+  li {
+    page-break-inside: avoid;
+  }
+}

@@ -1,5 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import AuthorCard from '#components/AuthorCard';
+import ImageWithFrame from '#components/ImageWithFrame';
 import { transformMdx } from 'utils/transformMdx';
 import { getPostBySlug, getPostSlugs } from 'utils/posts';
 import siteData from '../../data/site';
@@ -49,7 +50,7 @@ export default function Post({
       `}</style>
       <header className="flex flex-row items-center w-screen relative shift-left bg-gray-100 bg-no-repeat bg-cover bg-center bg-image my-4">
         <div className="flex-1 w-full px-4 md:px-8 pt-32 pb-20 rounded-lg -mt-16 text-center md:text-left print:pb-5">
-          <div className="mx-auto w-full max-w-screen-lg">
+          <div className="mx-auto w-full max-w-screen-lg print:px-10">
             <h1 className="font-heading text-gray-800 text-4xl font-bold capitalize mb-2">{title}</h1>
             <p className="text-gray-600 text-xl font-serif mb-4 pt-2">{desc}</p>
             <p className="mb-10 text-gray-600 text-sm uppercase">
@@ -60,7 +61,7 @@ export default function Post({
         </div>
       </header>
       <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words print:prose-pre:border print:pt-3 print:prose-pre:whitespace-pre-wrap	">
-        <MDXRemote {...html} />
+        <MDXRemote {...html} components={{ img: ImageWithFrame }} />
       </div>
       <div className="print:hidden">
         {isCookieEnabled() && (
