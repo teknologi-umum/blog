@@ -17,7 +17,7 @@ Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya sejak sekitar dua
 
 # PHP
 
-Pertama, install PHP beserta ekstensi-ekstensinya (disini saya menggunakan php versi 7.4)
+Pertama, install PHP beserta ekstensi-ekstensinya (disini saya menggunakan PHP versi 7.4)
 
 ```bash
 sudo apt update
@@ -44,7 +44,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 # Node.js
 
-Kita perlu memasang Node.jS untuk memasang NPM (Node Package Manager), caranya pun cukup mudah. Jalankan perintah dibawah ini satu per satu:
+Kita perlu memasang Node.js untuk memasang NPM (Node Package Manager), caranya pun cukup mudah. Jalankan perintah di bawah ini satu per satu:
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_17.x -o nodesource_setup.sh
