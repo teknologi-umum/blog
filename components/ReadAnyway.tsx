@@ -17,7 +17,7 @@ const ReadAnyway = ({ posts }: { posts: PostFields[] }) => {
       <div className="md:-mx-12 mt-24">
         <h2 className="uppercase font-bold text-xl mb-10">...OR JUST READ ANYWAY</h2>
 
-        <div className="grid lg:grid-cols-3 gap-4 -mx-2 px-2 pb-6 horizontal-scroll">
+        <div className="grid lg:grid-cols-3 print:grid-cols-2 gap-4 -mx-2 px-2 pb-6 horizontal-scroll">
           {posts.map((post: PostFields, idx: number) => (
             <PostCard {...post} key={idx} />
           ))}

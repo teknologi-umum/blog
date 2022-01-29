@@ -7,7 +7,13 @@ export default function AuthorCard({ author, github, twitter, telegram }: Partia
     <div className="text-center md:text-left md:inline-grid md:grid-cols-[3.5rem,1fr] md:grid-rows-2 md:items-center md:justify-center font-sans">
       <div className="grid place-items-center row-start-1 row-end-3 pr-3">
         <a href={`https://github.com/${github}`}>
-          <img className="rounded-full" src={`https://github.com/${github}.png`} width="42" height="42" alt="author" />
+          <img
+            className="rounded-full print:border print:border-gray-200"
+            src={`https://github.com/${github}.png`}
+            width="42"
+            height="42"
+            alt="author"
+          />
         </a>
       </div>
       <span className="md:text-left text-gray-700">{author}</span>

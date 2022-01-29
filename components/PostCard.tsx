@@ -23,14 +23,14 @@ export default function PostCard({
           }
         `}
       </style>
-      <div className="max-h-max flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans">
+      <div className="max-h-max flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans print:shadow-none print:border">
         <img className="h-[10rem] object-cover w-full" src={cover} alt={slug} />
-        <div className="p-4">
+        <div className="p-4 print:p-2">
           <div className="flex flex-wrap gap-1 mb-2">
             {categories &&
               categories.map((category: string, idx: number) => (
                 <span
-                  className="text-xs px-2 py-1 rounded-sm bg-gray-200 text-gray-700 uppercase font-semibold"
+                  className="text-xs px-2 py-1 rounded-sm bg-gray-200 text-gray-700 uppercase font-semibold print:px-1 print:border"
                   key={`${idx}-${category}`}
                 >
                   {category}
