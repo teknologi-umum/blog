@@ -87,7 +87,13 @@ Untuk catatan, terkadang `PATH` ini tidak bersifat permanen ya. Apalagi kalau ka
 sudo nano ~/.zshrc
 ```
 
-Kemudian tambahkan kode bash seperti dibawah ini, jangan lupa disimpan ya.
+Atau jika kalian menggunakan default terminal seperti Bash, yang kebetulan menjadi default terminal di Linux Ubuntu yang saya pakai. Kalian cukup mengganti nama filenya sesuai dengan nama file konfigurasi default terminal kalian. kalau kalian tidak tahu nama file-nya, kalian bisa memeriksanya terlebih dahulu dengan command,
+
+```bash
+ls -a ~/
+```
+
+Setelah susah memastikan nama file konfigurasi default terminal kalian, kemudian tambahkan kode bash seperti dibawah ini, jangan lupa disimpan ya.
 
 ```bash
 export PATH=$PATH:/usr/local/go/bin
