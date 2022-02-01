@@ -105,13 +105,13 @@ Udah deh, tinggal cek. Apakah sudah terpasang atau belum dengan command
 go version
 ```
 
-# PosgreSQL
+# PostgreSQL
 
-Yapss, karena kebanyakan Go Developer lebih suka menggunakan PostgreSQL dari pada MySQL. Maka kita akan install juga, caranya ini cukup mudah. Cukup ikuti langkah-langkahnya seperti yang ada di dokumentasi resmi ini
+Yapss. karena kebanyakan Go Developer lebih suka menggunakan PostgreSQL dari pada MySQL, maka kita akan install juga. Caranya ini cukup mudah. Cukup ikuti langkah-langkahnya seperti yang ada di dokumentasi resmi ini.
 
 - [Cara Install PostgreSQL](https://www.postgresql.org/download/linux/ubuntu/)
 
-Kalau sudah, untuk PostgreSQL Clientnya sendiri, saya juga menggunakan ekstensi yang ada di Visual Studio Code / Goland.
+Kalau sudah, untuk PostgreSQL Clientnya sendiri, saya juga menggunakan ekstensi yang ada di Visual Studio Code / GoLand.
 
 `kalian : boleh minta link ekstensinya ga om?`
 
@@ -125,5 +125,5 @@ What's next? if you have some req tips. reach me on twitter [@a17wahidin](https:
 
 ```bash
 PHP IS STILL ALIVE.
-BUT, SOMETIME GO IS MAKE ME HAPPY TO CODE 😆.
+BUT GO IS WHAT MAKES ME HAPPY TO CODE 😆.
 ```
