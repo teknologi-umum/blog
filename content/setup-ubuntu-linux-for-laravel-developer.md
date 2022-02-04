@@ -99,7 +99,7 @@ Setelah susah memastikan nama file konfigurasi default terminal kalian, kemudian
 export PATH=$PATH:/usr/local/go/bin
 ```
 
-Lalu restart shell atau perbaharui shell environment dengan command,
+Lalu restart shell atau perbarui shell environment dengan command,
 
 ```bash
 source ~/.zshrc
