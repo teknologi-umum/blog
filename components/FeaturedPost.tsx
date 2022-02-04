@@ -24,7 +24,7 @@ const FeaturedPost = ({ post }) => {
         </a>
         <p className="mt-4 leading-relaxed font-serif text-gray-500">{post.desc}</p>
         <Link href={`/posts/${post.slug}`}>
-          <a className="bg-primary-900 hover:bg-primary-700 inline-block text-white mt-4 py-1.5 px-10 transition duration-300">
+          <a className="bg-primary-900 hover:bg-primary-700 inline-block text-white mt-4 py-1.5 px-10 transition duration-300 print:hidden">
             READ MORE
           </a>
         </Link>

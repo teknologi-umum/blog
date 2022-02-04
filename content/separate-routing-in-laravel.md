@@ -61,9 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 mungkin contohnya terlihat sedikit complex. sebentar, saya buatkan contoh yang lebih sederhana.
 
-<p align="center" style={{fontSize: "0.875em"}}> gambar 1</p>
-
-![This is a routing image before edit](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before%20edit%20routing.png)
+![Gambar 1. Contoh routes sebelum kita mapping](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before%20edit%20routing.png)
 pada gambar diatas ini 👆, terlihat ada 2 routing di dalam 1 file `web.php`.
 nah, biasanya agar lebih mudah di mapping ketika terjadi perubahan pada routing tertentu, saya biasanya memisahkannya kembali menjadi 1 file berbeda. dari yang sebelumnya struktur file-folder nya seperti ini :
 
@@ -91,53 +89,37 @@ menjadi
  |
 ```
 
-setelah itu, pada `gambar 1` line 6-8 kita pindahkan ke `admin.php`.
+setelah itu, pada gambar 1 line 6-8 kita pindahkan ke `admin.php`.
 
-<p align="center" style={{fontSize: "0.875em"}}> gambar 3</p>
+![Gambar 2. Routes untuk halaman admin](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/how%20to%20use%20in%20admin.php.png)
 
-![This is a routing-admin.php image](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/how%20to%20use%20in%20admin.php.png)
-
-lah kok cuma line 6-8?  
+lah kok cuma line 6-8?
 ya sabarr....
 
 nahh, selanjutnya ini untuk naming dan prefixing kita atur di pengaturan routing. (`pengaturan`) 😁 nya ada di folder `app/Providers/RouteServiceProvider.php`, lihat code pada line 50-55
 
-<p align="center" style={{fontSize: "0.875em"}}> gambar 4</p>
-
-![This is a routing-servie image](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/admin%20routing%20done.png)
+![Gambar 3. RouteServiceProvider pada Laravel](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/admin%20routing%20done.png)
 di sanalah kita meletakkan name x prefixnya.
 
 untuk uji coba silahkan lihat pada beberapa gambar ini,
 
-```bash
-before edit routing
-```
+Sebelum kita pisah
 
 - adminpage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 5</p>
-
-![This is a adminpage image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-admin-page.png)
+  ![Gambar 4. Routing untuk halaman admin sebelum kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-admin-page.png)
 
 - homepage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 6</p>
+  ![Gambar 5. Routing untuk halaman beranda sebelum kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-home-page.png)
 
-![This is a home image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-home-page.png)
-
-```bash
-after edit routing
-```
+Setelah kita pisah
 
 - adminpage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 7</p>
-
-![This is a adminpage image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-admin-page.png)
+  ![Gambar 6. Routing untuk halaman admin setelah kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-admin-page.png)
 
 - homepage
-<p align="center" style={{fontSize: "0.875em"}}> gambar 8</p>
+  ![Gambar 7. Routing untuk halaman admin setelah kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-home-page.png)
 
-![This is a home image before edit routing](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-home-page.png)
-
-### [Repo project](https://github.com/WahidinAji/routing-tips-laravel).
+[Repositori project](https://github.com/WahidinAji/routing-tips-laravel)
 
 what's next? if you have some req tips. reach me on twitter [@a17wahidin](https://twitter.com/a17wahidin)
 

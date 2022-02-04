@@ -28,9 +28,14 @@ export default function Blog({ posts }) {
             grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
           }
         }
+        @media print {
+          .posts {
+            grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+          }
+        }
       `}</style>
       <h1 className="text-left uppercase text-2xl font-bold my-8">Blog Posts</h1>
-      <div className="posts grid grid-cols-3 gap-4 px-4">
+      <div className="posts grid gap-4 px-4">
         {posts.map((post: PostFields, idx: number) => (
           <PostCard {...post} key={idx} />
         ))}
