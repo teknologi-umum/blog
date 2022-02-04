@@ -5,7 +5,7 @@ author: Wahidin Aji
 github: WahidinAji
 twitter: a17wahidin
 telegram:
-cover: image/pinguin.png
+cover: https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/pinguin.png
 date: 2022-01-05
 categories:
   - laravel
@@ -15,7 +15,7 @@ categories:
 
 Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya sejak sekitar dua minggu yang lalu saya kembali menggunakan Linux secara penuh untuk proses project development saya. Nah, maka dari itu untuk kali ini saya akan mencoba membagikan beberapa tips untuk setup Linux bagi para Laravel Developer. Oiya untuk distro Linux yang saya pakai adalah Ubuntu Linux versi 18.04 LTS.
 
-# PHP
+## PHP
 
 Pertama, install PHP beserta ekstensi-ekstensinya (disini saya menggunakan PHP versi 7.4)
 
@@ -25,7 +25,7 @@ sudo apt install php7.4
 sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
 ```
 
-# Composer
+## Composer
 
 Kemudian pasang composer
 
@@ -42,7 +42,7 @@ Setelah proses diatas sudah dijalankan satu per satu, pindahkan composer.phar ke
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-# Node.js
+## Node.js
 
 Kita perlu memasang Node.js untuk memasang NPM (Node Package Manager), caranya pun cukup mudah. Jalankan perintah di bawah ini satu per satu:
 
@@ -54,7 +54,7 @@ sudo apt install nodejs
 
 Untuk version pada `https://deb.nodesource.com/setup_17.x`, ini opsional ya. Kalian bisa menyesuaikan sesuai dengan kebutuhan.
 
-# MySQL
+## MySQL
 
 Nah, untuk MySQL ini kalian sebenarnya tidak perlu bingung. Cukup buka link ini
 
@@ -72,7 +72,7 @@ Oiya, disini saya tidak menggunakan Web Server ya. Karena Laravel sendiri sudah 
 
 Sip, selanjutnya kita install Go untuk kebutuhan kalau kita pengen ngoding Go.
 
-# Go
+## Go
 
 Sebenarnya, langkahnya cukup mudah. Pertama [Download Go disini](https://go.dev/doc/install), setelah itu jalankan perintah dibawah ini satu per satu
 
@@ -113,7 +113,7 @@ Udah deh, tinggal cek. Apakah sudah terpasang atau belum dengan command
 go version
 ```
 
-# PostgreSQL
+## PostgreSQL
 
 Yapss. karena kebanyakan Go Developer lebih suka menggunakan PostgreSQL dari pada MySQL, maka kita akan install juga. Caranya ini cukup mudah. Cukup ikuti langkah-langkahnya seperti yang ada di dokumentasi resmi ini.
 
