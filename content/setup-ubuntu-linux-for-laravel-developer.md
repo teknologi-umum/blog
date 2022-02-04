@@ -99,6 +99,14 @@ Setelah susah memastikan nama file konfigurasi default terminal kalian, kemudian
 export PATH=$PATH:/usr/local/go/bin
 ```
 
+Lalu restart shell atau perbaharui shell environment dengan command,
+
+```bash
+source ~/.zshrc
+```
+
+Sesuain dengan default terminal yang kalian pakai ya.
+
 Udah deh, tinggal cek. Apakah sudah terpasang atau belum dengan command
 
 ```bash
