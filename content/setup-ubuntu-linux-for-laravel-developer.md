@@ -105,7 +105,7 @@ Lalu restart shell atau perbarui shell environment dengan command,
 source ~/.zshrc
 ```
 
-Sesuain dengan default terminal yang kalian pakai ya.
+Sesuaikan dengan terminal emulator yang kalian pakai ya.
 
 Udah deh, tinggal cek. Apakah sudah terpasang atau belum dengan command
 
