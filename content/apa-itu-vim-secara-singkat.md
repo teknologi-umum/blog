@@ -1,46 +1,90 @@
 ---
 title: Apa Itu Vim Secara Singkat
-desc: aplikasi text editor berada di terminal yaitu vim dengan penggunaan dan konfigurasi tersendiri
+desc: Text editor yang berada di terminal dengan cara penggunaan dan konfigurasi yang cukup berbeda dari text editor lainnya
 author: afman42
 github: afman42
 telegram: afman42
 date: 2022-02-04
-cover: https://1.bp.blogspot.com/-gl_s6BL9y34/XVeO7mNRChI/AAAAAAAABEI/wQ554bkHgs41eGC-1Ni-xmOPrm4n6ajWACLcBGAs/s1600/Vim_logo.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png
 categories:
   - vim
 ---
 
 # Apa Itu Vim Secara Singkat
 
-Vim dikenal text editor di terminal dengan distribusi di sistem operasi windows,macos,dan linux. Aplikasi nya ringan dengan sekitar `~10mb` dan website nya pun belum berubah. Apakah vim powerfull untuk digunakan ? ya tergantung pengguna / pemakai bisa dijadikan IDE (Integration Development Environment). Vim ada dua versi tampilan yaitu tampilan Grafis atau tampilan terminal
+Vim dikenal sebagai text editor yang dapat berjalan pada sistem operasi Windows, MacOS, Linux, [dan lain sebagainya](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Availability>). Aplikasi ini relatif ringan dibandingkan text editor lainnya. Apakah Vim powerful untuk digunakan? Hal ini sangat bergantung pada penggunanya. Vim dapat dijadikan sebagai Integrated Development Environment (IDE) atau sebatas Text Editor sederhana. Vim memiliki dua jenis tampilan yaitu Graphical User Interface (GUI) atau Terminal User Interface (TUI)
 
-## Unduh Aplikasi [Vim](https://www.vim.org/download.php)
+## Instalasi Vim
 
-- Windows: seperti biasa di klik website
-- Linux: distribusi linux biasanya menggunakan terminal, seperti ubuntu: `sudo apt update && sudo apt install vim`
-- Macos: bisa menggunakan unduh aplikasi atau pun mengetik di terminal
+Terdapat beberapa cara untuk memasang Vim pada mesin kalian.
+
+- Windows
+  Kalian dapat mengunduh Vim melalui [website resminya](https://www.vim.org/download.php) lalu memasangnya seperti biasa. Kalian bisa juga menggunakan package manager seperti [chocolatey](https://community.chocolatey.org/packages/vim) atau [winget](https://winget.run/pkg/vim/vim)
+- Linux
+  Kalian dapat menggunakan package manager yang sudah tersedia pada distribusi masing masing. Biasanya Vim sudah terpasang secara _default_, namun apabila tidak ada, kalian dapat memasangnya dengan cara seperti ini:
+  ```bash
+  # ubuntu / debian / distribusi lain yang menggunakan apt
+  sudo apt install vim
+
+  # arch / manjaro / distribusi lain yang menggunakan pacman
+  sudo pacman -S vim
+
+  # fedora / distribusi lain yang menggunakan dnf
+  sudo dnf install vim
+  ```
+- Mac OS
+  Kalian dapat mengunduhnya melalui [website resmi Vim](https://www.vim.org/download.php)) atau menggunakan package manager yang ada pada Mac OS seperti [Homebrew](https://brew.sh/)
 
 ## Pengoperasian atau Penggunaanya
 
-Ketika berada di aplikasi terminal dan sudah menginstal vim, bisa mengetik `vim` lalu `enter`
+Ketika kalian berada di dalam terminal emulator dan sudah memasang Vim, kalian bisa langsung mengetik `vim` lalu tekan tombol <kbd>enter</kbd> untuk membukanya.
 
 ```bash
 $ vim file.txt
 ```
 
-dan jika sudah berada vim, dengan mengetik apapun tidak memunculkan sesuatu kecuali keymap udah di setting vim muncul.Ada beberapa Mode yaitu Normal Mode,Insert Mode, Visual Mode.lalu mengetikan `i` maka masuk insert mode dan beberapa huruf.
+Jika kalian sudah berada di dalam Vim, kalian akan sadar bahwa apabila kalian mulai mengetik, tidak ada huruf yang keluar seperti layaknya text editor biasanya. Vim menggunakan prinsip _Modal Editing_ yang berarti Vim memiliki beberapa _mode_ untuk melakukan text editing. Beberapa diantaranya yaitu Normal, Insert, Visual, [dan masih banyak lagi](http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes-intro). Untuk masuk ke dalam Insert Mode, kalian bisa menekan <kbd>i</kbd> yang berarti _insert_ atau <kbd>a</kbd> yang berarti _append_.
 
-```
-Ini Sangat Inda[h]
-```
+- Normal Mode
+  Dalam Normal Mode, ada perintah khusus - khusus pengoperasian. ketika input karakter dengan keyboard, input tersebut bukanlah dimasukan ke Vim melainkan command atau perintah. Berikut contohnya:
 
-dan mau kembali normal mode harus ketik `esc`. dan lalu menggerakan cursor yang bentuk kotak.ketik `h` maka mengarahkan ke `[a]`.
+  - `e` - berada di belakang kata
+  - `b` - berada di depan kata
+  - `p` - mem*paste* jika telah di copy dengan `yank`
+  - `x` - menghapus satu karaker atau _delete_
+  - `u` - mengembalikan riwayat yang telah dihapus atau _undo_
 
-```
-Ini Sangat Ind[a]h
-```
+  jika menggeser kursor dengan tanda panah atau _Arrow Keys_ biasanya. Di Vim berbeda dengan yang lain yaitu:
 
-copy satu baris maka diperlukan `yy` dan jika paste diperlukan `p`. untuk menyimpan atau save file maka perlu `Shift+:` dan `w` atau pun dari keluar vim bisa menggunkan `:q`
+  - `h` - geser kursor ke kiri
+  - `j` - geser kursor ke bawah
+  - `k` - geser kursor ke atas
+  - `l` - geser kursor ke kanan
+
+- Insert Mode
+  Dalam Insert Mode, kita bisa menuliskan atau mengedit text didalam VIM. Dan akses ke dalam yaitu masuk Normal Mode terlebih dahulu. Bisa juga seperti text editor pada umumnya: _enter_, _backspace_, _arrow keys_, _shift_ dan lain - lain. Berikut contohnya:
+
+  - `i` - masuk ke Insert Mode
+  - `a` - berada satu langkah di depan huruf dan masuk ke Insert Mode
+  - `I` - masuk ke Insert Mode menuju ke awal huruf satu baris
+  - `A` - masuk ke Insert Mode menuju ke akhir huruf satu baris
+
+- Visual Mode
+  Dalam Visual Mode, untuk menyeleksi text atau huruf. Dan akses ke Visual Mode yaitu masuk Insert Mode. Halnya seperti _delete_/_cut_/_copy_. Berikut contohnya:
+
+  - `v` - masuk ke Visual Mode dan menyeleksi per karakter
+  - `Shift+v` - masuk ke Visual Mode dan menyeleksi per baris
+
+- Command Mode
+  Di dalam _VIM_ tersedia perintah tertulis yang sudah ada. Dan bisa di jalankan terminal seperti berikut:
+
+  - `:q` - menghapus jendela aktif
+  - `:w` - menulis dan menyimpan file
+
+  Dan juga di gabung perintah tersebut menjadi:
+
+  - `:qa` - menghapus semua jendela aktif
+  - `:wq` - menyimpan dan menghapus jendela aktif
 
 # Penutup
 
