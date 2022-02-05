@@ -1,7 +1,7 @@
 ---
 title: Apa Itu Vim Secara Singkat
 desc: aplikasi text editor berada di terminal yaitu vim dengan penggunaan dan konfigurasi tersendiri
-author: afman42 
+author: afman42
 github: afman42
 telegram: afman42
 date: 2022-02-04
@@ -16,7 +16,7 @@ Vim dikenal text editor di terminal dengan distribusi di sistem operasi windows,
 
 ## Unduh Aplikasi [Vim](https://www.vim.org/download.php)
 
-- Windows: seperti biasa di klik website 
+- Windows: seperti biasa di klik website
 - Linux: distribusi linux biasanya menggunakan terminal, seperti ubuntu: `sudo apt update && sudo apt install vim`
 - Macos: bisa menggunakan unduh aplikasi atau pun mengetik di terminal
 
@@ -44,4 +44,4 @@ copy satu baris maka diperlukan `yy` dan jika paste diperlukan `p`. untuk menyim
 
 # Penutup
 
-Ini hanya sebatas penjelasan singkat dari saya. untuk cara kustomisasi bisa dicari internet dan penggunaan aplikasi vim di `vimtutor`. Berbagi pengetahuan itu sangat bagus karena bisa jadi apa yang kita bermanfaat bagi orang lain. 
+Ini hanya sebatas penjelasan singkat dari saya. untuk cara kustomisasi bisa dicari internet dan penggunaan aplikasi vim di `vimtutor`. Berbagi pengetahuan itu sangat bagus karena bisa jadi apa yang kita bermanfaat bagi orang lain.
