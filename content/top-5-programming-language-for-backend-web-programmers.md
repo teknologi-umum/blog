@@ -55,7 +55,7 @@ tl;dr:
 
 If you are looking for a "powerful" web backend solution which has been around for a long time and you want to build a cost effective enterprise web application, enter Spring and Kotlin.
 
-Spring boot is a very mature open source web framework which runs on top of the [JVM (Java Virtual Machine)](https://en.wikipedia.org/wiki/Java_virtual_machine) and is developed by the team at VMWare. It provides a complete solution for building web applications and utilizes modern web technologies such as **HATEOAS** & **microservices gateway** (Netflix Zuul & Eureka server) for data processing/presentation, and server templating engine such as [Thymeleaf](https://www.thymeleaf.org/) or [JSP](https://en.wikipedia.org/wiki/Jakarta_Server_Pages).
+Spring boot is a very mature open source web framework which runs on top of [JVM (Java Virtual Machine)](https://en.wikipedia.org/wiki/Java_virtual_machine) and is developed by the team at VMWare. It provides a complete solution for building web applications and utilizes modern web technologies such as **HATEOAS** & **microservices gateway** (Netflix Zuul & Eureka server) for data processing/presentation, and server templating engine such as [Thymeleaf](https://www.thymeleaf.org/) or [JSP](https://en.wikipedia.org/wiki/Jakarta_Server_Pages).
 
 While primarily designed for **Java** in the userland aspect, **Kotlin** support in Spring Boot is fantastic. I think what the Java flavored Spring/Spring Boot framework lacks is modern programming language features like type inference, null safety, immutable struct/classes/variables, declarative queries, expression-based syntax etc in which Kotlin has all of them.
 
@@ -110,7 +110,7 @@ class PersonController(
 }
 ```
 
-Writing Spring Boot in Kotlin is very productive. Many of the reasons are because of:
+Writing Spring Boot codes using Kotlin is very productive. Many of the reasons are because of:
 
 - **function return inference** which can lead to writing very concise controller functions.
 - **dataclasses**
@@ -642,7 +642,7 @@ FYI: Generics is coming in Go version 1.18!
 
    In C#, you can do something like this, in case you want to get an information from deeply nested objects:
 
-   ```cs
+   ```csharp
    ...
 
    val pCompanyAddress = person
@@ -701,7 +701,7 @@ $ cd myapp
 
 Open `Program.cs`
 
-```cs
+```csharp
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -712,7 +712,7 @@ app.Run();
 
 Modify `"Hello World!"` to:
 
-```cs
+```csharp
 app.MapGet("/", () => "Hello People!");
 ```
 
@@ -743,7 +743,7 @@ $ dotnet tool install --global dotnet-ef
 
 Then in your `Program.cs`, put this code:
 
-```cs
+```csharp
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
