@@ -29,13 +29,13 @@ Why **can't you**? Because there are always a few considerations in picking a pr
    Popularity should be a strong factor in deciding which tech to use, because the bigger the community is, the easier for you to find a solution to a sometimes weird and quirky problem in a programming language, compiler, tooling, etc. You don't want to spend a few days trying to fix a weird bug when the fix is actually just adding a semicolon or comma, adding a single configuration line, or simple stupid things that can cost you precious time when trying to fix it.
 
 2. **Demand**  
-   This one applies if you are looking for work related to a programming language. You do not want to learn a language which has little no none vacancies if you are looking for a paying job to put food on your table.
+   This one applies if you are looking for programming language for work related purposes. You do not want to learn a language which has little to none job vacancies with decent pay to put food on your table.
 
 3. **Local community**  
-   Sometimes it's best to learn some tech within a local community in your area (city, country, university, etc), because in some cases you can share your knowledge easily with someone near your area, brainstorm ideas more clearly in person, and comfortability in talking to a person who you might be able to relate to in general.
+   Sometimes it's best to learn a particular tech within a local community in your area (city, country, university, etc). In some cases you can even share your knowledge in such social circles, brainstorm ideas clearer in person, and comfortably talk to people with common interest.
 
 4. **Paradigm & use cases**  
-   Always use the right tool for the right job. For example, you don't want to use low level languages (C, C++, Rust) to make a prototype of a proof of concept quickly, we have high level languages (Javascript, Python, Go) for that. And you also don't want to use a high level language for something like a smart watch, set top boxes, or a micro-controller because they tend to have very little memory, and in this case low level language is better than the high level ones.
+   Always use the right tool for the right job. For example, you don't want to use low level languages (C, C++, Rust) to to prototype and build proof of concepts, we have high level languages (Javascript, Python, Go) for that. And you also don't want to use a high level language for something like a smart watch, set top boxes, or a micro-controller because they tend to have very little memory, and in this case low level language is better suited than the high level ones.
 
 Now we are going to review the top 5 programming languages based on the considerations we have made above, which fit backend web programming.
 
@@ -53,7 +53,7 @@ tl;dr:
 - **Founder**: Jetbrains (Kotlin), VMWare (Spring)
 - **Paradigm**: multi paradigm, mainly object oriented
 
-If you are looking for a "powerful" web backend solution which has been around for a long time and you want to build an enterprise web application for very cheap, enter Spring and Kotlin.
+If you are looking for a "powerful" web backend solution which has been around for a long time and you want to build a cost effective enterprise web application, enter Spring and Kotlin.
 
 Spring boot is a very mature open source web framework which runs on top of the [JVM (Java Virtual Machine)](https://en.wikipedia.org/wiki/Java_virtual_machine) and is developed by the team at VMWare. It provides a complete solution for building web applications and utilizes modern web technologies such as **HATEOAS** & **microservices gateway** (Netflix Zuul & Eureka server) for data processing/presentation, and server templating engine such as [Thymeleaf](https://www.thymeleaf.org/) or [JSP](https://en.wikipedia.org/wiki/Jakarta_Server_Pages).
 
@@ -65,7 +65,7 @@ Here's how a Spring Boot REST API project in Kotlin typically looks like:
 
 - Model
 
-```kt
+```kotlin
 @Entity
 data class Person(
    @Id
@@ -92,7 +92,7 @@ interface PersonRepository : JpaRepository<Person, Long>, JpaSpecificationExecut
 
 - Controller
 
-```kt
+```kotlin
 @RestController
 class PersonController(
    private val environment: Environment,
