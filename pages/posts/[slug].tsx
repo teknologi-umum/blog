@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import AuthorCard from '#components/AuthorCard';
 import ImageWithFrame from '#components/ImageWithFrame';
+import EnhancedSection from '#components/EnhancedSection';
 import { transformMdx } from 'utils/transformMdx';
 import { getPostBySlug, getPostSlugs } from 'utils/posts';
 import siteData from '../../data/site';
@@ -61,7 +62,15 @@ export default function Post({
         </div>
       </header>
       <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words print:prose-pre:border print:pt-3 print:prose-pre:whitespace-pre-wrap	">
-        <MDXRemote {...html} components={{ img: ImageWithFrame }} />
+        <MDXRemote
+          {...html}
+          components={{
+            img: ImageWithFrame,
+            pre: function CopyableCodeBlock(props) {
+              return <EnhancedSection copyable {...props} />;
+            },
+          }}
+        />
       </div>
       <div className="print:hidden">
         {isCookieEnabled() && (
