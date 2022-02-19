@@ -11,17 +11,58 @@ body {
   @apply text-primary-600 font-bold;
 }
 
-pre {
+pre:not(.shiki-no-line-numbers) {
   counter-reset: line;
 }
 
-pre > code > span.line:not(:only-child):before {
+pre:not(.shiki-no-line-numbers) > code > span.line:not(:only-child):before {
   counter-increment: line;
   content: counter(line);
   display: inline-block;
   margin-right: 1.5em;
   min-width: 1.5em;
   text-align: right;
+}
+
+@media screen {
+  .shiki-line-highlights code {
+    display: table;
+    width: 100%;
+  }
+
+  .shiki-line-highlights .line {
+    display: table-row;
+  }
+
+  .shiki-line-highlights .line.line-highlight {
+    position: relative;
+  }
+
+  .shiki-line-highlights .line.line-highlight > span {
+    position: inherit;
+    z-index: 1;
+  }
+
+  .shiki-line-highlights .line.line-highlight::after {
+    content: '\00a0'; /* &nbsp; */
+    background-color: rgb(174, 124, 20, 0.15);
+    box-shadow: inset 5px 0 0 rgb(174, 124, 20, 0.4);
+    position: absolute;
+    top: 0;
+    left: calc(var(--tw-prose-pre-padding-x) * -1);
+    width: calc(100% + var(--tw-prose-pre-padding-x) * 2);
+    z-index: 0;
+  }
+
+  .shiki-line-highlights .line.line-highlight::after {
+    --tw-prose-pre-padding-x: 1.1428571em;
+  }
+
+  @media (min-width: 1280px) {
+    .shiki-line-highlights .line.line-highlight::after {
+      --tw-prose-pre-padding-x: 1.65em;
+    }
+  }
 }
 
 @media print {
