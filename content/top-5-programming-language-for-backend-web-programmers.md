@@ -149,12 +149,12 @@ If you or your company already has a Spring Boot project with Java, I really, re
 One of the most popular tool for creating web HTTP APIs for Node.JS is **Express**. It's an unopinionated web framework which is designed to create web APIs with great freedom, and the setup is very, very simple. Here is an example Express project:
 
 ```js
-const express = require("express");
+const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 app.listen(port, () => {
@@ -167,9 +167,9 @@ The above code will spin up an HTTP server on port 3000 inside the machine you a
 To send JSON, just use the `res.json()` function:
 
 ```js
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.json({
-    hello: "world!",
+    hello: 'world!',
   });
 });
 ```
@@ -197,12 +197,12 @@ npm i @types/node @types/express ts-node
 3. Create an `index.ts` file containing:
 
 ```ts
-import express from "express";
+import express from 'express';
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send({ hello: "world!" });
+app.get('/', (req, res) => {
+  res.send({ hello: 'world!' });
 });
 
 app.listen(3000);
@@ -639,12 +639,12 @@ If you or your company already has a Spring Boot project with Java, I really, re
 One of the most popular tool for creating web HTTP APIs for Node.JS is **Express**. It's an unopinionated web framework which is designed to create web APIs with great freedom, and the setup is very, very simple. Here is an example Express project:
 
 ```js
-const express = require("express");
+const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 app.listen(port, () => {
@@ -657,9 +657,9 @@ The above code will spin up an HTTP server on port 3000 inside the machine you a
 To send JSON, just use the `res.json()` function:
 
 ```js
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.json({
-    hello: "world!",
+    hello: 'world!',
   });
 });
 ```
@@ -687,12 +687,12 @@ npm i @types/node @types/express ts-node
 3. Create an `index.ts` file containing:
 
 ```ts
-import express from "express";
+import express from 'express';
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send({ hello: "world!" });
+app.get('/', (req, res) => {
+  res.send({ hello: 'world!' });
 });
 
 app.listen(3000);
