@@ -4,7 +4,7 @@ desc: Why i store my docs in cloud
 author: Raymond WP
 github: raywp
 twitter:
-telegram: aldy505
+telegram:
 date: 2022-03-10
 cover: https://www.codebase.co.in/wp-content/uploads/2020/02/Choose-Best-Cloud-Storage-Provider-For-Your-Requirement.jpg
 categories:
@@ -23,8 +23,8 @@ I connected my Office Apps (Word, Excel, PowerPoint, etc.) to OneDrive
 [How to add OneDrive to OfficeApps](https://support.microsoft.com/en-us/office/how-to-add-onedrive-as-a-service-3ae78a39-c0de-4c86-8abc-ad519b6de44e)
 [How to add OneDrive as additional storage](https://support.microsoft.com/en-us/office/sync-files-with-onedrive-files-on-demand-1ab17c60-af03-4c63-a24c-bb1e131f76c9)
 
->_"Why OneDrive?"_
->Because as a student, i was granted 1TB of OneDrive space
+_"Why OneDrive?"_
+Because as a student, i was granted 1TB of OneDrive space
 
 _You don't like Microsoft?, here's another option:_
 [DropBox + Office Apps](https://help.dropbox.com/installs-integrations/third-party/adding-place-microsoft-office)
