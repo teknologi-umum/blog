@@ -1,5 +1,5 @@
 ---
-title: Apa itu Big O Notation dalam pemrograman?
+title: Apa itu Big O Notation dalam pemrograman? Part 1
 desc: Penjelasan sederhana mengenai kompleksitas waktu sebuah algoritma
 author: Krishna Rowter
 github: krowter
