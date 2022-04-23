@@ -18,7 +18,7 @@ Pada tulisan ini saya ingin mengurai beberapa pelajaran yang mungkin berguna ter
 
 ## Kompleksitas Algoritma
 
-Kompleksitas algoritma dari binary search adalah `O(Log N)`. Artinya, binary search membutuhkan maksimum `Log(1000000)` = `20` kali operasi saja untuk memproses array dengan panjang 1000.000. Bandingkan dengan linear search yang memiliki kompleksitas `O(N)`:
+Kompleksitas algoritma dari binary search adalah `O(Log N)`. Artinya, binary search membutuhkan maksimum `Log(1000000)` = `20` kali operasi saja untuk memproses array dengan panjang 1.000.000. Bandingkan dengan linear search yang memiliki kompleksitas `O(N)`:
 
 | N Elements | O(N)    | O(log N) |
 | ---------- | ------- | -------- |
