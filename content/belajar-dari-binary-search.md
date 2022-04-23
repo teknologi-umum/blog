@@ -6,7 +6,7 @@ github: kemumaki375
 twitter:
 telegram: kemumaki_35753
 date: 2022-04-19
-cover: https://miro.medium.com/max/1400/1*GvdVNpUC_d6n80ZJNqrG1A.png
+cover: https://ibb.co/fNKVyYR
 categories:
   - computer science
   - algorithm
