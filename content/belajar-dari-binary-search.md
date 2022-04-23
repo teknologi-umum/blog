@@ -6,7 +6,7 @@ github: kemumaki375
 twitter:
 telegram: kemumaki_35753
 date: 2022-04-19
-cover: https://ibb.co/fNKVyYR
+cover: https://i.ibb.co/M1jytDT/binary.png
 categories:
   - computer science
   - algorithm
