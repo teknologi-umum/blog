@@ -91,7 +91,7 @@ Jika terbukti kalau memang ada bagian kode yang harus dioptimisasi, maka lakukan
 
 ## Latihan 1 - Membuat Unit Testing
 
-Sebagai latihan, pelajari bagaimana [cara kerja binary search](https://www.programiz.com/dsa/binary-search) lalu coba buat implementasinya menggunakan bahasa kesukaan anda (C#).
+Sebagai latihan, pelajari bagaimana [cara kerja binary search](https://www.programiz.com/dsa/binary-search) lalu coba buat implementasinya menggunakan bahasa pemrograman kesukaan anda.
 
 Jangan berhenti sampai disitu, buat unit testing untuk memastikan kalau implementasinya sudah benar.
 
@@ -130,7 +130,7 @@ Ide utama dari teknik rekursif adalah memanggil kembali fungsi yang sama dengan 
 
 Tahukan anda kalau algoritma binary search bisa dilakukan untuk mencari jumlah cicilan yang harus dibayar per bulan? _No kidding_. Silahkan liat dan coba kerjakan [soal latihan ini](https://community.topcoder.com/stat?c=problem_statement&pm=2427&rd=4765).
 
-![](https://asset.kompas.com/crops/tYvXtRBHSmQ_-F-em4oKZRjWdSs=/201x0:1251x700/750x500/data/photo/2020/12/08/5fcfa34e6d44d.png)
+![](https://i.ibb.co/syxywn7/motor.png)
 
 Pesan moralnya adalah, _teknik pemecahan masalah yang sekilas memiliki ruang lingkup sangat spesifik ternyata dapat digunakan untuk menyelesaikan masalah lain_.
 
