@@ -15,14 +15,13 @@ const filterValues = (value: string | string[], keywords: string): boolean => {
   const lowerCasedKeywords = keywords.toLowerCase();
 
   if (Array.isArray(value)) {
-    let matchCount = 0;
-
     for (let i = 0; i < value.length; i += 1) {
-      if (matchCount > 0) break;
-      if (value[i].toLowerCase().includes(lowerCasedKeywords)) matchCount += 1;
+      if (value[i].toLowerCase().includes(lowerCasedKeywords)) {
+        return true;
+      };
     }
 
-    return !!matchCount;
+    return false;
   }
 
   return value.toLowerCase().includes(lowerCasedKeywords);
