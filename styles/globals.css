@@ -3,6 +3,10 @@ body {
   @apply p-0 m-0 box-border;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #__next {
   @apply relative;
 }
