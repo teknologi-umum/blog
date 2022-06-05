@@ -155,7 +155,7 @@ Elixir adalah [garbage-collected (GC) language](https://www.erlang.org/doc/apps/
 
 ## Immutability (FP Principles)
 
-Elixir disebut bahasa fungsional, karena evaluasi suatu program menggunakan konsep evaluasi fungsi dalam matematika murni. Secara bersamaan fp selalu populer dengan sifat _pure_ dan _immutable_. Immutable merupakan konsep inti Pemrograman Fungsional.
+Elixir disebut bahasa fungsional, karena evaluasi suatu program menggunakan konsep evaluasi fungsi dalam matematika. Secara bersamaan fp selalu populer dengan sifat _pure_ dan _immutable_. Immutable merupakan konsep inti Pemrograman Fungsional.
 
 Immutable berarti, **data yang sudah dibuat tidak dapat diubah**. Secara sederhana, itu berarti **semua variabel Anda adalah konstan**. Ini juga berkaitan dengan fungsi murni (_pure function_), ketika diberikan input yang sama, akan selalu menghasilkan output yang sama dan tidak memiliki efek samping.
 
