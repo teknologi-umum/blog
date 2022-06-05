@@ -1,6 +1,6 @@
 ---
 title: Elixir Pattern Matching, Assignment, & Immutability
-desc: Elixir disebut bahasa fungsional, karena evaluasi suatu program menggunakan konsep evaluasi fungsi dalam matematika murni. Secara bersamaan fp selalu populer dengan sifat pure dan immutable.
+desc: Elixir disebut bahasa fungsional, karena evaluasi suatu program menggunakan konsep evaluasi fungsi dalam matematika. Secara bersamaan fp selalu populer dengan sifat pure dan immutable.
 author: Alfin Surya
 github: natserract
 twitter:
