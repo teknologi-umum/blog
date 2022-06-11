@@ -59,7 +59,7 @@ Then, the main code that will be executed will be inside a function, which then 
 
 So, a basic hello world program in Go would be:
 
-```go
+```go {1,3-5}
 package main
 
 func main() {
@@ -98,7 +98,7 @@ want to import a file, you should import the whole package with the keyword `imp
 
 If I have some function that I want to import from the `controllers/index.go` into the `main.go` file, I would do:
 
-```go
+```go no-line-numbers
 // main.go
 package main
 
@@ -201,7 +201,7 @@ What if you want it to be immutable? We'll need to use the keyword...
 
 Unlike variables that are mutable, constants are immutable. You can't change the value of it after its declaration.
 
-```go
+```go {1,4-5}
 package main
 
 const (

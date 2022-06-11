@@ -25,7 +25,6 @@
     "@fontsource/lusitana": "4.5.0",
     "@fontsource/rubik": "^4.5.0",
     "@giscus/react": "1.0.0",
-    "@stefanprobst/remark-shiki": "1.1.1",
     "gray-matter": "4.0.3",
     "next": "^12.0.1",
     "next-mdx-remote": "3.0.4",
@@ -38,7 +37,7 @@
     "remark-math": "3.0.1",
     "remark-parse": "9.0.0",
     "sharp": "0.29.0",
-    "shiki": "0.9.6",
+    "shiki": "^0.10.0",
     "unified": "10.1.0",
     "unist-util-visit": "2.0.3"
   },

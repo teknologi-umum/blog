@@ -11,15 +11,67 @@ import remarkGFM from 'remark-gfm';
 interface CodeNode extends Node {
   value: string;
   lang: string;
-  meta: unknown;
+  meta: string;
 }
+
+interface LineOption {
+  line: number;
+  classes?: string[];
+}
+
+const highlightLine = (highlightRange: string) => {
+  const lineOptions: LineOption[] = [];
+
+  for (const line of highlightRange.split(',')) {
+    let range = line.split('-').map(Number);
+
+    if (range.length > 1) {
+      const begin = range[0],
+        end = range[1];
+      range = Array.from({ length: end - begin + 1 }, (_, i) => i + begin);
+    }
+
+    range.forEach((n) => {
+      lineOptions.push({ line: n, classes: ['line-highlight'] });
+    });
+  }
+
+  return lineOptions;
+};
 
 const attachHighlighter = (options: { highlighter: shiki.Highlighter }) => async (tree: Node<Data>) => {
   visit(tree, 'code', (node: CodeNode) => {
+    const preClassName = ['shiki'];
+    const lineOptions: LineOption[] = [];
+    let withHighlightLine = false;
+
+    if (node.meta) {
+      const params = node.meta.split(' ');
+
+      if (params.includes('no-line-numbers')) {
+        preClassName.push('shiki-no-line-numbers');
+      }
+
+      const highlightRange = node.meta.match(/{([^]*)}/)?.[1];
+      if (highlightRange) {
+        withHighlightLine = true;
+        lineOptions.push(...highlightLine(highlightRange));
+        preClassName.push('shiki-line-highlights');
+      }
+    }
+
     node.type = 'html';
+
     node.value = options.highlighter
-      .codeToHtml(node.value, node.lang)
-      .replace('<pre class="shiki"', `<pre class="shiki" language="${node.lang}" meta="${node.meta}"`);
+      .codeToHtml(node.value, { lang: node.lang, lineOptions: lineOptions })
+      .replace(
+        '<pre class="shiki"',
+        `<pre class="${preClassName.join(' ')}" language="${node.lang}" meta="${node.meta}"`,
+      );
+
+    if (withHighlightLine) {
+      node.value = node.value.replaceAll(`<span class="line"></span>`, '<span class="line"><br/></span>');
+    }
   });
 };
 
@@ -29,7 +81,7 @@ const attachHighlighter = (options: { highlighter: shiki.Highlighter }) => async
  * @return String containing HTML
  */
 export const transformMdx = async (raw: string): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> => {
-  const highlighter = await shiki.getHighlighter({ theme: 'github-dark' });
+  const highlighter = await shiki.getHighlighter({ theme: 'github-dark-dimmed' });
   const markdown = await serialize(raw, {
     mdxOptions: {
       remarkPlugins: [[attachHighlighter, { highlighter }], remarkGFM, remarkMath],
