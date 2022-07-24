@@ -61,20 +61,21 @@ Next, I mapped out the 3 buttons in the JSON file and keyboard definition file. 
 
 ```json
 {
-    "keyboard_name": "The Key V2",
-    "url": "https://drop.com/buy/stack-overflow-the-key-v2-macropad",
-    "maintainer": "massdrop",
-    "layouts": {
-        "LAYOUT": {
-            "layout": [
-                { "label": "K00 (D4,D2)", "x": 0, "y": 0 },
-                { "label": "K01 (D4,D1)", "x": 1, "y": 0 },
-                { "label": "K02 (D4,D0)", "x": 2, "y": 0 }
-            ]
-        }
+  "keyboard_name": "The Key V2",
+  "url": "https://drop.com/buy/stack-overflow-the-key-v2-macropad",
+  "maintainer": "massdrop",
+  "layouts": {
+    "LAYOUT": {
+      "layout": [
+        { "label": "K00 (D4,D2)", "x": 0, "y": 0 },
+        { "label": "K01 (D4,D1)", "x": 1, "y": 0 },
+        { "label": "K02 (D4,D0)", "x": 2, "y": 0 }
+      ]
     }
+  }
 }
 ```
+
 <center>*info.json*</center>
 
 ```cpp
@@ -90,6 +91,7 @@ Next, I mapped out the 3 buttons in the JSON file and keyboard definition file. 
     { K00, K01, K02 }, \
 }
 ```
+
 <center>*thekey_v2.h*</center>
 
 Next, I started to create the configuration for this keyboard. After some debugging, I also found out that the LED light arrangements are rather unique. It doesn't follow the normal orders, but the way those are arranged from left to right is `4, 0, 1, 2, 3`. I also had to enable lighting layers so I can use the RGB lights to indicate which keymap layer the user is currently on.
@@ -130,6 +132,7 @@ Next, I started to create the configuration for this keyboard. After some debugg
 #define RGBLIGHT_LAYERS /* Enable lighting layers */
 #define RGBLIGHT_LAYER_BLINK /* Enable lighting layer blink */
 ```
+
 <center>*config.h*</center>
 
 With the initial config of the keyboard being done, I can now proceed with the keymaps.
@@ -145,6 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 ```
+
 <center>*default/keymap.c*</center>
 
 Now moving on with the second group of people. This can be done through [custom keycodes](https://docs.qmk.fm/#/custom_quantum_functions?id=custom-keycodes). I had to make the Stack Overflow button to act as a button whose behavior I need to handle manually.
@@ -175,29 +179,30 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 ```
+
 <center>*url-copy-paste/keymap.c*</center>
 
 Now let's move on to the final group of people. This one is a little bit more challenging since I had only 3 buttons to work with and a full RGB control obviously needs more than that. So, I utilized the feature called [layers](https://docs.qmk.fm/#/keymap?id=keymap-and-layers). Using layers, I can now effectively have "extra buttons" to use. I knew that I had to designate the Stack Overflow button as a layer move button, so I had 2 buttons that I can work with in each layer.
 
 In addition to that, I also knew that I had to give visual feedback to the user so they wouldn't be confused on which layer they're currently on. I had 5 LEDs to play with, so I implemented a 5-layer keymaps:
 
-1. Layer 0 (leftmost LED flashes white):
+1.  Layer 0 (leftmost LED flashes white):
     - Move to layer 1
     - CTRL + C
     - CTRL + V
-1. Layer 1 (LED under the Stack Overflow button flashes white):
+1.  Layer 1 (LED under the Stack Overflow button flashes white):
     - Move to layer 2
     - Turn on/off LED
     - Change RGB animation mode
-1. Layer 2 (LED under the C button flashes white):
+1.  Layer 2 (LED under the C button flashes white):
     - Move to layer 3
     - LED brightness up
     - LED brightness down
-1. Layer 3 (LED under the V button flashes white):
+1.  Layer 3 (LED under the V button flashes white):
     - Move to layer 4
     - LED hue up
     - LED hue down
-1. Layer 4 (rightmost LED flashes white):
+1.  Layer 4 (rightmost LED flashes white):
     - Move to layer 0
     - LED saturation up
     - LED saturation down
@@ -300,6 +305,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 ```
+
 <center>*rgb-control/keymap.c*</center>
 
 After I was done with the 3 implementations, I tested them on my device, discovered no deal-breaking bugs and made a [pull request](https://github.com/qmk/qmk_firmware/pull/17696) to QMK's firmware repository.
@@ -313,6 +319,7 @@ At the beginning, I was pretty disappointed with what this device came up with o
 And what I covered here was just half of the story. After getting the default firmware approved by QMK maintainers, I actually had managed to build another firmware that suits my own needs and I paired it with AutoHotkey installed in my Windows machine. This device can now do even more things.
 
 Here are some examples of apps that I had built a custom button mapping for:
+
 1. Spotify: `Previous Song, Play/Pause, Next Song`
 1. Visual Studio Code: `Start Debugging, Step Over, Step Into`
 1. Microsoft Edge: `New Tab, Previous Tab, Next Tab`
