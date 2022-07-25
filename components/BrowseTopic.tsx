@@ -1,13 +1,12 @@
 import Link from 'next/link';
 
-const BrowseTopic = ({ categories }) => {
+type BrowseTopicProps = {
+  categories: string[];
+};
+
+export function BrowseTopic({ categories }: BrowseTopicProps) {
   return (
     <>
-      <style jsx>{`
-        .item {
-          flex: 0 0 calc(20% - 1.5rem);
-        }
-      `}</style>
       <div className="md:-mx-12 mt-24">
         <h2 className="uppercase font-bold text-xl mb-10">Browse Interesting Topics</h2>
 
@@ -20,7 +19,7 @@ const BrowseTopic = ({ categories }) => {
                 query: { q: category },
               }}
             >
-              <a className="item text-lg pb-3 border-b border-black text-center lowercase hover:text-primary-600 whitespace-nowrap">
+              <a className="flex-[0_0_calc(20%-1.5rem)] text-lg pb-3 border-b border-black text-center lowercase hover:text-primary-600 whitespace-nowrap">
                 {category}
               </a>
             </Link>
@@ -29,6 +28,4 @@ const BrowseTopic = ({ categories }) => {
       </div>
     </>
   );
-};
-
-export default BrowseTopic;
+}

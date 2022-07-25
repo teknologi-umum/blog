@@ -1,17 +1,17 @@
 import Link from 'next/link';
-import GithubIcon from '#components/Icons/GithubIcon';
-import TelegramIcon from '#components/Icons/TelegramIcon';
-import SearchIcon from '#components/Icons/SearchIcon';
 import { useRouter } from 'next/router';
+import { GithubIcon, TelegramIcon, SearchIcon } from '~/icons';
 
-export default function Navbar() {
+export function Navbar() {
   const router = useRouter();
 
-  const active = (route: string, isBasePath: boolean): string => {
-    if (router.route === '/' && isBasePath) return 'active';
-
-    return router.route === `/${route}` ? 'active' : '';
+  const getActiveClass = (route: string, isBasePath: boolean): string => {
+    if ((router.route === '/' && isBasePath) || router.route === `/${route}`) {
+      return 'active';
+    }
+    return '';
   };
+
   return (
     <nav className="fixed min-h-16 top-0 inset-x-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg z-20 font-sans print:static">
       <div className="container flex flex-col md:flex-row justify-between items-center space-y-1 mx-auto py-5 px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56 2xl:px-72 h-full">
@@ -19,7 +19,7 @@ export default function Navbar() {
           {['home', 'blog', 'about'].map((route, idx) => (
             <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
               <a
-                className={`flex-inline uppercase text-center hover:text-primary-600 transition duration-300 ${active(
+                className={`flex-inline uppercase text-center hover:text-primary-600 transition duration-300 ${getActiveClass(
                   route,
                   route === 'home',
                 )}`}

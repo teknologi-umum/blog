@@ -1,39 +1,23 @@
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { Data, Node } from 'unist';
 import { serialize } from 'next-mdx-remote/serialize';
-import * as shiki from 'shiki';
-import visit from 'unist-util-visit';
 import rehypeKatex from 'rehype-katex';
+import rehypePrettyCode, { type Options } from 'rehype-pretty-code';
 import remarkMath from 'remark-math';
-import remarkGFM from 'remark-gfm';
 
-// TODO(elianiva): this seems hacky, but Node<Data> doesn't have value, lang, or meta.
-interface CodeNode extends Node {
-  value: string;
-  lang: string;
-  meta: unknown;
-}
-
-const attachHighlighter = (options: { highlighter: shiki.Highlighter }) => async (tree: Node<Data>) => {
-  visit(tree, 'code', (node: CodeNode) => {
-    node.type = 'html';
-    node.value = options.highlighter
-      .codeToHtml(node.value, node.lang)
-      .replace('<pre class="shiki"', `<pre class="shiki" language="${node.lang}" meta="${node.meta}"`);
-  });
+const codeHighlightOption: Partial<Options> = {
+  theme: 'github-dark',
 };
 
 /**
  * Convert given markdown string to HTMl using remark
- * @param raw - The raw markdown you want to convert into HTML
+ * @param content - The raw markdown you want to convert into HTML
  * @return String containing HTML
  */
-export const transformMdx = async (raw: string): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> => {
-  const highlighter = await shiki.getHighlighter({ theme: 'github-dark' });
-  const markdown = await serialize(raw, {
+export const transformMdx = async (content: string): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> => {
+  const markdown = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [[attachHighlighter, { highlighter }], remarkGFM, remarkMath],
-      rehypePlugins: [rehypeKatex],
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [[rehypePrettyCode, codeHighlightOption], rehypeKatex],
     },
   });
 

@@ -1,25 +1,24 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import AuthorCard from '#components/AuthorCard';
-import ImageWithFrame from '#components/ImageWithFrame';
-import EnhancedSection from '#components/EnhancedSection';
-import { transformMdx } from 'utils/transformMdx';
-import { getPostBySlug, getPostSlugs } from 'utils/posts';
-import siteData from '../../data/site';
+import { MDXRemote, type MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { NextSeo } from 'next-seo';
-import type { PostFields } from '#types/post';
-import { MDXRemote } from 'next-mdx-remote';
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { Giscus } from '@giscus/react';
-import { isCookieEnabled } from '#utils/cookies';
+import Giscus from '@giscus/react';
+import { transformMdx } from '~/utils/transformMdx';
+import { AuthorCard } from '~/components/AuthorCard';
+import { ImageWithFrame } from '~/components/ImageWithFrame';
+import { CopyableCodeBlocks as CopyableCodeBlock } from '~/components/EnhancedSection';
+import siteData from '~/data/site';
+import type { PostField } from '~/types/post';
+import { isCookieEnabled } from '~/utils/cookies';
+import { getPostBySlug, getPostSlugs } from '~/services';
 
-interface PostType extends PostFields {
-  html: MDXRemoteSerializeResult<Record<string, unknown>>;
+interface PostType extends PostField {
+  postContent: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
 export default function Post({
   title,
   desc,
-  html,
+  postContent,
   author,
   github,
   twitter,
@@ -63,12 +62,10 @@ export default function Post({
       </header>
       <div className="mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words print:prose-pre:border print:pt-3 print:prose-pre:whitespace-pre-wrap	">
         <MDXRemote
-          {...html}
+          {...postContent}
           components={{
             img: ImageWithFrame,
-            pre: function CopyableCodeBlock(props) {
-              return <EnhancedSection copyable {...props} />;
-            },
+            pre: CopyableCodeBlock,
           }}
         />
       </div>
@@ -104,11 +101,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'telegram',
     'cover',
   ]);
-  const html = await transformMdx(content!);
+  const postContent = await transformMdx(content);
 
   return {
     props: {
-      html,
+      postContent,
       ...metadata,
     },
   };

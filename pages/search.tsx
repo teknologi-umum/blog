@@ -1,37 +1,39 @@
+import { type ChangeEvent, useEffect, useMemo, useRef, useState } from 'react';
 import { NextSeo } from 'next-seo';
-import siteData from 'data/site';
-import { useDebounce } from '#hooks/index';
-import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from 'react';
-import type { PostFields } from '#types/post';
-import PostCard from '#components/PostCard';
-import { getAllPosts } from '#utils/posts';
-import { filterPostsByKeywords } from '#utils/_modules';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
+import siteData from '~/data/site';
+import { useDebounce } from '~/hooks/use-debounce';
+import type { PostField, PostFieldName } from '~/types/post';
+import { PostCard } from '~/components/PostCard';
+import { filterPostsByKeywords, getAllPosts } from '~/services';
 
-export default function Search({ posts }) {
+type SearchProps = {
+  posts: PostField[];
+};
+
+export default function Search({ posts }: SearchProps) {
   const router = useRouter();
-  const tags = useMemo<Array<keyof PostFields>>(() => ['author', 'title', 'categories', 'desc'], []);
-  const [filteredPosts, setFilteredPosts] = useState<Partial<PostFields>[] | PostFields[]>([]);
-  const [keywords, setKeywords] = useState<string>('');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const filter = useMemo<PostFieldName[]>(() => ['author', 'title', 'categories', 'desc'], []);
+  const [filteredPosts, setFilteredPosts] = useState<PostField[]>([]);
+  const [keywords, setKeywords] = useState('');
+  const [selectedFields, setSelectedTags] = useState<PostFieldName[]>([]);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const didMount = useRef(false);
 
   const debouncedKeywords = useDebounce<typeof keywords>(keywords);
 
-  const notEmpty = (str: string) => str.replace(/\s/g, '').length;
+  const isNotEmpty = (str: string) => str.replace(/\s/g, '').length > 0;
 
   useEffect(() => {
     if (!router.isReady) return;
-    if ('q' in router.query && inputRef.current) {
+    if ('q' in router.query && inputRef.current !== null) {
       const q = router.query.q as string;
       setKeywords(q);
       inputRef.current.value = q;
       setFilteredPosts(() => filterPostsByKeywords(posts, q));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.isReady]);
+  }, [router.isReady]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!didMount.current) {
@@ -39,21 +41,18 @@ export default function Search({ posts }) {
       return;
     }
 
-    Router.replace({
-      ...(notEmpty(debouncedKeywords) ? { query: { q: debouncedKeywords } } : {}),
-    });
-
-    if (notEmpty(debouncedKeywords)) {
-      setFilteredPosts(() => filterPostsByKeywords(posts, debouncedKeywords, selectedTags));
+    if (isNotEmpty(debouncedKeywords)) {
+      router.replace({ query: { q: debouncedKeywords } });
+      setFilteredPosts(() => filterPostsByKeywords(posts, debouncedKeywords, selectedFields));
       return;
     }
+
+    router.replace({});
     setFilteredPosts(posts);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedKeywords, selectedTags]);
+  }, [debouncedKeywords, selectedFields]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const activeTag = (tagName: string): string => {
-    if (selectedTags.includes(tagName)) return 'text-white bg-black';
-
+  const activeClassFor = (field: PostFieldName): string => {
+    if (selectedFields.includes(field)) return 'text-white bg-black hover:bg-black';
     return '';
   };
 
@@ -62,15 +61,15 @@ export default function Search({ posts }) {
     setKeywords(value);
   };
 
-  const handleSelectTag = (tagName) => {
-    // check if items already exists in selectedTags
+  const toggleSelectedField = (fieldName: PostFieldName) => {
+    // check if items already exists in selectedFields
     // if so, remove it
-    if (selectedTags.includes(tagName)) {
-      setSelectedTags((prev) => prev.filter((v) => v !== tagName));
+    if (selectedFields.includes(fieldName)) {
+      setSelectedTags((prev) => prev.filter((v) => v !== fieldName));
       return;
     }
 
-    setSelectedTags((prev) => [...prev, tagName]);
+    setSelectedTags((prev) => [...prev, fieldName]);
   };
   return (
     <>
@@ -85,17 +84,6 @@ export default function Search({ posts }) {
           site_name: siteData.siteName,
         }}
       />
-      <style jsx>{`
-        .posts {
-          grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-        }
-
-        @media screen and (min-width: 432px) {
-          .posts {
-            grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-          }
-        }
-      `}</style>
       <div className="my-8">
         <input
           ref={inputRef}
@@ -106,13 +94,13 @@ export default function Search({ posts }) {
         />
 
         <div className="mt-4 flex flex-wrap gap-3">
-          {tags.map((tag, idx) => (
+          {filter.map((tag, idx) => (
             <div
               key={idx}
-              className={`border border-black hover:bg-black/90 hover:text-white cursor-pointer px-2 py-1 transition duration-300 ${activeTag(
+              className={`border border-black hover:bg-black/60 hover:text-white cursor-pointer px-2 py-1 transition duration-300 ${activeClassFor(
                 tag,
               )}`}
-              onClick={() => handleSelectTag(tag)}
+              onClick={() => toggleSelectedField(tag)}
             >
               <span className="text-base capitalize select-none">{tag}</span>
             </div>
@@ -121,8 +109,8 @@ export default function Search({ posts }) {
       </div>
 
       {filteredPosts.length > 0 && (
-        <div className="posts grid grid-cols-3 gap-4 px-4">
-          {filteredPosts.map((post: Partial<PostFields> | PostFields, idx: number) => (
+        <div className="posts grid lg:grid-cols-3 gap-4">
+          {filteredPosts.map((post: PostField, idx: number) => (
             <PostCard {...post} key={idx} />
           ))}
         </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const FeaturedPost = ({ post }) => {
+export function FeaturedPost({ post }) {
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 items-center mt-12 md:-mx-12 lg:gap-x-20 gap-y-10 lg:gap-y-0">
       <div className="lg:text-left text-center">
@@ -36,6 +36,4 @@ const FeaturedPost = ({ post }) => {
       </div>
     </div>
   );
-};
-
-export default FeaturedPost;
+}

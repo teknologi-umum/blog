@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo';
 import siteData from 'data/site';
-import { getAllPosts } from '#utils/posts';
-import PostCard from '#components/PostCard';
-import type { PostFields } from '#types/post';
+import { getAllPosts } from '~/services';
+import { PostCard } from '~/components/PostCard';
+import type { PostField } from '~/types/post';
 
 export default function Blog({ posts }) {
   return (
@@ -19,15 +19,6 @@ export default function Blog({ posts }) {
         }}
       />
       <style jsx>{`
-        .posts {
-          grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-        }
-
-        @media screen and (min-width: 432px) {
-          .posts {
-            grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-          }
-        }
         @media print {
           .posts {
             grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
@@ -35,8 +26,8 @@ export default function Blog({ posts }) {
         }
       `}</style>
       <h1 className="text-left uppercase text-2xl font-bold my-8">Blog Posts</h1>
-      <div className="posts grid gap-4 px-4">
-        {posts.map((post: PostFields, idx: number) => (
+      <div className="posts grid lg:grid-cols-3 gap-4">
+        {posts.map((post: PostField, idx: number) => (
           <PostCard {...post} key={idx} />
         ))}
       </div>

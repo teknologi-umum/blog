@@ -1,20 +1,24 @@
-import GithubIcon from '#components/Icons/GithubIcon';
+import { GithubIcon } from '~/icons';
 
-export interface Contributor {
+export type Contributor = {
   id: number;
   login: string;
   contribution: number;
   html_url: string;
   avatar_url: string;
-}
+};
 
-const Contributing = ({ contributors }: { contributors: Contributor[] }) => {
+type ContributingProps = {
+  contributors: Contributor[];
+};
+
+export function Contributing(props: ContributingProps) {
   return (
     <>
       <div className="md:-mx-12 mt-24 bg-primary-900 py-12 px-12 md:px-16 grid gap-12 grid-cols-1 md:grid-cols-2 items-start print:py-3">
         <div>
-          <h1 className="text-white text-3xl md:text-4xl font-bold  print:text-black">Feeling like contributing?</h1>
-          <p className="mt-6 mb-4 text-white text-md md:text-lg  print:text-black">
+          <h1 className="text-white text-3xl md:text-4xl font-bold print:text-black">Feeling like contributing?</h1>
+          <p className="mt-6 mb-4 text-white text-md md:text-lg print:text-black">
             Blog writers, code contributors, proofreaders... anything you could do is always welcome!
           </p>
           <a
@@ -29,7 +33,7 @@ const Contributing = ({ contributors }: { contributors: Contributor[] }) => {
           </a>
         </div>
         <div className="flex flex-wrap justify-start -mb-4 -mr-4">
-          {contributors.map((contributor) => (
+          {props.contributors.map((contributor) => (
             <a href={contributor.html_url} key={contributor.id} className="mr-4 mb-4 inline-block">
               <img
                 src={contributor.avatar_url}
@@ -51,6 +55,4 @@ const Contributing = ({ contributors }: { contributors: Contributor[] }) => {
       </div>
     </>
   );
-};
-
-export default Contributing;
+}

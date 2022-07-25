@@ -1,7 +1,11 @@
 import Link from 'next/link';
-import type { PostFields } from '#types/post';
+import type { PostField } from '~/types/post';
 
-export default function PostCard({
+type PostCardProps = Pick<PostField, 'slug' | 'title' | 'desc' | 'categories' | 'author' | 'github'> & {
+  cover?: string;
+};
+
+export function PostCard({
   slug,
   title,
   desc,
@@ -9,7 +13,7 @@ export default function PostCard({
   author,
   github,
   cover = '/image/sample.jpg',
-}: Partial<PostFields>) {
+}: PostCardProps) {
   return (
     <>
       <style jsx>
