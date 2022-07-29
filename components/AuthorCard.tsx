@@ -1,8 +1,7 @@
-import TwitterIcon from '#components/Icons/TwitterIcon';
-import type { Author } from '#types/post';
-import TelegramIcon from './Icons/TelegramIcon';
+import type { Author } from '~/types/post';
+import { TelegramIcon, TwitterIcon } from '~/icons';
 
-export default function AuthorCard({ author, github, twitter, telegram }: Partial<Author>) {
+export function AuthorCard({ author, github, twitter, telegram }: Partial<Author>) {
   return (
     <div className="text-center md:text-left md:inline-grid md:grid-cols-[3.5rem,1fr] md:grid-rows-2 md:items-center md:justify-center font-sans">
       <div className="grid place-items-center row-start-1 row-end-3 pr-3">
