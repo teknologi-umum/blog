@@ -57,7 +57,7 @@ With those insights in mind, I then knew that I had to create 3 different defaul
 
 But first, I need to start supporting the keyboard in QMK. I started by forking the official [QMK Firmware Github repository](https://github.com/qmk/qmk_firmware), and then created a new folder under the `massdrop/thekey_v2` directory.
 
-Next, I mapped out the 3 buttons in the JSON file and keyboard definition file. The keyboard only have 3 keys, so it shouldn't be difficult.
+Next, I mapped out the 3 buttons in the JSON and the keyboard definition file. The keyboard only has 3 keys, so it shouldn't be difficult.
 
 ```json
 {
