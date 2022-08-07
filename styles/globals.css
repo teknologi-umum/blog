@@ -26,6 +26,7 @@ pre > code > span.line:not(:only-child):before {
   margin-right: 1.5em;
   min-width: 1.5em;
   text-align: right;
+  opacity: 0.4;
 }
 
 @media print {

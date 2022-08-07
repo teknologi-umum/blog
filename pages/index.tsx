@@ -1,10 +1,10 @@
 import siteData from 'data/site';
 import { NextSeo } from 'next-seo';
-import { getAllPosts, getPostCategories } from '../utils/posts';
-import FeaturedPost from '#components/FeaturedPost';
-import BrowseTopic from '#components/BrowseTopic';
-import ReadAnyway from '#components/ReadAnyway';
-import Contributing, { Contributor } from '#components/Contributing';
+import { getAllPosts, getPostCategories } from '~/services';
+import { FeaturedPost } from '~/components/FeaturedPost';
+import { BrowseTopic } from '~/components/BrowseTopic';
+import { ReadAnyway } from '~/components/ReadAnyway';
+import { Contributing, type Contributor } from '~/components/Contributing';
 
 export default function Home({ categories, posts, contributors = [] }) {
   return (
@@ -29,8 +29,8 @@ export default function Home({ categories, posts, contributors = [] }) {
 }
 
 export const getStaticProps = async () => {
-  let categories = await getPostCategories();
-  let posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github', 'cover']);
+  const posts = await getAllPosts(['title', 'slug', 'desc', 'date', 'categories', 'author', 'github', 'cover']);
+  const categories = getPostCategories(posts);
   const res = await fetch('https://api.github.com/repos/teknologi-umum/blog/contributors');
   const contributors = (await res.json()) as Contributor[];
 

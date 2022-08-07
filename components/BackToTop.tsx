@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import ChevronUpIcon from '#components/Icons/ChevronUpIcon';
+import { ChevronUpIcon } from '~/icons';
 
-export default function BackToTop() {
+export function BackToTop() {
   const [show, setShow] = useState(false);
 
   const scrollToTop = () => {
@@ -13,11 +13,7 @@ export default function BackToTop() {
 
   useEffect(() => {
     const toggleButton = () => {
-      if (window.scrollY > 100) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
+      setShow(window.scrollY > 100);
     };
 
     window.addEventListener('load', toggleButton);

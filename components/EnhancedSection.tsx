@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
-
-interface EnhancedSectionProps {
-  copyable?: boolean;
-  children: React.ReactNode;
-}
+import { useState, type ReactNode, type ReactElement, type PropsWithChildren } from 'react';
 
 // From https://stackoverflow.com/a/60564620
-function getNodeText(node) {
-  if (['string', 'number'].includes(typeof node)) return node;
-  if (node instanceof Array) return node.map(getNodeText).join('');
-  if (typeof node === 'object' && node) return getNodeText(node.props.children);
+function getNodeText(node: ReactNode | number | string) {
+  const nodeType = typeof node;
+
+  if (nodeType === 'string' || nodeType === 'number') {
+    return node;
+  }
+
+  if (Array.isArray(node)) {
+    return node.map(getNodeText).join('');
+  }
+
+  if (nodeType === 'object' && node !== undefined) {
+    return getNodeText((node as ReactElement).props.children);
+  }
 }
 
 function CopyButton({ text = '' }) {
@@ -25,24 +30,24 @@ function CopyButton({ text = '' }) {
     setTimeout(handleBlur, 2000); // return to original state
   };
 
-  const buttonClass =
-    'absolute top-0 right-0 px-2 py-1 m-2 duration-200 text-sm rounded ' +
-    (clicked ? 'bg-white' : 'text-white bg-black');
-
   return (
-    <button className={buttonClass} onClick={handleClickCopy} onBlur={handleBlur}>
+    <button
+      className={`absolute top-0 right-0 px-2 py-1 m-2 duration-200 text-sm rounded ${
+        clicked ? 'bg-white' : 'text-white bg-black'
+      }`}
+      onClick={handleClickCopy}
+      onBlur={handleBlur}
+    >
       {clicked ? 'Copied!' : 'Copy'}
     </button>
   );
 }
 
-export default function EnhancedSection({ copyable, children, ...wrapperProps }: EnhancedSectionProps) {
-  const Wrapper = React.isValidElement(children) ? children.props.parentName : 'div';
-
+export function CopyableCodeBlocks({ children }: PropsWithChildren<{}>) {
   return (
     <section className="relative">
-      <Wrapper {...wrapperProps}>{children}</Wrapper>
-      {copyable && <CopyButton text={getNodeText(children) + '\n'} />}
+      <pre>{children}</pre>
+      <CopyButton text={getNodeText(children) + '\n'} />
     </section>
   );
 }

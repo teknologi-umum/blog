@@ -1,4 +1,4 @@
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="mt-12 px-4 py-10 text-center border-t-2 border-gray-200 font-serif bg-white print:hidden">
       <p className="text-base pb-2">&copy; {new Date().getFullYear()} Teknologi Umum</p>

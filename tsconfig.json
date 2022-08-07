@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": ["es6", "es7", "esnext", "dom"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "jsx": "preserve",
     "removeComments": true,
@@ -27,15 +27,12 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "#components/*": ["components/*"],
-      "#utils/*": ["utils/*"],
-      "#hooks/*": ["hooks/*"],
-      "#types/*": ["types/*"]
-    },
-    "incremental": true
+      "~/*": ["./*"]
+    }
   },
-  "include": ["pages", "utils", "components/FeaturedPost.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

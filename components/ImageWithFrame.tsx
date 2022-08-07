@@ -1,7 +1,9 @@
-export default function ImageWithFrame({ src, alt }) {
+import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react';
+
+export function ImageWithFrame({ src, alt }: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>) {
   return (
-    <figure>
-      <img src={src} alt={alt} />
+    <figure className="text-center">
+      <img className="inline-block p-0 overflow-hidden rounded-md" src={src} alt={alt} />
       <figcaption>{alt}</figcaption>
     </figure>
   );

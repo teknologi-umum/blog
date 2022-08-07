@@ -1,4 +1,11 @@
-export interface PostFields extends Author {
+export type Author = {
+  author: string;
+  github: string;
+  twitter: string;
+  telegram: string;
+};
+
+export type PostField = Author & {
   slug: string;
   content: string;
   title: string;
@@ -6,11 +13,6 @@ export interface PostFields extends Author {
   date: string;
   cover: string;
   categories: string[];
-}
+};
 
-export interface Author {
-  author: string;
-  github: string;
-  twitter: string;
-  telegram: string;
-}
+export type PostFieldName = keyof PostField;
