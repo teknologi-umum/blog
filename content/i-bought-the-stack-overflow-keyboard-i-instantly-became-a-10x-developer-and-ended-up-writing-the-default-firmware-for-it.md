@@ -50,8 +50,8 @@ As Winston Churchill famously said, â€œHe who fails to plan is planning to failâ
 So, I started by reading all the reviews, Q&As and discussion page for the device. And after spending several hours reading through them all, I found that there seems to be 3 main categories of people. Each one of the categories had different needs:
 
 1. The people who wanted the OOBE setup back after messing up their own customization and can't get it due to the "official" firmware builder killing the LEDs. Some of them were also willing to learn and looked at the source code for that OOBE firmware.
-1. The people who wanted to make the Stack Overflow button actually typed out `https://stackoverflow.com/` and the C button to be CTRL/CMD+C and the V button to be CTRL/CMD+V.
-1. The people who wanted to take full control of the LEDs and explore all customization options for it.
+2. The people who wanted to make the Stack Overflow button actually typed out `https://stackoverflow.com/` and the C button to be CTRL/CMD+C and the V button to be CTRL/CMD+V.
+3. The people who wanted to take full control of the LEDs and explore all customization options for it.
 
 With those insights in mind, I then knew that I had to create 3 different defaults to satisfy all those most commonly requested needs.
 
