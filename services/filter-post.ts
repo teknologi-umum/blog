@@ -20,7 +20,11 @@ export const filterPostsByKeywords = (posts: PostField[] = [], keywords = '', fi
   // filter based on selected field
   const postsFilteredByTags = postsWithValidTags.filter((post) => {
     for (const field of selectedFields) {
-      if (isMatched(post[field], keywords)) {
+      const value = post[field];
+
+      if (value === null) continue;
+
+      if (isMatched(value, keywords)) {
         return true;
       }
     }
