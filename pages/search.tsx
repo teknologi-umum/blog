@@ -6,6 +6,8 @@ import { useDebounce } from '~/hooks/use-debounce';
 import type { PostField, PostFieldName } from '~/types/post';
 import { PostCard } from '~/components/PostCard';
 import { filterPostsByKeywords, getAllPosts } from '~/services';
+import clsx from 'clsx';
+import { isMobile, isStandalone } from '~/utils/helpers';
 
 type SearchProps = {
   posts: PostField[];
@@ -71,6 +73,8 @@ export default function Search({ posts }: SearchProps) {
 
     setSelectedTags((prev) => [...prev, fieldName]);
   };
+
+  const hasHoverEvent = !isMobile() && !isStandalone();
   return (
     <>
       <NextSeo
@@ -97,9 +101,11 @@ export default function Search({ posts }: SearchProps) {
           {filter.map((tag, idx) => (
             <div
               key={idx}
-              className={`border border-black hover:bg-black/60 hover:text-white cursor-pointer px-2 py-1 transition duration-300 ${activeClassFor(
-                tag,
-              )}`}
+              className={clsx(
+                'border border-black cursor-pointer px-2 py-1 transition duration-300',
+                activeClassFor(tag),
+                hasHoverEvent && 'hover:bg-black/60 hover:text-white',
+              )}
               onClick={() => toggleSelectedField(tag)}
             >
               <span className="text-base capitalize select-none">{tag}</span>

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { GithubIcon, TelegramIcon, SearchIcon } from '~/icons';
@@ -19,10 +20,10 @@ export function Navbar() {
           {['home', 'blog', 'about'].map((route, idx) => (
             <Link href={`/${route === 'home' ? '' : route}`} key={`${idx}-${route}`}>
               <a
-                className={`flex-inline uppercase text-center hover:text-primary-600 transition duration-300 ${getActiveClass(
-                  route,
-                  route === 'home',
-                )}`}
+                className={clsx(
+                  'flex-inline uppercase text-center hover:text-primary-600 transition duration-300',
+                  getActiveClass(route, route === 'home'),
+                )}
               >
                 {route}
               </a>
