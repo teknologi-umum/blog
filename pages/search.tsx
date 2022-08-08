@@ -21,7 +21,7 @@ export default function Search({ posts }: SearchProps) {
   const [selectedFields, setSelectedTags] = useState<PostFieldName[]>([]);
 
   const inputRef = useRef<HTMLInputElement>(null);
-  const didMount = useRef(false);
+  const initialEffectsRun = useRef(false);
 
   const debouncedKeywords = useDebounce<typeof keywords>(keywords);
 
@@ -38,8 +38,9 @@ export default function Search({ posts }: SearchProps) {
   }, [router.isReady]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (!didMount.current) {
-      didMount.current = true;
+    if (!initialEffectsRun.current) {
+      //  on page load, let all useEffects run first to avoid flickering
+      setTimeout(() => (initialEffectsRun.current = true), 0);
       return;
     }
 
