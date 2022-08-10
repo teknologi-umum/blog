@@ -16,7 +16,7 @@ type SearchProps = {
 export default function Search({ posts }: SearchProps) {
   const router = useRouter();
   const filter = useMemo<PostFieldName[]>(() => ['author', 'title', 'categories', 'desc'], []);
-  const [filteredPosts, setFilteredPosts] = useState<PostField[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<PostField[]>(posts);
   const [keywords, setKeywords] = useState('');
   const [selectedFields, setSelectedTags] = useState<PostFieldName[]>([]);
 
