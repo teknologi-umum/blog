@@ -16,7 +16,7 @@ type SearchProps = {
 export default function Search({ posts }: SearchProps) {
   const router = useRouter();
   const filter = useMemo<PostFieldName[]>(() => ['author', 'title', 'categories', 'desc'], []);
-  const [filteredPosts, setFilteredPosts] = useState<PostField[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<PostField[]>(posts);
   const [keywords, setKeywords] = useState('');
   const [selectedFields, setSelectedTags] = useState<PostFieldName[]>([]);
 
@@ -26,6 +26,8 @@ export default function Search({ posts }: SearchProps) {
   const debouncedKeywords = useDebounce<typeof keywords>(keywords);
 
   const isNotEmpty = (str: string) => str.replace(/\s/g, '').length > 0;
+
+  const hasHoverEvent = !isMobile() && !isStandalone();
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -56,6 +58,7 @@ export default function Search({ posts }: SearchProps) {
 
   const activeClassFor = (field: PostFieldName): string => {
     if (selectedFields.includes(field)) return 'text-white bg-black hover:bg-black';
+    if (hasHoverEvent) return 'hover:bg-black/60 hover:text-white';
     return '';
   };
 
@@ -75,7 +78,6 @@ export default function Search({ posts }: SearchProps) {
     setSelectedTags((prev) => [...prev, fieldName]);
   };
 
-  const hasHoverEvent = !isMobile() && !isStandalone();
   return (
     <>
       <NextSeo
@@ -105,7 +107,6 @@ export default function Search({ posts }: SearchProps) {
               className={clsx(
                 'border border-black cursor-pointer px-2 py-1 transition duration-300',
                 activeClassFor(tag),
-                hasHoverEvent && 'hover:bg-black/60 hover:text-white',
               )}
               onClick={() => toggleSelectedField(tag)}
             >
