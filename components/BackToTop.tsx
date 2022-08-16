@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { ChevronUpIcon } from '~/icons';
 
@@ -27,9 +28,10 @@ export function BackToTop() {
 
   return (
     <div
-      className={`fixed bottom-10 right-9 w-8 h-8 flex items-center justify-center bg-black text-white rounded cursor-pointer print:hidden ${
-        !show && 'hidden'
-      }`}
+      className={clsx(
+        'fixed bottom-10 right-9 w-8 h-8 flex items-center justify-center bg-black text-white rounded cursor-pointer print:hidden',
+        !show && 'hidden',
+      )}
       onClick={scrollToTop}
     >
       <ChevronUpIcon />

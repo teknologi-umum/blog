@@ -6,6 +6,8 @@ import { useDebounce } from '~/hooks/use-debounce';
 import type { PostField, PostFieldName } from '~/types/post';
 import { PostCard } from '~/components/PostCard';
 import { filterPostsByKeywords, getAllPosts } from '~/services';
+import clsx from 'clsx';
+import { isMobile, isStandalone } from '~/utils/helpers';
 
 type SearchProps = {
   posts: PostField[];
@@ -14,16 +16,18 @@ type SearchProps = {
 export default function Search({ posts }: SearchProps) {
   const router = useRouter();
   const filter = useMemo<PostFieldName[]>(() => ['author', 'title', 'categories', 'desc'], []);
-  const [filteredPosts, setFilteredPosts] = useState<PostField[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<PostField[]>(posts);
   const [keywords, setKeywords] = useState('');
   const [selectedFields, setSelectedTags] = useState<PostFieldName[]>([]);
 
   const inputRef = useRef<HTMLInputElement>(null);
-  const didMount = useRef(false);
+  const initialEffectsRun = useRef(false);
 
   const debouncedKeywords = useDebounce<typeof keywords>(keywords);
 
   const isNotEmpty = (str: string) => str.replace(/\s/g, '').length > 0;
+
+  const hasHoverEvent = !isMobile() && !isStandalone();
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -36,8 +40,9 @@ export default function Search({ posts }: SearchProps) {
   }, [router.isReady]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (!didMount.current) {
-      didMount.current = true;
+    if (!initialEffectsRun.current) {
+      //  on page load, let all useEffects run first to avoid flickering
+      setTimeout(() => (initialEffectsRun.current = true), 0);
       return;
     }
 
@@ -53,6 +58,7 @@ export default function Search({ posts }: SearchProps) {
 
   const activeClassFor = (field: PostFieldName): string => {
     if (selectedFields.includes(field)) return 'text-white bg-black hover:bg-black';
+    if (hasHoverEvent) return 'hover:bg-black/60 hover:text-white';
     return '';
   };
 
@@ -71,6 +77,7 @@ export default function Search({ posts }: SearchProps) {
 
     setSelectedTags((prev) => [...prev, fieldName]);
   };
+
   return (
     <>
       <NextSeo
@@ -97,9 +104,10 @@ export default function Search({ posts }: SearchProps) {
           {filter.map((tag, idx) => (
             <div
               key={idx}
-              className={`border border-black hover:bg-black/60 hover:text-white cursor-pointer px-2 py-1 transition duration-300 ${activeClassFor(
-                tag,
-              )}`}
+              className={clsx(
+                'border border-black cursor-pointer px-2 py-1 transition duration-300',
+                activeClassFor(tag),
+              )}
               onClick={() => toggleSelectedField(tag)}
             >
               <span className="text-base capitalize select-none">{tag}</span>
