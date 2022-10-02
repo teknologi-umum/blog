@@ -47,7 +47,7 @@ export function PostCard({
                 {title}
               </a>
             </Link>
-            <p className="text-base leading-relaxed text-gray-500 text-gray-100 mb-2 font-serif">{desc}</p>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-100 mb-2 font-serif">{desc}</p>
           </div>
           <a className="group" href={`https://github.com/${github}`}>
             <div className="flex items-center justify-start">
