@@ -27,14 +27,14 @@ export function PostCard({
           }
         `}
       </style>
-      <div className="flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans print:shadow-none print:border">
-        <img className="h-[10rem] object-cover w-full" src={cover} alt={slug} />
+      <div className="flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans print:shadow-none print:border dark:bg-neutral-800">
+        <img className="h-[10rem] object-cover w-full bg-neutral-100" src={cover} alt={slug} />
         <div className="p-4 print:p-2">
           <div className="flex flex-wrap gap-1 mb-2">
             {categories &&
               categories.map((category: string, idx: number) => (
                 <span
-                  className="text-xs px-2 py-1 rounded-sm bg-gray-200 text-gray-700 uppercase font-semibold print:px-1 print:border"
+                  className="text-xs px-2 py-1 rounded-sm bg-gray-200 text-gray-700 dark:bg-gray-600 dark:text-gray-300 uppercase font-semibold print:px-1 print:border"
                   key={`${idx}-${category}`}
                 >
                   {category}
@@ -43,9 +43,11 @@ export function PostCard({
           </div>
           <div className="py-1">
             <Link href={`/posts/${slug}`}>
-              <a className="text-xl font-bold capitalize font-display text-gray-800 hover:text-primary-600">{title}</a>
+              <a className="text-xl font-bold capitalize font-display text-gray-800 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-200 ">
+                {title}
+              </a>
             </Link>
-            <p className="text-base leading-relaxed text-gray-500 mb-2 font-serif">{desc}</p>
+            <p className="text-base leading-relaxed text-gray-500 text-gray-100 mb-2 font-serif">{desc}</p>
           </div>
           <a className="group" href={`https://github.com/${github}`}>
             <div className="flex items-center justify-start">
@@ -56,7 +58,9 @@ export function PostCard({
                 height="32"
                 alt="author"
               />
-              <span className="text-sm ml-2 text-left text-gray-700 group-hover:text-primary-600">{author}</span>
+              <span className="text-sm ml-2 text-left text-gray-700 group-hover:text-primary-600 dark:text-gray-300 dark:group-hover:text-primary-200">
+                {author}
+              </span>
             </div>
           </a>
         </div>

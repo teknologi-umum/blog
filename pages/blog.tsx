@@ -25,7 +25,7 @@ export default function Blog({ posts }) {
           }
         }
       `}</style>
-      <h1 className="text-left uppercase text-2xl font-bold my-8">Blog Posts</h1>
+      <h1 className="text-left uppercase text-2xl font-bold my-8 dark:text-neutral-100">Blog Posts</h1>
       <div className="posts grid lg:grid-cols-3 gap-4">
         {posts.map((post: PostField, idx: number) => (
           <PostCard {...post} key={idx} />
