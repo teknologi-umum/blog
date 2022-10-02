@@ -3,6 +3,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode, { type Options } from 'rehype-pretty-code';
 import remarkMath from 'remark-math';
+import remarkUnwrapImages from 'remark-unwrap-images';
 
 const codeHighlightOption: Partial<Options> = {
   theme: 'github-dark',
@@ -16,7 +17,7 @@ const codeHighlightOption: Partial<Options> = {
 export const transformMdx = async (content: string): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> => {
   const markdown = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [remarkMath],
+      remarkPlugins: [remarkMath, remarkUnwrapImages],
       rehypePlugins: [[rehypePrettyCode, codeHighlightOption], rehypeKatex],
     },
   });
