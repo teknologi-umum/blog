@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import siteData from 'data/site';
+import { PageTitle } from '~/components/PageTitle';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 interface Contributor {
@@ -37,8 +38,8 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
         }}
       />
       <div>
-        <div className="w-full text-lg font-serif dark:text-neutral-100">
-          <h1 className="text-left text-2xl font-bold py-8 uppercase font-sans">Tentang Teknologi Umum</h1>
+        <div className="w-full text-lg font-serif">
+          <PageTitle>Tentang Teknologi Umum</PageTitle>
           <p className="pb-3">
             <strong className="font-bold">Teknologi Umum</strong> merupakan suatu paguyuban yang berdiri sejak tahun
             2021 awal karena keresahan sang pencipta, La Ode Muhammad Al Fatih yang kesulitan untuk mengungkapkan rasa,
