@@ -37,7 +37,7 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
         }}
       />
       <div>
-        <div className="w-full text-lg font-serif">
+        <div className="w-full text-lg font-serif dark:text-neutral-100">
           <h1 className="text-left text-2xl font-bold py-8 uppercase font-sans">Tentang Teknologi Umum</h1>
           <p className="pb-3">
             <strong className="font-bold">Teknologi Umum</strong> merupakan suatu paguyuban yang berdiri sejak tahun
@@ -48,18 +48,19 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
           <p className="pb-3">
             Namun, siapa yang sangka kalau grup yang tidak punya aturan ini bisa aktif sekali, hingga sering ada 1000
             pesan setiap harinya. Dari member yang suka meracuni bahasa pemrograman C#, adu skill dukun, hingga
-            membicarakan konspirasi elit global seperti provider internet <span className="bg-black">redacted</span> dan
-            keberadaan <span className="bg-black">redacted redacted</span>.
+            membicarakan konspirasi elit global seperti provider internet{' '}
+            <span className="bg-black dark:bg-white">redacted</span> dan keberadaan{' '}
+            <span className="bg-black dark:bg-white">redacted redacted</span>.
           </p>
           <p className="pb-3">
             Untungnya, kamu juga bisa masuk ke grup Telegram Teknologi Umum hanya dengan klik&nbsp;
-            <a href="https://t.me/teknologi_umum" className="text-primary-600 hover:underline">
+            <a href="https://t.me/teknologi_umum" className="text-primary-600 dark:text-primary-200 hover:underline">
               tulisan ini
             </a>
             .
           </p>
         </div>
-        <div className="py-4">
+        <div className="py-4 dark:text-neutral-100">
           <h2 className="text-left text-2xl font-bold py-8 uppercase">Contributors</h2>
           <div className="grid grid-flow-row grid-cols-4 md:grid-cols-8 lg:grid-cols-12 grid-rows-3 gap-2 py-4 pb-2 print:grid-cols-8">
             {contributors.map((contributor: Contributor) => (
