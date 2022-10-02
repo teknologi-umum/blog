@@ -1,25 +1,17 @@
-import { cloneElement, ReactElement, useEffect, useState } from 'react';
+import { cloneElement, useState } from 'react';
 
-import {
-  loadColorMode,
-  enableDarkMode,
-  enableLightMode,
-  enableOSDefaultMode,
-  getColorMode,
-  type ColorMode,
-} from '~/utils/dark-mode';
+import { usePersistedDarkMode } from '~/hooks/use-dark-mode';
 import { useOnClickOutside } from '~/hooks/use-on-click-outside';
 import { SunIcon, CrescentMoonIcon, HalfMoonIcon } from '~/icons';
 
-const themeIcon: Record<ColorMode, ReactElement> = {
+const themeIcon = {
   'os-default': <HalfMoonIcon />,
   light: <SunIcon />,
   dark: <CrescentMoonIcon />,
 };
 
 export function DarkModeToggler() {
-  // only used for determining displayed icon besides "Theme"
-  const [localColorMode, setLocalColorMode] = useState<ColorMode>('light');
+  const { setAndPersistPreference, colorPreference } = usePersistedDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -28,13 +20,6 @@ export function DarkModeToggler() {
   }
 
   const clickOutsideRef = useOnClickOutside(closeDropdown);
-
-  useEffect(() => {
-    loadColorMode();
-
-    const colorMode = getColorMode();
-    if (colorMode !== null) setLocalColorMode(colorMode);
-  }, []);
 
   return (
     <div className="relative" ref={clickOutsideRef}>
@@ -47,7 +32,7 @@ export function DarkModeToggler() {
           onChange={(e) => setIsDropdownOpen(e.currentTarget.checked)}
         />
         <span className="bg-neutral-100 dark:bg-neutral-900 dark:text-neutral-100 px-3 py-1 rounded-2xl cursor-pointer flex items-center">
-          {cloneElement(themeIcon[localColorMode], { width: '1.25rem', height: '1.25rem' })}
+          {cloneElement(themeIcon[colorPreference ?? 'os-default'], { width: '1.25rem', height: '1.25rem' })}
           <span className="ml-2">Theme</span>
         </span>
 
@@ -62,8 +47,7 @@ export function DarkModeToggler() {
             <li>
               <button
                 onClick={() => {
-                  enableOSDefaultMode();
-                  setLocalColorMode('os-default');
+                  setAndPersistPreference('os-default');
                   closeDropdown();
                 }}
                 className="cursor-pointer w-full rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-900 flex items-center px-2 mb-2"
@@ -75,8 +59,7 @@ export function DarkModeToggler() {
             <li>
               <button
                 onClick={() => {
-                  enableLightMode();
-                  setLocalColorMode('light');
+                  setAndPersistPreference('light');
                   closeDropdown();
                 }}
                 className="cursor-pointer w-full rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-900 flex items-center px-2 mb-2"
@@ -88,8 +71,7 @@ export function DarkModeToggler() {
             <li>
               <button
                 onClick={() => {
-                  enableDarkMode();
-                  setLocalColorMode('dark');
+                  setAndPersistPreference('dark');
                   closeDropdown();
                 }}
                 className="cursor-pointer w-full rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-900 flex items-center px-2"
