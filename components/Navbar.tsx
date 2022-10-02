@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { GithubIcon, TelegramIcon, SearchIcon } from '~/icons';
+import { DarkModeToggler } from './DarkModeToggler';
 
 export function Navbar() {
   const router = useRouter();
@@ -55,6 +56,8 @@ export function Navbar() {
                 <TelegramIcon width="2rem" height="2rem" />
               </a>
             </div>
+
+            <DarkModeToggler />
           </div>
         </div>
       </div>
