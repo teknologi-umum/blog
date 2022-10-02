@@ -15,7 +15,7 @@ type ContributingProps = {
 export function Contributing(props: ContributingProps) {
   return (
     <>
-      <div className="md:-mx-12 mt-24 bg-primary-900 py-12 px-12 md:px-16 grid gap-12 grid-cols-1 md:grid-cols-2 items-start print:py-3">
+      <div className="md:-mx-12 mt-24 bg-primary-900 dark:bg-neutral-800 py-12 px-12 md:px-16 grid gap-12 grid-cols-1 md:grid-cols-2 items-start print:py-3">
         <div>
           <h1 className="text-white text-3xl md:text-4xl font-bold print:text-black">Feeling like contributing?</h1>
           <p className="mt-6 mb-4 text-white text-md md:text-lg print:text-black">

@@ -4,7 +4,7 @@ import { BackToTop } from '~/components/BackToTop';
 
 export function Layout({ children }) {
   return (
-    <>
+    <div className="bg-white dark:bg-neutral-900 ">
       <BackToTop />
       <Navbar />
       <div className="container mx-auto pt-10 lg:pt-2 w-full font-sans print:pt-0">
@@ -13,6 +13,6 @@ export function Layout({ children }) {
           <Footer />
         </main>
       </div>
-    </>
+    </div>
   );
 }
