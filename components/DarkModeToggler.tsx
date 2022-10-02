@@ -46,7 +46,7 @@ export function DarkModeToggler() {
           checked={isDropdownOpen}
           onChange={(e) => setIsDropdownOpen(e.currentTarget.checked)}
         />
-        <span className="bg-slate-100 dark:bg-slate-800 dark:text-slate-100 px-3 py-1 rounded-2xl cursor-pointer flex items-center">
+        <span className="bg-neutral-100 dark:bg-neutral-900 dark:text-neutral-100 px-3 py-1 rounded-2xl cursor-pointer flex items-center">
           {cloneElement(themeIcon[localColorMode], { width: '1.25rem', height: '1.25rem' })}
           <span className="ml-2">Theme</span>
         </span>
@@ -58,7 +58,7 @@ export function DarkModeToggler() {
                   transition-all duration-300 invisible opacity-0 
                   "
         >
-          <ul className="text-black dark:text-white bg-slate-100 dark:bg-slate-800 p-2 rounded-xl">
+          <ul className="text-black dark:text-white bg-neutral-100 dark:bg-neutral-800 p-2 rounded-xl">
             <li>
               <button
                 onClick={() => {
@@ -66,7 +66,7 @@ export function DarkModeToggler() {
                   setLocalColorMode('os-default');
                   closeDropdown();
                 }}
-                className="cursor-pointer w-full rounded-md hover:bg-slate-200 flex items-center px-2 mb-2"
+                className="cursor-pointer w-full rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-900 flex items-center px-2 mb-2"
               >
                 {cloneElement(themeIcon['os-default'], { width: '1rem', height: '1rem' })}
                 <span className="ml-4">OS Default</span>
@@ -79,7 +79,7 @@ export function DarkModeToggler() {
                   setLocalColorMode('light');
                   closeDropdown();
                 }}
-                className="cursor-pointer w-full rounded-md hover:bg-slate-200 flex items-center px-2 mb-2"
+                className="cursor-pointer w-full rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-900 flex items-center px-2 mb-2"
               >
                 {cloneElement(themeIcon['light'], { width: '1rem', height: '1rem' })}
                 <span className="ml-4">Light</span>
@@ -92,7 +92,7 @@ export function DarkModeToggler() {
                   setLocalColorMode('dark');
                   closeDropdown();
                 }}
-                className="cursor-pointer w-full rounded-md hover:bg-slate-200 flex items-center px-2"
+                className="cursor-pointer w-full rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-900 flex items-center px-2"
               >
                 {cloneElement(themeIcon['dark'], { width: '1rem', height: '1rem' })}
                 <span className="ml-4">Dark</span>
