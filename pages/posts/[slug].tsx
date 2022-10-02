@@ -10,7 +10,7 @@ import siteData from '~/data/site';
 import type { PostField } from '~/types/post';
 import { isCookieEnabled } from '~/utils/cookies';
 import { getPostBySlug, getPostSlugs } from '~/services';
-import { getColorMode } from '~/utils/dark-mode';
+import { useDarkMode } from '~/hooks/use-dark-mode';
 
 interface PostType extends PostField {
   postContent: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -27,6 +27,8 @@ export default function Post({
   date,
   cover = '/image/sample.jpg',
 }: PostType) {
+  const isDarkMode = useDarkMode();
+
   return (
     <>
       <NextSeo
@@ -92,7 +94,7 @@ export default function Post({
             term="..."
             reactionsEnabled="1"
             emitMetadata="1"
-            theme={getColorMode() === 'os-default' ? 'preferred_color_scheme' : getColorMode() ?? 'light'}
+            theme={isDarkMode ? 'dark' : 'light'}
           />
         )}
       </div>
