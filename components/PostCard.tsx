@@ -30,7 +30,7 @@ export function PostCard({
       <div className="flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans print:shadow-none print:border dark:bg-neutral-800">
         <img className="h-[10rem] object-cover w-full bg-neutral-100" src={cover} alt={slug} />
         <div className="p-4 print:p-2">
-          <div className="flex flex-wrap gap-1 mb-2">
+          <div className="flex whitespace-nowrap gap-1 mb-2">
             {categories &&
               categories.map((category: string, idx: number) => (
                 <span
