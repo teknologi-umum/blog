@@ -2,6 +2,7 @@ import { NextSeo } from 'next-seo';
 import siteData from 'data/site';
 import { getAllPosts } from '~/services';
 import { PostCard } from '~/components/PostCard';
+import { PageTitle } from '~/components/PageTitle';
 import type { PostField } from '~/types/post';
 
 export default function Blog({ posts }) {
@@ -25,7 +26,7 @@ export default function Blog({ posts }) {
           }
         }
       `}</style>
-      <h1 className="text-left uppercase text-2xl font-bold my-8">Blog Posts</h1>
+      <PageTitle>Blog Posts</PageTitle>
       <div className="posts grid lg:grid-cols-3 gap-4">
         {posts.map((post: PostField, idx: number) => (
           <PostCard {...post} key={idx} />
