@@ -38,7 +38,7 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
         }}
       />
       <div>
-        <div className="w-full text-lg font-serif">
+        <div className="w-full text-lg font-serif dark:text-neutral-100">
           <PageTitle>Tentang Teknologi Umum</PageTitle>
           <p className="pb-3">
             <strong className="font-bold">Teknologi Umum</strong> merupakan suatu paguyuban yang berdiri sejak tahun
@@ -50,8 +50,8 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
             Namun, siapa yang sangka kalau grup yang tidak punya aturan ini bisa aktif sekali, hingga sering ada 1000
             pesan setiap harinya. Dari member yang suka meracuni bahasa pemrograman C#, adu skill dukun, hingga
             membicarakan konspirasi elit global seperti provider internet{' '}
-            <span className="bg-black dark:bg-white">redacted</span> dan keberadaan{' '}
-            <span className="bg-black dark:bg-white">redacted redacted</span>.
+            <span className="bg-black dark:bg-neutral-100">redacted</span> dan keberadaan{' '}
+            <span className="bg-black dark:bg-neutral-100">redacted redacted</span>.
           </p>
           <p className="pb-3">
             Untungnya, kamu juga bisa masuk ke grup Telegram Teknologi Umum hanya dengan klik&nbsp;
