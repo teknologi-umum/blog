@@ -57,8 +57,8 @@ export default function Search({ posts }: SearchProps) {
   }, [debouncedKeywords, selectedFields]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const activeClassFor = (field: PostFieldName): string => {
-    if (selectedFields.includes(field)) return 'text-white bg-black hover:bg-black';
-    if (hasHoverEvent) return 'hover:bg-black/60 hover:text-white';
+    if (selectedFields.includes(field)) return 'text-white bg-black dark:text-black dark:bg-white hover:bg-black';
+    if (hasHoverEvent) return 'hover:bg-black/60 hover:text-white dark:hover:bg-neutral-600';
     return '';
   };
 
@@ -94,7 +94,7 @@ export default function Search({ posts }: SearchProps) {
       <div className="my-8">
         <input
           ref={inputRef}
-          className="w-full h-12 leading-tight border-0 border-b border-gray-400 focus:border-gray-600 text-2xl focus:outline-none"
+          className="w-full h-12 leading-tight border-0 border-b border-gray-400 focus:border-gray-600 dark:bg-transparent dark:text-white text-2xl focus:outline-none"
           type="text"
           placeholder="Dukun Teknologi Umum"
           onChange={handleChange}
@@ -105,7 +105,7 @@ export default function Search({ posts }: SearchProps) {
             <div
               key={idx}
               className={clsx(
-                'border border-black cursor-pointer px-2 py-1 transition duration-300',
+                'border border-black dark:border-white dark:text-neutral-100 cursor-pointer px-2 py-1 transition duration-300',
                 activeClassFor(tag),
               )}
               onClick={() => toggleSelectedField(tag)}

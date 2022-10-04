@@ -7,7 +7,7 @@ export function FeaturedPost({ post }) {
         <p className="text-black font-medium">FEATURED</p>
         <Link href={`/posts/${post.slug}`}>
           <a>
-            <h1 className="sm:text-5xl text-3xl mb-4 mt-2 font-bold text-black">{post.title}</h1>
+            <h1 className="sm:text-5xl text-3xl mb-4 mt-2 font-bold text-black dark:text-neutral-100">{post.title}</h1>
           </a>
         </Link>
         <a className="group inline-block" href={`https://github.com/${post.github}`}>
@@ -19,12 +19,14 @@ export function FeaturedPost({ post }) {
               height="32"
               alt={post.github}
             />
-            <span className="text-sm text-left text-gray-700 group-hover:text-primary-600">{post.author}</span>
+            <span className="text-sm text-left text-gray-700 group-hover:text-primary-600 dark:text-neutral-100 dark:group-hover:text-primary-200">
+              {post.author}
+            </span>
           </div>
         </a>
-        <p className="mt-4 leading-relaxed font-serif text-gray-500">{post.desc}</p>
+        <p className="mt-4 leading-relaxed font-serif text-gray-500 dark:text-gray-100">{post.desc}</p>
         <Link href={`/posts/${post.slug}`}>
-          <a className="bg-primary-900 hover:bg-primary-700 inline-block text-white mt-4 py-1.5 px-10 transition duration-300 print:hidden">
+          <a className="bg-primary-900 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-300 inline-block text-white dark:hover:text-black mt-4 py-1.5 px-10 transition duration-300 print:hidden">
             READ MORE
           </a>
         </Link>

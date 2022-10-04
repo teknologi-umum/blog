@@ -35,7 +35,7 @@ function CopyButton({ text = '' }) {
     <button
       className={clsx(
         'absolute top-0 right-0 px-2 py-1 m-2 duration-200 text-sm rounded',
-        clicked ? 'bg-white' : 'text-white bg-black',
+        clicked ? 'text-black bg-white' : 'text-white bg-black',
       )}
       onClick={handleClickCopy}
       onBlur={handleBlur}

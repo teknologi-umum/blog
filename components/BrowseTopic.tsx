@@ -13,7 +13,7 @@ export function BrowseTopic({ categories }: BrowseTopicProps) {
   return (
     <>
       <div className="md:-mx-12 mt-24">
-        <h2 className="uppercase font-bold text-xl mb-10">Browse Interesting Topics</h2>
+        <h2 className="uppercase font-bold text-xl mb-10 dark:text-neutral-100">Browse Interesting Topics</h2>
 
         <div className="flex flex-wrap gap-6 items-center justify-center">
           {categories.slice(0, showMoreTopics ? -1 : SHOWN_TOPICS_LIMIT).map((category: string, i: number) => (
@@ -24,7 +24,7 @@ export function BrowseTopic({ categories }: BrowseTopicProps) {
                 query: { q: category },
               }}
             >
-              <a className="flex-[0_0_calc(20%-1.5rem)] text-lg pb-3 border-b border-black text-center lowercase hover:text-primary-600 whitespace-nowrap">
+              <a className="flex-[0_0_calc(20%-1.5rem)] text-lg pb-3 border-b border-black text-center lowercase hover:text-primary-600 dark:text-neutral-100 dark:hover:text-primary-200 whitespace-nowrap">
                 {category}
               </a>
             </Link>
@@ -32,7 +32,7 @@ export function BrowseTopic({ categories }: BrowseTopicProps) {
         </div>
 
         <button
-          className="block mx-auto mt-10 font-medium text-lg text-gray-600 hover:text-primary-600 hover:underline decoration-dashed underline-offset-4"
+          className="block mx-auto mt-10 font-medium text-lg text-gray-600 hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-200 hover:underline decoration-dashed underline-offset-4"
           onClick={() => toggleShownTopics()}
         >
           SHOW {showMoreTopics ? 'LESS' : 'MORE'} TOPICS

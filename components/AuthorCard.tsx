@@ -15,13 +15,13 @@ export function AuthorCard({ author, github, twitter, telegram }: Partial<Author
           />
         </a>
       </div>
-      <span className="md:text-left text-gray-700">{author}</span>
+      <span className="md:text-left text-gray-700 dark:text-gray-300">{author}</span>
       <div className="flex flex-row items-center justify-center">
         {twitter && (
           <div className="flex-initial pr-3">
             <a
               href={`https://twitter.com/${twitter}`}
-              className="flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-primary-600"
+              className="flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-200"
             >
               <span className="text-primary-600">
                 <TwitterIcon />
@@ -34,7 +34,7 @@ export function AuthorCard({ author, github, twitter, telegram }: Partial<Author
           <div className="flex-initial">
             <a
               href={`https://t.me/${telegram}`}
-              className="flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-primary-600"
+              className="flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-200"
             >
               <span className="-mr-1 text-primary-600">
                 <TelegramIcon width="1.5rem" height="1.5rem" />
