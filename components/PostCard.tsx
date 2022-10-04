@@ -25,12 +25,25 @@ export function PostCard({
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
           }
+          ::-webkit-scrollbar {
+            width: 0;
+            height: .3rem;
+          }
+          
+          ::-webkit-scrollbar-track {
+            background-color: none;
+          }
+          
+          ::-webkit-scrollbar-thumb {
+            background: gray;
+            border-radius: 1rem;
+          }
         `}
       </style>
-      <div className="flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans print:shadow-none print:border dark:bg-neutral-800">
-        <img className="h-[10rem] object-cover w-full bg-neutral-100" src={cover} alt={slug} />
+      <div className="shadow-lg rounded-md print:shadow-none print:border flex flex-col justify-start font-sans dark:bg-neutral-800">
+        <img className="h-[10rem] object-cover w-full rounded-md bg-neutral-100" src={cover} alt={slug} />
         <div className="p-4 print:p-2">
-          <div className="flex whitespace-nowrap gap-1 mb-2">
+          <div className="flex pb-2 overflow-y-auto whitespace-nowrap gap-1 mb-2">
             {categories &&
               categories.map((category: string, idx: number) => (
                 <span
