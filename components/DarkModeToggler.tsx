@@ -1,6 +1,6 @@
 import { cloneElement, useState } from 'react';
 
-import { usePersistedDarkMode } from '~/hooks/use-dark-mode';
+import { useDarkModePreference } from '~/hooks/use-dark-mode';
 import { useOnClickOutside } from '~/hooks/use-on-click-outside';
 import { SunIcon, CrescentMoonIcon, HalfMoonIcon } from '~/icons';
 
@@ -11,7 +11,7 @@ const themeIcon = {
 };
 
 export function DarkModeToggler() {
-  const { setAndPersistPreference, colorPreference } = usePersistedDarkMode();
+  const { setAndPersistPreference, colorPreference } = useDarkModePreference();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -53,7 +53,7 @@ export function DarkModeToggler() {
                 className="cursor-pointer w-full rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-900 flex items-center px-2 mb-2"
               >
                 {cloneElement(themeIcon['os-default'], { width: '1rem', height: '1rem' })}
-                <span className="ml-4">OS Default</span>
+                <span className="ml-4">Follow System</span>
               </button>
             </li>
             <li>

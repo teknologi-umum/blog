@@ -10,7 +10,7 @@ import siteData from '~/data/site';
 import type { PostField } from '~/types/post';
 import { isCookieEnabled } from '~/utils/cookies';
 import { getPostBySlug, getPostSlugs } from '~/services';
-import { useSubscribeToDarkMode } from '~/hooks/use-dark-mode';
+import { useSubscribeDarkMode } from '~/hooks/use-dark-mode';
 
 interface PostType extends PostField {
   postContent: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -27,7 +27,7 @@ export default function Post({
   date,
   cover = '/image/sample.jpg',
 }: PostType) {
-  const isDarkMode = useSubscribeToDarkMode();
+  const isDarkMode = useSubscribeDarkMode();
 
   return (
     <>
@@ -84,7 +84,7 @@ export default function Post({
         />
       </div>
       <div className="print:hidden">
-        {isCookieEnabled() && (
+        {isCookieEnabled() && isDarkMode !== null && (
           <Giscus
             repo="teknologi-umum/blog"
             repoId="MDEwOlJlcG9zaXRvcnkzOTU1NzU1NTk="

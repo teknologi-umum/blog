@@ -49,15 +49,13 @@ const useDarkMode = (userPreference: ColorPreference | null) => {
       document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
-
-  return isDarkMode;
 };
 
 /**
  * for components that require a rerender after dark mode change
  */
-export const useSubscribeToDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+export const useSubscribeDarkMode = () => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
 
   useEffect(() => {
     //for initial load
@@ -83,9 +81,9 @@ export const useSubscribeToDarkMode = () => {
   return isDarkMode;
 };
 
-export const usePersistedDarkMode = () => {
+export const useDarkModePreference = () => {
   const [colorPreference, setColorPreference] = useState<ColorPreference | null>(null);
-  const isDarkMode = useDarkMode(colorPreference);
+  useDarkMode(colorPreference);
 
   useEffect(() => {
     const persistedValue = localStorage.getItem(localStorageKey);
@@ -107,5 +105,5 @@ export const usePersistedDarkMode = () => {
     }
   };
 
-  return { isDarkMode, colorPreference, setAndPersistPreference };
+  return { colorPreference, setAndPersistPreference };
 };
