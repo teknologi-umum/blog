@@ -29,11 +29,11 @@ export function PostCard({
             width: 0;
             height: .3rem;
           }
-          
+
           ::-webkit-scrollbar-track {
             background-color: none;
           }
-          
+
           ::-webkit-scrollbar-thumb {
             background: gray;
             border-radius: 1rem;
