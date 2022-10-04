@@ -16,7 +16,7 @@ export function PostCard({
 }: PostCardProps) {
   return (
     <>
-      <style jsx>
+      <style>
         {`
           p,
           a {
@@ -29,8 +29,9 @@ export function PostCard({
       </style>
       <div className="flex flex-col flex-wrap justify-start shadow-lg rounded-md overflow-hidden font-sans print:shadow-none print:border">
         <img className="h-[10rem] object-cover w-full" src={cover} alt={slug} />
-        <div className="p-4 print:p-2">
-          <div className="flex flex-wrap gap-1 mb-2">
+
+        <div className="w-full overflow-x-auto p-4">
+          <div className="flex gap-1 whitespace-nowrap">
             {categories &&
               categories.map((category: string, idx: number) => (
                 <span
@@ -41,25 +42,27 @@ export function PostCard({
                 </span>
               ))}
           </div>
-          <div className="py-1">
-            <Link href={`/posts/${slug}`}>
-              <a className="text-xl font-bold capitalize font-display text-gray-800 hover:text-primary-600">{title}</a>
-            </Link>
-            <p className="text-base leading-relaxed text-gray-500 mb-2 font-serif">{desc}</p>
-          </div>
-          <a className="group" href={`https://github.com/${github}`}>
-            <div className="flex items-center justify-start">
-              <img
-                className="rounded-full shadow-md"
-                src={`https://github.com/${github}.png`}
-                width="32"
-                height="32"
-                alt="author"
-              />
-              <span className="text-sm ml-2 text-left text-gray-700 group-hover:text-primary-600">{author}</span>
-            </div>
-          </a>
         </div>
+
+        <div className="px-4 mt-1 mb-4">
+          <Link href={`/posts/${slug}`}>
+            <a className="text-xl font-bold capitalize font-display text-gray-800 hover:text-primary-600">{title}</a>
+          </Link>
+          <p className="text-base leading-relaxed text-gray-500 mb-2 font-serif">{desc}</p>
+        </div>
+
+        <a className="group px-4 mb-4" href={`https://github.com/${github}`}>
+          <div className="flex items-center justify-start">
+            <img
+              className="rounded-full shadow-md"
+              src={`https://github.com/${github}.png`}
+              width="32"
+              height="32"
+              alt="author"
+            />
+            <span className="text-sm ml-2 text-left text-gray-700 group-hover:text-primary-600">{author}</span>
+          </div>
+        </a>
       </div>
     </>
   );
