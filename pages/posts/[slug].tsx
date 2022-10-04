@@ -10,7 +10,7 @@ import siteData from '~/data/site';
 import type { PostField } from '~/types/post';
 import { isCookieEnabled } from '~/utils/cookies';
 import { getPostBySlug, getPostSlugs } from '~/services';
-import { usePersistedDarkMode } from '~/hooks/use-dark-mode';
+import { useSubscribeToDarkMode } from '~/hooks/use-dark-mode';
 
 interface PostType extends PostField {
   postContent: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -27,7 +27,7 @@ export default function Post({
   date,
   cover = '/image/sample.jpg',
 }: PostType) {
-  const { isDarkMode } = usePersistedDarkMode();
+  const isDarkMode = useSubscribeToDarkMode();
 
   return (
     <>

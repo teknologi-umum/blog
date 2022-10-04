@@ -50,16 +50,20 @@ const useDarkMode = (userPreference: ColorPreference | null) => {
     }
   }, [isDarkMode]);
 
-  /**
-   * listens to changes from other hook instances
-   */
-  useEffect(() => {
-    let observer = window.darkModeObserver;
+  return isDarkMode;
+};
 
-    if (typeof window.darkModeObserver === 'undefined') {
-      observer = new MutationObserver(callback);
-      window.darkModeObserver = observer;
-    }
+/**
+ * for components that require a rerender after dark mode change
+ */
+export const useSubscribeToDarkMode = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    //for initial load
+    setIsDarkMode(document.documentElement.classList.contains('dark'));
+
+    let observer = new MutationObserver(callback);
 
     function callback(mutationList) {
       mutationList.forEach(function (mutation) {
