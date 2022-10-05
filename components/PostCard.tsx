@@ -26,10 +26,14 @@ export function PostCard({
             -webkit-box-orient: vertical;
           }
           ::-webkit-scrollbar {
+<<<<<<< HEAD
             width: 0;
+=======
+            width: 1px;
+>>>>>>> 200cbc4 (fix(frontend) : resolve scrollbar)
             height: .3rem;
           }
-
+          
           ::-webkit-scrollbar-track {
             background-color: none;
           }
