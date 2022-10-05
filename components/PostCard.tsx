@@ -26,16 +26,8 @@ export function PostCard({
             -webkit-box-orient: vertical;
           }
           ::-webkit-scrollbar {
-<<<<<<< HEAD
-            width: 0;
-=======
             width: 1px;
-<<<<<<< HEAD
->>>>>>> 200cbc4 (fix(frontend) : resolve scrollbar)
-            height: .3rem;
-=======
             height: 0.3rem;
->>>>>>> 6b21caf (fix(frontend) : resolve scrollbar)
           }
 
           ::-webkit-scrollbar-track {
