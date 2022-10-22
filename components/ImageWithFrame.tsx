@@ -4,7 +4,7 @@ export function ImageWithFrame({ src, alt }: DetailedHTMLProps<ImgHTMLAttributes
   return (
     <figure className="text-center">
       <img className="inline-block p-0 overflow-hidden rounded-md" src={src} alt={alt} />
-      <figcaption>{alt}</figcaption>
+      <figcaption className="break-words">{alt}</figcaption>
     </figure>
   );
 }
