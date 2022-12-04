@@ -16,7 +16,7 @@ You must [fork](https://help.github.com/articles/fork-a-repo/) this repository t
 
 To make life easier, we provide a [blog post template](./.github/BLOG_TEMPLATE.md) that you can fill out. Please fill out the metadata (title, description, author), so we can track the reader's analytics and the post performance. The post should be written in Markdown format.
 
-If you have any confusion or burning questions, please reach out to the guys on [Teknologi Umum's Telegram group](https://t.me/teknologi_umum).
+If you have any confusion or burning questions, please reach out to the guys on [Teknologi Umum's Telegram group](https://t.me/teknologi_umum_v2).
 
 ## Bug report, ideas and suggestion
 
@@ -26,7 +26,7 @@ Please make sure that the issue you're creating is in as much detail as possible
 
 ## Code fix and new feature
 
-**A big heads up before you're writing a breaking change code or a new feature: Please open up an [issue](https://github.com/teknologi-umum/blog/issues) regarding what you're working on, or just talk in the [Telegram group](https://t.me/teknologi_umum).**
+**A big heads up before you're writing a breaking change code or a new feature: Please open up an [issue](https://github.com/teknologi-umum/blog/issues) regarding what you're working on, or just talk in the [Telegram group](https://t.me/teknologi_umum_v2).**
 
 ### Prerequisites
 
