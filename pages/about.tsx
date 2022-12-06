@@ -55,7 +55,7 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
           </p>
           <p className="pb-3">
             Untungnya, kamu juga bisa masuk ke grup Telegram Teknologi Umum hanya dengan klik&nbsp;
-            <a href="https://t.me/teknologi_umum" className="text-primary-600 dark:text-primary-200 hover:underline">
+            <a href="https://t.me/teknologi_umum_v2" className="text-primary-600 dark:text-primary-200 hover:underline">
               tulisan ini
             </a>
             .
