@@ -43,14 +43,14 @@ export function PostCard({
       <div className="shadow-lg rounded-md print:shadow-none print:border flex flex-col justify-start font-sans dark:bg-neutral-800">
         <img className="h-[10rem] object-cover w-full rounded-md bg-neutral-100" src={cover} alt={slug} />
         <div className="p-4 print:p-2">
-          <div className="flex pb-2 hover:overflow-y-auto overflow-hidden whitespace-nowrap gap-1 mb-2">
+          <div className="flex pb-2 hover:overflow-auto overflow-hidden whitespace-nowrap gap-1 mb-2">
             {categories &&
               categories.map((category: string, idx: number) => (
                 <span
-                  className="text-xs px-2 py-1 rounded-sm bg-gray-200 text-gray-700 dark:bg-gray-600 dark:text-gray-300 uppercase font-semibold print:px-1 print:border"
+                  className="cursor-pointer text-xs px-2 py-1 rounded-sm bg-gray-200 text-gray-700 dark:bg-gray-600 dark:text-gray-300 uppercase font-semibold print:px-1 print:border"
                   key={`${idx}-${category}`}
                 >
-                  {category}
+                  <a href={`/search?q=${category}`}>{category}</a>
                 </span>
               ))}
           </div>
