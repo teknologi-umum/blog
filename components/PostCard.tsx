@@ -43,7 +43,7 @@ export function PostCard({
       <div className="shadow-lg rounded-md print:shadow-none print:border flex flex-col justify-start font-sans dark:bg-neutral-800">
         <img className="h-[10rem] object-cover w-full rounded-md bg-neutral-100" src={cover} alt={slug} />
         <div className="p-4 print:p-2">
-          <div className="flex pb-2 overflow-y-auto whitespace-nowrap gap-1 mb-2">
+          <div className="flex pb-2 hover:overflow-y-auto overflow-hidden whitespace-nowrap gap-1 mb-2">
             {categories &&
               categories.map((category: string, idx: number) => (
                 <span
