@@ -4,7 +4,7 @@ export function FeaturedPost({ post }) {
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 items-center mt-12 md:-mx-12 lg:gap-x-20 gap-y-10 lg:gap-y-0">
       <div className="lg:text-left text-center">
-        <p className="text-black font-medium">FEATURED</p>
+        <p className="text-black dark:text-neutral-100 font-medium">FEATURED</p>
         <Link href={`/posts/${post.slug}`}>
           <a>
             <h1 className="sm:text-5xl text-3xl mb-4 mt-2 font-bold text-black dark:text-neutral-100">{post.title}</h1>
