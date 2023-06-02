@@ -159,10 +159,10 @@ Sudah menjadi rahasia umum jika ingin menjalankan Laravel-based project yaitu de
 
 Perlu dicatat bahwa di sini gue hanya ingin membahas apa dan bagaimana cara menggunakan Laravel Scout, karena hal tersebut-lah gue tidak teralalu peduli dengan tampilannya alias seadanya haha.
 
-![halaman users](image/berkenalan-dengan-laravel-scout/users-index.png)
+![halaman users](/image/berkenalan-dengan-laravel-scout/users-index.png)
 
 Gue mencoba melakukan pencarian dengan kata kunci krido (narsis banget gila lol)
-![hasil pencarian](image/berkenalan-dengan-laravel-scout/hasil-pencarian.png)
+![hasil pencarian](/image/berkenalan-dengan-laravel-scout/hasil-pencarian.png)
 
 ## Penutup
 
