@@ -1,7 +1,6 @@
 {
   "extends": ["eslint:recommended", "next", "prettier"],
   "rules": {
-    "@next/next/no-img-element": "off",
-    "react/no-unknown-property": ["error", { "ignore": ["jsx"] }]
+    "@next/next/no-img-element": "off"
   }
 }

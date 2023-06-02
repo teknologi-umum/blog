@@ -137,9 +137,9 @@ Variabel `$users` dari controller user sudah bisa kita panggil (thanks to `compa
   </form>
 ```
 
-Hal yang ingin gue soroti di sini adalah nama dari `input` yaitu `keyword` (semoga masih ingat dengan `Request $request` yang ada pada bagian controller), `keyword` inilah yang akan dija dikan parameter nantinya.
+Hal yang ingin gue soroti di sini adalah nama dari `input` yaitu `keyword` (semoga masih ingat dengan `Request $request` yang ada pada bagian controller), `keyword` inilah yang akan dijadikan parameter nantinya.
 
-Lanjut, dibagian ini gue melakukan perulangan unutk menampilkan semua data yang ada.
+Lanjut, dibagian ini gue melakukan perulangan untuk menampilkan semua data yang ada.
 
 ```php
   <ul>
