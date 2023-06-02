@@ -34,7 +34,7 @@ Sekarang, ijinkan gue untuk malakukan sedikit eksperimen dalam menggunakan Larav
 ## Initialize
 
 Ritual pertama yaitu gue membuat project laravel dengan perintah `laravel new laravel-scout`
-![init laravel project](image/berkenalan-dengan-laravel-scout/init-laravel-project.png)
+![init laravel project](/image/berkenalan-dengan-laravel-scout/init-laravel-project.png)
 
 ## Setup environment
 
@@ -53,8 +53,8 @@ DB_PASSWORD=
 
 Jika sudah setup basis data, ritual selanjutnya adalah lakukan migrasi database dengan perintah `php artisan migrate`.
 Jika basis data yang kita deklarasikan di file `.env` belum dibuat, maka Laravel secara otomatis akan 'bertanya' via cli (atau terminal) apakah mau 'dibuatkan' atau tidak.
-![menjalankan migrasi](image/berkenalan-dengan-laravel-scout/migrate-table.png)
-![dan ya, ini hasil migrasinya](image/berkenalan-dengan-laravel-scout/hasil-migrasi.png)
+![menjalankan migrasi](/image/berkenalan-dengan-laravel-scout/migrate-table.png)
+![dan ya, ini hasil migrasinya](/image/berkenalan-dengan-laravel-scout/hasil-migrasi.png)
 
 ## Installing Laravel Scout
 
