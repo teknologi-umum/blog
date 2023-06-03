@@ -6,7 +6,7 @@ github: aldy505
 twitter:
 telegram: aldy505
 date: 2021-12-13
-cover: https://www.codecademy.com/resources/blog/content/images/size/w1600/2020/08/what-programming-language-should-i-learn.png
+cover: /image/bahasa-pemrograman-tidak-penting/header.png
 categories:
   - language
 ---

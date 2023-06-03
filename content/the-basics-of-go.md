@@ -6,7 +6,7 @@ github: aldy505
 twitter:
 telegram: aldy505
 date: 2021-11-09
-cover: https://www.jeremymorgan.com/images/learn-golang/learn-golang-og.jpg
+cover: /image/the-basics-of-go/header.jpg
 categories:
   - golang
 ---

@@ -5,7 +5,7 @@ author: Reinaldy Rafli
 github: aldy505
 twitter:
 telegram: aldy505
-cover: https://i.ibb.co/LhKFMDq/typescript-30-men.jpg
+cover: /image/belajar-typescript-dalam-30-menit/header.jpg
 date: 2021-09-02
 categories:
   - tutorial

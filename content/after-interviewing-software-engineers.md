@@ -6,7 +6,7 @@ github: aldy505
 twitter:
 telegram: aldy05
 date: 2022-03-08
-cover: https://cdn.dribbble.com/users/2367860/screenshots/17663374/media/f26fa05f5146bda85357ec4c6f544ecb.png
+cover: /image/after-interviewing-software-engineers/header.png
 categories:
   - interview
 ---
