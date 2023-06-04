@@ -5,7 +5,7 @@ author: Reinaldy Rafli
 github: aldy505
 twitter:
 telegram: aldy505
-cover: https://i.ibb.co/g3ZL10K/docker-15-min.jpg
+cover: /image/belajar-docker-dalam-15-menit/header.png
 date: 2021-09-02
 categories:
   - tutorial
