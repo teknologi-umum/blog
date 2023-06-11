@@ -19,39 +19,37 @@ export function Navbar() {
             <div className="container flex flex-col md:flex-row justify-between items-center space-y-1 mx-auto py-5 px-8 sm:px-16 md:px-32 lg:px-40 xl:px-56 2xl:px-72 h-full">
                 <div className="flex-1 space-x-6 print:hidden">
                     {["home", "blog", "about"].map((route, idx) => (
-                        <Link href={`/${route === "home" ? "" : route}`} key={`${idx}-${route}`}>
-                            <a
-                                className={clsx(
-                                    "flex-inline uppercase text-center hover:text-primary-600 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300",
-                                    getActiveClass(route, route === "home"),
-                                )}
-                            >
-                                {route}
-                            </a>
+                        <Link
+                            href={`/${route === "home" ? "" : route}`}
+                            key={`${idx}-${route}`}
+                            className={clsx(
+                                "flex-inline uppercase text-center hover:text-primary-600 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300",
+                                getActiveClass(route, route === "home"),
+                            )}
+                        >
+                            {route}
                         </Link>
                     ))}
                 </div>
                 <div className="flex-2 lg:flex-1 text-center dark:text-neutral-100 text-3xl mb-2 lg:mb-0">
-                    <Link href="/">
-                        <a className="font-black">Teknologi Umum</a>
+                    <Link href="/" className="font-black">
+                        Teknologi Umum
                     </Link>
                 </div>
                 <div className="flex-1 text-right text-lg print:hidden">
                     <div className="flex flex-row items-center justify-end space-x-4">
                         <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
                             <Link href="/search">
-                                <a>
-                                    <SearchIcon width="1.5rem" height="1.5rem" />
-                                </a>
+                                <SearchIcon width="1.5rem" height="1.5rem" />
                             </Link>
                         </div>
 
-                        <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300 transition duration-300">
+                        <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
                             <a href="https://github.com/teknologi-umum">
                                 <GithubIcon width="1.5rem" height="1.5rem" />
                             </a>
                         </div>
-                        <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300 transition duration-300">
+                        <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
                             <a href="https://t.me/teknologi_umum">
                                 <TelegramIcon width="2rem" height="2rem" />
                             </a>

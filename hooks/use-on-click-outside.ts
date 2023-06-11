@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 
 type Event = MouseEvent | TouchEvent;
+type Handler = () => void;
 
-export const useOnClickOutside = (handler: (event: Event) => void) => {
+export function useOnClickOutside(handler: Handler) {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -12,7 +13,7 @@ export const useOnClickOutside = (handler: (event: Event) => void) => {
                 return;
             }
 
-            handler(event);
+            handler();
         };
 
         document.addEventListener("mousedown", listener);
@@ -25,4 +26,4 @@ export const useOnClickOutside = (handler: (event: Event) => void) => {
     }, [ref, handler]);
 
     return ref;
-};
+}

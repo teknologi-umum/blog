@@ -13,10 +13,10 @@ type SearchProps = {
     posts: PostField[];
 };
 
-export default function Search({ posts }: SearchProps) {
+export default function Search(props: SearchProps) {
     const router = useRouter();
     const filter = useMemo<PostFieldName[]>(() => ["author", "title", "categories", "desc"], []);
-    const [filteredPosts, setFilteredPosts] = useState<PostField[]>(posts);
+    const [filteredPosts, setFilteredPosts] = useState<PostField[]>(props.posts);
     const [keywords, setKeywords] = useState("");
     const [selectedFields, setSelectedTags] = useState<PostFieldName[]>([]);
 
@@ -35,7 +35,7 @@ export default function Search({ posts }: SearchProps) {
             const q = router.query.q as string;
             setKeywords(q);
             inputRef.current.value = q;
-            setFilteredPosts(() => filterPostsByKeywords(posts, q));
+            setFilteredPosts(() => filterPostsByKeywords(props.posts, q));
         }
     }, [router.isReady]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -48,12 +48,12 @@ export default function Search({ posts }: SearchProps) {
 
         if (isNotEmpty(debouncedKeywords)) {
             router.replace({ query: { q: debouncedKeywords } });
-            setFilteredPosts(() => filterPostsByKeywords(posts, debouncedKeywords, selectedFields));
+            setFilteredPosts(() => filterPostsByKeywords(props.posts, debouncedKeywords, selectedFields));
             return;
         }
 
         router.replace({});
-        setFilteredPosts(posts);
+        setFilteredPosts(props.posts);
     }, [debouncedKeywords, selectedFields]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const activeClassFor = (field: PostFieldName): string => {

@@ -1,8 +1,11 @@
 import { Navbar } from "~/components/Navbar";
 import { Footer } from "~/components/Footer";
 import { BackToTop } from "~/components/BackToTop";
+import { PropsWithChildren } from "react";
 
-export function Layout({ children }) {
+type LayoutProps = PropsWithChildren<{}>;
+
+export function Layout({ children }: LayoutProps) {
     return (
         <div className="bg-white dark:bg-neutral-900 ">
             <BackToTop />

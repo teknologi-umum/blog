@@ -1,8 +1,8 @@
 export type Author = {
     author: string;
     github: string;
-    twitter: string;
-    telegram: string;
+    twitter: string | null;
+    telegram: string | null;
 };
 
 export type PostField = Author & {

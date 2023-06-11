@@ -1,17 +1,8 @@
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import { NextSeo } from "next-seo";
 import siteData from "data/site";
 import { PageTitle } from "~/components/PageTitle";
-import type { GetStaticProps, InferGetStaticPropsType } from "next";
-
-interface Contributor {
-    login?: string;
-    id?: number;
-    avatar_url?: string;
-    html_url?: string;
-    type?: string;
-    site_admin?: boolean;
-    contributions?: number;
-}
+import { Contributor } from "~/types/contributor";
 
 export const getStaticProps: GetStaticProps = async () => {
     const res = await fetch("https://api.github.com/repos/teknologi-umum/blog/contributors");

@@ -4,9 +4,17 @@ import { getAllPosts, getPostCategories } from "~/services";
 import { FeaturedPost } from "~/components/FeaturedPost";
 import { BrowseTopic } from "~/components/BrowseTopic";
 import { ReadAnyway } from "~/components/ReadAnyway";
-import { Contributing, type Contributor } from "~/components/Contributing";
+import { Contributing } from "~/components/Contributing";
+import { PostField } from "~/types/post";
+import { Contributor } from "~/types/contributor";
 
-export default function Home({ categories, posts, contributors = [] }) {
+type HomeProps = {
+    categories: string[];
+    posts: PostField[];
+    contributors: Contributor[];
+};
+
+export default function Home(props: HomeProps) {
     return (
         <>
             <NextSeo
@@ -20,10 +28,10 @@ export default function Home({ categories, posts, contributors = [] }) {
                     site_name: siteData.siteName,
                 }}
             />
-            <FeaturedPost post={posts[0]} />
-            <BrowseTopic categories={categories} />
-            <ReadAnyway posts={posts} />
-            <Contributing contributors={contributors} />
+            <FeaturedPost post={props.posts[0]} />
+            <BrowseTopic categories={props.categories} />
+            <ReadAnyway posts={props.posts} />
+            <Contributing contributors={props.contributors} />
         </>
     );
 }

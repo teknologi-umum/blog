@@ -18,7 +18,11 @@ function getNodeText(node: ReactNode | number | string) {
     }
 }
 
-function CopyButton({ text = "" }) {
+type CopyButtonProps = {
+    text?: string;
+};
+
+function CopyButton({ text = "" }: CopyButtonProps) {
     const [clicked, setClicked] = useState(false);
 
     const handleBlur = () => {
@@ -45,7 +49,9 @@ function CopyButton({ text = "" }) {
     );
 }
 
-export function CopyableCodeBlocks({ children }: PropsWithChildren<{}>) {
+type CopyableCodeBlocksProps = PropsWithChildren<{}>;
+
+export function CopyableCodeBlocks({ children }: CopyableCodeBlocksProps) {
     return (
         <section className="relative">
             <pre>{children}</pre>

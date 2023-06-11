@@ -1,12 +1,5 @@
 import { GithubIcon } from "~/icons";
-
-export type Contributor = {
-    id: number;
-    login: string;
-    contribution: number;
-    html_url: string;
-    avatar_url: string;
-};
+import { Contributor } from "~/types/contributor";
 
 type ContributingProps = {
     contributors: Contributor[];

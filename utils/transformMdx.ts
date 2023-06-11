@@ -5,9 +5,9 @@ import rehypePrettyCode, { type Options } from "rehype-pretty-code";
 import remarkMath from "remark-math";
 import remarkUnwrapImages from "remark-unwrap-images";
 
-const codeHighlightOption: Partial<Options> = {
+const codeHighlightOption = {
     theme: "github-dark",
-};
+} satisfies Partial<Options>;
 
 /**
  * Convert given markdown string to HTMl using remark
@@ -17,7 +17,7 @@ const codeHighlightOption: Partial<Options> = {
 export const transformMdx = async (content: string): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> => {
     const markdown = await serialize(content, {
         mdxOptions: {
-            remarkPlugins: [remarkMath, remarkUnwrapImages],
+            remarkPlugins: [remarkUnwrapImages, remarkMath],
             rehypePlugins: [[rehypePrettyCode, codeHighlightOption], rehypeKatex],
         },
     });

@@ -5,7 +5,11 @@ import { PostCard } from "~/components/PostCard";
 import { PageTitle } from "~/components/PageTitle";
 import type { PostField } from "~/types/post";
 
-export default function Blog({ posts }) {
+type BlogProps = {
+    posts: PostField[];
+};
+
+export default function Blog(props: BlogProps) {
     return (
         <>
             <NextSeo
@@ -28,8 +32,8 @@ export default function Blog({ posts }) {
             `}</style>
             <PageTitle>Blog Posts</PageTitle>
             <div className="posts grid lg:grid-cols-3 gap-4">
-                {posts.map((post: PostField, idx: number) => (
-                    <PostCard {...post} key={idx} />
+                {props.posts.map((post: PostField) => (
+                    <PostCard {...post} key={post.title} />
                 ))}
             </div>
         </>

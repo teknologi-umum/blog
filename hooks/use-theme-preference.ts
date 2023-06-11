@@ -5,10 +5,10 @@ type ThemePreference = {
     isDark: boolean;
 };
 
-const localStorageKey = "teknologi-umum-blog-theme";
+const THEME_KEY = "teknologi-umum-blog-theme";
 
 function getThemePreference(): ThemePreference {
-    const userPreference = localStorage.getItem(localStorageKey);
+    const userPreference = localStorage.getItem(THEME_KEY);
 
     switch (userPreference) {
         case "dark":
@@ -24,7 +24,7 @@ let themePreference: ThemePreference = { theme: "os-default", isDark: false };
 
 const darkModeSubscribers = new Set<Dispatch<SetStateAction<ThemePreference>>>();
 
-function subscribe(subscriberFn) {
+function subscribe(subscriberFn: Dispatch<SetStateAction<ThemePreference>>) {
     darkModeSubscribers.add(subscriberFn);
 
     return () => darkModeSubscribers.delete(subscriberFn);
@@ -46,9 +46,9 @@ function updateTheme() {
 
 function persistTheme(theme: ThemePreference["theme"]) {
     if (theme === "dark" || theme === "light") {
-        localStorage.setItem(localStorageKey, theme);
+        localStorage.setItem(THEME_KEY, theme);
     } else {
-        localStorage.removeItem(localStorageKey);
+        localStorage.removeItem(THEME_KEY);
     }
 }
 

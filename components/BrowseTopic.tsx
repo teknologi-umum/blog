@@ -7,7 +7,7 @@ type BrowseTopicProps = {
     categories: string[];
 };
 
-export function BrowseTopic({ categories }: BrowseTopicProps) {
+export function BrowseTopic(props: BrowseTopicProps) {
     const [showMoreTopics, toggleShownTopics] = useReducer((s) => !s, false);
 
     return (
@@ -16,21 +16,18 @@ export function BrowseTopic({ categories }: BrowseTopicProps) {
                 <h2 className="uppercase font-bold text-xl mb-10 dark:text-neutral-100">Browse Interesting Topics</h2>
 
                 <div className="flex flex-wrap gap-6 items-center justify-center">
-                    {categories
-                        .slice(0, showMoreTopics ? -1 : SHOWN_TOPICS_LIMIT)
-                        .map((category: string, i: number) => (
-                            <Link
-                                key={i}
-                                href={{
-                                    pathname: "/search",
-                                    query: { q: category },
-                                }}
-                            >
-                                <a className="flex-[0_0_calc(20%-1.5rem)] text-lg pb-3 border-b border-black text-center lowercase hover:text-primary-600 dark:text-neutral-100 dark:hover:text-primary-200 whitespace-nowrap">
-                                    {category}
-                                </a>
-                            </Link>
-                        ))}
+                    {props.categories.slice(0, showMoreTopics ? -1 : SHOWN_TOPICS_LIMIT).map((category: string) => (
+                        <Link
+                            key={category}
+                            href={{
+                                pathname: "/search",
+                                query: { q: category },
+                            }}
+                            className="flex-[0_0_calc(20%-1.5rem)] text-lg pb-3 border-b border-black text-center lowercase hover:text-primary-600 dark:text-neutral-100 dark:hover:text-primary-200 whitespace-nowrap"
+                        >
+                            {category}
+                        </Link>
+                    ))}
                 </div>
 
                 <button

@@ -27,10 +27,11 @@ export function ReadAnyway({ posts }: ReadAnywayProps) {
                     ))}
                 </div>
 
-                <Link href="/blog">
-                    <a className="w-full font-bold text-black dark:text-white text-center block mt-10 hover:text-primary-600 dark:hover:text-primary-200 transition duration-300">
-                        FIND MORE POST
-                    </a>
+                <Link
+                    href="/blog"
+                    className="w-full font-bold text-black dark:text-white text-center block mt-10 hover:text-primary-600 dark:hover:text-primary-200 transition duration-300"
+                >
+                    FIND MORE POST
                 </Link>
             </div>
         </>

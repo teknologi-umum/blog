@@ -12,32 +12,22 @@ import { isCookieEnabled } from "~/utils/cookies";
 import { getPostBySlug, getPostSlugs } from "~/services";
 import { useThemePreference } from "~/hooks/use-theme-preference";
 
-interface PostType extends PostField {
+type PostProps = PostField & {
     postContent: MDXRemoteSerializeResult<Record<string, unknown>>;
-}
+};
 
-export default function Post({
-    title,
-    desc,
-    postContent,
-    author,
-    github,
-    twitter,
-    telegram,
-    date,
-    cover = "/image/sample.jpg",
-}: PostType) {
+export default function Post({ cover = "/image/sample.jpg", ...props }: PostProps) {
     const { isDarkMode } = useThemePreference();
 
     return (
         <>
             <NextSeo
-                title={title}
-                description={desc}
+                title={props.title}
+                description={props.desc}
                 openGraph={{
                     type: "website",
-                    title,
-                    description: desc,
+                    title: props.title,
+                    description: props.desc,
                     url: process.env.NEXT_PUBLIC_SERVER_URL,
                     site_name: siteData.siteName,
                 }}
@@ -65,19 +55,24 @@ export default function Post({
                 <div className="flex-1 w-full px-4 md:px-8 pt-32 pb-20 rounded-lg -mt-16 text-center md:text-left print:pb-5">
                     <div className="mx-auto w-full max-w-screen-lg print:px-10">
                         <h1 className="font-heading text-gray-800 dark:text-gray-400 text-4xl font-bold capitalize mb-2">
-                            {title}
+                            {props.title}
                         </h1>
-                        <p className="text-gray-600 dark:text-gray-200 text-xl font-serif mb-4 pt-2">{desc}</p>
+                        <p className="text-gray-600 dark:text-gray-200 text-xl font-serif mb-4 pt-2">{props.desc}</p>
                         <p className="mb-10 text-gray-600 dark:text-gray-200 text-sm uppercase">
-                            Posted on {new Date(date).toLocaleDateString("en-GB")}
+                            Posted on {new Date(props.date).toLocaleDateString("en-GB")}
                         </p>
-                        <AuthorCard author={author} github={github} twitter={twitter} telegram={telegram} />
+                        <AuthorCard
+                            author={props.author}
+                            github={props.github}
+                            twitter={props.twitter}
+                            telegram={props.telegram}
+                        />
                     </div>
                 </div>
             </header>
             <div className="mdx-content dark:text-neutral-200 mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words print:prose-pre:border print:pt-3 print:prose-pre:whitespace-pre-wrap	">
                 <MDXRemote
-                    {...postContent}
+                    {...props.postContent}
                     components={{
                         img: ImageWithFrame,
                         pre: CopyableCodeBlock,
@@ -86,17 +81,7 @@ export default function Post({
             </div>
             <div className="print:hidden">
                 {isCookieEnabled() && isDarkMode !== null && (
-                    <Giscus
-                        repo="teknologi-umum/blog"
-                        repoId="MDEwOlJlcG9zaXRvcnkzOTU1NzU1NTk="
-                        category="General"
-                        categoryId="DIC_kwDOF5QBB84B-uOk"
-                        mapping="pathname"
-                        term="..."
-                        reactionsEnabled="1"
-                        emitMetadata="1"
-                        theme={isDarkMode ? "dark" : "light"}
-                    />
+                    <Giscus {...siteData.giscus} theme={isDarkMode ? "dark" : "light"} />
                 )}
             </div>
         </>
