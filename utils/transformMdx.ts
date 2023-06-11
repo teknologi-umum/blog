@@ -1,12 +1,12 @@
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { serialize } from 'next-mdx-remote/serialize';
-import rehypeKatex from 'rehype-katex';
-import rehypePrettyCode, { type Options } from 'rehype-pretty-code';
-import remarkMath from 'remark-math';
-import remarkUnwrapImages from 'remark-unwrap-images';
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import rehypeKatex from "rehype-katex";
+import rehypePrettyCode, { type Options } from "rehype-pretty-code";
+import remarkMath from "remark-math";
+import remarkUnwrapImages from "remark-unwrap-images";
 
 const codeHighlightOption: Partial<Options> = {
-  theme: 'github-dark',
+    theme: "github-dark",
 };
 
 /**
@@ -15,12 +15,12 @@ const codeHighlightOption: Partial<Options> = {
  * @return String containing HTML
  */
 export const transformMdx = async (content: string): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> => {
-  const markdown = await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [remarkMath, remarkUnwrapImages],
-      rehypePlugins: [[rehypePrettyCode, codeHighlightOption], rehypeKatex],
-    },
-  });
+    const markdown = await serialize(content, {
+        mdxOptions: {
+            remarkPlugins: [remarkMath, remarkUnwrapImages],
+            rehypePlugins: [[rehypePrettyCode, codeHighlightOption], rehypeKatex],
+        },
+    });
 
-  return markdown;
+    return markdown;
 };

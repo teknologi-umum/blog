@@ -8,8 +8,8 @@ telegram:
 cover: https://picsum.photos/500
 date: 2021-10-08
 categories:
-  - hackoberfest
-  - random
+    - hackoberfest
+    - random
 ---
 
 I have joined Hackoberfest since 2017. It is really an enjoyable journey to code and communicate with the developers from different corners of the World. One can indeed learn a lot. And one would feel excited to see your pull request is merged into some others' repository.

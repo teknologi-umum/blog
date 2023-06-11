@@ -8,9 +8,9 @@ telegram:
 cover: https://picsum.photos/500
 date: 2021-10-03
 categories:
-  - react
-  - vite
-  - tutorial
+    - react
+    - vite
+    - tutorial
 ---
 
 React adalah sebuah JavaScript Library untuk membangun Antarmuka Pengguna, React hadir dengan memberikan banyak fitur yang keren buat Developer seperti _[JSX](https://reactjs.org/docs/introducing-jsx.html)_ dan _[Virtual DOM](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)_ untuk mempermudah Developer dalam mengembangkan sebuah aplikasi.

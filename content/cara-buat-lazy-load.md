@@ -1,18 +1,18 @@
 ---
-title: 'Cara Membuat Image Lazyload'
-desc: 'Lazy load adalah salah satu cara mengoptimasi performa website dengan memuat image ketika telah berada di dalam viewport'
-author: 'Bakunya | medeveloper.me'
-github: 'bakunya'
-telegram: 'shuvi_chan'
+title: "Cara Membuat Image Lazyload"
+desc: "Lazy load adalah salah satu cara mengoptimasi performa website dengan memuat image ketika telah berada di dalam viewport"
+author: "Bakunya | medeveloper.me"
+github: "bakunya"
+telegram: "shuvi_chan"
 cover: https://picsum.photos/500
 date: 2021-10-03
 categories:
-  - javascript
-  - intersection-observer
-  - lazyload
-  - image lazyload
-  - optimasi
-  - optimasi website
+    - javascript
+    - intersection-observer
+    - lazyload
+    - image lazyload
+    - optimasi
+    - optimasi website
 ---
 
 Lazy load adalah salah satu cara mengoptimasi performa website dengan memuat image ketika telah berada di dalam viewport
@@ -55,11 +55,11 @@ Kemudian kita buat container dan juga tag imagenya, tapi attribute src-nya janga
 
 ```html
 <div class="container">
-  <img data-src="/img/img-1.png" />
-  <img data-src="/img/img-2.png" />
-  <img data-src="/img/img-3.png" />
-  <img data-src="/img/img-4.png" />
-  <img data-src="/img/img-5.png" />
+    <img data-src="/img/img-1.png" />
+    <img data-src="/img/img-2.png" />
+    <img data-src="/img/img-3.png" />
+    <img data-src="/img/img-4.png" />
+    <img data-src="/img/img-5.png" />
 </div>
 ```
 
@@ -69,30 +69,30 @@ Untuk tutorial kali ini, kita cukup membuat layout dan tampilan yang sederhana t
 
 ```css
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container img {
-  margin: 40px 0;
-  width: 500px;
-  height: 300px;
-  background: lightblue;
-  border: none;
-  outline: none;
-  display: block;
+    margin: 40px 0;
+    width: 500px;
+    height: 300px;
+    background: lightblue;
+    border: none;
+    outline: none;
+    display: block;
 }
 ```
 
@@ -103,16 +103,16 @@ Dan akhirnya kita sampai di bagian javascript. Ada beberapa langkah yang harus d
 Pertama kita membutuhkan target untuk diobserve oleh IntersectionObserver, dalam konteks ini adalah tag image.
 
 ```js
-const elements = document.querySelectorAll('img[data-src]');
+const elements = document.querySelectorAll("img[data-src]");
 ```
 
 Yang kedua adalah options sebagai pengaturan dalam kondisi apa target harus diobservasi.
 
 ```js
 const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 1,
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
 };
 ```
 
@@ -124,12 +124,12 @@ Jangan lupa juga kita panggil method unobserve() supaya IntersectionObserver tid
 
 ```js
 const callback = (entries, observer) => {
-  const [entry] = entries;
-  const { src } = entry.target.dataset;
-  if (entry.isIntersecting) {
-    entry.target.setAttribute('src', src);
-    observer.unobserve(entry.target);
-  }
+    const [entry] = entries;
+    const { src } = entry.target.dataset;
+    if (entry.isIntersecting) {
+        entry.target.setAttribute("src", src);
+        observer.unobserve(entry.target);
+    }
 };
 ```
 
@@ -151,70 +151,70 @@ Untuk mempersingkat halaman, disini saya menggunakan satu file HTML.
 
 ```html
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-      body {
-        min-height: 100vh;
-      }
+            body {
+                min-height: 100vh;
+            }
 
-      .container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-      }
+            .container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
 
-      .container img {
-        margin: 40px 0;
-        width: 500px;
-        height: 300px;
-        background: lightblue;
-        border: none;
-        outline: none;
-        display: block;
-      }
-    </style>
-    <title>Lazy Load</title>
-  </head>
-  <body>
-    <div class="container">
-      <img data-src="/img/img-1.png" />
-      <img data-src="/img/img-2.png" />
-      <img data-src="/img/img-3.png" />
-      <img data-src="/img/img-4.png" />
-      <img data-src="/img/img-5.png" />
-    </div>
+            .container img {
+                margin: 40px 0;
+                width: 500px;
+                height: 300px;
+                background: lightblue;
+                border: none;
+                outline: none;
+                display: block;
+            }
+        </style>
+        <title>Lazy Load</title>
+    </head>
+    <body>
+        <div class="container">
+            <img data-src="/img/img-1.png" />
+            <img data-src="/img/img-2.png" />
+            <img data-src="/img/img-3.png" />
+            <img data-src="/img/img-4.png" />
+            <img data-src="/img/img-5.png" />
+        </div>
 
-    <script>
-      const elements = document.querySelectorAll('img[data-src]');
-      const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 1,
-      };
-      const callback = (entries, observer) => {
-        const [entry] = entries;
-        const { src } = entry.target.dataset;
-        if (entry.isIntersecting) {
-          entry.target.setAttribute('src', src);
-          observer.unobserve(entry.target);
-        }
-      };
+        <script>
+            const elements = document.querySelectorAll("img[data-src]");
+            const options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 1,
+            };
+            const callback = (entries, observer) => {
+                const [entry] = entries;
+                const { src } = entry.target.dataset;
+                if (entry.isIntersecting) {
+                    entry.target.setAttribute("src", src);
+                    observer.unobserve(entry.target);
+                }
+            };
 
-      const lazyload = new IntersectionObserver(callback, options);
+            const lazyload = new IntersectionObserver(callback, options);
 
-      elements.forEach((elm) => lazyload.observe(elm));
-    </script>
-  </body>
+            elements.forEach((elm) => lazyload.observe(elm));
+        </script>
+    </body>
 </html>
 ```
 

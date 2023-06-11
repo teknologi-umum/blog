@@ -8,8 +8,8 @@ telegram: kemumaki_35753
 date: 2022-04-19
 cover: https://i.ibb.co/M1jytDT/binary.png
 categories:
-  - computer science
-  - algorithm
+    - computer science
+    - algorithm
 ---
 
 [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) adalah algoritma untuk mencari nilai di dalam array. Teknik ini sedikit lebih rumit dibandingkan dengan _linear search_ biasa (cari dari kiri ke kanan) namun memiliki performance yang jauh lebih baik.
@@ -31,9 +31,9 @@ Kompleksitas algoritma dari binary search adalah `O(Log N)`. Artinya, binary sea
 
 **Tips**:
 
-- Abaikan konstanta dalam menentukan [Big O Notation](https://teknologiumum.com/posts/apa-itu-big-o-notation-part-1). Algoritma dengan kompleksitas `O(1000N + 10)` dapat dianggap sama saja dengan `O(N)` [meskipun secara runtime tetap akan berpengaruh](https://stackoverflow.com/questions/22188851/why-is-the-constant-always-dropped-from-big-o-analysis).
-- [Basis logaritma yang digunakan juga bisa kita abaikan](https://stackoverflow.com/questions/6701809/base-of-logarithms-in-time-complexity-algorithms). Untuk contoh binary search (dan algoritma lain yang memotong-motong data menjadi 2) basis logaritma yang digunakan adalah 2 karena kompleksitas binary search kira-kira artinya "berapa kali N harus dibagi 2 sampai nilainya menjadi 1".
-- Latihan: Pelajari [merge sort](https://en.wikipedia.org/wiki/Merge_sort) dan pahami mengapa kompleksitasnya O(N. Log N)
+-   Abaikan konstanta dalam menentukan [Big O Notation](https://teknologiumum.com/posts/apa-itu-big-o-notation-part-1). Algoritma dengan kompleksitas `O(1000N + 10)` dapat dianggap sama saja dengan `O(N)` [meskipun secara runtime tetap akan berpengaruh](https://stackoverflow.com/questions/22188851/why-is-the-constant-always-dropped-from-big-o-analysis).
+-   [Basis logaritma yang digunakan juga bisa kita abaikan](https://stackoverflow.com/questions/6701809/base-of-logarithms-in-time-complexity-algorithms). Untuk contoh binary search (dan algoritma lain yang memotong-motong data menjadi 2) basis logaritma yang digunakan adalah 2 karena kompleksitas binary search kira-kira artinya "berapa kali N harus dibagi 2 sampai nilainya menjadi 1".
+-   Latihan: Pelajari [merge sort](https://en.wikipedia.org/wiki/Merge_sort) dan pahami mengapa kompleksitasnya O(N. Log N)
 
 ## Prekondisi
 
@@ -61,9 +61,9 @@ Pada saat menyelesaikan masalah, jangan langsung lompat ke teknik yang paling ca
 
 Periksa dulu sebelum memutuskan untuk melakukan optimalisasi habis-habisan:
 
-- Apakah user akan terbantu? Atau _effort_ saya lebih baik dialihkan untuk memperbaiki bug yang membuat Pak Joko dari finance marah-marah setiap sore?
-- Apakah biaya infrastruktur dapat berkurang secara signifikan?
-- Apakah **memang terbukti** kalau bagian tersebut adalah sumber masalahnya? Atau emang kamu gak suka aja ngeliat kode si Mahmud?
+-   Apakah user akan terbantu? Atau _effort_ saya lebih baik dialihkan untuk memperbaiki bug yang membuat Pak Joko dari finance marah-marah setiap sore?
+-   Apakah biaya infrastruktur dapat berkurang secara signifikan?
+-   Apakah **memang terbukti** kalau bagian tersebut adalah sumber masalahnya? Atau emang kamu gak suka aja ngeliat kode si Mahmud?
 
 Jangan buang waktu untuk mengoptimalisasi proses yang hanya dipanggil satu user sebulan sekali dan sebenarnya sudah lumayan kencang.
 
@@ -77,17 +77,17 @@ Apakah kita ikuti saja apa kata pak bos? Atau ikutan resign?
 
 Sebelum memutuskan untuk mengirim one month notice, cari tahu dulu permasalahannya dimana. Ingat, algoritma yang buruk juga akan terasa kencang kalau datanya cuma ada 5 biji.
 
-- Interview user untuk mencari tahu bagian mana dan proses apa yang lambat (bisa jadi sistem cuma lambat di laptop Intel Atom jadul punya Bu Dahlan).
-- Umumnya persoalan performa hanya muncul di production environment karena data dev cuma dikit.
-- Nyalakan [instrumentasi](<https://en.wikipedia.org/wiki/Instrumentation_(computer_programming)>) untuk mendapatkan gambaran operasional sistem secara lebih jelas dan menyeluruh.
-- Lakukan [profiling](<https://en.wikipedia.org/wiki/Profiling_(computer_programming)>) untuk mencari tahu bagian mana yang menjadi sumber penyakit - biasanya disebut dengan [hot spot](<https://en.wikipedia.org/wiki/Hot_spot_(computer_programming)>).
+-   Interview user untuk mencari tahu bagian mana dan proses apa yang lambat (bisa jadi sistem cuma lambat di laptop Intel Atom jadul punya Bu Dahlan).
+-   Umumnya persoalan performa hanya muncul di production environment karena data dev cuma dikit.
+-   Nyalakan [instrumentasi](<https://en.wikipedia.org/wiki/Instrumentation_(computer_programming)>) untuk mendapatkan gambaran operasional sistem secara lebih jelas dan menyeluruh.
+-   Lakukan [profiling](<https://en.wikipedia.org/wiki/Profiling_(computer_programming)>) untuk mencari tahu bagian mana yang menjadi sumber penyakit - biasanya disebut dengan [hot spot](<https://en.wikipedia.org/wiki/Hot_spot_(computer_programming)>).
 
 Jika terbukti kalau memang ada bagian kode yang harus dioptimisasi, maka lakukan. Jangan tutupi implementasi jelek menggunakan server upgrade. Makin lama ongkos upgrade akan makin tidak sebanding dengan tambahan performance yang didapat.
 
 **Tips:**
 
-- Sebelum memperbaiki, **buat unit testing terlebih dulu**. Jangan mengutak-atik kode yang tidak memiliki test.
-- Setelah perbaikan selesai, lakukan benchmark untuk memverifikasi kalau perbaikan tadi memang membuahkan hasil.
+-   Sebelum memperbaiki, **buat unit testing terlebih dulu**. Jangan mengutak-atik kode yang tidak memiliki test.
+-   Setelah perbaikan selesai, lakukan benchmark untuk memverifikasi kalau perbaikan tadi memang membuahkan hasil.
 
 ## Latihan 1 - Membuat Unit Testing
 
@@ -97,22 +97,22 @@ Jangan berhenti sampai disitu, buat unit testing untuk memastikan kalau implemen
 
 **Tips:** Saat membuat unit testing, biasanya kita mulai dengan membuat test cases untuk skenario yang umum:
 
-- Tes dengan nilai yang ada di dalam array, pastikan fungsi mengembalikan posisi index yang benar.
-- Tes dengan nilai yang tidak ada. Pastikan fungsi mengembalikan nilai -1 (atau `false` tergantung implementasi anda).
+-   Tes dengan nilai yang ada di dalam array, pastikan fungsi mengembalikan posisi index yang benar.
+-   Tes dengan nilai yang tidak ada. Pastikan fungsi mengembalikan nilai -1 (atau `false` tergantung implementasi anda).
 
 Setelah kasus yang umum berhasil ditangani, kita pikirkan kasus-kasus selanjutnya terutama [edge-case](https://en.wikipedia.org/wiki/Edge_case) dimana bug mungkin ditemukan:
 
-- Tes menggunakan array dengan jumlah element ganjil dan genap.
-- Tes menggunakan array berisi 1 element.
-- Tes menggunakan array kosong.
-- Tes menggunakan array dengan elemen yang sama semua (index mana yang dikembalikan?).
-- Tes dengan ukuran array sangat besar.
-- Ada lagi..?
+-   Tes menggunakan array dengan jumlah element ganjil dan genap.
+-   Tes menggunakan array berisi 1 element.
+-   Tes menggunakan array kosong.
+-   Tes menggunakan array dengan elemen yang sama semua (index mana yang dikembalikan?).
+-   Tes dengan ukuran array sangat besar.
+-   Ada lagi..?
 
 **Pelajari Lebih Jauh:**
 
-- [Code coverage](https://en.wikipedia.org/wiki/Code_coverage) adalah metrics yang memperlihatkan sebarapa banyak kode yang kita tulis sudah memiliki testing. Pelajari konsep code coverage dan teknik untuk melihatnya (tips: pakai library, tools, atau IDE, jangan hitung manual).
-- [Test driven development](https://en.wikipedia.org/wiki/Test-driven_development) adalah teknik development dimana kita membuat test terlebih dahulu sebelum membuat programnya.
+-   [Code coverage](https://en.wikipedia.org/wiki/Code_coverage) adalah metrics yang memperlihatkan sebarapa banyak kode yang kita tulis sudah memiliki testing. Pelajari konsep code coverage dan teknik untuk melihatnya (tips: pakai library, tools, atau IDE, jangan hitung manual).
+-   [Test driven development](https://en.wikipedia.org/wiki/Test-driven_development) adalah teknik development dimana kita membuat test terlebih dahulu sebelum membuat programnya.
 
 ## Latihan 2 - Membuat Versi Rekursif
 
@@ -122,9 +122,9 @@ Ide utama dari teknik rekursif adalah memanggil kembali fungsi yang sama dengan 
 
 **Latihan**:
 
-- Implementasikan binary search secara rekursif lalu gunakan unit tests dari latihan 1 untuk memeriksa kebenarannya.
-- Cara mana yang lebih mudah dipahami?
-- Cari tahu dan pelajari soal [tail call optimization](https://stackoverflow.com/questions/310974/what-is-tail-call-optimization).
+-   Implementasikan binary search secara rekursif lalu gunakan unit tests dari latihan 1 untuk memeriksa kebenarannya.
+-   Cara mana yang lebih mudah dipahami?
+-   Cari tahu dan pelajari soal [tail call optimization](https://stackoverflow.com/questions/310974/what-is-tail-call-optimization).
 
 ## Binary Search Sebagai Teknik Pemecahan Masalah
 

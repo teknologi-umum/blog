@@ -8,9 +8,9 @@ telegram: your_telegram_username (not required, leave it empty by deleting this 
 date: 2021-08-31
 cover: https://link/to/image (not really required, leave it empty by deleting this line)
 categories:
-  - javascript
-  - tutorial
-  - create your tags here!
+    - javascript
+    - tutorial
+    - create your tags here!
 ---
 
 # Let's begin with why I like Vue better instead of React
@@ -19,8 +19,8 @@ Okay I'm kidding. I don't want to start a fight with the other guys. Your post t
 
 There are a few tutorial on writing markdown, you can find it here:
 
-- https://www.markdowntutorial.com/
-- https://learnmarkdown.com/
-- https://www.youtube.com/watch?v=2JE66WFpaII
+-   https://www.markdowntutorial.com/
+-   https://learnmarkdown.com/
+-   https://www.youtube.com/watch?v=2JE66WFpaII
 
 If you have some concerns or something's bugging you out, reach out the guys on Teknologi Umum's Telegram group here: https://t.me/teknologi_umum

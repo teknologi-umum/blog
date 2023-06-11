@@ -8,7 +8,7 @@ telegram: aldy05
 date: 2022-03-08
 cover: /image/after-interviewing-software-engineers/header.png
 categories:
-  - interview
+    - interview
 ---
 
 To be honest, until now, I don't think that I'd interview others for a _software engineer_ role.
@@ -21,12 +21,12 @@ projects that are about to begin. So, there are some variables whether someone w
 a certain job that they applied to. I might be able to mention some, but other more experienced people
 might have a different take on this.
 
-- Technical capabilities/skill -- your knowledge about software engineering, from theoretical part,
-  fundamental, to code.
-- Interpersonal skill -- how would you explain something to someone, either it's explaining a problem,
-  solution, or even how you'd respond to something.
-- Motivation -- why do you want to work, and what's the motivation behind it. Sometimes the interviewer
-  would ask something along the line of, "why should we hire you?"
+-   Technical capabilities/skill -- your knowledge about software engineering, from theoretical part,
+    fundamental, to code.
+-   Interpersonal skill -- how would you explain something to someone, either it's explaining a problem,
+    solution, or even how you'd respond to something.
+-   Motivation -- why do you want to work, and what's the motivation behind it. Sometimes the interviewer
+    would ask something along the line of, "why should we hire you?"
 
 I can't think of anything else, because on a job interview, it's usually around: behavioral interview
 and technical interview.

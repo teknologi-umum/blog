@@ -8,9 +8,9 @@ telegram: aldy505
 cover: /image/belajar-docker-dalam-15-menit/header.png
 date: 2021-09-02
 categories:
-  - tutorial
-  - crash course
-  - docker
+    - tutorial
+    - crash course
+    - docker
 ---
 
 15 menit, here we go.
@@ -21,9 +21,9 @@ Tapi, Docker cara kerjanya berbeda dengan Virtual Machine. Saya nggak hafal pers
 
 Lalu kenapa kita harus pakai Docker?
 
-- Bisa menyamakan development environment dan production environment, tanpa harus ke server production
-- Untuk menyamakan development environment antar anggota tim.
-- Agar meme ini tidak terjadi di kehidupan mu:
+-   Bisa menyamakan development environment dan production environment, tanpa harus ke server production
+-   Untuk menyamakan development environment antar anggota tim.
+-   Agar meme ini tidak terjadi di kehidupan mu:
 
 ![it works on my machine](https://hackernoon.com/hn-images/1*ookfwogTLx_1qhHaiFJoJw.png)
 
@@ -154,25 +154,25 @@ Kamu tinggal buat file `docker-compose.yml`, yang isinya bisa seperti ini:
 
 ```yaml
 services:
-  database:
-    image: postgres:13.4-alpine # Image dari docker hub
-    restart: always
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: verysecure
-  cache:
-    image: redis:6.2-alpine # Image dari docker hub
-    restart: always
-    ports:
-      - 6379:6379
-  app:
-    # Anggep Dockerfile nya ada di directory yang sama dengan docker-compose.yml
-    build: . # Image dari Dockerfile dan harus build dulu
-    restart: always
-    ports:
-      - 8080:8080
+    database:
+        image: postgres:13.4-alpine # Image dari docker hub
+        restart: always
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: verysecure
+    cache:
+        image: redis:6.2-alpine # Image dari docker hub
+        restart: always
+        ports:
+            - 6379:6379
+    app:
+        # Anggep Dockerfile nya ada di directory yang sama dengan docker-compose.yml
+        build: . # Image dari Dockerfile dan harus build dulu
+        restart: always
+        ports:
+            - 8080:8080
 ```
 
 Cara jalaninnya?
@@ -187,12 +187,12 @@ Biar nggak kayak orang yang pertama kali pakai Vim, nggak tahu cara exit Vim, pa
 
 Kalau kamu mengikuti cara jalanin Docker yang saya sebut tadi, kemungkinan besar aplikasi Docker-nya jalan terus di terminal. Cara untuk keluar adalah Ctrl + C (atau Cmd + C untuk Mac). Kalau mau Docker jalan di background, kamu bisa:
 
-- Kalau Docker Image biasa (yang pakai `docker run`): `docker run -d <nama image>`
-- Kalau Docker Compose: `docker-compose up -d`
+-   Kalau Docker Image biasa (yang pakai `docker run`): `docker run -d <nama image>`
+-   Kalau Docker Compose: `docker-compose up -d`
 
 Kalau ikutin cara ini, kan Dockernya nggak ada di terminal. Lalu matiinnya gimana?
 
-- Kalau Docker Image biasa: `docker stop <nama image>`
-- Kalau Docker Compose: `docker-compose stop`
+-   Kalau Docker Image biasa: `docker stop <nama image>`
+-   Kalau Docker Compose: `docker-compose stop`
 
 Selamat! Kamu sudah jago Docker. Dimana lagi bisa bermain Docker? Heroku support deploy aplikasi pakai Docker, Github Actions support Docker, VPS (kalau punya) juga bisa kok di install Docker.

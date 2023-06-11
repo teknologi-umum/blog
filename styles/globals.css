@@ -1,48 +1,48 @@
 html,
 body {
-  @apply p-0 m-0 box-border;
+    @apply p-0 m-0 box-border;
 }
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 #__next {
-  @apply relative;
+    @apply relative;
 }
 
 .active {
-  @apply text-primary-600 font-bold;
+    @apply text-primary-600 font-bold;
 }
 
 pre {
-  counter-reset: line;
+    counter-reset: line;
 }
 
 pre > code > span.line:not(:only-child):before {
-  counter-increment: line;
-  content: counter(line);
-  display: inline-block;
-  margin-right: 1.5em;
-  min-width: 1.5em;
-  text-align: right;
-  opacity: 0.4;
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    margin-right: 1.5em;
+    min-width: 1.5em;
+    text-align: right;
+    opacity: 0.4;
 }
 
 @media print {
-  @page {
-    margin: 2cm 1cm;
-  }
+    @page {
+        margin: 2cm 1cm;
+    }
 
-  /* make the wrapped code looks better */
-  span.line {
-    display: inline-block;
-    margin-left: 1cm;
-    text-indent: -1cm;
-  }
+    /* make the wrapped code looks better */
+    span.line {
+        display: inline-block;
+        margin-left: 1cm;
+        text-indent: -1cm;
+    }
 
-  p,
-  li {
-    page-break-inside: avoid;
-  }
+    p,
+    li {
+        page-break-inside: avoid;
+    }
 }

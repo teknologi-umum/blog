@@ -8,8 +8,8 @@ cover: https://laravelnews.s3.amazonaws.com/images/laravel-scout-featured.png?w=
 telegram:
 date: 2023-06-01
 categories:
-  - laravel
-  - php
+    - laravel
+    - php
 ---
 
 Belakangan ini [Laravel](https://laravel.com) menjadi salah satu _go-to weapon_ gue dalam membuat perangkat lunak yang berbasis web. Gue memilih si Laravel ini tentu bukan karena engga sengaja, salah satu yang gue suka ialah _ecosystem_-nya yang oke banget (sounds like ehm im an Laravel evangelist).

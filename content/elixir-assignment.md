@@ -8,8 +8,8 @@ telegram: dotnatserract
 date: 2022-06-05
 cover: https://files.speakerdeck.com/presentations/0ee235074d534893ac19cf5218a58204/slide_3.jpg
 categories:
-  - elixir
-  - functional programming
+    - elixir
+    - functional programming
 ---
 
 [Elixir](https://github.com/elixir-lang/elixir) adalah bahasa pemrograman fungsional, dinamis, dan _metaprogrammable_ dibangun untuk membuat aplikasi yang scalable dan maintanable. Elixir dibangun dari bahasa pemrograman [Erlang](https://www.erlang.org/), secara bersamaan bahasa ini melakukan pendekatan [actor based](https://www.oreilly.com/library/view/functional-programming-a/9781680502756/f_0061.xhtml) untuk masalah **[concurrency](<https://en.wikipedia.org/wiki/Concurrency_(computer_science)>)** dengan syntax yang lebih sederhana, clean, namun kuat.
@@ -80,8 +80,8 @@ iex(2)> 10 = num
 
 Anda lihat? Pada bagian operasi pertama `num = 10`, proses yang terjadi yakni:
 
-- Nilai 10 di cocokan dengan `num` apakah nilainya ada? jika ada maka 10 dicocokan dengan nilai tersebut. Namun jika nilai tidak ada, maka artinya `num` memiliki nilai 10. Proses pencocokan tersebut, sekaligus melakukan binding `num = 10` dengan `10 = num`.
-- Saat coba dicocokan dengan nilai yang lain, `5 = num` dan itu sudah exists. Maka artinya 5 tidak sama dengan 10 dan tentunya `match error`.
+-   Nilai 10 di cocokan dengan `num` apakah nilainya ada? jika ada maka 10 dicocokan dengan nilai tersebut. Namun jika nilai tidak ada, maka artinya `num` memiliki nilai 10. Proses pencocokan tersebut, sekaligus melakukan binding `num = 10` dengan `10 = num`.
+-   Saat coba dicocokan dengan nilai yang lain, `5 = num` dan itu sudah exists. Maka artinya 5 tidak sama dengan 10 dan tentunya `match error`.
 
 Itu sebenarnya seperti kondisi biasa, jika _num == 10_ maka cetak!
 
@@ -124,8 +124,8 @@ valid_name?
 juga_ok!
 ```
 
-- (`?`): Fungsi yang mengembalikan nilai boolean.
-- (`!`): Fungsi atau makro di mana kasus kegagalan memunculkan exception.
+-   (`?`): Fungsi yang mengembalikan nilai boolean.
+-   (`!`): Fungsi atau makro di mana kasus kegagalan memunculkan exception.
 
 Lihat [konvensi penamaan](https://hexdocs.pm/elixir/main/naming-conventions.html) lainnya.
 
@@ -218,5 +218,5 @@ Immutability, sekaligus juga membuat kode Anda lebih mudah diuji, dan mudah dipa
 
 ## Additional Reading:
 
-- [https://dockyard.com/blog/2021/03/30/elixir-is-safe](https://dockyard.com/blog/2021/03/30/elixir-is-safe)
-- [https://www.youtube.com/watch?v=lxYFOM3UJzo](https://www.youtube.com/watch?v=lxYFOM3UJzo)
+-   [https://dockyard.com/blog/2021/03/30/elixir-is-safe](https://dockyard.com/blog/2021/03/30/elixir-is-safe)
+-   [https://www.youtube.com/watch?v=lxYFOM3UJzo](https://www.youtube.com/watch?v=lxYFOM3UJzo)

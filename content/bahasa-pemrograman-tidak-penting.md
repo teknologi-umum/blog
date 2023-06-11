@@ -8,7 +8,7 @@ telegram: aldy505
 date: 2021-12-13
 cover: /image/bahasa-pemrograman-tidak-penting/header.png
 categories:
-  - language
+    - language
 ---
 
 Menjelang akhir tahun 2021 ini, sebagai seorang developer kamu pasti tahu bahwa ada banyak sekali programming langage, dari yang secara _syntax_ mudah untuk dipahami seperti Python dan Scratch, dari yang memiliki banyak sekali _parenthesis_ seperti Common Lisp, Clojure, dan Janet, hingga yang sangat cepat sekali secara performa seperti Rust dan C++. Ada lebih banyak programming language lainnya yang dapat kamu [cari tahu sendiri di Wikipedia](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type).

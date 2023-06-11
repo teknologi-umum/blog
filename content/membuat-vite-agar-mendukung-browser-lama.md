@@ -6,9 +6,9 @@ github: bulukucing
 telegram: abdulqirom323
 date: 2022-01-01
 categories:
-  - javascript
-  - tutorial
-  - vite
+    - javascript
+    - tutorial
+    - vite
 ---
 
 Vite menggunakan native **ES modules** untuk membuat proses development lebih cepat,
@@ -51,20 +51,20 @@ atau jika file tersebut tidak ada maka kalian bisa membuatnya terlebih dahulu.
 
 ```js
 // vite.config.js
-import legacy from '@vitejs/plugin-legacy';
+import legacy from "@vitejs/plugin-legacy";
 
 export default {
-  plugins: [
-    legacy({
-      targets: ['defaults'],
-    }),
-  ],
+    plugins: [
+        legacy({
+            targets: ["defaults"],
+        }),
+    ],
 };
 ```
 
 Baca dokumentasi resmi berikut untuk melihat lebih spesifik konfigurasi yang bisa diberikan:
 
-- https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
+-   https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
 
 ## Mencoba hasil build
 
@@ -153,7 +153,7 @@ dan sebaliknya, script ini juga akan mengabaikan eksekusi script lama pada brows
 
 Baca lebih jelasnya disini:
 
-- https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule
+-   https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule
 
 ### Melihat preview dari project yang sudah kita build
 
