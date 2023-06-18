@@ -29,9 +29,9 @@ export function ReadAnyway({ posts }: ReadAnywayProps) {
 
                 <Link
                     href="/blog"
-                    className="w-full font-bold text-black dark:text-white text-center block mt-10 hover:text-primary-600 dark:hover:text-primary-200 transition duration-300"
+                    className="w-full font-bold text-black dark:text-white text-center block mt-10 hover:text-primary-600 dark:hover:text-primary-200 transition duration-300 uppercase"
                 >
-                    FIND MORE POST
+                    find more post
                 </Link>
             </div>
         </>
