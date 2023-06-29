@@ -3,10 +3,10 @@ title: Membuat Website Yang Dibangun Menggunakan Vite Agar Mendukung Browser Lam
 desc: Menambahkan plugin legacy pada vite agar hasil build mendukung browser lama
 author: Bulu Kucing
 github: bulukucing
-telegram: abdulqirom323
+telegram: abdulq32
+cover: https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/23-06-01-cover-blog-tentang-vite.jpg
 date: 2022-01-01
 categories:
-  - javascript
   - tutorial
   - vite
 ---
@@ -64,7 +64,7 @@ export default {
 
 Baca dokumentasi resmi berikut untuk melihat lebih spesifik konfigurasi yang bisa diberikan:
 
-- https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
+- [https://github.com/vitejs/vite/tree/main/packages/plugin-legacy](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy)
 
 ## Mencoba hasil build
 
@@ -74,9 +74,7 @@ akan tampil pada browser lama.
 
 Saya akan menggunakan Chrome android dengan versi 55 pada uji coba ini.
 
-![chrome android versi 55](https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/22-01-01-chrome-android-versi-55.jpg)
-
-<p align="center" style={{fontSize: "0.875em"}}> Chrome android versi 55</p>
+![Chrome android versi 55](https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/22-01-01-chrome-android-versi-55.jpg)
 
 ### Membuild project vite
 
@@ -153,7 +151,7 @@ dan sebaliknya, script ini juga akan mengabaikan eksekusi script lama pada brows
 
 Baca lebih jelasnya disini:
 
-- https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule
+- [https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule](https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule)
 
 ### Melihat preview dari project yang sudah kita build
 
