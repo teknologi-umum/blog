@@ -11,6 +11,10 @@ module.exports = {
             use: ["@svgr/webpack"],
         });
         fileLoaderRule.exclude = /\.svg$/i;
+        config.resolve.fallback = {
+            fs: false,
+            path: false,
+        };
         return config;
     },
 };
