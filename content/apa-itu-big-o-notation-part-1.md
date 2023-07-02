@@ -8,7 +8,7 @@ telegram: krishna_1412
 date: 2022-03-19
 cover: https://images.unsplash.com/photo-1506719040632-7d586470c936?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1010&q=80
 categories:
-  - computer science
+    - computer science
 ---
 
 Pernah lihat iklan PrivyID yang ini?
@@ -51,9 +51,9 @@ Dalam contoh saya tadi, metode kurir pesawat adalah proses O(1) atau "konstan". 
 
 Sedangkan metode transfer data lewat internet adalah proses O(n), atau "linear", di mana laju proses tersebut **sebanding dengan ukuran inputnya**.
 
-- download dokument 1MB, di bawah 1 detik,
-- download film 500MB, mungkin 10 menitan,
-- download Call of Duty: Warzone 130GB, butuh sehari penuh
+-   download dokument 1MB, di bawah 1 detik,
+-   download film 500MB, mungkin 10 menitan,
+-   download Call of Duty: Warzone 130GB, butuh sehari penuh
 
 Apakah O(1) selalu lebih baik dari O(n)? Oh tidak. Di contoh di atas saja O(1) baru bisa mengungguli O(n) saat inputnya sangat besar.
 

@@ -8,7 +8,7 @@ cover: https://i.ibb.co/wdrbd9f/thumb.png
 telegram: manusier_bernapas
 date: 2022-01-27
 categories:
-  - text editor
+    - text editor
 ---
 
 [lsp-reference]: https://microsoft.github.io/language-server-protocol/
@@ -80,21 +80,21 @@ I'd recommend watching [this presentation](https://youtu.be/Jes3bD6P0To?t=372) b
 
 You might say that Semantic Syntax Highlighting from Language Server is more powerful, well, because it is, but to an extent. Why would you want to use Treesitter then? Like any other technology, there are several pros and cons to them both.
 
-- **Portability**
+-   **Portability**
 
-  Treesitter works virtually everywhere while Language Server semantic highlighting can only work when it's possible to run a Language Server. For example, you can use Treesitter inside a browser but not a Language Server.
+    Treesitter works virtually everywhere while Language Server semantic highlighting can only work when it's possible to run a Language Server. For example, you can use Treesitter inside a browser but not a Language Server.
 
-- **Semantic**
+-   **Semantic**
 
-  Since Treesitter can only work on a single file, its context is very limited compared to semantic highlighting. Here's an example:
+    Since Treesitter can only work on a single file, its context is very limited compared to semantic highlighting. Here's an example:
 
-  ![useState](https://i.ibb.co/VYZC0Rw/Shot-2022-01-27-17-06-33.png)
+    ![useState](https://i.ibb.co/VYZC0Rw/Shot-2022-01-27-17-06-33.png)
 
-  Treesitter (first line) wouldn't know if setState is a function because it's coming from a different file, thus making it thinks that node is just a regular variable. The semantic highlighting (second line) actually knows if `setDebouncedValue` is a function so it highlights that node as a function.
+    Treesitter (first line) wouldn't know if setState is a function because it's coming from a different file, thus making it thinks that node is just a regular variable. The semantic highlighting (second line) actually knows if `setDebouncedValue` is a function so it highlights that node as a function.
 
-- **Performance**
+-   **Performance**
 
-  Most of the time, Treesitter wins by _a lot_. It works super fast because it does less thinking (it's limited to a single file) and the parser itself is written in C. Fast performance isn't always the case with semantic highlighting because some Language Servers are written in a slow language. Although, Treesitter could also get sluggish because the hand-written parsing rule is not that good
+    Most of the time, Treesitter wins by _a lot_. It works super fast because it does less thinking (it's limited to a single file) and the parser itself is written in C. Fast performance isn't always the case with semantic highlighting because some Language Servers are written in a slow language. Although, Treesitter could also get sluggish because the hand-written parsing rule is not that good
 
 #### Structural code editing
 
@@ -185,20 +185,20 @@ Like any other parser, Treesitter needs a "grammar" for it to know "how" to pars
 
 ```javascript
 module.exports = grammar({
-  // the grammar's name
-  name: 'javascript',
+    // the grammar's name
+    name: "javascript",
 
-  // these are the nodes for the hand-written parsing rule to consume
-  externals: ($) => [$._automatic_semicolon, $._template_chars, $._ternary_qmark],
+    // these are the nodes for the hand-written parsing rule to consume
+    externals: ($) => [$._automatic_semicolon, $._template_chars, $._ternary_qmark],
 
-  // the parsing rules
-  rules: {
-    program: ($) => seq(optional($.hash_bang_line), repeat($.statement)),
+    // the parsing rules
+    rules: {
+        program: ($) => seq(optional($.hash_bang_line), repeat($.statement)),
 
-    hash_bang_line: ($) => /#!.*/,
+        hash_bang_line: ($) => /#!.*/,
 
-    // the rest of the rules goes here
-  },
+        // the rest of the rules goes here
+    },
 });
 ```
 

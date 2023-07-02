@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1590959651373-a3db0f38a961?ixid=MnwxMjA
 telegram: mikrofon_pelunas_hutang
 date: 2021-10-15
 categories:
-  - Pengantar Teknologi Informasi
+    - Pengantar Teknologi Informasi
 ---
 
 Berpikir tanpa bahasa bisa dibilang suatu hal yang sulit dibayangkan (Baca: 1984, Orwel. G), dari bangun tidur hingga tidur lagi tidak lepas dari penggunaan bahasa. Bahasa selain alat untuk komunikasi merupakan instrumen pikiran untuk menyimpan, mendefinisikan dan memahami buah pikiran manusia. Manusia dan komputer memiliki kesamaan pada titik ini.
@@ -37,21 +37,21 @@ Bahasa pemrograman berasal dari potongan bahasa inggris yang menjadi kata kunci 
 
 Berikut perbandingan antara bahasa manusia dengan bahasa pemrograman :
 
-- Bahasa Inggris
-  ```shell
-  Computer show my name
-  ```
-- Bahasa Pemrograman
-  ```javascript
-  console.log(yourName);
-  ```
+-   Bahasa Inggris
+    ```shell
+    Computer show my name
+    ```
+-   Bahasa Pemrograman
+    ```javascript
+    console.log(yourName);
+    ```
 
 Saat memrogram kita perlu memberikan arahan dan informasi yang jelas dari perintah kita, yang tidak jelas dari contoh diatas : Program tidak tau yourName itu sebuah nilai apa.
 
 Maka perlu kita ubah dengan nama kita dalam bentuk yang dimengerti komputer, nilai ini`"UwU"` sebagai contoh.
 
 ```javascript
-console.log('UwU');
+console.log("UwU");
 ```
 
 ## Paradigma sebagai kunci
@@ -60,33 +60,33 @@ Kita tidak bisa langsung "menyodorkan" pemikiran kita ke komputer, ide tersebut 
 
 Paradigma pemrograman mengatur kita untuk menuliskan kode program yang menwakili pemikiran kita, contoh sepert ini:
 
-- Paradigma Imperatif
+-   Paradigma Imperatif
 
-  ```javascript
-  var nama;
+    ```javascript
+    var nama;
 
-  tulisNama(){
-    console.log(nama)
-  }
+    tulisNama(){
+      console.log(nama)
+    }
 
-  nama = "UwU"
-  tulisNama() // UwU
-  nama = "Reine"
-  tulisNama() // Reine
-  ```
+    nama = "UwU"
+    tulisNama() // UwU
+    nama = "Reine"
+    tulisNama() // Reine
+    ```
 
-- Paradigma Fungsional
+-   Paradigma Fungsional
 
-  ```javascript
-  tulisNama(nama){
-    console.log(nama)
-  }
+    ```javascript
+    tulisNama(nama){
+      console.log(nama)
+    }
 
-  tulisNama("UwU") // UwU
-  tulisNama("Reine") // Reine
-  ```
+    tulisNama("UwU") // UwU
+    tulisNama("Reine") // Reine
+    ```
 
-  Contoh diatas kita melihat bahwa paradigma imperatif lebih cenderung melakukan perubahan nilai sedengkan paradigma fungsional lebih cendrung memanggil fungsi, dari kedua contoh ini menghasilkan bentuk kode yang tidak jauh berbeda namun memerlukan cara berpikir yang berbeda untuk menghasilkan kode demikian.
+    Contoh diatas kita melihat bahwa paradigma imperatif lebih cenderung melakukan perubahan nilai sedengkan paradigma fungsional lebih cendrung memanggil fungsi, dari kedua contoh ini menghasilkan bentuk kode yang tidak jauh berbeda namun memerlukan cara berpikir yang berbeda untuk menghasilkan kode demikian.
 
 ## Program sebagai ekosistem pikiran
 
@@ -138,12 +138,12 @@ contoh :
 Apa kira-kira jawaban yang dikeluarkan komputer ? mereka tidak akan menjawab pesawat atau helikopter
 karena tidak memiliki data itu.
 
-- [Jawabanya ada disini](https://www.kaggle.com/onigura/pohon-keputusan)
+-   [Jawabanya ada disini](https://www.kaggle.com/onigura/pohon-keputusan)
 
 > The only constructive theory connecting neuroscience and psychology will arise from the study of software --Alan J. Perlis
 
 ### Referensi:
 
-- Liem, I. 2008. Diktat Kuliah Dasar Pemrograman : Pemrograman Fungsional. ITB.
-- [What is Programming Language ?](https://hackr.io/blog/what-is-programming-language)
-- [What is Programming ?](https://hackr.io/blog/what-is-programming)
+-   Liem, I. 2008. Diktat Kuliah Dasar Pemrograman : Pemrograman Fungsional. ITB.
+-   [What is Programming Language ?](https://hackr.io/blog/what-is-programming-language)
+-   [What is Programming ?](https://hackr.io/blog/what-is-programming)

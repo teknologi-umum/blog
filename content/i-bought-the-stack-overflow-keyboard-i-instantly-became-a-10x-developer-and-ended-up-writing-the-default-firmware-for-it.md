@@ -7,8 +7,8 @@ telegram: jason_wihardja
 date: 2022-07-24
 cover: https://diskusi-tech-production.s3.amazonaws.com/i/tbg77rlcm2luwyxvpg4k.png
 categories:
-  - QMK programming
-  - Stack Overflow
+    - QMK programming
+    - Stack Overflow
 ---
 
 ## "The Key"
@@ -61,18 +61,18 @@ Next, I mapped out the 3 buttons in the JSON and the keyboard definition file. T
 
 ```json
 {
-  "keyboard_name": "The Key V2",
-  "url": "https://drop.com/buy/stack-overflow-the-key-v2-macropad",
-  "maintainer": "massdrop",
-  "layouts": {
-    "LAYOUT": {
-      "layout": [
-        { "label": "K00 (D4,D2)", "x": 0, "y": 0 },
-        { "label": "K01 (D4,D1)", "x": 1, "y": 0 },
-        { "label": "K02 (D4,D0)", "x": 2, "y": 0 }
-      ]
+    "keyboard_name": "The Key V2",
+    "url": "https://drop.com/buy/stack-overflow-the-key-v2-macropad",
+    "maintainer": "massdrop",
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "label": "K00 (D4,D2)", "x": 0, "y": 0 },
+                { "label": "K01 (D4,D1)", "x": 1, "y": 0 },
+                { "label": "K02 (D4,D0)", "x": 2, "y": 0 }
+            ]
+        }
     }
-  }
 }
 ```
 
@@ -187,25 +187,25 @@ Now let's move on to the final group of people. This one is a little bit more ch
 In addition to that, I also knew that I had to give visual feedback to the user so they wouldn't be confused on which layer they're currently on. I had 5 LEDs to play with, so I implemented a 5-layer keymaps:
 
 1.  Layer 0 (leftmost LED flashes white):
-    - Move to layer 1
-    - CTRL + C
-    - CTRL + V
+    -   Move to layer 1
+    -   CTRL + C
+    -   CTRL + V
 1.  Layer 1 (LED under the Stack Overflow button flashes white):
-    - Move to layer 2
-    - Turn on/off LED
-    - Change RGB animation mode
+    -   Move to layer 2
+    -   Turn on/off LED
+    -   Change RGB animation mode
 1.  Layer 2 (LED under the C button flashes white):
-    - Move to layer 3
-    - LED brightness up
-    - LED brightness down
+    -   Move to layer 3
+    -   LED brightness up
+    -   LED brightness down
 1.  Layer 3 (LED under the V button flashes white):
-    - Move to layer 4
-    - LED hue up
-    - LED hue down
+    -   Move to layer 4
+    -   LED hue up
+    -   LED hue down
 1.  Layer 4 (rightmost LED flashes white):
-    - Move to layer 0
-    - LED saturation up
-    - LED saturation down
+    -   Move to layer 0
+    -   LED saturation up
+    -   LED saturation down
 
 With that in mind, I started coding the implementation. I used a feature called [lighting layers](https://docs.qmk.fm/#/feature_rgblight?id=lighting-layers).
 

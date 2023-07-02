@@ -8,9 +8,9 @@ telegram:
 cover: https://laravel.com/img/logomark.min.svg
 date: 2022-01-01
 categories:
-  - laravel
-  - php
-  - tips
+    - laravel
+    - php
+    - tips
 ---
 
 Singkat saja, sederhananya didalam routing laravel biasanya kita menempatkannya pada 1 file web.php. secara harfiah memang seperti itu, akan tetapi ketika project sudah besar dan ada berbagai macam routing, terkadang itu akan membuat kita merasa kesulitan untuk menemukan routing mana yang akan kita edit. Contoh,
@@ -105,19 +105,19 @@ untuk uji coba silahkan lihat pada beberapa gambar ini,
 
 Sebelum kita pisah
 
-- adminpage
-  ![Gambar 4. Routing untuk halaman admin sebelum kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-admin-page.png)
+-   adminpage
+    ![Gambar 4. Routing untuk halaman admin sebelum kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-admin-page.png)
 
-- homepage
-  ![Gambar 5. Routing untuk halaman beranda sebelum kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-home-page.png)
+-   homepage
+    ![Gambar 5. Routing untuk halaman beranda sebelum kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/before-home-page.png)
 
 Setelah kita pisah
 
-- adminpage
-  ![Gambar 6. Routing untuk halaman admin setelah kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-admin-page.png)
+-   adminpage
+    ![Gambar 6. Routing untuk halaman admin setelah kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-admin-page.png)
 
-- homepage
-  ![Gambar 7. Routing untuk halaman admin setelah kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-home-page.png)
+-   homepage
+    ![Gambar 7. Routing untuk halaman admin setelah kita pisahkan](https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/after-home-page.png)
 
 [Repositori project](https://github.com/WahidinAji/routing-tips-laravel)
 

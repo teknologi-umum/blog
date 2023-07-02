@@ -51,14 +51,14 @@ atau jika file tersebut tidak ada maka kalian bisa membuatnya terlebih dahulu.
 
 ```js
 // vite.config.js
-import legacy from '@vitejs/plugin-legacy';
+import legacy from "@vitejs/plugin-legacy";
 
 export default {
-  plugins: [
-    legacy({
-      targets: ['defaults'],
-    }),
-  ],
+    plugins: [
+        legacy({
+            targets: ["defaults"],
+        }),
+    ],
 };
 ```
 

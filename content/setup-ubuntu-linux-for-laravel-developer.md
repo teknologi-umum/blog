@@ -8,9 +8,9 @@ telegram:
 cover: https://raw.githubusercontent.com/WahidinAji/tips-teknum-assets/master/routing%20laravel%20tip/pinguin.png
 date: 2022-01-05
 categories:
-  - laravel
-  - tips
-  - ubuntu
+    - laravel
+    - tips
+    - ubuntu
 ---
 
 Setelah sempat pensiun jadi pengguna penguin (Linux), akhirnya sejak sekitar dua minggu yang lalu saya kembali menggunakan Linux secara penuh untuk proses project development saya. Nah, maka dari itu untuk kali ini saya akan mencoba membagikan beberapa tips untuk setup Linux bagi para Laravel Developer. Oiya untuk distro Linux yang saya pakai adalah Ubuntu Linux versi 18.04 LTS.
@@ -58,11 +58,11 @@ Untuk version pada `https://deb.nodesource.com/setup_17.x`, ini opsional ya. Kal
 
 Nah, untuk MySQL ini kalian sebenarnya tidak perlu bingung. Cukup buka link ini
 
-- [`MySQL Downloads`](https://dev.mysql.com/downloads/mysql/),
+-   [`MySQL Downloads`](https://dev.mysql.com/downloads/mysql/),
 
 Download MySQL-nya dan sesuaikan dengan Distro OS Linux kalian. Kemudian ikuti langkah-langkahnya seperti yang ada di dokumentasi ini
 
-- [`Cara Install`](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-debian.html).
+-   [`Cara Install`](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-debian.html).
 
 Lohhh, kok ke dokumentasi? Ya sekalian belajar baca-baca dokumentasinya juga hehehe :). Belajar dari yang mudah untuk diikuti terlebih dahulu aja okay ^~^.
 
@@ -117,7 +117,7 @@ go version
 
 Yapss. karena kebanyakan Go Developer lebih suka menggunakan PostgreSQL dari pada MySQL, maka kita akan install juga. Caranya ini cukup mudah. Cukup ikuti langkah-langkahnya seperti yang ada di dokumentasi resmi ini.
 
-- [Cara Install PostgreSQL](https://www.postgresql.org/download/linux/ubuntu/)
+-   [Cara Install PostgreSQL](https://www.postgresql.org/download/linux/ubuntu/)
 
 Kalau sudah, untuk PostgreSQL Clientnya sendiri, saya juga menggunakan ekstensi yang ada di Visual Studio Code / GoLand.
 

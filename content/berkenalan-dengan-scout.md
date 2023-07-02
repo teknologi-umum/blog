@@ -8,8 +8,8 @@ cover: https://laravelnews.s3.amazonaws.com/images/laravel-scout-featured.png?w=
 telegram:
 date: 2023-06-01
 categories:
-  - laravel
-  - php
+    - laravel
+    - php
 ---
 
 Belakangan ini [Laravel](https://laravel.com) menjadi salah satu _go-to weapon_ gue dalam membuat perangkat lunak yang berbasis web. Gue memilih si Laravel ini tentu bukan karena engga sengaja, salah satu yang gue suka ialah _ecosystem_-nya yang oke banget (sounds like ehm im an Laravel evangelist).
@@ -34,6 +34,7 @@ Sekarang, ijinkan gue untuk malakukan sedikit eksperimen dalam menggunakan Larav
 ## Initialize
 
 Ritual pertama yaitu gue membuat project laravel dengan perintah `laravel new laravel-scout`
+
 ![init laravel project](/image/berkenalan-dengan-laravel-scout/init-laravel-project.png)
 
 ## Setup environment
@@ -53,7 +54,9 @@ DB_PASSWORD=
 
 Jika sudah setup basis data, ritual selanjutnya adalah lakukan migrasi database dengan perintah `php artisan migrate`.
 Jika basis data yang kita deklarasikan di file `.env` belum dibuat, maka Laravel secara otomatis akan 'bertanya' via cli (atau terminal) apakah mau 'dibuatkan' atau tidak.
+
 ![menjalankan migrasi](/image/berkenalan-dengan-laravel-scout/migrate-table.png)
+
 ![dan ya, ini hasil migrasinya](/image/berkenalan-dengan-laravel-scout/hasil-migrasi.png)
 
 ## Installing Laravel Scout
@@ -162,6 +165,7 @@ Perlu dicatat bahwa di sini gue hanya ingin membahas apa dan bagaimana cara meng
 ![halaman users](/image/berkenalan-dengan-laravel-scout/users-index.png)
 
 Gue mencoba melakukan pencarian dengan kata kunci krido (narsis banget gila lol)
+
 ![hasil pencarian](/image/berkenalan-dengan-laravel-scout/hasil-pencarian.png)
 
 ## Penutup

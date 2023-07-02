@@ -8,9 +8,9 @@ telegram: aldy505
 cover: /image/belajar-typescript-dalam-30-menit/header.jpg
 date: 2021-09-02
 categories:
-  - tutorial
-  - crash course
-  - typescript
+    - tutorial
+    - crash course
+    - typescript
 ---
 
 Tulisan ini terinspirasi dari [Learn Rust in 30 minutes](https://fasterthanli.me/articles/a-half-hour-to-learn-rust) dan berbagai tutorial singkat tentang topik tertentu lainnya. Topik yang dibahas disini tidak mencakup 100% fitur Typescript, karena fiturnya banyak sekali. Namun, lumayan cukup untuk memulai perjalananmu belajar Typescript.
@@ -19,10 +19,10 @@ Sebelumnya kamu harus memahami Javascript terlebih dahulu, karena Typescript mer
 
 ## Kenapa Typescript? Kapan harus pakai Typescript?
 
-- Setiap saat, apalagi disaat kamu tidak ingin ada error pada saat aplikasi buatanmu berjalan. Semua kemungkinan error dapat ditangkap saat compile ke Javascript, atau bahkan saat kamu masih mengetik kodenya di code editor kamu!
-- Kalau kamu mau menjamin hasil kode kamu berkualitas tanpa error berkepanjangan.
-- Dapat akses ke fitur-fitur Javascript yang wujudnya masih proposal Stage 3, tanpa ribet-ribet siapin Babel untuk polyfill kode kamu.
-- Autocomplete segala tulisanmu, apalagi saat menggunakan library orang lain.
+-   Setiap saat, apalagi disaat kamu tidak ingin ada error pada saat aplikasi buatanmu berjalan. Semua kemungkinan error dapat ditangkap saat compile ke Javascript, atau bahkan saat kamu masih mengetik kodenya di code editor kamu!
+-   Kalau kamu mau menjamin hasil kode kamu berkualitas tanpa error berkepanjangan.
+-   Dapat akses ke fitur-fitur Javascript yang wujudnya masih proposal Stage 3, tanpa ribet-ribet siapin Babel untuk polyfill kode kamu.
+-   Autocomplete segala tulisanmu, apalagi saat menggunakan library orang lain.
 
 ## Data Types
 
@@ -39,15 +39,15 @@ let author: String; // Error!
 let age: number;
 let old: boolean;
 
-let name: string = 'Ronny'; // Valid juga
+let name: string = "Ronny"; // Valid juga
 ```
 
 Bagaimana kalau tipe datanya tidak kita definisikan terlebih dahulu? Bisa juga! Namun, kalau kita ubah isi tipe datanya, akan error.
 
 ```ts
-let name = 'Ronny';
+let name = "Ronny";
 
-name = 'Rubi'; // Valid
+name = "Rubi"; // Valid
 name = 30; // Error! name is a variable with a type string!
 ```
 
@@ -58,7 +58,7 @@ Bagaimana dengan array? Simpel! Ada dua cara:
 let portfolio: string[];
 let portfolio: Array<string>;
 
-portfolio = ['Graphene', 'Flourite', 'LaodeAI'];
+portfolio = ["Graphene", "Flourite", "LaodeAI"];
 ```
 
 Bagaimana kalau kamu mau tipe datanya bebas, benar-benar sebebas mungkin? Bisa pakai `any` (literally, anything). Tapi penggunaan `any` ini agak dijauhi karena... percuma dong pake Typescript kalo ujung-ujungnya pake `any`?
@@ -67,9 +67,9 @@ Bagaimana kalau kamu mau tipe datanya bebas, benar-benar sebebas mungkin? Bisa p
 let anything: any;
 
 // Valid semua
-anything = 'literally';
+anything = "literally";
 anything = 123;
-anything = ['anything'];
+anything = ["anything"];
 anythhing = null;
 ```
 
@@ -81,7 +81,7 @@ Kalau tipe datanya mau lebih dari satu, bagaimana? Kamu bisa menggunakan _union 
 let price: number | string;
 
 price = 30000; // Valid
-price = '50000'; // Valid
+price = "50000"; // Valid
 price = false; // Error!
 ```
 
@@ -90,11 +90,11 @@ price = false; // Error!
 Tipe data juga bisa didefinisikan secara literal. Benar-benar literal.
 
 ```ts
-let name: 'Norman' | 'Jason';
+let name: "Norman" | "Jason";
 
-name = 'Norman'; // Valid
-name = 'Jason'; // Valid
-name = 'Dicha'; // Error!
+name = "Norman"; // Valid
+name = "Jason"; // Valid
+name = "Dicha"; // Error!
 ```
 
 ## Interface
@@ -106,16 +106,16 @@ Interface umumnya dipakai untuk mendefinisikan suatu _schema_ dari tipe data obj
 // "person" aja valid kok. Nggak harus "Person".
 // Tapi disini, saya pakai Person biar nggak bingungin aja.
 interface Person {
-  name: string;
-  age: number;
-  email: string;
+    name: string;
+    age: number;
+    email: string;
 }
 
 // variabel harry punya tipe data Person
 const harry: Person = {
-  name: 'Harry',
-  age: 27,
-  email: 'harry@harhar.id',
+    name: "Harry",
+    age: 27,
+    email: "harry@harhar.id",
 };
 ```
 
@@ -125,22 +125,22 @@ Kerennya lagi, seperti `class`, `interface` bisa di "`extends`" dengan `interfac
 
 ```ts
 interface Person {
-  name: string;
-  age: number;
-  email: string;
+    name: string;
+    age: number;
+    email: string;
 }
 
 interface Programmer extends Person {
-  github: string;
-  languages: string[];
+    github: string;
+    languages: string[];
 }
 
 const ronny: Programmer = {
-  name: 'Ronny',
-  age: 26,
-  email: 'ron@dot.net',
-  github: 'ronnygunawan',
-  languages: ['C#', 'Kotlin', 'Typescript'],
+    name: "Ronny",
+    age: 26,
+    email: "ron@dot.net",
+    github: "ronnygunawan",
+    languages: ["C#", "Kotlin", "Typescript"],
 };
 ```
 
@@ -148,8 +148,8 @@ Bagaimana kalau ada _key_ yang wujudnya optional/tidak harus diisi? Bisa dengan 
 
 ```ts
 interface Person {
-  name: string; // Wajib diisi
-  job?: string; // Tidak wajib diisi
+    name: string; // Wajib diisi
+    job?: string; // Tidak wajib diisi
 }
 ```
 
@@ -159,11 +159,11 @@ Tipe data `type` itu menyerupai `interface`, tujuannya kurang lebih sama, namun 
 
 ```ts
 type person = {
-  name: string;
+    name: string;
 };
 
 interface person {
-  name: string;
+    name: string;
 }
 
 // Dua hal ini sama saja
@@ -189,7 +189,7 @@ type Name = { name: string };
 type Email = { email: string };
 type Person = Name & Email;
 
-const person: Person = { name: 'Another', email: 'another@person.com' };
+const person: Person = { name: "Another", email: "another@person.com" };
 ```
 
 Kalau kamu masih kurang paham dan penasaran, bisa cek [Typescript Handbook - Differences Between Type Aliases and Interfaces](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces).
@@ -202,8 +202,8 @@ Kamu bisa pakai `Record<typeKey, typeValue>`.
 
 ```ts
 let something: Record<string, number> = {
-  some: 12,
-  thing: 42,
+    some: 12,
+    thing: 42,
 };
 ```
 
@@ -224,13 +224,13 @@ Tipe data dari parameter function dan tipe data hasil return nya juga bisa kok d
 // verbose - tipe data boolean
 // Dia akan mereturn void (alias, nggak return apa-apa)
 function hackNASA(port: number, key: string, verbose: boolean): void {
-  // ...
+    // ...
 }
 
 // Bagaimana dengan async function yang return Promise?
 // Bisa pakai Promise<tipe data output>
 async function stealYourGirlfriend(yourGF: name): Promise<string> {
-  // ...
+    // ...
 }
 ```
 
@@ -259,7 +259,7 @@ Kalau kamu nggak suka dengan fungsi yang cuma bisa menerima parameters dan retur
 ```ts
 function insertData(id: string, data: Content): Data;
 function insertData(id: string, name: string, data: Content): Data {
-  // ...
+    // ...
 }
 ```
 
@@ -269,22 +269,22 @@ Kalau kamu hobi banget sama yang namanya OOP, dan bingung cara mendefinisikan co
 
 ```ts
 interface Post {
-  id: number;
-  title: string;
-  author: string;
-  date: Date;
-  content: string;
+    id: number;
+    title: string;
+    author: string;
+    date: Date;
+    content: string;
 }
 
 interface BlogConstructor {
-  url: string;
-  posts: Post[];
+    url: string;
+    posts: Post[];
 }
 
 interface BlogClass extends BlogConstructor {
-  addPost(title: string, author: string, content: string): string;
-  editPost(id: string, content: string): string;
-  deletePost(id: string): boolean;
+    addPost(title: string, author: string, content: string): string;
+    editPost(id: string, content: string): string;
+    deletePost(id: string): boolean;
 }
 ```
 
@@ -313,28 +313,28 @@ Sederhananya, enum adalah sebuah named constant. Bersifat seperti variabel yang 
 
 ```ts
 enum Language {
-  Javascript, // Ini ekuivalen dengan angka 0
-  Typescript, // Lalu, ini 1, dan seterusnya
-  Dart,
+    Javascript, // Ini ekuivalen dengan angka 0
+    Typescript, // Lalu, ini 1, dan seterusnya
+    Dart,
 }
 
 // Penggunaannya
 function choose(lang: Language): string {
-  switch (lang) {
-    case Language.Javascript:
-      return 'You poor noob';
-    case Language.Typescript:
-      return 'I respect you';
-    case Language.Dart:
-      return 'What kind of language is that?';
-    default:
-      return 'Language must be supplied!';
-  }
+    switch (lang) {
+        case Language.Javascript:
+            return "You poor noob";
+        case Language.Typescript:
+            return "I respect you";
+        case Language.Dart:
+            return "What kind of language is that?";
+        default:
+            return "Language must be supplied!";
+    }
 }
 
 choose(Language.Typescript); // "I respect you"
 choose(1); // "I respect you"
-choose('blabla'); // Error: Argument of type '"blabla"' is not assignable to parameter of type 'Language'.
+choose("blabla"); // Error: Argument of type '"blabla"' is not assignable to parameter of type 'Language'.
 ```
 
 ## Advanced: Generics

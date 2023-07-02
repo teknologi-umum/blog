@@ -8,7 +8,7 @@ telegram: aldy505
 date: 2021-11-09
 cover: /image/the-basics-of-go/header.jpg
 categories:
-  - golang
+    - golang
 ---
 
 First and foremost, I can't teach this material in Indonesian. So, to understand this article, you should know
@@ -125,23 +125,23 @@ What about public and private scope in Go?
 
 It's straightforward:
 
-- Anything that would meant to be public scope (a type, function, variable, or constant) should be named with an uppercase
-  on the first character. Example: `func SayHello()`.
-- Anything that would meant to be a private scope, should do the opposite of public scope. It should be named with a lowercase
-  on the first character. Example: `func sayHello()`.
+-   Anything that would meant to be public scope (a type, function, variable, or constant) should be named with an uppercase
+    on the first character. Example: `func SayHello()`.
+-   Anything that would meant to be a private scope, should do the opposite of public scope. It should be named with a lowercase
+    on the first character. Example: `func sayHello()`.
 
 ## Data types
 
 Go has some built-in data types, which I will only mention some of the important ones:
 
-- `bool` - boolean value being either true or false.
-- `string` - a string of characters.
-- `byte` - byte is an alias for uint8 and is equivalent to uint8 in all ways. It is used, by convention,
-  to distinguish byte values from 8-bit unsigned integer values.
-- `error` - error built-in interface type is the conventional interface for representing an error condition, with the nil value representing no error.
-- `int` - int is a signed integer type that is at least 32 bits in size. It is a distinct type, however,
-  and not an alias for, say, int32.
-- `uint` - uint is an unsigned integer type that is at least 32 bits in size. It is a distinct type, however, and not an alias for, say, uint32.
+-   `bool` - boolean value being either true or false.
+-   `string` - a string of characters.
+-   `byte` - byte is an alias for uint8 and is equivalent to uint8 in all ways. It is used, by convention,
+    to distinguish byte values from 8-bit unsigned integer values.
+-   `error` - error built-in interface type is the conventional interface for representing an error condition, with the nil value representing no error.
+-   `int` - int is a signed integer type that is at least 32 bits in size. It is a distinct type, however,
+    and not an alias for, say, int32.
+-   `uint` - uint is an unsigned integer type that is at least 32 bits in size. It is a distinct type, however, and not an alias for, say, uint32.
 
 ## Variables
 

@@ -6,9 +6,9 @@ Contributing means anything from submitting blog post, reporting bugs, ideas, su
 
 **JUMP STRAIGHT TO:**
 
-- [Add a blog post](#add-a-blog-post)
-- [Bug report, ideas and suggestion](#bug-report-ideas-and-suggestion)
-- [Code fix and new feature](#code-fix-and-new-feature)
+-   [Add a blog post](#add-a-blog-post)
+-   [Bug report, ideas and suggestion](#bug-report-ideas-and-suggestion)
+-   [Code fix and new feature](#code-fix-and-new-feature)
 
 ## Add a blog post
 
@@ -69,8 +69,8 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 

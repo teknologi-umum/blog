@@ -8,7 +8,7 @@ telegram: aldy505
 date: 2021-12-12
 cover: /image/apa-itu-domain-driven-design/header.jpg
 categories:
-  - domain driven design
+    - domain driven design
 ---
 
 **Domain-driven design** adalah istilah yang sering terdengar namanya belakangan ini, dan ini lumayan terdengar seperti
@@ -73,7 +73,7 @@ digantikan kapan pun, serta UI (atau biasanya lebih familiar dengan sebutan pres
 Masih banyak resource yang harus dieksplor sendiri, karena tidak akan habis kalau domain-driven design dijelaskan melalui
 sebuah artikel saja.
 
-- [Microsoft: Design a DDD-oriented microservice](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
-- [Anemic Domain Model](https://martinfowler.com/bliki/AnemicDomainModel.html)
-- [Stackoverflow - What is domain driven design](https://stackoverflow.com/questions/1222392/what-is-domain-driven-design-ddd/1222488#1222488)
-- [Awesome DDD - Curated list of DDD resource](https://github.com/heynickc/awesome-ddd)
+-   [Microsoft: Design a DDD-oriented microservice](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
+-   [Anemic Domain Model](https://martinfowler.com/bliki/AnemicDomainModel.html)
+-   [Stackoverflow - What is domain driven design](https://stackoverflow.com/questions/1222392/what-is-domain-driven-design-ddd/1222488#1222488)
+-   [Awesome DDD - Curated list of DDD resource](https://github.com/heynickc/awesome-ddd)

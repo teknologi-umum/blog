@@ -1,24 +1,20 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-  swcMinify: true,
+    reactStrictMode: true,
+    swcMinify: true,
 
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: [
-        'next-swc-loader',
-        {
-          loader: '@svgr/webpack',
-          options: { babel: false },
-        },
-      ],
-    });
-    config.resolve.fallback = {
-      fs: false,
-      path: false,
-    };
-
-    return config;
-  },
+    webpack(config) {
+        const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.(".svg"));
+        config.module.rules.push({
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: ["@svgr/webpack"],
+        });
+        fileLoaderRule.exclude = /\.svg$/i;
+        config.resolve.fallback = {
+            fs: false,
+            path: false,
+        };
+        return config;
+    },
 };
