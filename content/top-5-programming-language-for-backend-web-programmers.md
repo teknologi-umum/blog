@@ -25,7 +25,7 @@ Here's the thing about picking the most powerful, best ever programming language
 Why **can't you**? Because there are always a few considerations in picking a programming language for a certain field of work/expertise. In my experience, some of them includes:
 
 1. **Popularity**  
-   Is the language commonly used? Does it have big communities? Are big companies using it, supporting it, and endorsing it?  
+   Is the language commonly used? Does it have large communities? Are big companies using it, supporting it, and endorsing it?  
    Popularity should be a strong factor in deciding which tech to use, because the bigger the community is, the easier for you to find a solution to a sometimes weird and quirky problem in a programming language, compiler, tooling, etc. You don't want to spend a few days trying to fix a weird bug when the fix is actually just adding a semicolon or comma, adding a single configuration line, or simple stupid things that can cost you precious time when trying to fix it.
 
 2. **Demand**  
