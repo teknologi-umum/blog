@@ -7,8 +7,8 @@ telegram: abdulq32
 cover: https://raw.githubusercontent.com/bulukucing/assets/main/teknum-blog/23-06-01-cover-blog-tentang-vite.jpg
 date: 2022-01-01
 categories:
-  - tutorial
-  - vite
+    - tutorial
+    - vite
 ---
 
 Vite menggunakan native **ES modules** untuk membuat proses development lebih cepat,
@@ -64,7 +64,7 @@ export default {
 
 Baca dokumentasi resmi berikut untuk melihat lebih spesifik konfigurasi yang bisa diberikan:
 
-- [https://github.com/vitejs/vite/tree/main/packages/plugin-legacy](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy)
+-   [https://github.com/vitejs/vite/tree/main/packages/plugin-legacy](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy)
 
 ## Mencoba hasil build
 
@@ -151,7 +151,7 @@ dan sebaliknya, script ini juga akan mengabaikan eksekusi script lama pada brows
 
 Baca lebih jelasnya disini:
 
-- [https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule](https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule)
+-   [https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule](https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule)
 
 ### Melihat preview dari project yang sudah kita build
 
