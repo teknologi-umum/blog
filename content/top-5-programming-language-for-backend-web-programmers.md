@@ -1172,7 +1172,7 @@ This framework which is created by Microsoft is often given a negative impressio
 
 There's a good [article](https://www.excella.com/insights/5-myths-about-net) about the misconceptions or myths about .NET, which points are:
 
-1. .Net Only Runs on Windows
+1. .Net Only Runs on Windows ❌ HOAX ❌
 2. .Net is Only for Desktop Applications
 3. .Net is a Proprietary, Closed Source Technology
 4. .Net is Only Useful for Business Applications
