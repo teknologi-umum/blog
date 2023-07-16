@@ -8,9 +8,9 @@ telegram: vmasdani
 cover: https://content.techgig.com/thumb/msid-67337479,width-860,resizemode-4/Top-5-programming-languages-for-backend-web-development.jpg?94297
 date: 2022-02-05
 categories:
-  - backend
-  - web
-  - programming
+    - backend
+    - web
+    - programming
 ---
 
 There are tons upon tons of programming languages in the market nowadays, and it might be overwhelming for people who just started programming. This question is often asked among the beginner programmers:
@@ -41,17 +41,17 @@ Now we are going to review the top 5 programming languages based on the consider
 
 tl;dr:
 
-- 5. Spring Boot + Kotlin
-- 4. Typescript NodeJS
-- 3. PHP
-- 2. Golang
-- 1. .NET Core / C#
+-   5. Spring Boot + Kotlin
+-   4. Typescript NodeJS
+-   3. PHP
+-   2. Golang
+-   1. .NET Core / C#
 
 ## 5. Spring Boot + Kotlin
 
-- **Typing**: Strong, static
-- **Founder**: Jetbrains (Kotlin), VMWare (Spring)
-- **Paradigm**: multi paradigm, mainly object oriented
+-   **Typing**: Strong, static
+-   **Founder**: Jetbrains (Kotlin), VMWare (Spring)
+-   **Paradigm**: multi paradigm, mainly object oriented
 
 If you are looking for a "powerful" web backend solution which has been around for a long time and you want to build a cost effective enterprise web application, enter Spring and Kotlin.
 
@@ -63,7 +63,7 @@ On top of the modern programming language features, Kotlin has 100% interoperabi
 
 Here's how a Spring Boot REST API project in Kotlin typically looks like:
 
-- Model
+-   Model
 
 ```kotlin
 @Entity
@@ -83,14 +83,14 @@ data class Person(
 )
 ```
 
-- Repository
+-   Repository
 
 ```kotlin
 interface PersonRepository : JpaRepository<Person, Long>, JpaSpecificationExecutor<Person> {
 }
 ```
 
-- Controller
+-   Controller
 
 ```kotlin
 @RestController
@@ -112,10 +112,10 @@ class PersonController(
 
 Writing Spring Boot codes using Kotlin is very productive. Many of the reasons are because of:
 
-- **function return inference** which can lead to writing very concise controller functions.
-- **dataclasses**
-  which enables you to create a struct/record data type without **getters** and **setters**. Although you can generate getters and setters through most JVM-based IDEs like **IntelliJ Idea Community** and **Eclipse IDE**, not having to write getters and setters is very intuitive and not time-consuming.
-- **declarative utility functions** such as **map, filter, fold** which Java does not (natively) have, and makes writing loops very, very concise.
+-   **function return inference** which can lead to writing very concise controller functions.
+-   **dataclasses**
+    which enables you to create a struct/record data type without **getters** and **setters**. Although you can generate getters and setters through most JVM-based IDEs like **IntelliJ Idea Community** and **Eclipse IDE**, not having to write getters and setters is very intuitive and not time-consuming.
+-   **declarative utility functions** such as **map, filter, fold** which Java does not (natively) have, and makes writing loops very, very concise.
 
 ```kotlin
 // find something in array
@@ -129,7 +129,7 @@ val onlyAges = people.map { p -> p.age }
 
 ```
 
-- Lastly, one of the most important benefit of writing in Kotlin is **null safety**. Rolling-release project model which has very fast-changing RDBMS is very prone to error, and the data that is returned from the RDBMS might not always have a value, which might be a result of **column update**. But the null safety feature in Kotlin prevents your program from getting a random **null pointer exception** which you might will often encounter while writing Java due to Java not having nullable types, so it assumes that every variables are nullable by default, so you can't accidentally unpack a property which is actually **null** while writing Kotlin.
+-   Lastly, one of the most important benefit of writing in Kotlin is **null safety**. Rolling-release project model which has very fast-changing RDBMS is very prone to error, and the data that is returned from the RDBMS might not always have a value, which might be a result of **column update**. But the null safety feature in Kotlin prevents your program from getting a random **null pointer exception** which you might will often encounter while writing Java due to Java not having nullable types, so it assumes that every variables are nullable by default, so you can't accidentally unpack a property which is actually **null** while writing Kotlin.
 
 However, as good as Spring + Kotlin is, I would not choose Spring + Kotlin or any JVM based runtime to create a new web-based project these days, because of:
 
@@ -140,25 +140,25 @@ If you or your company already has a Spring Boot project with Java, I really, re
 
 ## 4. Typescript NodeJS
 
-- **Typing**: Strong, static
-- **Founder**: Ryan Dahl (NodeJS), Typescript (Anders Hejlsberg/Microsoft)
-- **Paradigm**: multi paradigm, mainly functional
+-   **Typing**: Strong, static
+-   **Founder**: Ryan Dahl (NodeJS), Typescript (Anders Hejlsberg/Microsoft)
+-   **Paradigm**: multi paradigm, mainly functional
 
 **NodeJS** is probably one of the most common tools used in the backend web programming community, and that is not wihout reason. There are tons upon tons of free services providing NodeJS-based runtime because the runtime/language is **that** versatile and lightweight, and I think should be crowned the **write once, run anywhere** title--rather than Java--because Javascript/Node does run everywhere.
 
 One of the most popular tool for creating web HTTP APIs for Node.JS is **Express**. It's an unopinionated web framework which is designed to create web APIs with great freedom, and the setup is very, very simple. Here is an example Express project:
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get("/", (req, res) => {
+    res.send("Hello World!");
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${port}`);
 });
 ```
 
@@ -167,10 +167,10 @@ The above code will spin up an HTTP server on port 3000 inside the machine you a
 To send JSON, just use the `res.json()` function:
 
 ```js
-app.get('/', (req, res) => {
-  res.json({
-    hello: 'world!',
-  });
+app.get("/", (req, res) => {
+    res.json({
+        hello: "world!",
+    });
 });
 ```
 
@@ -197,12 +197,12 @@ npm i @types/node @types/express ts-node
 3. Create an `index.ts` file containing:
 
 ```ts
-import express from 'express';
+import express from "express";
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send({ hello: 'world!' });
+app.get("/", (req, res) => {
+    res.send({ hello: "world!" });
 });
 
 app.listen(3000);
@@ -262,9 +262,9 @@ You can also deploy NodeJS in your own Virtual Private Server or on-premise serv
 
 ## 3. PHP
 
-- **Typing**: Weak, dynamic (optional static)
-- **Founder**: Rasmus Lerdorf
-- **Paradigm**: multi paradigm, mainly imperative
+-   **Typing**: Weak, dynamic (optional static)
+-   **Founder**: Rasmus Lerdorf
+-   **Paradigm**: multi paradigm, mainly imperative
 
 PHP is still the king of web programming, as it is the true pioneer and kickstarter of dynamic web applications. In fact, around 50% or more of the world wide web is still using PHP.
 
@@ -431,10 +431,10 @@ You may have noticed that it is now possible to use code annotations in PHP such
 
 There are many improvements in PHP 8 such as:
 
-- Annotations
-- Null safety
-- Named arguments
-- Match expression
+-   Annotations
+-   Null safety
+-   Named arguments
+-   Match expression
 
 and many other [features](https://www.php.net/releases/8.0/en.php) I have not mentioned, which makes developer experiences easier, saner, and far more enjoyable compared to older times with PHP 5, so that hair-pulling will happen less while programming.
 
@@ -442,9 +442,9 @@ PHP is regaining traction.
 
 ## 2. Golang
 
-- **Typing**: Strong, static
-- **Founder**: Google
-- **Paradigm**: multi paradigm, mainly functional & imperative
+-   **Typing**: Strong, static
+-   **Founder**: Google
+-   **Paradigm**: multi paradigm, mainly functional & imperative
 
 Golang is a relatively new programming language made by Google. Its original purpose was to replace C/C++ for some parts of internal Google code because there were too much boilerplate and the codebase was becoming too verbose. It has now become one of the most used programming language for web backend and CLI tools such as big companies, project, and/or services like [Docker](https://docs.docker.com/get-started/overview/#the-underlying-technology), [Gojek](https://www.gojek.io/blog/ruby-java-golang), [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes), [yay](https://github.com/Jguer/yay) (arch linux AUR helper) etc.
 
@@ -573,14 +573,14 @@ data class Person(
 )
 ````
 
-- Repository
+-   Repository
 
 ```kotlin
 interface PersonRepository : JpaRepository<Person, Long>, JpaSpecificationExecutor<Person> {
 }
 ```
 
-- Controller
+-   Controller
 
 ```kotlin
 @RestController
@@ -602,10 +602,10 @@ class PersonController(
 
 Writing Spring Boot codes using Kotlin is very productive. Many of the reasons are because of:
 
-- **function return inference** which can lead to writing very concise controller functions.
-- **dataclasses**
-  which enables you to create a struct/record data type without **getters** and **setters**. Although you can generate getters and setters through most JVM-based IDEs like **IntelliJ Idea Community** and **Eclipse IDE**, not having to write getters and setters is very intuitive and not time-consuming.
-- **declarative utility functions** such as **map, filter, fold** which Java does not (natively) have, and makes writing loops very, very concise.
+-   **function return inference** which can lead to writing very concise controller functions.
+-   **dataclasses**
+    which enables you to create a struct/record data type without **getters** and **setters**. Although you can generate getters and setters through most JVM-based IDEs like **IntelliJ Idea Community** and **Eclipse IDE**, not having to write getters and setters is very intuitive and not time-consuming.
+-   **declarative utility functions** such as **map, filter, fold** which Java does not (natively) have, and makes writing loops very, very concise.
 
 ```kotlin
 // find something in array
@@ -619,7 +619,7 @@ val onlyAges = people.map { p -> p.age }
 
 ```
 
-- Lastly, one of the most important benefit of writing in Kotlin is **null safety**. Rolling-release project model which has very fast-changing RDBMS is very prone to error, and the data that is returned from the RDBMS might not always have a value, which might be a result of **column update**. But the null safety feature in Kotlin prevents your program from getting a random **null pointer exception** which you might will often encounter while writing Java due to Java not having nullable types, so it assumes that every variables are nullable by default, so you can't accidentally unpack a property which is actually **null** while writing Kotlin.
+-   Lastly, one of the most important benefit of writing in Kotlin is **null safety**. Rolling-release project model which has very fast-changing RDBMS is very prone to error, and the data that is returned from the RDBMS might not always have a value, which might be a result of **column update**. But the null safety feature in Kotlin prevents your program from getting a random **null pointer exception** which you might will often encounter while writing Java due to Java not having nullable types, so it assumes that every variables are nullable by default, so you can't accidentally unpack a property which is actually **null** while writing Kotlin.
 
 However, as good as Spring + Kotlin is, I would not choose Spring + Kotlin or any JVM based runtime to create a new web-based project these days, because of:
 
@@ -630,25 +630,25 @@ If you or your company already has a Spring Boot project with Java, I really, re
 
 ## 4. Typescript NodeJS
 
-- **Typing**: Strong, static
-- **Founder**: Ryan Dahl (NodeJS), Typescript (Anders Hejlsberg/Microsoft)
-- **Paradigm**: multi paradigm, mainly functional
+-   **Typing**: Strong, static
+-   **Founder**: Ryan Dahl (NodeJS), Typescript (Anders Hejlsberg/Microsoft)
+-   **Paradigm**: multi paradigm, mainly functional
 
 **NodeJS** is probably one of the most common tools used in the backend web programming community, and that is not wihout reason. There are tons upon tons of free services providing NodeJS-based runtime because the runtime/language is **that** versatile and lightweight, and I think should be crowned the **write once, run anywhere** title--rather than Java--because Javascript/Node does run everywhere.
 
 One of the most popular tool for creating web HTTP APIs for Node.JS is **Express**. It's an unopinionated web framework which is designed to create web APIs with great freedom, and the setup is very, very simple. Here is an example Express project:
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get("/", (req, res) => {
+    res.send("Hello World!");
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${port}`);
 });
 ```
 
@@ -657,10 +657,10 @@ The above code will spin up an HTTP server on port 3000 inside the machine you a
 To send JSON, just use the `res.json()` function:
 
 ```js
-app.get('/', (req, res) => {
-  res.json({
-    hello: 'world!',
-  });
+app.get("/", (req, res) => {
+    res.json({
+        hello: "world!",
+    });
 });
 ```
 
@@ -687,12 +687,12 @@ npm i @types/node @types/express ts-node
 3. Create an `index.ts` file containing:
 
 ```ts
-import express from 'express';
+import express from "express";
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send({ hello: 'world!' });
+app.get("/", (req, res) => {
+    res.send({ hello: "world!" });
 });
 
 app.listen(3000);
@@ -752,9 +752,9 @@ You can also deploy NodeJS in your own Virtual Private Server or on-premise serv
 
 ## 3. PHP
 
-- **Typing**: Weak, dynamic (optional static)
-- **Founder**: Rasmus Lerdorf
-- **Paradigm**: multi paradigm, mainly imperative
+-   **Typing**: Weak, dynamic (optional static)
+-   **Founder**: Rasmus Lerdorf
+-   **Paradigm**: multi paradigm, mainly imperative
 
 PHP is still the king of web programming, as it is the true pioneer and kickstarter of dynamic web applications. In fact, around 50% or more of the world wide web is still using PHP.
 
@@ -921,10 +921,10 @@ You may have noticed that it is now possible to use code annotations in PHP such
 
 There are many improvements in PHP 8 such as:
 
-- Annotations
-- Null safety
-- Named arguments
-- Match expression
+-   Annotations
+-   Null safety
+-   Named arguments
+-   Match expression
 
 and many other [features](https://www.php.net/releases/8.0/en.php) I have not mentioned, which makes developer experiences easier, saner, and far more enjoyable compared to older times with PHP 5, so that hair-pulling will happen less while programming.
 
@@ -932,9 +932,9 @@ PHP is regaining traction.
 
 ## 2. Golang
 
-- **Typing**: Strong, static
-- **Founder**: Google
-- **Paradigm**: multi paradigm, mainly functional & imperative
+-   **Typing**: Strong, static
+-   **Founder**: Google
+-   **Paradigm**: multi paradigm, mainly functional & imperative
 
 Golang is a relatively new programming language made by Google. Its original purpose was to replace C/C++ for some parts of internal Google code because there were too much boilerplate and the codebase was becoming too verbose. It has now become one of the most used programming language for web backend and CLI tools such as big companies, project, and/or services like [Docker](https://docs.docker.com/get-started/overview/#the-underlying-technology), [Gojek](https://www.gojek.io/blog/ruby-java-golang), [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes), [yay](https://github.com/Jguer/yay) (arch linux AUR helper) etc.
 
@@ -1132,31 +1132,31 @@ FYI: Generics is coming in Go version 1.18!
 4. **Lack of null safety**  
    Golang does not have a null safety operator, because the language is closer to machine and **nullable types** must be wrapped in a pointer.
 
-   In C#, you can do something like this, in case you want to get an information from deeply nested objects:
+    In C#, you can do something like this, in case you want to get an information from deeply nested objects:
 
-   ```csharp
-   ...
+    ```csharp
+    ...
 
-   val pCompanyAddress = person
-      ?.Company
-      ?.Address
-      ?.Name;
+    val pCompanyAddress = person
+       ?.Company
+       ?.Address
+       ?.Name;
 
-   ...
-   ```
+    ...
+    ```
 
-   But in Go, you have to have a thorough null check in each nested property.
+    But in Go, you have to have a thorough null check in each nested property.
 
-   ```go
-   pCompanyAddress := ""
+    ```go
+    pCompanyAddress := ""
 
-   if person.Company != nil && person.Company.Address != nil {
-      pCompanyAddress = person.Company.Address.Name
-   }
+    if person.Company != nil && person.Company.Address != nil {
+       pCompanyAddress = person.Company.Address.Name
+    }
 
-   ```
+    ```
 
-   There's a whole discussion about why null safety is not implemented in Go, see this [GitHub issue](https://github.com/golang/go/issues/42847)
+    There's a whole discussion about why null safety is not implemented in Go, see this [GitHub issue](https://github.com/golang/go/issues/42847)
 
 Despite all these cons, Go is a really, really nice language which balances between developer experience which makes writing code fast, safe, and scalable, but also does not compromise performance--meaning that code written in Go is really fast, and very robust if your error handling game is played correctly. Memory usage is **very lightweight** too with Go. Definitely a correct option to pick Go for creating new projects in 2022.
 
@@ -1164,9 +1164,9 @@ Go is an excellent language for [gRPC](https://grpc.io/) too, but that leaves a 
 
 ## 1. .NET Core / C#
 
-- **Typing**: Strong, static
-- **Founder**: Microsoft
-- **Paradigm**: multi paradigm, mainly object-oriented
+-   **Typing**: Strong, static
+-   **Founder**: Microsoft
+-   **Paradigm**: multi paradigm, mainly object-oriented
 
 This framework which is created by Microsoft is often given a negative impression at first glance because of the name **Microsoft** associated with .NET framework, but I assure you, nothing is about money-grabbing software made by greedy big corporations here.
 
