@@ -50,7 +50,7 @@ export function Navbar() {
                             </a>
                         </div>
                         <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
-                            <a href="https://t.me/teknologi_umum">
+                            <a href="https://t.me/teknologi_umum_v2">
                                 <TelegramIcon width="2rem" height="2rem" />
                             </a>
                         </div>
