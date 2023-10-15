@@ -25,11 +25,11 @@ Git Flow merupakan alur kerja percabangan yang diterapkan pada proyek yang mengg
 
 ## Studi kasus
 
-
 ### Tools yang digunakan
 
 ## Referensi :
 
-* https://www.geeksforgeeks.org/git-flow-vs-github-flow/
-* https://www.scaler.com/topics/git/git-flow-vs-github-flow/#
-* https://danielkummer.github.io/git-flow-cheatsheet/index.id_ID.html
+-   https://www.geeksforgeeks.org/git-flow-vs-github-flow/
+-   https://www.scaler.com/topics/git/git-flow-vs-github-flow/
+-   https://blog.jetbrains.com/space/2023/04/18/space-git-flow/
+-   https://danielkummer.github.io/git-flow-cheatsheet/index.id_ID.html
