@@ -13,7 +13,7 @@ categories:
 
 _Cross-posted from https://blog.reinaldyrafli.com/47922/lesson-learned-from-running-a-community-tech-conference_
 
-Yes, I basically led a team of 5 people to run what came to be TeknumConf 2023. An independent, no-sponsor, paid, self-sufficient community-based meetup consisting of keynote talks, career advice talkshow, and bunch of networking sessions that allows people to talk to each other and gain new connection. And yes, we created our own website, our own ticketing system, in which I will talk about it later. 
+Yes, I basically led a team of 5 people to run what came to be TeknumConf 2023. An independent, no-sponsor, paid, self-sufficient community-based meetup consisting of keynote talks, career advice talkshow, and bunch of networking sessions that allows people to talk to each other and gain new connection. And yes, we created our own website, our own ticketing system, in which I will talk about it later.
 
 ![image](/image/lesson-learned-from-running-a-community-tech-conference/moment.jpg)
 
@@ -37,7 +37,7 @@ This reminds me about one thing that [I've read a few years back](https://www.am
 
 An event is not yet complete without any promotion.
 
-But yeah, we really need promotion because we have a quota to fill. Otherwise, we'd have to cover all the costs by ourselves. 
+But yeah, we really need promotion because we have a quota to fill. Otherwise, we'd have to cover all the costs by ourselves.
 
 Being an independent event, we have nothing that backed us up. We'd need to rely from the ticket sales to cover venue and snack costs. The venue itself costs around 4 million rupiahs for 8 hours rent. That's not much compared to other venue that we think would be better for an event like this. Most venues asks for around 8 million rupiahs or more, because we're running the event on weekends. Even one venue asks us to run the venue on weekdays, in which we obviously can't. Like I said, we have a quota to fill to cover those costs. We can't be sure that people will come by solely relying on the people that already joined the community, and we can't rely on people that would go to the event by the last minute.
 
@@ -55,12 +55,12 @@ Venue is something that people might look away because it's just a small thing, 
 
 There are a few checklist that I had in mind for finding the (at least close to) perfect venue
 
-- Close to public transport as possible (it's even better if it's near MRT station [subway] rather than Transjakarta [bus] or Commuter Line [train])
-- People with wheelchair can easily enter the venue
-- Cheap, obviously, we had very small budget
-- Can fit a minimum of 30 people
-- Fit well to the community's value and culture
-- Good air conditioning, or at least good ventilation
+-   Close to public transport as possible (it's even better if it's near MRT station [subway] rather than Transjakarta [bus] or Commuter Line [train])
+-   People with wheelchair can easily enter the venue
+-   Cheap, obviously, we had very small budget
+-   Can fit a minimum of 30 people
+-   Fit well to the community's value and culture
+-   Good air conditioning, or at least good ventilation
 
 There are a few venues that I really liked, that would perfectly fits the theme of TeknumConf that's covers a lot of ranges in the tech industry. But sadly, it obviously didn't tick the "cheap" requirement. So, we'd have to tone down everything and make sure we have booked the venue 1 month prior.
 
@@ -72,26 +72,26 @@ Ticketing platform are expensive, if you don't know about it. They're free if yo
 
 What do we do then? We make our own ticketing platform. Every verification and confirmation is done manually by a human, because we don't have time to build a full scale and feature complete ticketing system. We just need a system that:
 
-- Let attendees be in the waitlist
-- Get an email for payment
-- Submit proof of payment via website
-- Get a confirmation email for their payment; and 
-- Get a ticket via email that's just a simple QR image verified using Ed25519 signature.
-- The organizer team can scan the QR code to verifies the ticket
+-   Let attendees be in the waitlist
+-   Get an email for payment
+-   Submit proof of payment via website
+-   Get a confirmation email for their payment; and
+-   Get a ticket via email that's just a simple QR image verified using Ed25519 signature.
+-   The organizer team can scan the QR code to verifies the ticket
 
 The code for the entire website is open sourced at [github.com/teknologi-umum/conf](https://github.com/teknologi-umum/conf).
 
-Am I proud of making my own ticketing platform? Not at all. There are a lot of things that the platform must do better. One thing for sure is that we shouldn't use PostgreSQL sitting on the server, instead we should use a cloud database that can be read easily by human, that's as close as possible to something similar to Google Sheet or Microsoft Excel. One thing that pops in my mind about this is Airtable or NocoDB (they offer [a cloud version](https://www.nocodb.com/) now). 
+Am I proud of making my own ticketing platform? Not at all. There are a lot of things that the platform must do better. One thing for sure is that we shouldn't use PostgreSQL sitting on the server, instead we should use a cloud database that can be read easily by human, that's as close as possible to something similar to Google Sheet or Microsoft Excel. One thing that pops in my mind about this is Airtable or NocoDB (they offer [a cloud version](https://www.nocodb.com/) now).
 
 ## Something you want to bring along
 
 I don't think I'd be interested to become next year's organizer if there were one. But, I'd like to have others that would continue this journey of this community conference to know a few things and preferably bring along these things that have worked on previous event:
 
-- Don't be afraid of not going independent. Money is a hard problem to solve, even most people don't want to come unless it's free.
-- Don't host a strict event. Be organic, be as close as possible to the audience.
-- Demand honest answer and feedbacks from the attendees.
-- Be very clear on communicating, through website, social media, or even in-person. Put as much information as possible. There are no "too much information" for an event.
-- Know that being a part of the organizer doesn't mean you can enjoy the event. You are running the event, you should pay attention not just on the content, but to everywhere around you.
-- Food (mostly just snacks) and drink should always be free.
+-   Don't be afraid of not going independent. Money is a hard problem to solve, even most people don't want to come unless it's free.
+-   Don't host a strict event. Be organic, be as close as possible to the audience.
+-   Demand honest answer and feedbacks from the attendees.
+-   Be very clear on communicating, through website, social media, or even in-person. Put as much information as possible. There are no "too much information" for an event.
+-   Know that being a part of the organizer doesn't mean you can enjoy the event. You are running the event, you should pay attention not just on the content, but to everywhere around you.
+-   Food (mostly just snacks) and drink should always be free.
 
 ![image](/image/lesson-learned-from-running-a-community-tech-conference/lastpic.jpg)
