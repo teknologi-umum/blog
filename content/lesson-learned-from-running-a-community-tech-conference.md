@@ -1,6 +1,6 @@
 ---
 title: Lesson learned from running a community tech conference
-desc: Penjelasan singkat dan sederhana terkait domain driven design.
+desc: A story behind TeknumConf 2023 from the organizer's perspective
 author: Reinaldy Rafli
 github: aldy505
 twitter:
