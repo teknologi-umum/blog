@@ -15,7 +15,7 @@ _Cross-posted from https://blog.reinaldyrafli.com/47922/lesson-learned-from-runn
 
 Yes, I basically led a team of 5 people to run what came to be TeknumConf 2023. An independent, no-sponsor, paid, self-sufficient community-based meetup consisting of keynote talks, career advice talkshow, and bunch of networking sessions that allows people to talk to each other and gain new connection. And yes, we created our own website, our own ticketing system, in which I will talk about it later.
 
-![image](/image/lesson-learned-from-running-a-community-tech-conference/moment.jpg)
+![Riza Ramadan's keynote on TeknumConf 2023](/image/lesson-learned-from-running-a-community-tech-conference/moment.jpg)
 
 ## Why did we go independent?
 
@@ -94,4 +94,4 @@ I don't think I'd be interested to become next year's organizer if there were on
 -   Know that being a part of the organizer doesn't mean you can enjoy the event. You are running the event, you should pay attention not just on the content, but to everywhere around you.
 -   Food (mostly just snacks) and drink should always be free.
 
-![image](/image/lesson-learned-from-running-a-community-tech-conference/lastpic.jpg)
+![Group photo of the speakers and attendeees of TeknumConf 2023](/image/lesson-learned-from-running-a-community-tech-conference/lastpic.jpg)
