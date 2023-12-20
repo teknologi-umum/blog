@@ -30,6 +30,7 @@ export default function Post({ cover = "/image/sample.jpg", ...props }: PostProp
                     description: props.desc,
                     url: process.env.NEXT_PUBLIC_SERVER_URL,
                     site_name: siteData.siteName,
+                    images: [{ url: cover }],
                 }}
             />
             <style jsx>{`
