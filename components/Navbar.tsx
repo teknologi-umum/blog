@@ -45,12 +45,20 @@ export function Navbar() {
                         </div>
 
                         <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
-                            <a href="https://github.com/teknologi-umum">
+                            <a
+                                href="https://github.com/teknologi-umum"
+                                id="community-github"
+                                data-umami-event="Community GitHub Link"
+                            >
                                 <GithubIcon width="1.5rem" height="1.5rem" />
                             </a>
                         </div>
                         <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
-                            <a href="https://t.me/teknologi_umum_v2">
+                            <a
+                                href="https://t.me/teknologi_umum_v2"
+                                id="community-telegram"
+                                data-umami-event="Community Telegram Link"
+                            >
                                 <TelegramIcon width="2rem" height="2rem" />
                             </a>
                         </div>

@@ -7,6 +7,8 @@ export function Footer() {
                 <a
                     href="https://github.com/teknologi-umum/blog/blob/master/LICENSE.CC-BY-SA-4.0"
                     className="text-primary-600 dark:text-primary-200  hover:underline"
+                    id="blog-post-license"
+                    data-umami-event="Blog post license link"
                 >
                     Creative Commons Attribution Share Alike 4.0 International
                 </a>
@@ -17,6 +19,8 @@ export function Footer() {
                 <a
                     href="https://github.com/teknologi-umum/blog/blob/master/LICENSE.GPL-3.0"
                     className="text-primary-600 dark:text-primary-200  hover:underline"
+                    id="source-code-license"
+                    data-umami-event="Source code license link"
                 >
                     GNU General Public License v3.0
                 </a>

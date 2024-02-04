@@ -50,6 +50,8 @@ export default function About({ contributors = [] }: InferGetStaticPropsType<typ
                         <a
                             href="https://t.me/teknologi_umum_v2"
                             className="text-primary-600 dark:text-primary-200 hover:underline"
+                            id="community-telegram"
+                            data-umami-event="Community Telegram Link"
                         >
                             tulisan ini
                         </a>
