@@ -19,6 +19,8 @@ export function Contributing(props: ContributingProps) {
                     <a
                         href="https://github.com/teknologi-umum/blog"
                         className="text-black bg-white p-1.5 px-2 w-full sm:w-auto md:px-4 lg:px-6 inline-flex items-center justify-center font-bold whitespace-nowrap"
+                        id="blog-github"
+                        data-umami-event="Blog GitHub Link"
                     >
                         <div className="flex items-center justify-center print:pr-2">
                             <GithubIcon className="w-5 h-5" />
