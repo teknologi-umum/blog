@@ -4,7 +4,7 @@ desc: The thoughts behind someone who might be interviewing you
 author: Reinaldy Rafli
 github: aldy505
 twitter:
-telegram: aldy05
+telegram: aldy505
 date: 2022-03-08
 cover: /image/after-interviewing-software-engineers/header.png
 categories:
