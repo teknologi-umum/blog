@@ -5,7 +5,7 @@ author: Rijal bin Husen
 github: rijalBinHusen
 twitter:
 telegram: rijalbinhusen
-cover: /image/cara-paling-mudah-menghafal-alquran/4-view-memverses.jpeg
+cover: /image/cara-paling-mudah-menghafal-alquran/thumbnail.jpg
 date: 2024-03-23
 categories:
     - tutorial
@@ -160,17 +160,17 @@ Cara paling mudah untuk murjoaah alquran adalah dengan cara membacanya setiap sh
 
 Langkah langkah diatas adalah berdasarkan pengalaman pribadi, bisa jadi kamu memiliki cara yang lebih sesuai dengan kemampuan menghafal kamu dan lebih baik dari cara diatas.
 
-Kami juga ingin berbagi beberapa rekaman alquran yang cukup mudah untuk di ikuti dan dihafalkan, kami telah memeriksa beberapa ayat pada pada rekaman tersebut dan sudah sesuai dengan aturan-aturan nya, berikut daftar rekaman alquran beserta dengan tautan nya :
+Kami juga ingin berbagi beberapa tautan rekaman alquran yang cukup mudah untuk di ikuti, dihafalkan, dan sudah sesuai dengan aturan-aturan membaca alquran, yaitu sebagai berikut:
 
-1. [Surah 12 - Yusuf - by Ismail Annuri](https://www.youtube.com/watch?v=ULmeWalLUy8)
-2. [Surah 14 - Ibrahim - by Ismail Annuri](https://www.youtube.com/watch?v=PQ32-2G70Q0)
-3. [Surah 18 - Al Kahf - by Syekh Abdurrah Assudais](https://www.youtube.com/watch?v=fxEK_hVl34M)
-4. [Surah 19 - Maryam - by Ismail Annuri](https://www.youtube.com/watch?v=IWbZXIQKLQU)
-5. [Surah 19 - Maryam (ayat 41 - 98) - by Muayyid al Mazen](https://www.youtube.com/watch?v=DerApQ5Hrzg)
-6. [Surah 20 - Tha ha - by Ismail Annuri](https://www.youtube.com/watch?v=mlVgtBajMTE)
-7. [Surah 23 - Al Mu'minun - by Ismail Annuri](https://www.youtube.com/watch?v=sCjXyCE6WDA)
-8. [Surah 58 - Al Mujadilah - by Fahad Aziz Niazi](https://www.youtube.com/watch?v=nFETqyjy7hE) *Catatan pada ayat ke 9
+1. [Surah 12 - Yusuf](https://www.youtube.com/watch?v=ULmeWalLUy8) - by Ismail Annuri
+2. [Surah 14 - Ibrahim](https://www.youtube.com/watch?v=PQ32-2G70Q0) - by Ismail Annuri
+3. [Surah 18 - Al Kahf](https://www.youtube.com/watch?v=fxEK_hVl34M) - by Syekh Abdurrahman Assudais
+4. [Surah 19 - Maryam](https://www.youtube.com/watch?v=IWbZXIQKLQU) - by Ismail Annuri
+5. [Surah 19 - Maryam (ayat 41 - 98)](https://www.youtube.com/watch?v=DerApQ5Hrzg) - by Muayyid al Mazen
+6. [Surah 20 - Tha ha](https://www.youtube.com/watch?v=mlVgtBajMTE) - by Ismail Annuri
+7. [Surah 23 - Al Mu'minun](https://www.youtube.com/watch?v=sCjXyCE6WDA) - by Ismail Annuri
+8. [Surah 58 - Al Mujadilah](https://www.youtube.com/watch?v=nFETqyjy7hE) - by Fahad Aziz Niazi *Catatan pada ayat ke 9
 
 Terimakasih telah membaca tulisan saya, semoga dapat menambah wawasan, sampai jumpa di tulisan saya selanjutnya.
 
-Tulisan [original](https://ibinhusen.my.id/blog/easiest-to-memorize-quran) dalam bahasa inggris
+[Original](https://ibinhusen.my.id/blog/easiest-to-memorize-quran/) post dalam bahasa inggris
