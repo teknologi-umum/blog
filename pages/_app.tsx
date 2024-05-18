@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
                 <script
                     async
                     src="https://analytics.teknologiumum.com/script.js"
-                    data-website-id="3602edd1-97cc-4185-8245-bc62e1efbb4b"
+                    data-website-id="86735db8-4270-486a-8db9-b79b91aa9470"
                 ></script>
             </Head>
             <Component {...pageProps} />
