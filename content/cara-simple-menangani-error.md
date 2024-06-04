@@ -13,7 +13,7 @@ categories:
     - chatgpt
 ---
 
-Error adalah hal yang paling sering terjadi ketika kita sedang melakukan pengembangan aplikasi. Terkadang error tersebut membuat kita merasa frustasi dan tidak tahu harus bagaimana. Ada beberapa cara yang bisa kita lakukan untuk menangani error tersebut, salah satunya adalah dengan menggunakan chatgpt atau AI lainnya. Namun, cara tersebut terkadang membutuhkan waktu yang lama dan tidak efisien.
+Error adalah hal yang paling sering terjadi ketika kita sedang melakukan pengembangan aplikasi. Terkadang error tersebut membuat kita merasa frustasi dan tidak tahu harus bagaimana. Ada beberapa cara yang bisa kita lakukan untuk menangani error tersebut, salah satunya adalah dengan menggunakan ChatGPT atau AI lainnya. Namun, cara tersebut terkadang membutuhkan waktu yang lama dan tidak efisien.
 Atau malah membuat kita jadi ketergantungan akan AI? Maka dari itu, saya akan memberikan cara simple untuk menangani error tanpa perlu menggunakan chatgpt atau AI lainnya.
 
 ## 1 **BACA ERRORNYA**
