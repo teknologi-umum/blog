@@ -61,7 +61,7 @@ Atau malah membuat kita jadi ketergantungan akan AI? Maka dari itu, saya akan me
 
     Nah, setelah itu muncul lagi perintah
     ```bash
-    To start using pnpm, run:
+    # To start using pnpm, run:
     source /Users/wahidinaji/.zshrc
     ```
     Mari kita ikuti perintahnya dengan menjalankan perintahnya di terminal.
