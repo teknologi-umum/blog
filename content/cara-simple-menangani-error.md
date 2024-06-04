@@ -1,6 +1,6 @@
 ---
 title: Cara simple menangani error
-desc: Menangani error dengan mudah dan cepat tanpa perlu chatgpt atau AI lainnya.
+desc: Menangani error dengan mudah dan cepat tanpa perlu ChatGPT atau AI lainnya.
 author: Wahidin Aji
 github: WahidinAji
 twitter:
