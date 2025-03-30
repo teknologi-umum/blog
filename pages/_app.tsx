@@ -19,6 +19,20 @@ export default function App({ Component, pageProps }) {
                     src="https://analytics.teknologiumum.com/script.js"
                     data-website-id="86735db8-4270-486a-8db9-b79b91aa9470"
                 ></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                    (() => {
+                        const theme = localStorage.getItem('teknologi-umum-blog-theme');
+                        if (theme === 'dark') {
+                            document.documentElement.classList.add('dark');
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                        }
+                    })();
+                    `,
+                    }}
+                ></script>
             </Head>
             <Component {...pageProps} />
         </Layout>
