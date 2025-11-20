@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
     return (
         <Layout>
             <Head>
+                <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
                 <script
                     async
                     src="https://analytics.teknologiumum.com/script.js"

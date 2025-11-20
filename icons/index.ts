@@ -6,3 +6,4 @@ export { default as TwitterIcon } from "./ic_twitter.svg";
 export { default as SunIcon } from "./ic_sun.svg";
 export { default as CrescentMoonIcon } from "./ic_crescent-moon.svg";
 export { default as HalfMoonIcon } from "./ic_half-moon.svg";
+export { default as RssIcon } from "./ic_rss.svg";

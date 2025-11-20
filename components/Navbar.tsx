@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { GithubIcon, TelegramIcon, SearchIcon } from "~/icons";
+import { GithubIcon, TelegramIcon, SearchIcon, RssIcon } from "~/icons";
 import { DarkModeToggler } from "./DarkModeToggler";
 
 export function Navbar() {
@@ -42,6 +42,19 @@ export function Navbar() {
                             <Link href="/search">
                                 <SearchIcon width="1.5rem" height="1.5rem" />
                             </Link>
+                        </div>
+
+                        <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
+                            <a
+                                href="/feed.xml"
+                                id="rss-feed"
+                                data-umami-event="RSS Feed Link"
+                                title="RSS Feed"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <RssIcon width="1.5rem" height="1.5rem" />
+                            </a>
                         </div>
 
                         <div className="flex-initial opacity-60 hover:text-primary-600/100 dark:text-neutral-300 dark:hover:text-neutral-50 transition duration-300">
